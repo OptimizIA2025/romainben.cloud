@@ -44,11 +44,20 @@ Site : https://www.optimizia.xyz/
 - **Compression JPEG (DCT · CSR)** : projet académique en mathématiques appliquées, implémentation de compression d'image via transformée en cosinus discrète et stockage sparse.
 - **Site portfolio d'Ophélie** : site vitrine single-page livré.
 
+## Contact & prise de rendez-vous
+
+Romain Ben propose une prise de rendez-vous en ligne (20 minutes, visio) via sa page de contact :
+- **URL** : https://www.romainben.cloud/contact-rom.html
+- **Créneaux** : lundi au samedi, générés dynamiquement
+- **Cas d'usage** : projet étudiant, collaboration tech, mission via OptimizIA.xyz, stage ou alternance, simple bonjour
+- **Email de secours** : contact@romainben.cloud
+
 ## Liens
 
 - LinkedIn : https://www.linkedin.com/in/romainben/
 - GitHub : https://github.com/BnRomain
 - OptimizIA : https://www.optimizia.xyz/
+- Contact / RDV : https://www.romainben.cloud/contact-rom.html
 - Mentions légales : https://www.romainben.cloud/mentions-legales.html
 
 ## Philosophie
