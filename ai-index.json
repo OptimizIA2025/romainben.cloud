@@ -1,0 +1,12 @@
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "romainben.cloud",
+    "aiVisibilityScore": 100,
+    "isMachineReadable": true,
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://romainben.cloud/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+    }
+}

@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Romain Ben | Réservez un échange</title>
+    <meta name="description" content="Contact Romain Ben — étudiant ingénieur MAM3 Polytech Nice Sophia, co-fondateur OptimizIA.xyz. Réservez 20 minutes pour échanger sur un projet, une collaboration ou OptimizIA.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0F172A">
+    <link rel="canonical" href="https://www.romainben.cloud/contact-rom.html">
+
+    <meta property="og:title" content="Contact — Romain Ben">
+    <meta property="og:description" content="Réservez un échange de 20 minutes : projet étudiant, collaboration tech, mission OptimizIA.xyz ou simple bonjour.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.romainben.cloud/contact-rom.html">
+    <meta property="og:image" content="https://www.romainben.cloud/PhotoProfil.jpeg">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Romain Ben">
+
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@0.460.0"></script>
+
+    <script>
+        // Webhooks n8n à brancher plus tard. Tant qu'ils sont vides, le widget
+        // génère ses créneaux localement et le formulaire bascule sur mailto:.
+        window.N8N_AVAILABILITY_URL = 'https://n8n.romainben.cloud/webhook/booking-availability';
+        window.N8N_BOOKING_URL      = 'https://n8n.romainben.cloud/webhook/booking-confirm';
+        window.N8N_DAYS_URL         = 'https://n8n.romainben.cloud/webhook/booking-days';
+        window.CONTACT_FALLBACK_EMAIL = 'contact@romainben.cloud';
+    </script>
+
+    <style>
+        :root {
+            --bg: #0F172A;
+            --surface: #1E293B;
+            --surface-2: #18253B;
+            --emerald: #10B981;
+            --emerald-hover: #059669;
+            --emerald-light: rgba(16, 185, 129, 0.1);
+            --emerald-glow: rgba(16, 185, 129, 0.2);
+            --violet: #8B5CF6;
+            --violet-hover: #7C3AED;
+            --violet-light: rgba(139, 92, 246, 0.1);
+            --violet-glow: rgba(139, 92, 246, 0.2);
+            --text: #F1F5F9;
+            --text-muted: #94A3B8;
+            --text-subtle: #64748B;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(16, 185, 129, 0.4);
+            --glass: rgba(30, 41, 59, 0.72);
+
+            --max-width: 1200px;
+            --radius: 12px;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
+            --radius-pill: 100px;
+            --transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+            overflow-x: hidden;
+            background-image:
+                radial-gradient(ellipse at 18% 20%, rgba(16, 185, 129, 0.06) 0%, transparent 55%),
+                radial-gradient(ellipse at 82% 75%, rgba(139, 92, 246, 0.06) 0%, transparent 55%),
+                radial-gradient(ellipse at 50% 110%, rgba(16, 185, 129, 0.04) 0%, transparent 45%);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Inter Tight', sans-serif;
+            font-weight: 800;
+            line-height: 1.12;
+            letter-spacing: -0.025em;
+            color: var(--text);
+        }
+        p { font-weight: 300; color: var(--text-muted); }
+        a { text-decoration: none; color: inherit; }
+
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 28px; }
+        section { padding: 90px 0; position: relative; }
+        @media (max-width: 768px) { section { padding: 64px 0; } }
+
+        .overline {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.78rem; font-weight: 500;
+            text-transform: uppercase; letter-spacing: 0.16em;
+            color: var(--emerald);
+            display: inline-block; margin-bottom: 18px;
+        }
+
+        /* ═══ NAVBAR ═══ */
+        nav {
+            position: fixed; top: 0; width: 100%;
+            padding: 22px 0; z-index: 1000;
+            transition: var(--transition);
+        }
+        nav.scrolled {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo {
+            font-family: 'Inter Tight', sans-serif;
+            font-size: 1.4rem; font-weight: 800;
+            color: var(--text); letter-spacing: -0.03em;
+        }
+        .logo span { color: var(--emerald); }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a {
+            color: var(--text-muted);
+            font-weight: 500; font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .nav-links a:hover { color: var(--text); }
+        .nav-links a.nav-active { color: var(--emerald) !important; font-weight: 600; }
+        .nav-socials { display: flex; gap: 10px; align-items: center; margin-left: 6px; }
+        .nav-socials a {
+            width: 36px; height: 36px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+        .nav-socials a:hover {
+            color: var(--emerald);
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+        }
+        .nav-socials svg { width: 16px; height: 16px; }
+        .nav-cta {
+            background: var(--emerald);
+            color: #06281F !important;
+            padding: 10px 22px; border-radius: var(--radius-pill);
+            font-weight: 700 !important; font-size: 0.88rem !important;
+            margin-left: 8px;
+        }
+        .nav-cta:hover {
+            background: var(--emerald-hover) !important;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 24px var(--emerald-glow);
+        }
+
+        .hamburger {
+            display: none; cursor: pointer; background: none; border: none;
+            width: 32px; height: 24px; position: relative; z-index: 1001;
+        }
+        .hamburger span {
+            display: block; width: 100%; height: 2px; background: var(--text);
+            border-radius: 2px; transition: var(--transition);
+            position: absolute; left: 0;
+        }
+        .hamburger span:nth-child(1) { top: 0; }
+        .hamburger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+        .hamburger span:nth-child(3) { bottom: 0; }
+        .hamburger.active span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { bottom: 50%; transform: translateY(50%) rotate(-45deg); }
+
+        .mobile-menu {
+            position: fixed; inset: 0; z-index: 999;
+            background: rgba(15, 23, 42, 0.97);
+            backdrop-filter: blur(24px);
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center; gap: 26px;
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+        .mobile-menu.open { opacity: 1; pointer-events: all; }
+        .mobile-menu a {
+            color: var(--text);
+            font-family: 'Inter Tight', sans-serif;
+            font-size: 1.5rem; font-weight: 700;
+        }
+        .mobile-menu a:hover { color: var(--emerald); }
+        .mobile-menu .mobile-cta {
+            background: var(--emerald); color: #06281F;
+            padding: 14px 36px; border-radius: var(--radius-pill);
+            font-size: 1rem; margin-top: 12px;
+        }
+        .mobile-menu .mobile-socials { display: flex; gap: 18px; margin-top: 12px; }
+        .mobile-menu .mobile-socials a {
+            width: 44px; height: 44px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            font-size: 0;
+        }
+        .mobile-menu .mobile-socials svg { width: 18px; height: 18px; }
+
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .nav-socials { display: none; }
+            .nav-cta { display: none; }
+            .hamburger { display: block; }
+        }
+
+        /* ═══ HERO ═══ */
+        .hero {
+            padding-top: 160px;
+            padding-bottom: 64px;
+            text-align: center;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 7px 16px;
+            background: var(--emerald-light);
+            color: var(--emerald);
+            border-radius: var(--radius-pill);
+            font-family: 'DM Mono', monospace;
+            font-size: 0.74rem; font-weight: 500;
+            text-transform: uppercase; letter-spacing: 0.14em;
+            margin-bottom: 26px;
+            border: 1px solid rgba(16, 185, 129, 0.25);
+        }
+        .hero-badge .dot {
+            width: 6px; height: 6px; border-radius: 50%;
+            background: var(--emerald); animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.75); }
+        }
+        .hero h1 {
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            margin-bottom: 22px;
+            background: linear-gradient(135deg, #FFFFFF 45%, rgba(148, 163, 184, 0.7) 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--emerald) 0%, var(--violet) 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 660px; margin: 0 auto;
+            line-height: 1.75;
+        }
+
+        /* ═══ BENEFITS ═══ */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 1000px; margin: 0 auto;
+        }
+        .benefit-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px 28px;
+            transition: var(--transition);
+        }
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-hover);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+        }
+        .benefit-icon {
+            width: 48px; height: 48px;
+            border-radius: 12px;
+            background: var(--emerald-light);
+            color: var(--emerald);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 20px;
+            border: 1px solid rgba(16, 185, 129, 0.25);
+        }
+        .benefit-icon svg { width: 22px; height: 22px; }
+        .benefit-card h3 { font-size: 1.15rem; margin-bottom: 12px; }
+        .benefit-card p { color: var(--text-muted); font-size: 0.93rem; line-height: 1.7; }
+
+        /* ═══ BOOKING ═══ */
+        .booking-intro { text-align: center; max-width: 680px; margin: 0 auto 52px; }
+        .booking-intro h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin-bottom: 16px; }
+        .booking-intro p { font-size: 1.02rem; color: var(--text-muted); line-height: 1.75; }
+
+        /* ═══ WIDGET CALENDRIER ═══ */
+        .bw-card {
+            max-width: 1000px; margin: 0 auto;
+            display: grid; grid-template-columns: 290px 1fr;
+            min-height: 520px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: var(--surface);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+        }
+        @media (max-width: 860px) { .bw-card { grid-template-columns: 1fr; } }
+        .bw-sidebar {
+            padding: 36px 28px;
+            border-right: 1px solid var(--border);
+            background: var(--surface-2);
+            display: flex; flex-direction: column;
+        }
+        @media (max-width: 860px) {
+            .bw-sidebar { border-right: none; border-bottom: 1px solid var(--border); padding: 28px 24px; }
+        }
+        .bw-sidebar-label {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.68rem; font-weight: 500;
+            letter-spacing: 0.14em; text-transform: uppercase;
+            color: var(--emerald); margin-bottom: 14px;
+        }
+        .bw-sidebar-title {
+            font-family: 'Inter Tight', sans-serif;
+            font-size: 1.4rem; font-weight: 800;
+            line-height: 1.15; letter-spacing: -0.02em;
+            color: var(--text); margin-bottom: 4px;
+        }
+        .bw-sidebar-sub { font-size: 0.9rem; color: var(--text-muted); font-style: italic; margin-bottom: 28px; }
+        .bw-meta { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+        .bw-meta-item { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: var(--text-muted); }
+        .bw-meta-icon {
+            width: 30px; height: 30px;
+            border-radius: 8px;
+            background: var(--emerald-light);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .bw-meta-icon svg { width: 14px; height: 14px; stroke: var(--emerald); stroke-width: 2; fill: none; }
+        .bw-divider { height: 1px; background: var(--border); margin: 4px 0 18px; }
+        .bw-bullets { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; }
+        .bw-bullets li {
+            font-size: 0.83rem; color: var(--text-muted);
+            padding-left: 16px; position: relative; line-height: 1.55;
+        }
+        .bw-bullets li::before {
+            content: ''; position: absolute; left: 0; top: 7px;
+            width: 5px; height: 5px; border-radius: 50%;
+            background: var(--emerald); opacity: 0.7;
+        }
+        .bw-cta-box {
+            margin-top: auto; padding: 16px;
+            background: var(--emerald-light);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 12px;
+        }
+        .bw-cta-box p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
+        .bw-cta-box strong { color: var(--emerald); }
+
+        .bw-main { padding: 32px 36px; display: flex; flex-direction: column; background: var(--surface); }
+        @media (max-width: 860px) { .bw-main { padding: 24px 20px; } }
+        .bw-steps { display: flex; align-items: center; gap: 8px; margin-bottom: 24px; }
+        .bw-step-dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: rgba(255,255,255,0.04);
+            border: 1.5px solid var(--text-muted);
+            transition: var(--transition);
+        }
+        .bw-step-dot.active {
+            background: var(--emerald); border-color: var(--emerald);
+            box-shadow: 0 0 8px var(--emerald-glow);
+        }
+        .bw-step-dot.done { background: var(--emerald); border-color: var(--emerald); opacity: 0.4; }
+        .bw-step-line { width: 28px; height: 1.5px; background: var(--border); }
+        .bw-step-line.active { background: rgba(16,185,129,0.3); }
+        .bw-section-title {
+            font-family: 'Inter Tight', sans-serif;
+            font-size: 1.1rem; font-weight: 700;
+            color: var(--text); margin-bottom: 22px;
+        }
+        .bw-cal-nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+        .bw-cal-nav-btn {
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            width: 38px; height: 38px;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; color: var(--text);
+            transition: var(--transition);
+        }
+        .bw-cal-nav-btn:hover { border-color: var(--border-hover); background: var(--emerald-light); }
+        .bw-cal-nav-btn svg { width: 18px; height: 18px; stroke: currentColor; stroke-width: 2.5; fill: none; }
+        .bw-cal-month {
+            font-family: 'Inter Tight', sans-serif;
+            font-size: 1rem; font-weight: 700;
+            color: var(--text); text-transform: capitalize;
+        }
+        .bw-cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; }
+        .bw-cal-hdr {
+            text-align: center;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.72rem; font-weight: 500;
+            color: var(--text-muted); letter-spacing: 0.06em;
+            text-transform: uppercase; padding: 6px 0;
+        }
+        .bw-cal-day {
+            aspect-ratio: 1;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.9rem; font-weight: 600;
+            border-radius: 10px;
+            border: 1.5px solid transparent;
+            cursor: pointer; transition: var(--transition);
+            color: var(--text); background: transparent;
+            position: relative;
+        }
+        .bw-cal-day:hover:not(.bw-cal-day--off):not(.bw-cal-day--empty) {
+            background: var(--emerald-light);
+            border-color: var(--border-hover);
+        }
+        .bw-cal-day--today:not(.bw-cal-day--sel) { color: var(--emerald); font-weight: 800; }
+        .bw-cal-day--today::after {
+            content: ''; position: absolute; bottom: 3px;
+            width: 4px; height: 4px; border-radius: 50%;
+            background: var(--emerald); opacity: 0.7;
+        }
+        .bw-cal-day--sel {
+            background: var(--emerald) !important;
+            color: #06281F !important;
+            font-weight: 800;
+            border-color: var(--emerald) !important;
+            box-shadow: 0 0 14px var(--emerald-glow);
+        }
+        .bw-cal-day--off { color: var(--text-subtle); opacity: 0.35; cursor: default; }
+        .bw-cal-day--empty { cursor: default; }
+
+        .bw-slots {
+            margin-top: 24px; padding-top: 20px;
+            border-top: 1px solid var(--border);
+            animation: bwFadeUp .35s cubic-bezier(.23,1,.32,1);
+        }
+        @keyframes bwFadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .bw-slots-date {
+            font-family: 'Inter Tight', sans-serif;
+            font-size: 0.95rem; font-weight: 700;
+            color: var(--text); margin-bottom: 12px; text-transform: capitalize;
+        }
+        .bw-slots-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 7px; max-height: 180px; overflow-y: auto; padding-right: 4px;
+        }
+        .bw-slots-grid::-webkit-scrollbar { width: 3px; }
+        .bw-slots-grid::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+        .bw-slot {
+            padding: 10px 4px; text-align: center;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.9rem; font-weight: 500;
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 8px; cursor: pointer;
+            transition: var(--transition);
+        }
+        .bw-slot:hover { background: var(--emerald-light); border-color: var(--border-hover); color: var(--emerald); }
+        .bw-slot--sel {
+            background: var(--emerald-light) !important;
+            border-color: var(--emerald) !important;
+            color: var(--emerald) !important;
+            box-shadow: 0 0 10px var(--emerald-glow);
+            font-weight: 700;
+        }
+        .bw-slots-empty { text-align: center; padding: 16px; color: var(--text-muted); font-size: 0.88rem; }
+        .bw-slots-loading { text-align: center; padding: 16px; color: var(--text-muted); font-size: 0.88rem; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .bw-spinner { width: 16px; height: 16px; border: 2px solid var(--border); border-top-color: var(--emerald); border-radius: 50%; animation: spin 0.8s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .bw-continue-row { margin-top: 18px; text-align: right; }
+        .bw-btn-continue {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 11px 26px;
+            background: var(--emerald);
+            color: #06281F;
+            border: none; border-radius: var(--radius-pill);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.86rem; font-weight: 700;
+            cursor: pointer; transition: var(--transition);
+            box-shadow: 0 8px 24px var(--emerald-glow);
+        }
+        .bw-btn-continue:hover { background: var(--emerald-hover); color: #fff; transform: translateY(-1px); }
+        .bw-btn-continue svg { width: 14px; height: 14px; stroke: currentColor; stroke-width: 2.5; fill: none; }
+
+        .bw-form-container { animation: bwFadeUp .4s cubic-bezier(.23,1,.32,1); }
+        .bw-back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: none; border: none; color: var(--text-muted);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.84rem; font-weight: 500;
+            cursor: pointer; padding: 4px 0; margin-bottom: 18px;
+            transition: color 0.3s;
+        }
+        .bw-back-btn:hover { color: var(--text); }
+        .bw-back-btn svg { width: 14px; height: 14px; stroke: currentColor; stroke-width: 2; fill: none; }
+        .bw-selection-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 8px 14px;
+            background: var(--emerald-light);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 10px; margin-bottom: 22px;
+            font-size: 0.8rem; color: var(--text-muted);
+        }
+        .bw-selection-badge svg { width: 14px; height: 14px; stroke: var(--emerald); stroke-width: 2; fill: none; }
+        .bw-selection-badge strong { color: var(--emerald); font-family: 'DM Mono', monospace; }
+        .bw-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+        @media (max-width: 560px) { .bw-form-row { grid-template-columns: 1fr; } }
+        .bw-form-group { margin-bottom: 12px; }
+        .bw-form-label {
+            display: block; font-size: 0.82rem; font-weight: 700;
+            color: var(--text); margin-bottom: 6px;
+        }
+        .bw-form-label-hint { font-weight: 400; color: var(--text-muted); }
+        .bw-input {
+            width: 100%; padding: 12px 14px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.92rem; color: var(--text);
+            transition: var(--transition); outline: none;
+        }
+        .bw-input::placeholder { color: var(--text-subtle); }
+        .bw-input:focus {
+            border-color: var(--border-hover);
+            box-shadow: 0 0 0 3px var(--emerald-light);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        textarea.bw-input { resize: vertical; min-height: 72px; }
+
+        .bw-pills { display: flex; flex-wrap: wrap; gap: 7px; }
+        .bw-pill {
+            display: flex; align-items: center; gap: 6px;
+            padding: 8px 14px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-pill);
+            font-size: 0.83rem; font-weight: 500;
+            color: var(--text); cursor: pointer;
+            transition: var(--transition); user-select: none;
+        }
+        .bw-pill:hover { border-color: rgba(255, 255, 255, 0.18); background: rgba(255, 255, 255, 0.05); }
+        .bw-pill.checked {
+            background: var(--emerald-light);
+            border-color: rgba(16, 185, 129, 0.4);
+            color: var(--emerald);
+        }
+        .bw-pill input { display: none; }
+        .bw-pill-check {
+            width: 15px; height: 15px; border-radius: 4px;
+            border: 1.5px solid var(--text-muted);
+            display: flex; align-items: center; justify-content: center;
+            transition: var(--transition); flex-shrink: 0;
+        }
+        .bw-pill.checked .bw-pill-check { background: var(--emerald); border-color: var(--emerald); }
+        .bw-pill-check svg { width: 9px; height: 9px; stroke: #06281F; stroke-width: 3; fill: none; opacity: 0; transition: var(--transition); }
+        .bw-pill.checked .bw-pill-check svg { opacity: 1; }
+
+        .bw-btn-row { display: flex; gap: 10px; margin-top: 20px; }
+        .bw-btn {
+            flex: 1; padding: 13px 20px;
+            border-radius: var(--radius-pill);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.88rem; font-weight: 600;
+            cursor: pointer; transition: var(--transition);
+            border: none; text-align: center;
+        }
+        .bw-btn-ghost {
+            background: transparent;
+            border: 1.5px solid var(--border);
+            color: var(--text-muted);
+        }
+        .bw-btn-ghost:hover { border-color: rgba(255, 255, 255, 0.2); color: var(--text); background: rgba(255, 255, 255, 0.03); }
+        .bw-btn-emerald {
+            background: var(--emerald); color: #06281F;
+            font-weight: 700;
+            box-shadow: 0 8px 24px var(--emerald-glow);
+        }
+        .bw-btn-emerald:hover { background: var(--emerald-hover); color: #fff; transform: translateY(-1px); }
+        .bw-btn-emerald:disabled { opacity: 0.35; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        .bw-error {
+            padding: 10px 14px;
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.25);
+            border-radius: 10px;
+            color: #FCA5A5; font-size: 0.84rem; margin-bottom: 14px;
+        }
+
+        .bw-confirm {
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center; text-align: center;
+            flex: 1; padding: 40px 24px;
+            animation: bwFadeUp .45s cubic-bezier(.23,1,.32,1);
+        }
+        .bw-confirm-icon {
+            width: 64px; height: 64px; border-radius: 50%;
+            background: rgba(34, 197, 94, 0.1);
+            border: 2px solid rgba(34, 197, 94, 0.35);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 20px;
+        }
+        .bw-confirm-icon svg { width: 28px; height: 28px; stroke: #34D399; stroke-width: 2.5; fill: none; }
+        .bw-confirm-title {
+            font-family: 'Inter Tight', sans-serif;
+            font-size: 1.3rem; font-weight: 800;
+            color: var(--text); margin-bottom: 8px;
+        }
+        .bw-confirm-text { font-size: 0.88rem; color: var(--text-muted); }
+        .bw-confirm-email { font-family: 'DM Mono', monospace; color: var(--emerald); font-size: 0.88rem; margin-top: 4px; }
+
+        /* ═══ FAQ ═══ */
+        .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+        .faq-item {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: border-color 0.35s ease;
+        }
+        .faq-item.open { border-color: var(--border-hover); }
+        .faq-question {
+            width: 100%;
+            display: flex; justify-content: space-between; align-items: center; gap: 16px;
+            padding: 22px 28px;
+            background: none; border: none; cursor: pointer; text-align: left;
+            font-family: 'Inter Tight', sans-serif;
+            font-size: 1.05rem; font-weight: 700;
+            color: var(--text); line-height: 1.35;
+        }
+        .faq-icon {
+            width: 28px; height: 28px; border-radius: 50%;
+            background: var(--emerald-light);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            color: var(--emerald);
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+            transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .faq-icon svg { width: 14px; height: 14px; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .faq-answer-inner {
+            padding: 0 28px 24px;
+            font-size: 0.97rem; color: var(--text-muted); line-height: 1.75;
+        }
+        .faq-answer-inner strong { color: var(--text); font-weight: 600; }
+        .faq-answer-inner a { color: var(--emerald); font-weight: 500; }
+        .faq-answer-inner a:hover { color: var(--emerald-hover); }
+
+        /* ═══ FOOTER ═══ */
+        footer { border-top: 1px solid var(--border); padding: 72px 0 0; margin-top: 40px; }
+        .footer-main { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 48px; padding-bottom: 56px; }
+        .footer-brand-name {
+            font-family: 'Inter Tight', sans-serif;
+            font-size: 1.6rem; font-weight: 900;
+            letter-spacing: -0.03em; color: var(--text);
+            margin-bottom: 16px;
+        }
+        .footer-brand-name span { color: var(--emerald); }
+        .footer-bio { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 22px; font-weight: 300; }
+        .footer-tagline {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.78rem; color: var(--emerald);
+            display: inline-flex; align-items: center; gap: 8px;
+        }
+        .footer-tagline::before { content: '↗'; }
+        .footer-tagline a:hover { color: var(--text); }
+        .footer-legal { color: var(--text-subtle); transition: color 0.25s; }
+        .footer-legal:hover { color: var(--emerald); }
+        .footer-col-title {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.72rem; font-weight: 500;
+            text-transform: uppercase; letter-spacing: 0.14em;
+            color: var(--text-subtle); margin-bottom: 20px;
+        }
+        .footer-nav { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+        .footer-nav a { font-size: 0.92rem; color: var(--text-muted); transition: color 0.25s; }
+        .footer-nav a:hover { color: var(--emerald); }
+        .footer-contact-list { display: flex; flex-direction: column; gap: 14px; }
+        .footer-contact-item { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--text-muted); }
+        .footer-contact-item svg { width: 15px; height: 15px; flex-shrink: 0; color: var(--text-subtle); }
+        .footer-contact-item a { color: var(--text-muted); transition: color 0.25s; }
+        .footer-contact-item a:hover { color: var(--emerald); }
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding: 22px 0;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 12px;
+        }
+        .footer-copy { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--text-subtle); }
+        .footer-bottom-right { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+        .footer-domains { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--text-subtle); }
+        .footer-domains a { color: var(--emerald); transition: color 0.25s; }
+        .footer-domains a:hover { color: var(--emerald-hover); }
+        .footer-domains a.muted { color: var(--text-subtle); }
+        .footer-domains a.muted:hover { color: var(--emerald); }
+        .footer-socials { display: flex; gap: 10px; }
+        .footer-socials a {
+            width: 34px; height: 34px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+        .footer-socials a:hover { color: var(--emerald); border-color: var(--border-hover); transform: translateY(-2px); }
+        .footer-socials svg { width: 15px; height: 15px; }
+        @media (max-width: 768px) {
+            .footer-main { grid-template-columns: 1fr; gap: 36px; }
+            .footer-bottom { flex-direction: column; align-items: flex-start; }
+        }
+
+        .reveal { opacity: 0; }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "url": "https://www.romainben.cloud/contact-rom.html",
+      "name": "Contact — Romain Ben",
+      "description": "Page de contact de Romain Ben, étudiant ingénieur MAM3 à Polytech Nice Sophia et co-fondateur d'OptimizIA.xyz.",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Romain Ben",
+        "email": "contact@romainben.cloud",
+        "url": "https://www.romainben.cloud/",
+        "sameAs": [
+          "https://www.linkedin.com/in/romainben/",
+          "https://github.com/BnRomain",
+          "https://www.optimizia.xyz/"
+        ]
+      }
+    }
+    </script>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav id="navbar">
+    <div class="container nav-content">
+        <a href="index.html" class="logo">Romain <span>Ben</span></a>
+        <div class="nav-links">
+            <a href="index.html#about">Parcours</a>
+            <a href="index.html#skills">Compétences</a>
+            <a href="index.html#projects">Projets</a>
+            <a href="index.html#optimizia">OptimizIA.xyz</a>
+            <a href="contact-rom.html" class="nav-active">Contact</a>
+            <a href="index.html#faq">FAQ</a>
+            <div class="nav-socials">
+                <a href="https://www.linkedin.com/in/romainben/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i data-lucide="linkedin"></i>
+                </a>
+                <a href="https://github.com/BnRomain" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i data-lucide="github"></i>
+                </a>
+            </div>
+            <a href="contact-rom.html" class="nav-cta">Me contacter</a>
+        </div>
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#about">Parcours</a>
+    <a href="index.html#skills">Compétences</a>
+    <a href="index.html#projects">Projets</a>
+    <a href="index.html#optimizia">OptimizIA.xyz</a>
+    <a href="contact-rom.html">Contact</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="contact-rom.html" class="mobile-cta">Me contacter</a>
+    <div class="mobile-socials">
+        <a href="https://www.linkedin.com/in/romainben/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i data-lucide="linkedin"></i>
+        </a>
+        <a href="https://github.com/BnRomain" target="_blank" rel="noopener" aria-label="GitHub">
+            <i data-lucide="github"></i>
+        </a>
+    </div>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-badge reveal">
+            <span class="dot"></span>
+            Ouvert aux échanges & projets
+        </div>
+        <h1 class="reveal">Échangeons sur ton <span>projet</span>.</h1>
+        <p class="hero-subtitle reveal">
+            20 minutes pour discuter d'un projet étudiant, d'une collaboration tech, d'une mission OptimizIA.xyz, ou juste pour faire connaissance. Choisis un créneau qui t'arrange.
+        </p>
+    </div>
+</section>
+
+
+<!-- ═══ BOOKING ═══ -->
+<section id="reservation">
+    <div class="container">
+        <div class="booking-intro reveal">
+            <span class="overline">Réservation</span>
+            <h2>Choisis ton créneau</h2>
+            <p>Le calendrier reflète mes disponibilités habituelles, semaine d'école et OptimizIA comprises. Sélectionne un jour, puis un horaire.</p>
+        </div>
+        <div id="booking-root" class="reveal"></div>
+    </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section id="faq">
+    <div class="container">
+        <div class="booking-intro reveal" style="margin-bottom: 48px;">
+            <span class="overline">FAQ</span>
+            <h2>Questions fréquentes</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item reveal">
+                <button class="faq-question">
+                    Comment se déroule l'échange ?
+                    <span class="faq-icon"><i data-lucide="plus"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        20 minutes en visio (Google Meet, Zoom ou Teams selon ta préférence). Tu me racontes ton contexte ou ton projet, je te partage ce que je sais et on regarde ensemble s'il y a une suite à donner.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-question">
+                    Pour quel type de demande puis-je te contacter ?
+                    <span class="faq-icon"><i data-lucide="plus"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <strong>Projet étudiant</strong> (entraide, retour de code, échange Polytech), <strong>collaboration tech</strong> (dev, n8n, IA), <strong>mission via OptimizIA.xyz</strong> pour ton entreprise, ou simplement <strong>faire connaissance</strong>. Tout ce qui sort de ce cadre, écris-moi à <a href="mailto:contact@romainben.cloud">contact@romainben.cloud</a>.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-question">
+                    Quelle différence avec OptimizIA.xyz ?
+                    <span class="faq-icon"><i data-lucide="plus"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Cette page est mon canal <strong>perso</strong>. Pour une mission B2B encadrée (diagnostic, MVP, industrialisation), passe plutôt par <a href="https://www.optimizia.xyz/fr/contact.html" target="_blank" rel="noopener">optimizia.xyz/contact</a>, c'est le bon point d'entrée pour un projet d'entreprise avec Rémy et moi.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-question">
+                    Et si aucun créneau ne me convient ?
+                    <span class="faq-icon"><i data-lucide="plus"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Pas de souci : envoie-moi un mail à <a href="mailto:contact@romainben.cloud">contact@romainben.cloud</a> avec tes disponibilités, je te propose autre chose.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+    <div class="container">
+        <div class="footer-main">
+            <div>
+                <div class="footer-brand-name">Romain <span>Ben</span></div>
+                <p class="footer-bio">Étudiant ingénieur en Maths Appliquées à Polytech Nice Sophia, co-fondateur d'OptimizIA.xyz. Dev, automatisation n8n, IA et entrepreneuriat.</p>
+                <div class="footer-tagline">
+                    <a href="https://www.optimizia.xyz" target="_blank" rel="noopener">OptimizIA.xyz — l'agence IA & automatisation</a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-col-title">Navigation</div>
+                <ul class="footer-nav">
+                    <li><a href="index.html#about">Parcours</a></li>
+                    <li><a href="index.html#skills">Compétences</a></li>
+                    <li><a href="index.html#projects">Projets</a></li>
+                    <li><a href="index.html#optimizia">OptimizIA.xyz</a></li>
+                    <li><a href="contact-rom.html">Contact</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-col-title">Contact</div>
+                <div class="footer-contact-list">
+                    <div class="footer-contact-item">
+                        <i data-lucide="mail"></i>
+                        <a href="mailto:contact@romainben.cloud">contact@romainben.cloud</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i data-lucide="mail"></i>
+                        <a href="mailto:contact@optimizia.xyz">contact@optimizia.xyz</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i data-lucide="linkedin"></i>
+                        <a href="https://www.linkedin.com/in/romainben/" target="_blank" rel="noopener">LinkedIn</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i data-lucide="github"></i>
+                        <a href="https://github.com/BnRomain" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i data-lucide="map-pin"></i>
+                        Antibes, France
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copy">© 2026 Romain Ben · Tous droits réservés · <a href="mentions-legales.html" class="footer-legal">Mentions légales</a></div>
+            <div class="footer-bottom-right">
+                <div class="footer-domains"><a href="index.html" class="muted">romainben.cloud</a> · <a href="https://www.optimizia.xyz" target="_blank" rel="noopener">optimizia.xyz</a></div>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/romainben/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="https://github.com/BnRomain" target="_blank" rel="noopener" aria-label="GitHub">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a href="mailto:contact@romainben.cloud" aria-label="Email">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ═══ REACT WIDGET ═══ -->
+<script defer crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script defer crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script defer src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+const { useState, useEffect } = React;
+
+// Plages de disponibilités hebdomadaires (heure décimale, 13.5 = 13:30)
+// 0=dim, 1=lun ... 6=sam. null = jour off.
+const SC = { 0: null, 1: [[13.5, 19]], 2: [[10, 19]], 3: [[9, 12.5]], 4: [[14, 19]], 5: [[9, 16]], 6: [[9.5, 11.5]] };
+
+// Objectifs proposés (adaptés contexte Romain)
+const OB = ['Projet étudiant', 'Collaboration tech', 'Mission OptimizIA.xyz', 'Stage ou alternance', 'Simple bonjour'];
+
+const MO = ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+const DF = ['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+const DH = ['Lun','Mar','Mer','Jeu','Ven','Sam','Dim'];
+
+function bok(d, dm) {
+    const t = new Date; t.setHours(0,0,0,0);
+    const a = new Date(t); a.setDate(a.getDate()+1);
+    const b = new Date(t); b.setDate(b.getDate()+21);
+    const c = new Date(d); c.setHours(0,0,0,0);
+    if (c < a || c > b) return false;
+    const key = fmDate(c);
+    if (dm && key in dm) return dm[key];
+    return SC[c.getDay()] !== null;
+}
+function isT(d) {
+    const t = new Date;
+    return d.getDate()===t.getDate() && d.getMonth()===t.getMonth() && d.getFullYear()===t.getFullYear();
+}
+function fm(d) { return `${DF[d.getDay()]} ${d.getDate()} ${MO[d.getMonth()]}`; }
+function fmDate(d) {
+    const y = d.getFullYear(), m = String(d.getMonth()+1).padStart(2,'0'), dd = String(d.getDate()).padStart(2,'0');
+    return `${y}-${m}-${dd}`;
+}
+function fmTime(h) {
+    const hh = Math.floor(h);
+    const mm = Math.round((h - hh) * 60);
+    return `${String(hh).padStart(2,'0')}:${String(mm).padStart(2,'0')}`;
+}
+// Génère les créneaux de 30 min localement à partir de SC. Utilisé tant que
+// le webhook n8n d'availability n'est pas branché.
+function localSlots(date) {
+    const windows = SC[date.getDay()];
+    if (!windows) return [];
+    const slots = [];
+    windows.forEach(([start, end]) => {
+        for (let h = start; h + 0.5 <= end; h += 0.5) slots.push(fmTime(h));
+    });
+    return slots;
+}
+
+const I = {
+    clock: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>,
+    video: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>,
+    cal:   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>,
+    cL:    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="15 18 9 12 15 6"/></svg>,
+    cR:    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9 6 15 12 9 18"/></svg>,
+    aL:    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>,
+    aR:    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>,
+    chk:   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>,
+    cs:    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+};
+
+function BW() {
+    const [vd, sVd] = useState(new Date);
+    const [sd, sSd] = useState(null);
+    const [st, sSt] = useState(null);
+    const [step, sStep] = useState('cal');
+    const [slots, setSlots] = useState([]);
+    const [slotsLoading, setSlotsLoading] = useState(false);
+    const [slotsError, setSlotsError] = useState(null);
+    const [ld, sLd] = useState(false);
+    const [er, sEr] = useState(null);
+    const [f, sF] = useState({ fn: '', ln: '', em: '', co: '', ob: [], ch: '' });
+    const [daysMap, setDaysMap] = useState({});
+
+    const up = (k, v) => {
+        if (k === 'ob') sF(p => ({ ...p, ob: p.ob.includes(v) ? p.ob.filter(o => o !== v) : [...p.ob, v] }));
+        else sF(p => ({ ...p, [k]: v }));
+    };
+    const vl = f.fn && f.ln && f.em && f.ob.length > 0;
+
+    useEffect(() => {
+        if (!window.N8N_DAYS_URL) return;
+        const y = vd.getFullYear(), m = vd.getMonth() + 1;
+        fetch(`${window.N8N_DAYS_URL}?year=${y}&month=${m}`, { method: 'GET', headers: { 'Accept': 'application/json' } })
+            .then(r => r.ok ? r.json() : {})
+            .then(data => setDaysMap(prev => ({ ...prev, ...(data.dates || {}) })))
+            .catch(() => {});
+    }, [vd]);
+
+    useEffect(() => {
+        if (!sd) return;
+        sSt(null);
+        // Si pas de webhook configuré, on génère localement (mode démo).
+        if (!window.N8N_AVAILABILITY_URL) {
+            setSlotsLoading(false); setSlotsError(null);
+            setSlots(localSlots(sd).map(t => ({ d: t })));
+            return;
+        }
+        setSlotsLoading(true); setSlotsError(null); setSlots([]);
+        fetch(`${window.N8N_AVAILABILITY_URL}?date=${fmDate(sd)}`, { method: 'GET', headers: { 'Accept': 'application/json' } })
+            .then(r => { if (!r.ok) throw new Error(); return r.json(); })
+            .then(data => { setSlots((data.slots || []).map(t => ({ d: t }))); })
+            .catch(() => setSlotsError(`Impossible de charger les créneaux. Écris-moi à ${window.CONTACT_FALLBACK_EMAIL}`))
+            .finally(() => setSlotsLoading(false));
+    }, [sd]);
+
+    const sub = async () => {
+        if (!vl || !sd || !st) return;
+        sLd(true); sEr(null);
+        const payload = {
+            firstName: f.fn, lastName: f.ln, email: f.em, company: f.co,
+            objectives: f.ob, challenge: f.ch,
+            date: fmDate(sd), time: st.d, timestamp: new Date().toISOString()
+        };
+        try {
+            if (window.N8N_BOOKING_URL) {
+                const r = await fetch(window.N8N_BOOKING_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+                if (!r.ok) throw new Error();
+                sStep('ok');
+            } else {
+                // Pas de webhook : on bascule sur mailto: pré-rempli.
+                const subject = `RDV ${fmDate(sd)} ${st.d} — ${f.fn} ${f.ln}`;
+                const lines = [
+                    `Bonjour Romain,`,
+                    ``,
+                    `Je souhaite réserver un échange.`,
+                    ``,
+                    `• Date : ${fm(sd)} à ${st.d}`,
+                    `• Nom : ${f.fn} ${f.ln}`,
+                    `• Email : ${f.em}`,
+                    f.co ? `• Entreprise / école : ${f.co}` : null,
+                    `• Objectif : ${f.ob.join(', ')}`,
+                    f.ch ? `` : null,
+                    f.ch ? `Contexte :` : null,
+                    f.ch ? f.ch : null,
+                    ``,
+                    `Merci !`
+                ].filter(Boolean).join('\n');
+                const href = `mailto:${window.CONTACT_FALLBACK_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines)}`;
+                window.location.href = href;
+                sStep('ok');
+            }
+        } catch (e) {
+            sEr(`Une erreur est survenue. Écris-moi à ${window.CONTACT_FALLBACK_EMAIL}`);
+        } finally { sLd(false); }
+    };
+
+    const dim = new Date(vd.getFullYear(), vd.getMonth()+1, 0).getDate();
+    const fd = new Date(vd.getFullYear(), vd.getMonth(), 1).getDay();
+    const off = fd === 0 ? 6 : fd - 1;
+    const cells = [];
+    for (let i = 0; i < off; i++) cells.push(<div key={`e${i}`} className="bw-cal-day bw-cal-day--empty"/>);
+    for (let d = 1; d <= dim; d++) {
+        const dt = new Date(vd.getFullYear(), vd.getMonth(), d);
+        const b = bok(dt, daysMap), t = isT(dt), s = sd && sd.toDateString() === dt.toDateString();
+        let c = 'bw-cal-day';
+        if (!b) c += ' bw-cal-day--off';
+        if (t) c += ' bw-cal-day--today';
+        if (s) c += ' bw-cal-day--sel';
+        cells.push(<button key={d} className={c} onClick={() => { if (b) { sSd(dt); sSt(null); } }} disabled={!b}>{d}</button>);
+    }
+
+    const Side = () => (
+        <div className="bw-sidebar">
+            <div className="bw-sidebar-label">Romain Ben</div>
+            <h3 className="bw-sidebar-title">Échangeons ensemble</h3>
+            <p className="bw-sidebar-sub">Étudiant ingénieur · OptimizIA.xyz</p>
+            <div className="bw-meta">
+                <div className="bw-meta-item"><div className="bw-meta-icon">{I.clock}</div><span>20 minutes</span></div>
+                <div className="bw-meta-item"><div className="bw-meta-icon">{I.video}</div><span>Visio (lien à la confirmation)</span></div>
+                <div className="bw-meta-item"><div className="bw-meta-icon">{I.cal}</div><span>Lun → Sam</span></div>
+            </div>
+            <div className="bw-divider"/>
+            <ul className="bw-bullets">
+                <li>Échanger sur ton projet ou ton parcours</li>
+                <li>Partager mon expérience dev, n8n, IA</li>
+                <li>Voir si une collab étudiante ou OptimizIA.xyz a du sens</li>
+            </ul>
+            <div className="bw-cta-box">
+                <p><strong>Sans engagement.</strong> Un simple échange, à toi de voir s'il y a une suite.</p>
+            </div>
+        </div>
+    );
+
+    const Dots = ({ cur }) => {
+        const idx = cur === 'cal' ? 0 : cur === 'form' ? 1 : 2;
+        return (
+            <div className="bw-steps">
+                {[0,1,2].map((d, i) => (
+                    <React.Fragment key={i}>
+                        {i > 0 && <div className={`bw-step-line${i <= idx ? ' active' : ''}`}/>}
+                        <div className={`bw-step-dot${i === idx ? ' active' : i < idx ? ' done' : ''}`}/>
+                    </React.Fragment>
+                ))}
+            </div>
+        );
+    };
+
+    if (step === 'cal') return (
+        <div className="bw-card">
+            <Side/>
+            <div className="bw-main">
+                <Dots cur="cal"/>
+                <h3 className="bw-section-title">Sélectionne une date et un créneau</h3>
+                <div className="bw-cal-nav">
+                    <button className="bw-cal-nav-btn" onClick={() => sVd(new Date(vd.getFullYear(), vd.getMonth()-1))}>{I.cL}</button>
+                    <span className="bw-cal-month">{MO[vd.getMonth()]} {vd.getFullYear()}</span>
+                    <button className="bw-cal-nav-btn" onClick={() => sVd(new Date(vd.getFullYear(), vd.getMonth()+1))}>{I.cR}</button>
+                </div>
+                <div className="bw-cal-grid">
+                    {DH.map(d => <div key={d} className="bw-cal-hdr">{d}</div>)}
+                    {cells}
+                </div>
+                {sd && (
+                    <div className="bw-slots">
+                        <div className="bw-slots-date">{fm(sd)}</div>
+                        {slotsLoading && <div className="bw-slots-loading"><div className="bw-spinner"/><span>Chargement...</span></div>}
+                        {slotsError && <div className="bw-slots-empty" style={{color: '#FCA5A5'}}>{slotsError}</div>}
+                        {!slotsLoading && !slotsError && slots.length > 0 && (
+                            <>
+                                <div className="bw-slots-grid">
+                                    {slots.map((s, i) => (
+                                        <button key={i} className={`bw-slot${st?.d === s.d ? ' bw-slot--sel' : ''}`} onClick={() => sSt(s)}>{s.d}</button>
+                                    ))}
+                                </div>
+                                {st && (
+                                    <div className="bw-continue-row">
+                                        <button className="bw-btn-continue" onClick={() => sStep('form')}>Continuer</button>
+                                    </div>
+                                )}
+                            </>
+                        )}
+                        {!slotsLoading && !slotsError && slots.length === 0 && <div className="bw-slots-empty">Aucun créneau disponible ce jour</div>}
+                    </div>
+                )}
+            </div>
+        </div>
+    );
+
+    if (step === 'form') return (
+        <div className="bw-card">
+            <Side/>
+            <div className="bw-main bw-form-container">
+                <Dots cur="form"/>
+                <button className="bw-back-btn" onClick={() => sStep('cal')}>{I.aL} Modifier le créneau</button>
+                <h3 className="bw-section-title">Tes informations</h3>
+                <div className="bw-selection-badge">{I.cal}<span>{fm(sd)} à <strong>{st?.d}</strong></span></div>
+                <div className="bw-form-row">
+                    <div className="bw-form-group">
+                        <label className="bw-form-label">Prénom *</label>
+                        <input className="bw-input" type="text" value={f.fn} onChange={e => up('fn', e.target.value)} placeholder="Ton prénom"/>
+                    </div>
+                    <div className="bw-form-group">
+                        <label className="bw-form-label">Nom *</label>
+                        <input className="bw-input" type="text" value={f.ln} onChange={e => up('ln', e.target.value)} placeholder="Ton nom"/>
+                    </div>
+                </div>
+                <div className="bw-form-row">
+                    <div className="bw-form-group">
+                        <label className="bw-form-label">Email *</label>
+                        <input className="bw-input" type="email" value={f.em} onChange={e => up('em', e.target.value)} placeholder="toi@exemple.com"/>
+                    </div>
+                    <div className="bw-form-group">
+                        <label className="bw-form-label">Entreprise / école <span className="bw-form-label-hint">(optionnel)</span></label>
+                        <input className="bw-input" type="text" value={f.co} onChange={e => up('co', e.target.value)} placeholder="Polytech, ton boulot…"/>
+                    </div>
+                </div>
+                <div className="bw-form-group">
+                    <label className="bw-form-label">Objectif principal * <span className="bw-form-label-hint">(un ou plusieurs)</span></label>
+                    <div className="bw-pills">
+                        {OB.map(o => (
+                            <label key={o} className={`bw-pill${f.ob.includes(o) ? ' checked' : ''}`}>
+                                <input type="checkbox" checked={f.ob.includes(o)} onChange={() => up('ob', o)}/>
+                                <span className="bw-pill-check">{I.cs}</span>
+                                {o}
+                            </label>
+                        ))}
+                    </div>
+                </div>
+                <div className="bw-form-group">
+                    <label className="bw-form-label">Quelques mots sur ton contexte <span className="bw-form-label-hint">(optionnel)</span></label>
+                    <textarea className="bw-input" value={f.ch} onChange={e => up('ch', e.target.value)} placeholder="Décris brièvement ton projet, ta question…" rows="3"/>
+                </div>
+                {er && <div className="bw-error">{er}</div>}
+                <div className="bw-btn-row">
+                    <button className="bw-btn bw-btn-ghost" onClick={() => sStep('cal')}>Retour</button>
+                    <button className="bw-btn bw-btn-emerald" disabled={!vl || ld} onClick={sub}>{ld ? 'Envoi…' : 'Confirmer le rendez-vous'}</button>
+                </div>
+            </div>
+        </div>
+    );
+
+    if (step === 'ok') return (
+        <div className="bw-card">
+            <Side/>
+            <div className="bw-main bw-confirm">
+                <div className="bw-confirm-icon">{I.chk}</div>
+                <h3 className="bw-confirm-title">Demande envoyée !</h3>
+                <p className="bw-confirm-text">{fm(sd)} à {st?.d}</p>
+                <p className="bw-confirm-text" style={{marginTop: '8px'}}>Je reviens vers toi à</p>
+                <span className="bw-confirm-email">{f.em}</span>
+                <p style={{marginTop: '20px', fontSize: '0.82rem', color: 'var(--text-muted)', lineHeight: '1.6'}}>
+                    Une question urgente ? <a href={`mailto:${window.CONTACT_FALLBACK_EMAIL}`} style={{color: 'var(--emerald)'}}>{window.CONTACT_FALLBACK_EMAIL}</a>
+                </p>
+            </div>
+        </div>
+    );
+
+    return null;
+}
+
+ReactDOM.createRoot(document.getElementById('booking-root')).render(<BW/>);
+</script>
+
+<!-- ═══ SCRIPTS GÉNÉRAUX ═══ -->
+<script>
+    // Lucide icons
+    function initLucide() { if (typeof lucide !== 'undefined') { lucide.createIcons(); } else { setTimeout(initLucide, 100); } }
+    initLucide();
+
+    // Sticky navbar
+    window.addEventListener('scroll', () => {
+        document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // GSAP reveal
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.reveal').forEach(el => {
+            gsap.fromTo(el,
+                { y: 36, opacity: 0 },
+                {
+                    scrollTrigger: { trigger: el, start: "top 88%", toggleActions: "play none none none" },
+                    y: 0, opacity: 1, duration: 1, ease: "power4.out",
+                    delay: el.closest('.benefits-grid') ? Array.from(el.parentElement.children).indexOf(el) * 0.12 : 0
+                }
+            );
+        });
+    } else {
+        document.querySelectorAll('.reveal').forEach(el => { el.style.opacity = '1'; });
+    }
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.parentElement;
+            const answer = item.querySelector('.faq-answer');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => {
+                i.classList.remove('open');
+                i.querySelector('.faq-answer').style.maxHeight = null;
+            });
+            if (!isOpen) {
+                item.classList.add('open');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        });
+    });
+
+    // Mobile menu
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            hamburger.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+    "@context": "https:\/\/schema.org",
+    "@type": "Dataset",
+    "name": "Top Semantic Entities",
+    "description": "Core knowledge graph entities extracted for LLM ingestion.",
+    "about": [
+        "Mathématiques Appliquées et Modélisation",
+        "Gmail",
+        "API",
+        "VPS",
+        "DCT",
+        "CSR",
+        "Polytech Nice Sophia",
+        "Rémy Ginoux",
+        "PME",
+        "ETI",
+        "HTML",
+        "CSS",
+        "JPEG",
+        "n8n",
+        "Knowledge Management",
+        "OptimizIA"
+    ]
+}

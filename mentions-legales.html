@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions légales | Romain Ben</title>
+    <meta name="description" content="Mentions légales du site personnel de Romain Ben — étudiant ingénieur à Polytech Nice Sophia, co-fondateur d'OptimizIA.xyz.">
+    <meta name="theme-color" content="#0F172A">
+    <link rel="canonical" href="https://romainben.cloud/mentions-legales.html">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@0.460.0"></script>
+
+    <style>
+        :root {
+            --bg: #0F172A;
+            --surface: #1E293B;
+            --emerald: #10B981;
+            --emerald-hover: #059669;
+            --emerald-light: rgba(16, 185, 129, 0.1);
+            --emerald-glow: rgba(16, 185, 129, 0.2);
+            --violet: #8B5CF6;
+            --violet-light: rgba(139, 92, 246, 0.1);
+            --text: #F1F5F9;
+            --text-muted: #94A3B8;
+            --text-subtle: #64748B;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(16, 185, 129, 0.4);
+            --glass: rgba(30, 41, 59, 0.72);
+
+            --max-width: 860px;
+            --radius: 12px;
+            --radius-lg: 20px;
+            --transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+            overflow-x: hidden;
+            min-height: 100vh;
+            background-image:
+                radial-gradient(ellipse at 18% 20%, rgba(16, 185, 129, 0.06) 0%, transparent 55%),
+                radial-gradient(ellipse at 82% 75%, rgba(139, 92, 246, 0.06) 0%, transparent 55%);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Inter Tight', sans-serif;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.025em;
+            color: var(--text);
+        }
+        p { font-weight: 300; color: var(--text-muted); }
+        a { text-decoration: none; color: inherit; }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* ═══ NAV ═══ */
+        .topbar {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .topbar-inner {
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .brand {
+            font-family: 'Inter Tight', sans-serif;
+            font-weight: 900;
+            font-size: 1.15rem;
+            color: var(--text);
+            letter-spacing: -0.02em;
+        }
+        .brand span { color: var(--emerald); }
+        .back-link {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            display: inline-flex; align-items: center; gap: 8px;
+            transition: var(--transition);
+        }
+        .back-link:hover { color: var(--emerald); }
+        .back-link svg { width: 15px; height: 15px; }
+
+        /* ═══ HEADER ═══ */
+        .page-header {
+            padding: 80px 0 40px;
+            text-align: center;
+        }
+        .overline {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.78rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--emerald);
+            display: inline-block;
+            margin-bottom: 18px;
+        }
+        .page-header h1 {
+            font-size: clamp(2.2rem, 5vw, 3rem);
+            margin-bottom: 14px;
+        }
+        .page-header p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        /* ═══ CONTENT ═══ */
+        .legal-content {
+            padding: 40px 0 100px;
+        }
+        .legal-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 48px 44px;
+        }
+        .legal-section + .legal-section {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+        }
+        .legal-section-num {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--emerald);
+            letter-spacing: 0.12em;
+            margin-bottom: 10px;
+        }
+        .legal-section h2 {
+            font-size: 1.35rem;
+            margin-bottom: 18px;
+        }
+        .legal-section p,
+        .legal-section li {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+        }
+        .legal-section p + p { margin-top: 14px; }
+        .legal-section strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .legal-section a {
+            color: var(--emerald);
+            border-bottom: 1px dashed rgba(16, 185, 129, 0.4);
+            transition: var(--transition);
+        }
+        .legal-section a:hover {
+            color: var(--emerald-hover);
+            border-bottom-color: var(--emerald-hover);
+        }
+        .legal-section ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 12px;
+        }
+        .legal-section ul li {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 8px;
+        }
+        .legal-section ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--emerald);
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 12px 24px;
+            margin-top: 16px;
+            font-size: 0.93rem;
+        }
+        .info-grid dt {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--text-subtle);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding-top: 2px;
+        }
+        .info-grid dd {
+            color: var(--text-muted);
+        }
+        .info-grid dd strong { color: var(--text); font-weight: 600; }
+
+        /* ═══ FOOTER ═══ */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 28px 0;
+        }
+        .footer-inner {
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 14px;
+        }
+        .footer-copy {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.78rem;
+            color: var(--text-subtle);
+        }
+        .footer-copy a {
+            color: var(--text-subtle);
+            transition: color 0.25s;
+        }
+        .footer-copy a:hover { color: var(--emerald); }
+        .footer-bottom-right {
+            display: flex; align-items: center; gap: 20px;
+            flex-wrap: wrap;
+        }
+        .footer-domains {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.78rem;
+            color: var(--text-subtle);
+        }
+        .footer-domains a {
+            color: var(--emerald);
+            transition: color 0.25s;
+        }
+        .footer-domains a:hover { color: var(--emerald-hover); }
+        .footer-domains a.muted {
+            color: var(--text-subtle);
+        }
+        .footer-domains a.muted:hover { color: var(--emerald); }
+        .footer-socials {
+            display: flex; gap: 10px;
+        }
+        .footer-socials a {
+            width: 34px; height: 34px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+        .footer-socials a:hover {
+            color: var(--emerald);
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+        }
+        .footer-socials svg { width: 15px; height: 15px; }
+
+        @media (max-width: 640px) {
+            .legal-card { padding: 32px 24px; }
+            .info-grid { grid-template-columns: 1fr; gap: 4px; }
+            .info-grid dt { padding-top: 10px; }
+            .footer-inner { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="topbar">
+    <div class="container topbar-inner">
+        <a href="index.html" class="brand">Romain <span>Ben</span></a>
+        <a href="index.html" class="back-link">
+            <i data-lucide="arrow-left"></i>
+            Retour à l'accueil
+        </a>
+    </div>
+</header>
+
+<section class="page-header">
+    <div class="container">
+        <span class="overline">Informations légales</span>
+        <h1>Mentions légales</h1>
+        <p>Conformément à la loi n°&nbsp;2004-575 du 21 juin 2004 (LCEN).</p>
+        <p style="margin-top: 8px;">Les informations obligatoires relatives à l'édition et à l'hébergement de ce site.</p>
+    </div>
+</section>
+
+<section class="legal-content">
+    <div class="container">
+        <div class="legal-card">
+
+            <div class="legal-section">
+                <div class="legal-section-num">01</div>
+                <h2>Éditeur du site</h2>
+                <p>Ce site personnel est édité par :</p>
+                <dl class="info-grid">
+                    <dt>Nom</dt><dd><strong>Romain Ben</strong></dd>
+                    <dt>Statut</dt><dd>Étudiant ingénieur — Polytech Nice Sophia, Maths Appliquées et Modélisation</dd>
+                    <dt>Localisation</dt><dd>Antibes, France</dd>
+                    <dt>Contact</dt><dd><a href="mailto:contact@romainben.cloud">contact@romainben.cloud</a></dd>
+                    <dt>Site web</dt><dd><a href="https://www.romainben.cloud" target="_blank" rel="noopener">www.romainben.cloud</a></dd>
+                </dl>
+            </div>
+
+            <div class="legal-section">
+                <div class="legal-section-num">02</div>
+                <h2>Directeur de la publication</h2>
+                <p>Le directeur de la publication est <strong>Romain Ben</strong>, joignable par courrier électronique à l'adresse ci-dessus.</p>
+            </div>
+
+            <div class="legal-section">
+                <div class="legal-section-num">03</div>
+                <h2>Hébergement</h2>
+                <p>Ce site est hébergé sur un VPS, déployé automatiquement depuis un dépôt GitHub privé.</p>
+                <dl class="info-grid">
+                    <dt>Hébergeur</dt><dd><strong>Hostinger International Ltd.</strong></dd>
+                    <dt>Adresse</dt><dd>61 Lordou Vironos Street, 6023 Larnaca, Chypre — serveur situé à Paris, France</dd>
+                    <dt>Site</dt><dd><a href="https://www.hostinger.fr" target="_blank" rel="noopener">www.hostinger.fr</a></dd>
+                </dl>
+            </div>
+
+            <div class="legal-section">
+                <div class="legal-section-num">04</div>
+                <h2>Propriété intellectuelle</h2>
+                <p>L'ensemble des contenus de ce site (textes, graphismes, logos, code, photographies) est la propriété exclusive de Romain Ben, sauf mention contraire explicite.</p>
+                <p>Toute reproduction, représentation, modification ou exploitation, totale ou partielle, sans autorisation écrite préalable est <strong>interdite</strong> et constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.</p>
+                <p>Les marques et logos cités (notamment <strong>OptimizIA.xyz</strong>) restent la propriété de leurs détenteurs respectifs.</p>
+            </div>
+
+            <div class="legal-section">
+                <div class="legal-section-num">05</div>
+                <h2>Données personnelles</h2>
+                <p>Ce site ne collecte <strong>aucune donnée personnelle à votre insu</strong>. Les seules informations transmises le sont à votre initiative, lorsque vous envoyez un e-mail via les liens de contact.</p>
+                <p>Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi « Informatique et Libertés », vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition aux données vous concernant. Pour exercer ces droits, adressez votre demande à <a href="mailto:contact@romainben.cloud">contact@romainben.cloud</a>.</p>
+                <p>En cas de réclamation, vous pouvez saisir la CNIL : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>.</p>
+            </div>
+
+            <div class="legal-section">
+                <div class="legal-section-num">06</div>
+                <h2>Cookies</h2>
+                <p>Ce site n'utilise <strong>aucun cookie de tracking</strong> ni outil d'analyse tiers (type Google Analytics). Seules des ressources statiques (polices, icônes) sont chargées depuis des CDN publics, ce qui peut entraîner des requêtes techniques standards sans collecte nominative.</p>
+            </div>
+
+            <div class="legal-section">
+                <div class="legal-section-num">07</div>
+                <h2>Liens externes</h2>
+                <p>Ce site contient des liens vers des sites tiers (LinkedIn, GitHub, OptimizIA.xyz, etc.). L'éditeur n'exerce aucun contrôle sur le contenu de ces sites et décline toute responsabilité quant aux informations qui y sont publiées.</p>
+            </div>
+
+            <div class="legal-section">
+                <div class="legal-section-num">08</div>
+                <h2>Responsabilité</h2>
+                <p>Les informations présentées sur ce site le sont à titre indicatif. Malgré le soin apporté à leur mise à jour, l'éditeur ne peut garantir l'exactitude, la complétude ou l'actualité des informations diffusées.</p>
+                <p>L'utilisation du site se fait sous la seule responsabilité de l'utilisateur.</p>
+            </div>
+
+            <div class="legal-section">
+                <div class="legal-section-num">09</div>
+                <h2>Droit applicable</h2>
+                <p>Les présentes mentions légales sont soumises au <strong>droit français</strong>. En cas de litige, et à défaut de résolution amiable, compétence est attribuée aux tribunaux français.</p>
+            </div>
+
+            <div class="legal-section">
+                <div class="legal-section-num">10</div>
+                <h2>Date de mise à jour</h2>
+                <p>Les présentes mentions légales ont été mises à jour le <strong>22 avril 2026</strong>. L'éditeur se réserve le droit de les modifier à tout moment, la version en ligne faisant foi.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container footer-inner">
+        <div class="footer-copy">© 2026 <a href="index.html">Romain Ben</a> · Tous droits réservés</div>
+        <div class="footer-bottom-right">
+            <div class="footer-domains"><a href="index.html" class="muted">romainben.cloud</a> · <a href="https://www.optimizia.xyz" target="_blank" rel="noopener">optimizia.xyz</a></div>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/romainben/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i data-lucide="linkedin"></i>
+                </a>
+                <a href="https://github.com/BnRomain" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i data-lucide="github"></i>
+                </a>
+                <a href="mailto:contact@romainben.cloud" aria-label="Email">
+                    <i data-lucide="mail"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    lucide.createIcons();
+</script>
+
+</body>
+</html>

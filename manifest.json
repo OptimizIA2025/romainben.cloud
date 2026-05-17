@@ -1,0 +1,45 @@
+{
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "name": "Romain Ben — Ingénieur Polytech & Co-fondateur OptimizIA",
+    "url": "https://www.romainben.cloud/",
+    "mainEntity": {
+        "@type": "Person",
+        "name": "Romain Ben",
+        "jobTitle": "Ingénieur MAM3, Polytech Nice Sophia · Co-fondateur OptimizIA",
+        "url": "https://www.romainben.cloud/",
+        "email": "contact@romainben.cloud",
+        "sameAs": [
+            "https://www.linkedin.com/in/romainben/",
+            "https://github.com/BnRomain",
+            "https://www.optimizia.xyz/"
+        ]
+    },
+    "offers": [
+        {
+            "@type": "Offer",
+            "name": "Automatisation de processus métier (n8n)",
+            "description": "Mise en place de workflows n8n hébergés sur VPS : tri email, notifications, génération de brouillons, synchronisation d'outils métier.",
+            "seller": { "@type": "Organization", "name": "OptimizIA", "url": "https://www.optimizia.xyz/" }
+        },
+        {
+            "@type": "Offer",
+            "name": "Intégration d'agents IA personnalisés",
+            "description": "Développement d'agents IA sur API OpenAI adaptés aux processus internes des PME/ETI.",
+            "seller": { "@type": "Organization", "name": "OptimizIA", "url": "https://www.optimizia.xyz/" }
+        },
+        {
+            "@type": "Offer",
+            "name": "Knowledge Management & structuration de l'information",
+            "description": "Cartographie et structuration des connaissances d'une organisation pour les rendre exploitables par des outils IA.",
+            "seller": { "@type": "Organization", "name": "OptimizIA", "url": "https://www.optimizia.xyz/" }
+        }
+    ],
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@optimizia.xyz",
+        "url": "https://www.optimizia.xyz/contact.html",
+        "availableLanguage": "French"
+    }
+}
