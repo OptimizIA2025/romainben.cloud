@@ -38,4 +38,4 @@ User-agent: CCBot
 Allow: /
 
 # Lien vers le plan du site (Sitemap)
-Sitemap: https://romainben.cloud/sitemap.xml
+Sitemap: https://www.romainben.cloud/sitemap.xml

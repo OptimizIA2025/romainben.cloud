@@ -29,7 +29,7 @@
     <link rel="icon" type="image/svg+xml" href="https://romainben.cloud/favicon.svg">
     <link rel="icon" type="image/png" sizes="192x192" href="https://romainben.cloud/favicon-192.png">
     <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
-    <link rel="preload" as="image" href="PhotoProfil.jpeg">
+    <link rel="preload" as="image" href="PhotoProfil.webp" type="image/webp">
 
     <script type="application/ld+json">
     {
@@ -1105,7 +1105,10 @@
                 </div>
             </div>
             <div class="hero-photo">
-                <img src="PhotoProfil.jpeg" alt="Portrait de Romain Ben, étudiant ingénieur MAM3 à Polytech Nice Sophia et co-fondateur d'OptimizIA" width="400" height="400" loading="eager" fetchpriority="high">
+                <picture>
+                    <source srcset="PhotoProfil.webp" type="image/webp">
+                    <img src="PhotoProfil.jpeg" alt="Portrait de Romain Ben, étudiant ingénieur MAM3 à Polytech Nice Sophia et co-fondateur d'OptimizIA" width="400" height="400" loading="eager" fetchpriority="high">
+                </picture>
             </div>
         </div>
     </div>
