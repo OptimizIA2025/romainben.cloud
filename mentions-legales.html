@@ -4,268 +4,223 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mentions légales | Romain Ben</title>
-    <meta name="description" content="Mentions légales du site personnel de Romain Ben — étudiant ingénieur à Polytech Nice Sophia, co-fondateur d'OptimizIA.xyz.">
-    <meta name="theme-color" content="#0F172A">
+    <meta name="description" content="Mentions légales du site personnel de Romain Ben, étudiant ingénieur MAM4 à Polytech Nice Sophia et co-fondateur d'OptimizIA.xyz.">
+    <meta name="theme-color" content="#FAFAF9">
     <link rel="canonical" href="https://romainben.cloud/mentions-legales.html">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="apple-touch-icon" href="/favicon.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Karla:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 
     <style>
+        /* ═══════════════════════════════════════════════════════════
+           DA « Trame ». Document juridique : la numerotation des
+           sections est conservee, elle sert de reference citable
+           (« article 5 »), ce n'est pas un ornement.
+           ═══════════════════════════════════════════════════════════ */
         :root {
-            --bg: #0F172A;
-            --surface: #1E293B;
-            --emerald: #10B981;
-            --emerald-hover: #059669;
-            --emerald-light: rgba(16, 185, 129, 0.1);
-            --emerald-glow: rgba(16, 185, 129, 0.2);
-            --violet: #8B5CF6;
-            --violet-light: rgba(139, 92, 246, 0.1);
-            --text: #F1F5F9;
-            --text-muted: #94A3B8;
-            --text-subtle: #64748B;
-            --border: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(16, 185, 129, 0.4);
-            --glass: rgba(30, 41, 59, 0.72);
+            --paper: #FAFAF9;
+            --surface: #FFFFFF;
+            --surface-2: #F2F2F0;
 
-            --max-width: 860px;
-            --radius: 12px;
-            --radius-lg: 20px;
-            --transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+            --ink: #101114;
+            --ink-2: #3A3E47;
+            --ink-3: #6B707B;
+            --muted: #8B909A;
+
+            --accent: #2B3FD9;
+            --accent-deep: #1E2FA8;
+            --accent-wash: #EDEFFE;
+
+            --rule: #DEDFE2;
+
+            --max-width: 940px;
+            --transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+
+            --f-display: 'Archivo', system-ui, sans-serif;
+            --f-body: 'Karla', system-ui, sans-serif;
+            --f-mono: 'JetBrains Mono', ui-monospace, monospace;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.65;
-            overflow-x: hidden;
-            min-height: 100vh;
-            background-image:
-                radial-gradient(ellipse at 18% 20%, rgba(16, 185, 129, 0.06) 0%, transparent 55%),
-                radial-gradient(ellipse at 82% 75%, rgba(139, 92, 246, 0.06) 0%, transparent 55%);
+            font-family: var(--f-body);
+            background: var(--paper);
+            color: var(--ink-2);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
         }
-
         h1, h2, h3 {
-            font-family: 'Inter Tight', sans-serif;
-            font-weight: 800;
-            line-height: 1.15;
-            letter-spacing: -0.025em;
-            color: var(--text);
+            font-family: var(--f-display);
+            font-weight: 800; line-height: 1.12;
+            letter-spacing: -0.03em; color: var(--ink);
+            text-wrap: balance;
         }
-        p { font-weight: 300; color: var(--text-muted); }
         a { text-decoration: none; color: inherit; }
+        :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
-        .container {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 28px;
-        }
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 28px; }
 
-        /* ═══ NAV ═══ */
-        .topbar {
-            padding: 28px 0;
-            border-bottom: 1px solid var(--border);
-        }
-        .topbar-inner {
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .brand {
-            font-family: 'Inter Tight', sans-serif;
-            font-weight: 900;
-            font-size: 1.15rem;
-            color: var(--text);
-            letter-spacing: -0.02em;
-        }
-        .brand span { color: var(--emerald); }
-        .back-link {
-            font-family: 'DM Mono', monospace;
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            display: inline-flex; align-items: center; gap: 8px;
-            transition: var(--transition);
-        }
-        .back-link:hover { color: var(--emerald); }
-        .back-link svg { width: 15px; height: 15px; }
-
-        /* ═══ HEADER ═══ */
-        .page-header {
-            padding: 80px 0 40px;
-            text-align: center;
-        }
         .overline {
-            font-family: 'DM Mono', monospace;
-            font-size: 0.78rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.16em;
-            color: var(--emerald);
-            display: inline-block;
-            margin-bottom: 18px;
-        }
-        .page-header h1 {
-            font-size: clamp(2.2rem, 5vw, 3rem);
-            margin-bottom: 14px;
-        }
-        .page-header p {
-            font-size: 1rem;
-            color: var(--text-muted);
-            max-width: 520px;
-            margin: 0 auto;
+            font-family: var(--f-mono);
+            font-size: 0.72rem; font-weight: 500;
+            text-transform: uppercase; letter-spacing: 0.18em;
+            color: var(--accent);
+            display: inline-block; margin-bottom: 14px;
         }
 
-        /* ═══ CONTENT ═══ */
-        .legal-content {
-            padding: 40px 0 100px;
+        /* ═══ TOPBAR ═══ */
+        .topbar {
+            border-bottom: 1px solid var(--ink);
+            padding: 18px 0;
+            background: var(--paper);
+            position: sticky; top: 0; z-index: 10;
         }
-        .legal-card {
-            background: var(--glass);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 48px 44px;
+        .topbar-inner { display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+        .brand {
+            font-family: var(--f-display);
+            font-size: 1.15rem; font-weight: 800;
+            letter-spacing: -0.035em; color: var(--ink);
         }
-        .legal-section + .legal-section {
-            margin-top: 40px;
-            padding-top: 40px;
-            border-top: 1px solid var(--border);
-        }
-        .legal-section-num {
-            font-family: 'DM Mono', monospace;
-            font-size: 0.75rem;
-            color: var(--emerald);
-            letter-spacing: 0.12em;
-            margin-bottom: 10px;
-        }
-        .legal-section h2 {
-            font-size: 1.35rem;
-            margin-bottom: 18px;
-        }
-        .legal-section p,
-        .legal-section li {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            line-height: 1.75;
-        }
-        .legal-section p + p { margin-top: 14px; }
-        .legal-section strong {
-            color: var(--text);
-            font-weight: 600;
-        }
-        .legal-section a {
-            color: var(--emerald);
-            border-bottom: 1px dashed rgba(16, 185, 129, 0.4);
+        .brand span { color: var(--accent); }
+        .back-link {
+            display: inline-flex; align-items: center; gap: 8px;
+            font-family: var(--f-mono);
+            font-size: 0.75rem; color: var(--ink-2);
+            border: 1px solid var(--rule);
+            padding: 8px 14px;
             transition: var(--transition);
         }
-        .legal-section a:hover {
-            color: var(--emerald-hover);
-            border-bottom-color: var(--emerald-hover);
+        .back-link:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+        .back-link svg { width: 14px; height: 14px; }
+
+        /* ═══ EN-TETE ═══ */
+        .page-header {
+            padding: 64px 0 44px;
+            border-bottom: 1px solid var(--ink);
+            background-image: repeating-linear-gradient(
+                to right,
+                transparent 0 calc(20% - 1px),
+                var(--rule) calc(20% - 1px) 20%
+            );
         }
-        .legal-section ul {
-            list-style: none;
-            padding-left: 0;
-            margin-top: 12px;
+        .page-header h1 { font-size: clamp(2rem, 4.5vw, 3rem); margin-bottom: 16px; }
+        .page-header p { color: var(--ink-3); font-size: 0.98rem; max-width: 66ch; }
+
+        /* ═══ CONTENU ═══ */
+        .legal-content { padding: 56px 0 80px; }
+        .legal-card {
+            background: var(--surface);
+            border: 1px solid var(--ink);
         }
-        .legal-section ul li {
+        .legal-section {
+            padding: 34px 38px;
+            border-bottom: 1px solid var(--rule);
             position: relative;
-            padding-left: 22px;
+        }
+        .legal-section:last-child { border-bottom: none; }
+        @media (max-width: 680px) { .legal-section { padding: 28px 22px; } }
+
+        /* Numero d'article : reference citable, pose en monospace sur un filet. */
+        .legal-section-num {
+            font-family: var(--f-mono);
+            font-size: 0.72rem; font-weight: 600;
+            letter-spacing: 0.14em;
+            color: var(--accent);
             margin-bottom: 8px;
         }
-        .legal-section ul li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--emerald);
+        .legal-section h2 {
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--rule);
         }
+        .legal-section p { margin-bottom: 12px; font-size: 0.95rem; color: var(--ink-2); max-width: 74ch; }
+        .legal-section p:last-child { margin-bottom: 0; }
+        .legal-section strong { color: var(--ink); font-weight: 700; }
+        .legal-section em { color: var(--ink-3); }
+        .legal-section a { color: var(--accent); font-weight: 600; border-bottom: 1px solid var(--accent); }
+        .legal-section a:hover { background: var(--accent-wash); }
+        .legal-section ul { margin: 0 0 14px; padding-left: 0; list-style: none; }
+        .legal-section ul li {
+            position: relative; padding-left: 20px;
+            font-size: 0.94rem; margin-bottom: 7px; color: var(--ink-2);
+        }
+        .legal-section ul li::before {
+            content: ''; position: absolute; left: 0; top: 0.72em;
+            width: 10px; height: 1px; background: var(--accent);
+        }
+        .legal-section code {
+            font-family: var(--f-mono);
+            font-size: 0.85em;
+            background: var(--surface-2);
+            border: 1px solid var(--rule);
+            padding: 1px 5px;
+            color: var(--ink);
+        }
+
+        /* Tableau de definitions : filets, pas de fond colore. */
         .info-grid {
             display: grid;
-            grid-template-columns: 160px 1fr;
-            gap: 12px 24px;
-            margin-top: 16px;
-            font-size: 0.93rem;
+            grid-template-columns: minmax(120px, 190px) 1fr;
+            border-top: 1px solid var(--rule);
+            margin-top: 14px;
         }
         .info-grid dt {
-            font-family: 'DM Mono', monospace;
-            font-size: 0.8rem;
-            color: var(--text-subtle);
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            padding-top: 2px;
+            font-family: var(--f-mono);
+            font-size: 0.72rem; font-weight: 500;
+            text-transform: uppercase; letter-spacing: 0.1em;
+            color: var(--ink-3);
+            padding: 12px 14px 12px 0;
+            border-bottom: 1px solid var(--rule);
         }
         .info-grid dd {
-            color: var(--text-muted);
+            font-size: 0.93rem; color: var(--ink-2);
+            padding: 12px 0;
+            border-bottom: 1px solid var(--rule);
         }
-        .info-grid dd strong { color: var(--text); font-weight: 600; }
+        .info-grid dd strong { color: var(--ink); }
+        @media (max-width: 560px) {
+            .info-grid { grid-template-columns: 1fr; }
+            .info-grid dt { border-bottom: none; padding-bottom: 2px; }
+        }
 
         /* ═══ FOOTER ═══ */
         footer {
-            border-top: 1px solid var(--border);
-            padding: 28px 0;
+            border-top: 1px solid var(--ink);
+            background: var(--surface);
+            padding: 24px 0;
         }
         .footer-inner {
             display: flex; justify-content: space-between; align-items: center;
             flex-wrap: wrap; gap: 14px;
         }
-        .footer-copy {
-            font-family: 'DM Mono', monospace;
-            font-size: 0.78rem;
-            color: var(--text-subtle);
-        }
-        .footer-copy a {
-            color: var(--text-subtle);
-            transition: color 0.25s;
-        }
-        .footer-copy a:hover { color: var(--emerald); }
-        .footer-bottom-right {
-            display: flex; align-items: center; gap: 20px;
-            flex-wrap: wrap;
-        }
-        .footer-domains {
-            font-family: 'DM Mono', monospace;
-            font-size: 0.78rem;
-            color: var(--text-subtle);
-        }
-        .footer-domains a {
-            color: var(--emerald);
-            transition: color 0.25s;
-        }
-        .footer-domains a:hover { color: var(--emerald-hover); }
-        .footer-domains a.muted {
-            color: var(--text-subtle);
-        }
-        .footer-domains a.muted:hover { color: var(--emerald); }
-        .footer-socials {
-            display: flex; gap: 10px;
-        }
+        .footer-copy { font-family: var(--f-mono); font-size: 0.74rem; color: var(--muted); }
+        .footer-copy a { color: var(--ink-2); }
+        .footer-copy a:hover { color: var(--accent); }
+        .footer-bottom-right { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+        .footer-domains { font-family: var(--f-mono); font-size: 0.74rem; color: var(--muted); }
+        .footer-domains a { color: var(--accent); transition: color 0.2s; }
+        .footer-domains a:hover { color: var(--accent-deep); }
+        .footer-domains a.muted { color: var(--muted); }
+        .footer-domains a.muted:hover { color: var(--accent); }
+        .footer-socials { display: flex; gap: 8px; }
         .footer-socials a {
-            width: 34px; height: 34px;
+            width: 31px; height: 31px;
             display: flex; align-items: center; justify-content: center;
-            border-radius: 50%;
-            border: 1px solid var(--border);
-            color: var(--text-muted);
+            border: 1px solid var(--rule); color: var(--ink-2);
             transition: var(--transition);
         }
-        .footer-socials a:hover {
-            color: var(--emerald);
-            border-color: var(--border-hover);
-            transform: translateY(-2px);
-        }
-        .footer-socials svg { width: 15px; height: 15px; }
+        .footer-socials a:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+        .footer-socials svg { width: 14px; height: 14px; }
+        @media (max-width: 600px) { .footer-inner { flex-direction: column; align-items: flex-start; } }
 
-        @media (max-width: 640px) {
-            .legal-card { padding: 32px 24px; }
-            .info-grid { grid-template-columns: 1fr; gap: 4px; }
-            .info-grid dt { padding-top: 10px; }
-            .footer-inner { flex-direction: column; align-items: flex-start; }
-        }
+        @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
     </style>
 </head>
 <body>
@@ -299,7 +254,7 @@
                 <p>Ce site personnel est édité par :</p>
                 <dl class="info-grid">
                     <dt>Nom</dt><dd><strong>Romain Ben</strong></dd>
-                    <dt>Statut</dt><dd>Étudiant ingénieur — Polytech Nice Sophia, Maths Appliquées et Modélisation</dd>
+                    <dt>Statut</dt><dd>Étudiant ingénieur MAM4, Polytech Nice Sophia, Maths Appliquées et Modélisation. Titulaire du Statut National Étudiant-Entrepreneur (SNEE), dispositif PEPITE.</dd>
                     <dt>Localisation</dt><dd>Antibes, France</dd>
                     <dt>Contact</dt><dd><a href="mailto:contact@romainben.cloud">contact@romainben.cloud</a></dd>
                     <dt>Site web</dt><dd><a href="https://www.romainben.cloud" target="_blank" rel="noopener">www.romainben.cloud</a></dd>
@@ -315,10 +270,10 @@
             <div class="legal-section">
                 <div class="legal-section-num">03</div>
                 <h2>Hébergement</h2>
-                <p>Ce site est hébergé sur un VPS, déployé automatiquement depuis un dépôt GitHub privé.</p>
+                <p>Ce site est hébergé sur un VPS, dans un conteneur nginx déployé depuis le dépôt GitHub public <a href="https://github.com/BnRomain/Mon-site-vitrine" target="_blank" rel="noopener">BnRomain/Mon-site-vitrine</a>.</p>
                 <dl class="info-grid">
                     <dt>Hébergeur</dt><dd><strong>Hostinger International Ltd.</strong></dd>
-                    <dt>Adresse</dt><dd>61 Lordou Vironos Street, 6023 Larnaca, Chypre — serveur situé à Paris, France</dd>
+                    <dt>Adresse</dt><dd>61 Lordou Vironos Street, 6023 Larnaca, Chypre. Serveur situé à Paris, France.</dd>
                     <dt>Site</dt><dd><a href="https://www.hostinger.fr" target="_blank" rel="noopener">www.hostinger.fr</a></dd>
                 </dl>
             </div>
@@ -362,13 +317,18 @@
             <div class="legal-section">
                 <div class="legal-section-num">06</div>
                 <h2>Cookies</h2>
-                <p>Ce site n'utilise <strong>aucun cookie de tracking</strong> ni outil d'analyse tiers (type Google Analytics). Seules des ressources statiques (polices, icônes) sont chargées depuis des CDN publics, ce qui peut entraîner des requêtes techniques standards sans collecte nominative.</p>
+                <p>Ce site n'utilise <strong>aucun cookie</strong> ni outil d'analyse tiers (type Google Analytics). Seules des ressources statiques sont chargées depuis des CDN publics, ce qui peut entraîner des requêtes techniques standards (adresse IP, en-têtes du navigateur) sans collecte nominative :</p>
+                <ul>
+                    <li><strong>Google Fonts</strong> (<code>fonts.googleapis.com</code>, <code>fonts.gstatic.com</code>) pour les polices d'affichage</li>
+                    <li><strong>cdnjs</strong> (<code>cdnjs.cloudflare.com</code>) pour la bibliothèque d'animation GSAP</li>
+                </ul>
             </div>
 
             <div class="legal-section">
                 <div class="legal-section-num">07</div>
                 <h2>Liens externes</h2>
-                <p>Ce site contient des liens vers des sites tiers (LinkedIn, GitHub, OptimizIA.xyz, etc.). L'éditeur n'exerce aucun contrôle sur le contenu de ces sites et décline toute responsabilité quant aux informations qui y sont publiées.</p>
+                <p>Ce site contient des liens vers des sites tiers, notamment LinkedIn, GitHub, <strong>OptimizIA.xyz</strong>, <strong>ginoux.xyz</strong>, <strong>SEOPlus!</strong> (<code>seoplus.optimizia.xyz</code>), Vercel et Streamlit pour les démonstrations de projets. L'éditeur n'exerce aucun contrôle sur le contenu de ces sites et décline toute responsabilité quant aux informations qui y sont publiées.</p>
+                <p>Le badge « Audité par SEOPlus! » affiché en pied de page renvoie vers SEOPlus!, un outil d'audit édité par OptimizIA.xyz, dont Romain Ben est co-fondateur. Ce lien comporte des paramètres de mesure d'audience (UTM) qui ne collectent aucune donnée nominative.</p>
             </div>
 
             <div class="legal-section">
@@ -387,7 +347,7 @@
             <div class="legal-section">
                 <div class="legal-section-num">10</div>
                 <h2>Date de mise à jour</h2>
-                <p>Les présentes mentions légales ont été mises à jour le <strong>17 mai 2026</strong>. L'éditeur se réserve le droit de les modifier à tout moment, la version en ligne faisant foi.</p>
+                <p>Les présentes mentions légales ont été mises à jour le <strong>26 juillet 2026</strong>. L'éditeur se réserve le droit de les modifier à tout moment, la version en ligne faisant foi.</p>
             </div>
 
         </div>
@@ -398,7 +358,7 @@
     <div class="container footer-inner">
         <div class="footer-copy">© 2026 <a href="index.html">Romain Ben</a> · Tous droits réservés</div>
         <div class="footer-bottom-right">
-            <div class="footer-domains"><a href="index.html" class="muted">romainben.cloud</a> · <a href="https://www.optimizia.xyz" target="_blank" rel="noopener">optimizia.xyz</a></div>
+            <div class="footer-domains"><a href="index.html" class="muted">romainben.cloud</a> · <a href="https://www.ginoux.xyz" target="_blank" rel="noopener">ginoux.xyz</a> · <a href="https://www.optimizia.xyz" target="_blank" rel="noopener">optimizia.xyz</a></div>
             <div class="footer-socials">
                 <a href="https://www.linkedin.com/in/romainben/" target="_blank" rel="noopener" aria-label="LinkedIn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>

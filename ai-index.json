@@ -1,12 +1,38 @@
 {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "romainben.cloud",
-    "aiVisibilityScore": 100,
+    "@id": "https://www.romainben.cloud/#website",
+    "name": "Romain Ben",
+    "alternateName": "romainben.cloud",
+    "url": "https://www.romainben.cloud/",
+    "inLanguage": "fr-FR",
     "isMachineReadable": true,
-    "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://romainben.cloud/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-    }
+    "dateModified": "2026-07-26",
+    "description": "Site personnel de Romain Ben, étudiant ingénieur MAM4 à Polytech Nice Sophia et co-fondateur d'OptimizIA.xyz. Automatisation n8n, agents IA, SaaS et mathématiques appliquées.",
+    "author": {
+        "@type": "Person",
+        "name": "Romain Ben",
+        "url": "https://www.romainben.cloud/"
+    },
+    "mainEntityOfPage": "https://www.romainben.cloud/",
+    "hasPart": [
+        {
+            "@type": "WebPage",
+            "name": "Accueil",
+            "url": "https://www.romainben.cloud/",
+            "description": "Parcours, compétences, réalisations en production, projets et FAQ."
+        },
+        {
+            "@type": "WebPage",
+            "name": "Contact et prise de rendez-vous",
+            "url": "https://www.romainben.cloud/contact-rom.html",
+            "description": "Réservation d'un échange de 20 minutes en visio, du lundi au samedi."
+        },
+        {
+            "@type": "WebPage",
+            "name": "Mentions légales",
+            "url": "https://www.romainben.cloud/mentions-legales.html",
+            "description": "Éditeur, hébergement, propriété intellectuelle, données personnelles et cookies."
+        }
+    ]
 }

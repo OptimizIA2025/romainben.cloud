@@ -3,17 +3,17 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.romainben.cloud/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.romainben.cloud/PhotoProfil.jpeg</image:loc>
-      <image:title>Romain Ben — Co-fondateur OptimizIA | Expert Automatisation &amp; IA</image:title>
+      <image:title>Romain Ben, co-fondateur OptimizIA.xyz | Automatisation &amp; IA</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://www.romainben.cloud/contact-rom.html</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
