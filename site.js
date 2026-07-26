@@ -100,8 +100,56 @@
 
     var ATTRS = window.RB_I18N_ATTR || {};
 
+    /* Certaines phrases du tunnel sont assemblees autour d'une valeur (une date,
+       une adresse) : leur texte complet n'est jamais deux fois le meme, donc on
+       ne peut pas le prendre comme cle. On y remplace des FRAGMENTS, en gardant
+       la valeur d'origine pour pouvoir revenir au francais. */
+    var FRAG = window.RB_I18N_FRAGMENTS || null;
+    var fragNodes = [];
+
+    /* Un fragment d'un seul mot est compare avec des limites de mot : sans ca
+       « mai » remplacerait les trois premieres lettres de « mail ». Les
+       fragments a plusieurs mots restent en comparaison litterale. */
+    var fragRe = {};
+    if (FRAG) {
+        Object.keys(FRAG).forEach(function (fr) {
+            if (!/\s/.test(fr)) {
+                fragRe[fr] = new RegExp('\\b' + fr.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'g');
+            }
+        });
+    }
+    function hasFrag(v, fr) {
+        return fragRe[fr] ? new RegExp(fragRe[fr].source, '').test(v) : v.indexOf(fr) !== -1;
+    }
+    function swapFrag(v, fr) {
+        return fragRe[fr] ? v.replace(fragRe[fr], FRAG[fr]) : v.split(fr).join(FRAG[fr]);
+    }
+    function collectFragments(scope) {
+        if (!FRAG) return;
+        var walker = document.createTreeWalker(scope, NodeFilter.SHOW_TEXT, null);
+        var n;
+        while ((n = walker.nextNode())) {
+            var v = n.nodeValue;
+            if (!v || !v.trim()) continue;
+            if (known && known.has(n)) continue;
+            for (var fr in FRAG) {
+                if (hasFrag(v, fr)) {
+                    if (known) known.add(n);
+                    fragNodes.push({ node: n, fr: v });
+                    break;
+                }
+            }
+        }
+    }
+
     function applyLang(lang) {
         var en = lang === 'en';
+        fragNodes.forEach(function (f) {
+            if (!en) { f.node.nodeValue = f.fr; return; }
+            var v = f.fr;
+            for (var fr in FRAG) { v = swapFrag(v, fr); }
+            f.node.nodeValue = v;
+        });
         nodes.forEach(function (n) {
             if (n.mode === 'text') {
                 n.node.nodeValue = en ? ' ' + n.en + ' ' : n.fr;
@@ -131,6 +179,8 @@
 
     /* Francais par defaut, comme le theme clair : le site s'affiche tel qu'il a
        ete ecrit tant que le visiteur n'a pas demande l'anglais. */
+    collectFragments(document.body);
+
     var stored;
     try { stored = localStorage.getItem('rb-lang'); } catch (e) { stored = null; }
     applyLang(stored === 'en' ? 'en' : 'fr');
@@ -157,9 +207,10 @@
             if (!fresh || pending) return;
             pending = setTimeout(function () {
                 pending = null;
-                var before = nodes.length;
+                var before = nodes.length + fragNodes.length;
                 collect(document);
-                if (nodes.length > before) applyLang('en');
+                collectFragments(document.body);
+                if (nodes.length + fragNodes.length > before) applyLang('en');
             }, 60);
         }).observe(document.body, { childList: true, subtree: true });
     }

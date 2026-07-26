@@ -10,7 +10,7 @@ window.RB_I18N = {
     "Romain Ben<br><span class=\"highlight\">étudiant ingénieur</span><br>&amp; entrepreneur.":
         "Romain Ben<br><span class=\"highlight\">engineering student</span><br>&amp; entrepreneur.",
     "étudiant ingénieur": "engineering student",
-    "Maths appliquées, automatisation et IA. Ce sont les ingrédients principaux que j'utilise pour proposer via <strong style=\"color: var(--ink)\">OptimizIA.xyz</strong>, des solutions innovantes pour mes clients ! Six systèmes en production, du workflow de veille au SaaS avec paiement.":
+    "Maths appliquées, automatisation et IA. Ce sont les ingrédients principaux que j'utilise pour proposer via <strong style=\"color: var(--ink)\">OptimizIA.xyz</strong>, des solutions innovantes pour mes clients ! Sept systèmes en production, du workflow de veille au SaaS avec paiement.":
         "Applied mathematics, automation and AI. Those are the main ingredients I use to build innovative solutions for our clients through <strong style=\"color: var(--ink)\">OptimizIA.xyz</strong>. Seven systems in production, from a monitoring workflow to a SaaS with payments.",
     "Me contacter": "Get in touch",
     "Découvrir OptimizIA.xyz": "Discover OptimizIA.xyz",

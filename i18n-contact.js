@@ -16,7 +16,7 @@ window.RB_I18N = {
     /* Section reservation */
     "Réservation": "Booking",
     "Choisis ton créneau": "Pick your slot",
-    "Le calendrier reflète mes disponibilités habituelles, semaine d'école et OptimizIA comprises. Sélectionne un jour, puis un horaire.":
+    "Le calendrier reflète mes disponibilités habituelles, semaine d'école et OptimizIA.xyz comprises. Sélectionne un jour, puis un horaire.":
         "The calendar reflects my usual availability, including school weeks and OptimizIA work. Choose a day, then a time.",
 
     /* Tunnel de reservation, rendu en JavaScript */
@@ -27,24 +27,36 @@ window.RB_I18N = {
     "Partager mon expérience dev, n8n, IA": "Share my experience in development, n8n and AI",
     "Voir si une collab étudiante ou OptimizIA.xyz a du sens": "See whether a student collaboration or an OptimizIA.xyz engagement makes sense",
     "Chargement des disponibilités...": "Loading availability...",
+    "Chargement du calendrier...": "Loading the calendar...",
     "Aucun créneau disponible ce jour, essaie une autre date.": "No slot available that day, try another date.",
     "Choisis une date et un créneau": "Choose a date and a slot",
     "Modifier le créneau": "Change slot",
-    "Ton prénom *": "Your first name *",
-    "Ton prénom": "Your first name",
+    "Lun → Sam": "Mon → Sat",
     "Demande envoyée !": "Request sent",
     "Je reviens vers toi à": "I will get back to you at",
-    "Une erreur est survenue. Écris-moi à": "Something went wrong. Email me at",
     "Continuer": "Continue",
     "Retour": "Back",
-    "Confirmer": "Confirm",
-    "Envoyer": "Send",
-    "Projet étudiant": "Student project",
 
-    /* Mois du calendrier */
-    "janvier": "January", "février": "February", "mars": "March", "avril": "April",
-    "mai": "May", "juin": "June", "juillet": "July", "août": "August",
-    "septembre": "September", "octobre": "October", "novembre": "November", "décembre": "December",
+    /* Formulaire */
+    "Tes informations": "Your details",
+    "Ton prénom *": "Your first name *",
+    "Ton nom *": "Your last name *",
+    "Ton email *": "Your email *",
+    "Entreprise / école <span class=\"bw-form-label-hint\">(optionnel)</span>":
+        "Company / school <span class=\"bw-form-label-hint\">(optional)</span>",
+    "Contexte * <span class=\"bw-form-label-hint\">(un ou plusieurs)</span>":
+        "Context * <span class=\"bw-form-label-hint\">(one or more)</span>",
+    "(optionnel)": "(optional)",
+    "(un ou plusieurs)": "(one or more)",
+    "Confirmer le rendez-vous": "Confirm the meeting",
+    "Envoi…": "Sending…",
+
+    /* Pastilles de contexte */
+    "Projet étudiant": "Student project",
+    "Collaboration tech": "Technical collaboration",
+    "Mission OptimizIA.xyz": "OptimizIA.xyz engagement",
+    "Stage ou alternance": "Internship or apprenticeship",
+    "Simple bonjour": "Just saying hello",
 
     /* Navigation et pied de page */
     "Parcours": "Background",
@@ -81,6 +93,23 @@ window.RB_I18N = {
     "Et si aucun créneau ne me convient ?": "What if none of the slots work for me?",
     "Pas de souci : envoie-moi un mail à <a href=\"mailto:contact@romainben.cloud\">contact@romainben.cloud</a> avec tes disponibilités, je te propose autre chose.":
         "No problem: email me at <a href=\"mailto:contact@romainben.cloud\">contact@romainben.cloud</a> with your availability and I will suggest something else."
+};
+
+/* Phrases assemblees autour d'une valeur variable (mois + annee, date choisie,
+   adresse e-mail) : impossibles a prendre comme cle entiere, site.js y remplace
+   ces fragments. L'ordre compte : les libelles longs passent avant les mots
+   isoles pour ne pas etre coupes en deux. */
+window.RB_I18N_FRAGMENTS = {
+    " est réservé. Tu recevras un lien Google Meet.": " is booked. You will receive a Google Meet link.",
+    "Une erreur est survenue. Écris-moi à ": "Something went wrong. Email me at ",
+    "Sans engagement. Un simple échange, à toi de voir s'": "No commitment. Just a conversation, then it is up to you whether ",
+
+    "janvier": "January", "février": "February", "mars": "March", "avril": "April",
+    "juillet": "July", "juin": "June", "août": "August", "septembre": "September",
+    "octobre": "October", "novembre": "November", "décembre": "December", "mai": "May",
+
+    "lundi": "Monday", "mardi": "Tuesday", "mercredi": "Wednesday", "jeudi": "Thursday",
+    "vendredi": "Friday", "samedi": "Saturday", "dimanche": "Sunday"
 };
 
 window.RB_I18N_ATTR = {

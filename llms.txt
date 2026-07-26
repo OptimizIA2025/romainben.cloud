@@ -90,6 +90,14 @@ Français langue maternelle, anglais niveau B2, espagnol niveau A2.
 - Contact / RDV : https://www.romainben.cloud/contact-rom.html
 - Mentions légales : https://www.romainben.cloud/mentions-legales.html
 
+## Fichiers structurés pour les agents
+
+Ces fichiers ne sont liés depuis aucune page, ils existent pour la lecture machine :
+- **Index des pages** : https://www.romainben.cloud/ai-index.json (les 4 pages du site, avec leur description)
+- **Entités du graphe de connaissance** : https://www.romainben.cloud/entities.json
+- **Profil et offres en JSON-LD** : https://www.romainben.cloud/manifest.json (Schema.org ProfilePage, pas un manifeste d'application web)
+- **Contact sécurité** : https://www.romainben.cloud/.well-known/security.txt
+
 ## Philosophie
 
 Prendre un problème concret (boîte mail qui déborde, traitement d'image à optimiser, site à livrer, tâche répétitive à automatiser) et sortir une solution qui marche, sans sur-ingénierie, sans frameworks inutiles.
