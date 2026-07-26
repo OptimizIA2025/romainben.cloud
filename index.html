@@ -24,11 +24,11 @@
     <meta name="twitter:title" content="Romain Ben | Co-fondateur OptimizIA.xyz">
     <meta name="twitter:image" content="https://www.romainben.cloud/PhotoProfil.jpeg">
 
-    <link rel="shortcut icon" href="/favicon-48.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="https://romainben.cloud/favicon-48.png">
-    <link rel="icon" type="image/svg+xml" href="https://romainben.cloud/favicon.svg">
-    <link rel="icon" type="image/png" sizes="192x192" href="https://romainben.cloud/favicon-192.png">
-    <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+    <link rel="shortcut icon" href="/favicon-48.png?v=2">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://romainben.cloud/favicon-48.png?v=2">
+    <link rel="icon" type="image/svg+xml" href="https://romainben.cloud/favicon.svg?v=2">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://romainben.cloud/favicon-192.png?v=2">
+    <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png?v=2">
     <link rel="preload" as="image" href="PhotoProfil.webp" type="image/webp">
 
     <script type="application/ld+json">
@@ -225,7 +225,69 @@
             --f-display: 'Archivo', system-ui, sans-serif;
             --f-body: 'Karla', system-ui, sans-serif;
             --f-mono: 'JetBrains Mono', ui-monospace, monospace;
+            --on-accent: #FFFFFF;
+            --nav-bg: rgba(250, 250, 249, 0.94);
+            --seo-wash: #FFF8F3;
+            --seo-wash-2: #FFF2E8;
+            --on-fill-2: #B9BDC7;
+            --on-fill-accent: #8FA0FF;
+            --fill-hover: #1B1D22;
+            --chip-bg: rgba(250, 250, 249, .08);
+            --chip-fg: rgba(250, 250, 249, .86);
+            --chip-br: rgba(250, 250, 249, .2);
+            color-scheme: light;
         }
+        /* ═══════════════════════════════════════════════════════════
+           Theme sombre. Les tokens s'INVERSENT : --ink devient clair et
+           --paper devient sombre. Toutes les regles ecrites
+           ackground: var(--ink); color: var(--paper) basculent donc
+           d'elles-memes en pave clair sur fond sombre, sans etre reecrites.
+           L'accent passe en periwinkle clair, donc le texte pose DESSUS
+           devient sombre : c'est le role de --on-accent.
+           ═══════════════════════════════════════════════════════════ */
+        :root[data-theme="dark"] {
+            --paper: #0E0F12;
+            --surface: #16181D;
+            --surface-2: #1E2128;
+
+            --ink: #F4F4F3;
+            --ink-2: #C6CAD2;
+            --ink-3: #969CA6;
+            --muted: #767C86;
+
+            --accent: #8B98FF;
+            --accent-deep: #AEB8FF;
+            --accent-wash: #1A1F35;
+
+            --rule: #2B2F37;
+
+            --on-accent: #0E0F12;
+            --nav-bg: rgba(14, 15, 18, 0.94);
+            --seo-wash: #241A12;
+            --seo-wash-2: #2E2117;
+            --on-fill-2: #4A4E57;
+            --on-fill-accent: #2B3FD9;
+            --fill-hover: #E6E6E3;
+            --chip-bg: rgba(16, 17, 20, .07);
+            --chip-fg: rgba(16, 17, 20, .86);
+            --chip-br: rgba(16, 17, 20, .2);
+            color-scheme: dark;
+        }
+
+        /* Bascules theme et langue. */
+        .site-controls { display: flex; align-items: center; gap: 6px; }
+        .site-ctrl {
+            display: inline-flex; align-items: center; justify-content: center;
+            min-width: 34px; height: 32px; padding: 0 9px;
+            background: none; border: 1px solid var(--rule); color: var(--ink-2);
+            font-family: var(--f-mono); font-size: 0.72rem; font-weight: 600;
+            line-height: 1; cursor: pointer; transition: var(--transition);
+        }
+        .site-ctrl:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+        .site-ctrl svg { width: 15px; height: 15px; }
+        .ico-sun { display: none; }
+        :root[data-theme="dark"] .ico-sun { display: inline-block; }
+        :root[data-theme="dark"] .ico-moon { display: none; }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
@@ -297,7 +359,7 @@
             border-bottom: 1px solid transparent;
         }
         nav.scrolled {
-            background: rgba(250, 250, 249, 0.94);
+            background: var(--nav-bg);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             padding: 11px 0;
@@ -335,7 +397,7 @@
 
         .nav-cta {
             background: var(--accent);
-            color: #fff !important;
+            color: var(--on-accent) !important;
             padding: 10px 20px;
             font-family: var(--f-mono);
             font-weight: 600 !important;
@@ -343,7 +405,7 @@
             letter-spacing: 0.02em;
             margin-left: 6px;
         }
-        .nav-cta:hover { background: var(--ink); color: #fff !important; }
+        .nav-cta:hover { background: var(--ink); color: var(--paper) !important; }
 
         /* Hamburger */
         .hamburger {
@@ -383,7 +445,7 @@
         }
         .mobile-menu a:hover { color: var(--accent); }
         .mobile-menu .mobile-cta {
-            background: var(--accent); color: #fff;
+            background: var(--accent); color: var(--on-accent);
             padding: 15px 30px; border: none;
             font-family: var(--f-mono); font-size: 0.85rem; font-weight: 600;
             margin-top: 22px; width: auto;
@@ -419,7 +481,7 @@
             border: 1px solid var(--ink);
         }
         .btn-outline:hover { background: var(--ink); color: var(--paper); }
-        .btn-violet { background: var(--accent); color: #fff; }
+        .btn-violet { background: var(--accent); color: var(--on-accent); }
         .btn-violet:hover { background: var(--accent-deep); }
 
         /* ═══ HERO ═══ */
@@ -544,7 +606,7 @@
         .skill-icon {
             width: 42px; height: 42px;
             background: var(--accent);
-            color: #fff;
+            color: var(--on-accent);
             display: flex; align-items: center; justify-content: center;
             margin-bottom: 20px;
         }
@@ -730,28 +792,28 @@
             font-size: 1.5rem; font-weight: 800;
             margin-bottom: 20px;
             letter-spacing: -0.035em;
-            color: #fff;
+            color: var(--paper);
         }
-        .optimizia-logo span { color: #8FA0FF; }
+        .optimizia-logo span { color: var(--on-fill-accent); }
         .optimizia-block h2 {
             font-size: clamp(1.7rem, 3.2vw, 2.2rem);
-            color: #fff;
+            color: var(--paper);
             margin-bottom: 20px;
         }
         .optimizia-block p {
             font-size: 1.01rem;
-            color: #B9BDC7;
+            color: var(--on-fill-2);
             margin-bottom: 18px;
             line-height: 1.8;
         }
-        .optimizia-block p strong { color: #fff; font-weight: 700; }
+        .optimizia-block p strong { color: var(--paper); font-weight: 700; }
         .optimizia-block p a {
-            color: #8FA0FF; font-weight: 600;
-            border-bottom: 1px solid #8FA0FF;
+            color: var(--on-fill-accent); font-weight: 600;
+            border-bottom: 1px solid var(--on-fill-accent);
         }
         .optimizia-cta { margin-top: 12px; }
-        .optimizia-cta .btn-emerald { background: #fff; color: var(--ink); }
-        .optimizia-cta .btn-emerald:hover { background: #8FA0FF; color: var(--ink); }
+        .optimizia-cta .btn-emerald { background: var(--paper); color: var(--ink); }
+        .optimizia-cta .btn-emerald:hover { background: var(--on-fill-accent); color: var(--ink); }
         @media (max-width: 768px) { .optimizia-block { padding: 40px 26px; } }
 
         /* ═══ CONTACT ═══ */
@@ -774,17 +836,17 @@
         .contact-card:hover { background: var(--surface-2); }
         /* La carte pro est inversee : un seul aplat d'encre, la ou porte la decision. */
         .contact-card.violet { background: var(--ink); }
-        .contact-card.violet:hover { background: #1B1D22; }
-        .contact-card.violet h3 { color: #fff; }
-        .contact-card.violet p { color: #B9BDC7; }
+        .contact-card.violet:hover { background: var(--fill-hover); }
+        .contact-card.violet h3 { color: var(--paper); }
+        .contact-card.violet p { color: var(--on-fill-2); }
         .contact-icon {
             width: 46px; height: 46px;
             background: var(--accent);
-            color: #fff;
+            color: var(--on-accent);
             display: flex; align-items: center; justify-content: center;
             margin-bottom: 20px;
         }
-        .contact-card.violet .contact-icon { background: #fff; color: var(--ink); }
+        .contact-card.violet .contact-icon { background: var(--paper); color: var(--ink); }
         .contact-icon svg { width: 22px; height: 22px; }
         .contact-card h3 { font-size: 1.14rem; margin-bottom: 10px; }
         .contact-card p {
@@ -795,8 +857,8 @@
             flex: 1;
         }
         .contact-card .btn { width: 100%; }
-        .contact-card.violet .btn-violet { background: #fff; color: var(--ink); }
-        .contact-card.violet .btn-violet:hover { background: #8FA0FF; }
+        .contact-card.violet .btn-violet { background: var(--paper); color: var(--ink); }
+        .contact-card.violet .btn-violet:hover { background: var(--on-fill-accent); }
         @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
 
         /* Renvoi SEOPlus! : garde l'orange de la marque SEOPlus pour se lire
@@ -806,11 +868,11 @@
             margin: 26px 0 0;
             display: flex; align-items: center; gap: 22px;
             padding: 26px 28px;
-            background: #FFF8F3;
+            background: var(--seo-wash);
             border: 1px solid #F0A56A;
             transition: var(--transition);
         }
-        .contact-seoplus:hover { border-color: #EA580C; background: #FFF2E8; }
+        .contact-seoplus:hover { border-color: #EA580C; background: var(--seo-wash-2); }
         .contact-seoplus-icon {
             width: 44px; height: 44px; flex-shrink: 0;
             background: #F97316;
@@ -863,7 +925,7 @@
             transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .faq-icon svg { width: 12px; height: 12px; }
-        .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--accent); border-color: var(--accent); color: #fff; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
         /* Accordeon en grid-template-rows plutot qu'en max-height : la hauteur
            n'est plus une valeur en dur calculee en JS, et l'animation ne
            declenche pas de reflow a chaque frame. */
@@ -1000,7 +1062,23 @@
             * { animation: none !important; transition: none !important; }
         }
 
-    </style>
+    </style>    <script>
+    // Pose le theme avant le premier rendu : sans ca, la page clignote en clair
+    // puis bascule en sombre. Choix explicite de l'utilisateur d'abord,
+    // preference systeme ensuite.
+    (function () {
+        try {
+            var t = localStorage.getItem('rb-theme');
+            if (t !== 'dark' && t !== 'light') {
+                t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            document.documentElement.setAttribute('data-theme', t);
+            if (localStorage.getItem('rb-lang') === 'en') {
+                document.documentElement.setAttribute('data-lang', 'en');
+            }
+        } catch (e) {}
+    })();
+    </script>
 </head>
 <body>
 
@@ -1025,6 +1103,13 @@
                 </a>
             </div>
             <a href="contact-rom.html" class="nav-cta">Me contacter</a>
+        </div>
+        <div class="site-controls">
+            <button type="button" class="site-ctrl" id="lang-toggle" aria-label="Switch to English">EN</button>
+            <button type="button" class="site-ctrl" id="theme-toggle" aria-label="Changer de theme">
+                <svg class="ico-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/></svg>
+                <svg class="ico-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </button>
         </div>
         <button class="hamburger" aria-label="Menu" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -1157,8 +1242,9 @@
                     <span class="skill-tag">Claude API</span>
                     <span class="skill-tag">Agents LLM</span>
                     <span class="skill-tag">Claude Code</span>
+                    <span class="skill-tag">Knowledge Management</span>
                 </div>
-                <p>Une trentaine de workflows en production : collecte, scoring par LLM, notifications, reprise sur erreur et alerte quand un run échoue.</p>
+                <p>Une trentaine de workflows en production : collecte, scoring par LLM, notifications, reprise sur erreur et alerte quand un run échoue. Et le système d'information qui pilote l'agence, monté sous Obsidian.</p>
             </div>
             <div class="skill-card violet reveal">
                 <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5V19A9 3 0 0 0 21 19V5" /><path d="M3 12A9 3 0 0 0 21 12" /></svg></div>
@@ -1217,7 +1303,7 @@
         <div class="section-header reveal">
             <span class="overline">Réalisations</span>
             <h2>Des systèmes qui tournent</h2>
-            <p>Six cas concrets, du besoin exprimé jusqu'à la mise en production. Les missions clients sont décrites par secteur, sans nommer les entreprises.</p>
+            <p>Sept cas concrets, du besoin exprimé jusqu'à la mise en production. Les missions clients sont décrites par secteur, sans nommer les entreprises.</p>
         </div>
         <div class="usecase-grid">
 
@@ -1343,6 +1429,27 @@
                 <div class="usecase-result">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg>
                     Réservation autonome, zéro saisie manuelle
+                </div>
+            </div>
+
+            <div class="usecase-card reveal">
+                <div class="usecase-head">
+                    <h3>Système d'information et pilotage de projet</h3>
+                    <span class="usecase-tag">Interne</span>
+                </div>
+                <p class="usecase-context">Deux associés, plusieurs projets et clients menés en parallèle, et aucun endroit unique pour savoir qui fait quoi ni où en est chaque chantier.</p>
+                <ul class="usecase-list">
+                    <li>Base de connaissances Obsidian partagée et synchronisée entre les deux associés</li>
+                    <li>Portefeuille structuré en sprints : fiches de tâches, backlog priorisé, revue hebdomadaire</li>
+                    <li>Diagrammes de Gantt, cartes de dépendances et chemin critique tenus à jour à chaque sprint</li>
+                    <li>Tableaux de bord calculés depuis les fiches, et point d'avancement envoyé par mail automatiquement</li>
+                </ul>
+                <div class="usecase-stack">
+                    <span>Obsidian</span><span>Dataview</span><span>Mermaid</span><span>n8n</span>
+                </div>
+                <div class="usecase-result">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg>
+                    Un seul endroit pour piloter tous les projets
                 </div>
             </div>
 
@@ -1792,5 +1899,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
+<script src="/site.js?v=20260726b" defer></script>
 </body>
 </html>

@@ -7,8 +7,8 @@
     <meta name="description" content="Mentions légales du site personnel de Romain Ben, étudiant ingénieur MAM4 à Polytech Nice Sophia et co-fondateur d'OptimizIA.xyz.">
     <meta name="theme-color" content="#FAFAF9">
     <link rel="canonical" href="https://romainben.cloud/mentions-legales.html">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="apple-touch-icon" href="/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2">
+    <link rel="apple-touch-icon" href="/favicon.svg?v=2">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +43,69 @@
             --f-display: 'Archivo', system-ui, sans-serif;
             --f-body: 'Karla', system-ui, sans-serif;
             --f-mono: 'JetBrains Mono', ui-monospace, monospace;
+            --on-accent: #FFFFFF;
+            --nav-bg: rgba(250, 250, 249, 0.94);
+            --seo-wash: #FFF8F3;
+            --seo-wash-2: #FFF2E8;
+            --on-fill-2: #B9BDC7;
+            --on-fill-accent: #8FA0FF;
+            --fill-hover: #1B1D22;
+            --chip-bg: rgba(250, 250, 249, .08);
+            --chip-fg: rgba(250, 250, 249, .86);
+            --chip-br: rgba(250, 250, 249, .2);
+            color-scheme: light;
         }
+        /* ═══════════════════════════════════════════════════════════
+           Theme sombre. Les tokens s'INVERSENT : --ink devient clair et
+           --paper devient sombre. Toutes les regles ecrites
+           ackground: var(--ink); color: var(--paper) basculent donc
+           d'elles-memes en pave clair sur fond sombre, sans etre reecrites.
+           L'accent passe en periwinkle clair, donc le texte pose DESSUS
+           devient sombre : c'est le role de --on-accent.
+           ═══════════════════════════════════════════════════════════ */
+        :root[data-theme="dark"] {
+            --paper: #0E0F12;
+            --surface: #16181D;
+            --surface-2: #1E2128;
+
+            --ink: #F4F4F3;
+            --ink-2: #C6CAD2;
+            --ink-3: #969CA6;
+            --muted: #767C86;
+
+            --accent: #8B98FF;
+            --accent-deep: #AEB8FF;
+            --accent-wash: #1A1F35;
+
+            --rule: #2B2F37;
+
+            --on-accent: #0E0F12;
+            --nav-bg: rgba(14, 15, 18, 0.94);
+            --seo-wash: #241A12;
+            --seo-wash-2: #2E2117;
+            --on-fill-2: #4A4E57;
+            --on-fill-accent: #2B3FD9;
+            --fill-hover: #E6E6E3;
+            --chip-bg: rgba(16, 17, 20, .07);
+            --chip-fg: rgba(16, 17, 20, .86);
+            --chip-br: rgba(16, 17, 20, .2);
+            color-scheme: dark;
+        }
+
+        /* Bascules theme et langue. */
+        .site-controls { display: flex; align-items: center; gap: 6px; }
+        .site-ctrl {
+            display: inline-flex; align-items: center; justify-content: center;
+            min-width: 34px; height: 32px; padding: 0 9px;
+            background: none; border: 1px solid var(--rule); color: var(--ink-2);
+            font-family: var(--f-mono); font-size: 0.72rem; font-weight: 600;
+            line-height: 1; cursor: pointer; transition: var(--transition);
+        }
+        .site-ctrl:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+        .site-ctrl svg { width: 15px; height: 15px; }
+        .ico-sun { display: none; }
+        :root[data-theme="dark"] .ico-sun { display: inline-block; }
+        :root[data-theme="dark"] .ico-moon { display: none; }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
@@ -221,13 +283,36 @@
 
         @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 
-    </style>
+    </style>    <script>
+    // Pose le theme avant le premier rendu : sans ca, la page clignote en clair
+    // puis bascule en sombre. Choix explicite de l'utilisateur d'abord,
+    // preference systeme ensuite.
+    (function () {
+        try {
+            var t = localStorage.getItem('rb-theme');
+            if (t !== 'dark' && t !== 'light') {
+                t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            document.documentElement.setAttribute('data-theme', t);
+            if (localStorage.getItem('rb-lang') === 'en') {
+                document.documentElement.setAttribute('data-lang', 'en');
+            }
+        } catch (e) {}
+    })();
+    </script>
 </head>
 <body>
 
 <header class="topbar">
     <div class="container topbar-inner">
         <a href="index.html" class="brand">Romain <span>Ben</span></a>
+        <div class="site-controls">
+            <button type="button" class="site-ctrl" id="lang-toggle" aria-label="Switch to English">EN</button>
+            <button type="button" class="site-ctrl" id="theme-toggle" aria-label="Changer de theme">
+                <svg class="ico-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/></svg>
+                <svg class="ico-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </button>
+        </div>
         <a href="index.html" class="back-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left"><path d="m12 19-7-7 7-7" /><path d="M19 12H5" /></svg>
             Retour à l'accueil
@@ -375,5 +460,6 @@
 </footer>
 
 
+<script src="/site.js?v=20260726b" defer></script>
 </body>
 </html>

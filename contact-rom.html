@@ -17,10 +17,10 @@
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="Romain Ben">
 
-    <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
-    <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png?v=2">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png?v=2">
+    <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png?v=2">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +66,69 @@
             --f-display: 'Archivo', system-ui, sans-serif;
             --f-body: 'Karla', system-ui, sans-serif;
             --f-mono: 'JetBrains Mono', ui-monospace, monospace;
+            --on-accent: #FFFFFF;
+            --nav-bg: rgba(250, 250, 249, 0.94);
+            --seo-wash: #FFF8F3;
+            --seo-wash-2: #FFF2E8;
+            --on-fill-2: #B9BDC7;
+            --on-fill-accent: #8FA0FF;
+            --fill-hover: #1B1D22;
+            --chip-bg: rgba(250, 250, 249, .08);
+            --chip-fg: rgba(250, 250, 249, .86);
+            --chip-br: rgba(250, 250, 249, .2);
+            color-scheme: light;
         }
+        /* ═══════════════════════════════════════════════════════════
+           Theme sombre. Les tokens s'INVERSENT : --ink devient clair et
+           --paper devient sombre. Toutes les regles ecrites
+           ackground: var(--ink); color: var(--paper) basculent donc
+           d'elles-memes en pave clair sur fond sombre, sans etre reecrites.
+           L'accent passe en periwinkle clair, donc le texte pose DESSUS
+           devient sombre : c'est le role de --on-accent.
+           ═══════════════════════════════════════════════════════════ */
+        :root[data-theme="dark"] {
+            --paper: #0E0F12;
+            --surface: #16181D;
+            --surface-2: #1E2128;
+
+            --ink: #F4F4F3;
+            --ink-2: #C6CAD2;
+            --ink-3: #969CA6;
+            --muted: #767C86;
+
+            --accent: #8B98FF;
+            --accent-deep: #AEB8FF;
+            --accent-wash: #1A1F35;
+
+            --rule: #2B2F37;
+
+            --on-accent: #0E0F12;
+            --nav-bg: rgba(14, 15, 18, 0.94);
+            --seo-wash: #241A12;
+            --seo-wash-2: #2E2117;
+            --on-fill-2: #4A4E57;
+            --on-fill-accent: #2B3FD9;
+            --fill-hover: #E6E6E3;
+            --chip-bg: rgba(16, 17, 20, .07);
+            --chip-fg: rgba(16, 17, 20, .86);
+            --chip-br: rgba(16, 17, 20, .2);
+            color-scheme: dark;
+        }
+
+        /* Bascules theme et langue. */
+        .site-controls { display: flex; align-items: center; gap: 6px; }
+        .site-ctrl {
+            display: inline-flex; align-items: center; justify-content: center;
+            min-width: 34px; height: 32px; padding: 0 9px;
+            background: none; border: 1px solid var(--rule); color: var(--ink-2);
+            font-family: var(--f-mono); font-size: 0.72rem; font-weight: 600;
+            line-height: 1; cursor: pointer; transition: var(--transition);
+        }
+        .site-ctrl:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+        .site-ctrl svg { width: 15px; height: 15px; }
+        .ico-sun { display: none; }
+        :root[data-theme="dark"] .ico-sun { display: inline-block; }
+        :root[data-theme="dark"] .ico-moon { display: none; }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
@@ -108,7 +170,7 @@
             border-bottom: 1px solid transparent;
         }
         nav.scrolled {
-            background: rgba(250, 250, 249, 0.94);
+            background: var(--nav-bg);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             padding: 11px 0;
@@ -141,7 +203,7 @@
         .nav-socials a:hover { color: var(--surface); background: var(--ink); border-color: var(--ink); }
         .nav-socials svg { width: 15px; height: 15px; }
         .nav-cta {
-            background: var(--accent); color: #fff !important;
+            background: var(--accent); color: var(--on-accent) !important;
             padding: 10px 20px;
             font-family: var(--f-mono);
             font-weight: 600 !important; font-size: 0.75rem !important;
@@ -184,7 +246,7 @@
         }
         .mobile-menu a:hover { color: var(--accent); }
         .mobile-menu .mobile-cta {
-            background: var(--accent); color: #fff;
+            background: var(--accent); color: var(--on-accent);
             padding: 15px 30px; border: none;
             font-family: var(--f-mono); font-size: 0.85rem; font-weight: 600;
             margin-top: 22px; width: auto;
@@ -279,7 +341,7 @@
             display: flex; align-items: center; justify-content: center;
             flex-shrink: 0;
         }
-        .bw-meta-icon svg { width: 13px; height: 13px; stroke: #fff; stroke-width: 2; fill: none; }
+        .bw-meta-icon svg { width: 13px; height: 13px; stroke: var(--on-accent); stroke-width: 2; fill: none; }
         .bw-divider { height: 1px; background: var(--rule); margin: 4px 0 18px; }
         .bw-bullets { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-bottom: 26px; }
         .bw-bullets li {
@@ -375,7 +437,7 @@
         }
         .bw-cal-day--sel {
             background: var(--accent) !important;
-            color: #fff !important;
+            color: var(--on-accent) !important;
             font-weight: 700;
         }
         .bw-cal-day--off { color: var(--muted); background: var(--surface-2); cursor: default; }
@@ -412,7 +474,7 @@
         .bw-slot--sel {
             background: var(--accent) !important;
             border-color: var(--accent) !important;
-            color: #fff !important;
+            color: var(--on-accent) !important;
             font-weight: 600;
         }
         .bw-slots-empty { padding: 16px 0; color: var(--ink-3); font-size: 0.87rem; }
@@ -508,7 +570,7 @@
             transition: var(--transition); flex-shrink: 0;
         }
         .bw-pill.checked .bw-pill-check { background: var(--accent); border-color: var(--accent); }
-        .bw-pill-check svg { width: 9px; height: 9px; stroke: #fff; stroke-width: 3; fill: none; opacity: 0; transition: var(--transition); }
+        .bw-pill-check svg { width: 9px; height: 9px; stroke: var(--on-accent); stroke-width: 3; fill: none; opacity: 0; transition: var(--transition); }
         .bw-pill.checked .bw-pill-check svg { opacity: 1; }
 
         .bw-btn-row { display: flex; gap: 10px; margin-top: 20px; }
@@ -521,7 +583,7 @@
         }
         .bw-btn-ghost { background: transparent; border: 1px solid var(--ink); color: var(--ink); }
         .bw-btn-ghost:hover { background: var(--ink); color: var(--paper); }
-        .bw-btn-emerald { background: var(--accent); color: #fff; font-weight: 600; }
+        .bw-btn-emerald { background: var(--accent); color: var(--on-accent); font-weight: 600; }
         .bw-btn-emerald:hover { background: var(--accent-deep); }
         .bw-btn-emerald:disabled { background: var(--rule); color: var(--muted); cursor: not-allowed; }
 
@@ -544,7 +606,7 @@
             display: flex; align-items: center; justify-content: center;
             margin-bottom: 20px;
         }
-        .bw-confirm-icon svg { width: 26px; height: 26px; stroke: #fff; stroke-width: 2.6; fill: none; }
+        .bw-confirm-icon svg { width: 26px; height: 26px; stroke: var(--on-accent); stroke-width: 2.6; fill: none; }
         .bw-confirm-title {
             font-family: var(--f-display);
             font-size: 1.3rem; font-weight: 800;
@@ -588,7 +650,7 @@
             transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .faq-icon svg { width: 12px; height: 12px; }
-        .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--accent); border-color: var(--accent); color: #fff; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
         .faq-answer {
             display: grid;
             grid-template-rows: 0fr;
@@ -694,6 +756,22 @@
         ]
       }
     }
+    </script>    <script>
+    // Pose le theme avant le premier rendu : sans ca, la page clignote en clair
+    // puis bascule en sombre. Choix explicite de l'utilisateur d'abord,
+    // preference systeme ensuite.
+    (function () {
+        try {
+            var t = localStorage.getItem('rb-theme');
+            if (t !== 'dark' && t !== 'light') {
+                t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            document.documentElement.setAttribute('data-theme', t);
+            if (localStorage.getItem('rb-lang') === 'en') {
+                document.documentElement.setAttribute('data-lang', 'en');
+            }
+        } catch (e) {}
+    })();
     </script>
 </head>
 <body>
@@ -718,6 +796,13 @@
                 </a>
             </div>
             <a href="contact-rom.html" class="nav-cta">Me contacter</a>
+        </div>
+        <div class="site-controls">
+            <button type="button" class="site-ctrl" id="lang-toggle" aria-label="Switch to English">EN</button>
+            <button type="button" class="site-ctrl" id="theme-toggle" aria-label="Changer de theme">
+                <svg class="ico-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/></svg>
+                <svg class="ico-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </button>
         </div>
         <button class="hamburger" aria-label="Menu" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -1216,5 +1301,6 @@
     }
 </script>
 
+<script src="/site.js?v=20260726b" defer></script>
 </body>
 </html>
