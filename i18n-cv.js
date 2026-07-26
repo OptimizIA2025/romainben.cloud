@@ -77,8 +77,8 @@ window.RB_I18N = {
         "<strong>Outcome:</strong> monitoring delivered five days a week, with no human intervention.",
     "<b>Produit</b>interne": "<b>Product</b>in-house",
     "SaaS d'audit SEO et GEO": "SEO and GEO audit SaaS",
-    "Moteur d'analyse couvrant plus de 60 points par site, rapport bilingue avec score, verdict et correctifs priorisés, espace client avec archivage des rapports en base, newsletter hebdomadaire générée et envoyée automatiquement.":
-        "An analysis engine covering more than 60 checks per site, a bilingual report with a score, a verdict and prioritised fixes, a client area with reports archived in the database, and a weekly newsletter generated and sent automatically.",
+    "Moteur d'analyse couvrant 80 points par site, rapport bilingue avec score, verdict et correctifs priorisés, espace client avec archivage des rapports en base, newsletter hebdomadaire générée et envoyée automatiquement.":
+        "An analysis engine covering 80 checks per site, a bilingual report with a score, a verdict and prioritised fixes, a client area with reports archived in the database, and a weekly newsletter generated and sent automatically.",
     "<strong>Résultat :</strong> audit complet rendu en ligne en quelques minutes.":
         "<strong>Outcome:</strong> a full audit delivered online in minutes.",
     "Plateforme d'abonnement": "Subscription platform",

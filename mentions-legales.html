@@ -289,10 +289,10 @@
     // preference systeme ensuite.
     (function () {
         try {
-            var t = localStorage.getItem('rb-theme');
-            if (t !== 'dark' && t !== 'light') {
-                t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            }
+            // Clair par defaut : le site n'est pas sombre tant que l'utilisateur
+            // ne l'a pas demande explicitement. La preference systeme n'entre pas
+            // en jeu (choix RBE du 26/07).
+            var t = localStorage.getItem('rb-theme') === 'dark' ? 'dark' : 'light';
             document.documentElement.setAttribute('data-theme', t);
             if (localStorage.getItem('rb-lang') === 'en') {
                 document.documentElement.setAttribute('data-lang', 'en');
@@ -460,6 +460,7 @@
 </footer>
 
 
-<script src="/site.js?v=20260726b" defer></script>
+<script src="/i18n-legal.js?v=20260726c" defer></script>
+<script src="/site.js?v=20260726c" defer></script>
 </body>
 </html>

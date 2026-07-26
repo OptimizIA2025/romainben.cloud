@@ -514,10 +514,10 @@
     // preference systeme ensuite.
     (function () {
         try {
-            var t = localStorage.getItem('rb-theme');
-            if (t !== 'dark' && t !== 'light') {
-                t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            }
+            // Clair par defaut : le site n'est pas sombre tant que l'utilisateur
+            // ne l'a pas demande explicitement. La preference systeme n'entre pas
+            // en jeu (choix RBE du 26/07).
+            var t = localStorage.getItem('rb-theme') === 'dark' ? 'dark' : 'light';
             document.documentElement.setAttribute('data-theme', t);
             if (localStorage.getItem('rb-lang') === 'en') {
                 document.documentElement.setAttribute('data-lang', 'en');
@@ -689,7 +689,7 @@
                 <div class="entry-when"><b>Produit</b>interne</div>
                 <div class="entry-body">
                     <h3>SaaS d'audit SEO et GEO</h3>
-                    <p>Moteur d'analyse couvrant plus de 60 points par site, rapport bilingue avec score, verdict et correctifs priorisés, espace client avec archivage des rapports en base, newsletter hebdomadaire générée et envoyée automatiquement.</p>
+                    <p>Moteur d'analyse couvrant 80 points par site, rapport bilingue avec score, verdict et correctifs priorisés, espace client avec archivage des rapports en base, newsletter hebdomadaire générée et envoyée automatiquement.</p>
                     <p><strong>Résultat :</strong> audit complet rendu en ligne en quelques minutes.</p>
                     <div class="tags"><span class="tag">n8n</span><span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">Brevo</span></div>
                 </div>
@@ -952,7 +952,7 @@ document.getElementById('print-cv').addEventListener('click', function () {
 });
 </script>
 
-<script src="/i18n-cv.js?v=20260726b" defer></script>
-<script src="/site.js?v=20260726b" defer></script>
+<script src="/i18n-cv.js?v=20260726c" defer></script>
+<script src="/site.js?v=20260726c" defer></script>
 </body>
 </html>

@@ -46,7 +46,7 @@ Site : https://www.optimizia.xyz/
 Systèmes livrés en production. Les missions clients sont décrites par secteur, sans nommer les entreprises.
 
 - **Agent de veille quotidien** (mission client, créateur de contenu) : collecte multi-sources déclenchée chaque nuit, scoring de pertinence par LLM, synthèse envoyée par mail du lundi au vendredi, workflow de surveillance qui alerte dès qu'une exécution échoue. Stack : n8n, OpenAI, Gmail API, VPS.
-- **SaaS d'audit SEO & GEO** (produit interne) : moteur d'analyse couvrant plus de 60 points par site, rapport bilingue avec score et correctifs priorisés, espace client, newsletter hebdomadaire automatisée. Stack : n8n, Supabase, PostgreSQL, Brevo.
+- **SaaS d'audit SEO & GEO** (produit interne) : moteur d'analyse couvrant 80 points par site, rapport bilingue avec score et correctifs priorisés, espace client, newsletter hebdomadaire automatisée. Stack : n8n, Supabase, PostgreSQL, Brevo.
 - **Plateforme d'abonnement** (produit interne) : paiement Stripe en production, espace client, attribution automatique des accès communautaires après paiement, droits décidés en base avec Row Level Security, connexion OAuth en un clic. Stack : Stripe, Supabase, n8n, OAuth2.
 - **Site vitrine et audit SEO** (mission client, consultante RH et RSE) : refonte complète sans framework, données structurées, pages légales conformes, audit SEO et GEO avec plan d'action sur 30 jours.
 - **Tri intelligent de boîte Gmail** : classification automatique à l'arrivée, notification sur les urgences, nettoyage planifié, brouillons pré-rédigés. 20 à 30 minutes économisées par jour.

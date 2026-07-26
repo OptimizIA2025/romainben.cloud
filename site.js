@@ -35,17 +35,10 @@
         });
     }
 
-    /* Si l'utilisateur n'a jamais tranche, on continue de suivre le systeme. */
-    if (window.matchMedia) {
-        var mq = window.matchMedia('(prefers-color-scheme: dark)');
-        var onSystemChange = function (e) {
-            var stored;
-            try { stored = localStorage.getItem('rb-theme'); } catch (err) { stored = null; }
-            if (stored !== 'dark' && stored !== 'light') applyTheme(e.matches ? 'dark' : 'light');
-        };
-        if (mq.addEventListener) mq.addEventListener('change', onSystemChange);
-        else if (mq.addListener) mq.addListener(onSystemChange);
-    }
+    /* Pas de suivi de la preference systeme : le site s'ouvre en clair par
+       defaut et ne passe en sombre que si l'utilisateur le demande (choix RBE
+       du 26/07). Un visiteur en theme systeme sombre voit donc quand meme la
+       DA « Trame » telle qu'elle a ete concue. */
 
     /* ─────────── Langue ─────────── */
 
@@ -67,8 +60,13 @@
     /* On memorise le francais d'origine au premier passage : la bascule inverse
        doit pouvoir restaurer le texte exact, y compris son balisage interne. */
     var nodes = [];
-    Array.prototype.forEach.call(document.querySelectorAll(SEL), function (el) {
+    var known = (typeof WeakSet === 'function') ? new WeakSet() : null;
+    function collect(scope) {
+    Array.prototype.forEach.call(scope.querySelectorAll(SEL), function (el) {
         if (el.closest('#lang-toggle, #theme-toggle')) return;
+        /* Un element deja enregistre ne doit pas l'etre deux fois : le
+           reobserver apres un rendu du tunnel dupliquerait les entrees. */
+        if (known) { if (known.has(el)) return; known.add(el); }
 
         /* Cas courant : le balisage interne fait partie de la cle. */
         var key = norm(el.innerHTML);
@@ -97,6 +95,8 @@
             }
         }
     });
+    }
+    collect(document);
 
     var ATTRS = window.RB_I18N_ATTR || {};
 
@@ -129,16 +129,38 @@
         langBtn.setAttribute('aria-label', en ? 'Revenir au francais' : 'Switch to English');
     }
 
+    /* Francais par defaut, comme le theme clair : le site s'affiche tel qu'il a
+       ete ecrit tant que le visiteur n'a pas demande l'anglais. */
     var stored;
     try { stored = localStorage.getItem('rb-lang'); } catch (e) { stored = null; }
-    if (stored !== 'en' && stored !== 'fr') {
-        stored = (navigator.language || '').toLowerCase().indexOf('fr') === 0 ? 'fr' : 'en';
-    }
-    applyLang(stored);
+    applyLang(stored === 'en' ? 'en' : 'fr');
 
     langBtn.addEventListener('click', function () {
         var next = root.getAttribute('data-lang') === 'en' ? 'fr' : 'en';
         applyLang(next);
         try { localStorage.setItem('rb-lang', next); } catch (e) {}
     });
+
+    /* Le tunnel de reservation construit son interface en JavaScript : ses
+       textes n'existent pas au chargement. On retraduit donc ce qui apparait
+       apres coup, sinon la page bascule en anglais mais pas le calendrier. */
+    if (window.MutationObserver) {
+        var pending = null;
+        new MutationObserver(function (records) {
+            if (root.getAttribute('data-lang') !== 'en') return;
+            var fresh = false;
+            records.forEach(function (r) {
+                Array.prototype.forEach.call(r.addedNodes, function (n) {
+                    if (n.nodeType === 1) { fresh = true; }
+                });
+            });
+            if (!fresh || pending) return;
+            pending = setTimeout(function () {
+                pending = null;
+                var before = nodes.length;
+                collect(document);
+                if (nodes.length > before) applyLang('en');
+            }, 60);
+        }).observe(document.body, { childList: true, subtree: true });
+    }
 })();
