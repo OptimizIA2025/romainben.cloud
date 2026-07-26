@@ -62,6 +62,7 @@ window.RB_I18N = {
     "Parcours": "Background",
     "Compétences": "Skills",
     "Réalisations": "Work",
+    "CV": "CV",
     "Projets": "Projects",
     "Contact": "Contact",
     "FAQ": "FAQ",
