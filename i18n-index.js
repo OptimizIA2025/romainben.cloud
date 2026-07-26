@@ -31,8 +31,7 @@ window.RB_I18N = {
     "Le code public": "Public code",
     "Travaillons ensemble": "Let's work together",
     "Questions fréquentes": "Frequently asked questions",
-    "L'agence qui dope votre performance !<br>(à l'IA et l'automatisation)":
-        "The agency that boosts your performance<br>(with AI and automation)",
+    "Mon rôle dans l'agence": "My role in the agency",
 
     /* Parcours */
     "Je suis en <strong>MAM4 à Polytech Nice Sophia</strong>, spécialité <strong>Maths Appliquées &amp; Modélisation</strong>. C'est ma <strong>4ᵉ année dans l'école</strong> et la 2ᵉ du cycle ingénieur : j'ai d'abord fait les deux ans de prépa intégrée <strong>PeiP</strong> sur place, à me former sur les maths, l'algo et la modélisation.":
@@ -171,10 +170,10 @@ window.RB_I18N = {
     "Voir tous les repos sur GitHub": "See all repositories on GitHub",
 
     /* OptimizIA */
-    "Je combine ma <strong>4ᵉ année d'école d'ingénieur en Mathématiques Appliquées &amp; Modélisation</strong>, pour nourrir mon goût d'apprendre, avec ma <strong>passion pour l'entrepreneuriat.</strong> Ensemble, nous accompagnons les <strong>dirigeants de PME/ETI</strong> dans l'intégration de l'IA, l'automatisation des processus et le <strong>Knowledge Management</strong>, avec des résultats mesurables dès les premières semaines.":
-        "I combine my <strong>fourth year of engineering school in Applied Mathematics &amp; Modelling</strong>, which feeds my appetite for learning, with my <strong>passion for entrepreneurship.</strong> Together we support <strong>owners of small and mid-sized companies</strong> in adopting AI, automating processes and building <strong>Knowledge Management</strong>, with results that are measurable within the first few weeks.",
-    "Une méthode développée pour <strong>s'adapter à chaque situation</strong> : diagnostic, identification de cas d'utilisation suivi du développement express d'un <em style=\"margin-right: 0.25em;\">Minimum Viable Product</em> fonctionnel (MVP, <strong>durée moyenne de dev de 13 jours</strong>) permettant au dirigeant de se projeter dans une solution déployable à l'échelle durant la phase d'industrialisation. OptimizIA.xyz c'est un <strong>réseau d'experts</strong>, de compétences Front et Back-end Development, Data, Design et automatisation mobilisables à la demande pour <strong>délivrer avec succès vos projets</strong> !":
-        "A method built to <strong>fit each situation</strong>: diagnosis, identification of use cases, then rapid development of a working <em style=\"margin-right: 0.25em;\">Minimum Viable Product</em> (MVP, <strong>13 days of development on average</strong>) so the owner can see a solution that will scale during the industrialisation phase. OptimizIA.xyz is a <strong>network of experts</strong> across front-end and back-end development, data, design and automation, available on demand to <strong>deliver your projects successfully</strong>.",
+    "<strong>OptimizIA.xyz</strong> est l'agence que j'ai co-fondée avec <a href=\"https://www.ginoux.xyz\" target=\"_blank\" rel=\"noopener\">Rémy Ginoux</a>. Nous accompagnons les dirigeants de PME et d'ETI sur l'intégration de l'IA et l'automatisation de leurs processus.":
+        "<strong>OptimizIA.xyz</strong> is the agency I co-founded with <a href=\"https://www.ginoux.xyz\" target=\"_blank\" rel=\"noopener\">Rémy Ginoux</a>. We help the owners of small and mid-sized companies adopt AI and automate their processes.",
+    "Ma part est <strong>technique</strong> : je conçois les systèmes et je les mets en production, du workflow n8n à l'application complète avec base de données, paiement et supervision. Une partie des réalisations ci-dessus vient de là. Rémy porte le diagnostic, la relation client et <strong>25 ans de terrain industriel</strong>. C'est ce qui nous permet d'aller vite sans naviguer à vue.":
+        "My side of it is <strong>technical</strong>: I design the systems and take them to production, from an n8n workflow to a complete application with database, payment and monitoring. Part of the work shown above comes from there. Rémy owns the diagnosis, the client relationship and <strong>25 years on the industrial floor</strong>. That is what lets us move fast without flying blind.",
     "Visiter OptimizIA.xyz": "Visit OptimizIA.xyz",
 
     /* Contact */
@@ -199,6 +198,10 @@ window.RB_I18N = {
     "Qui est Romain Ben ?": "Who is Romain Ben?",
     "Romain Ben est un étudiant ingénieur en MAM4 (Mathématiques Appliquées et Modélisation) à Polytech Nice Sophia. Il est co-fondateur de l'agence OptimizIA.xyz, spécialisée en IA et automatisation pour les PME et ETI, et titulaire du Statut National Étudiant-Entrepreneur.":
         "Romain Ben is a fourth-year engineering student in Applied Mathematics and Modelling at Polytech Nice Sophia. He is co-founder of OptimizIA.xyz, an agency specialising in AI and automation for small and mid-sized companies, and holds the French National Student-Entrepreneur Status.",
+    "Vous êtes étudiant : est-ce un risque pour mon projet ?":
+        "You are a student: is that a risk for my project?",
+    "C'est la question la plus légitime, alors voici les faits. Sept systèmes tournent aujourd'hui en production, avec base de données, paiement, authentification et supervision : ils sont utilisés tous les jours, pas seulement livrés. Mon statut d'étudiant-entrepreneur (SNEE) est reconnu par le ministère de l'Enseignement supérieur, il encadre officiellement cette activité en parallèle du cursus ingénieur. Et je ne travaille pas seul : chez OptimizIA.xyz, Rémy Ginoux apporte 25 ans de terrain industriel et pilote le diagnostic et la relation client. Le binôme est fait pour ça, ma vitesse d'exécution technique avec son expérience des organisations.":
+        "It is the most legitimate question there is, so here are the facts. Seven systems are running in production today, with database, payment, authentication and monitoring: they are used every day, not merely delivered. My student-entrepreneur status (SNEE) is recognised by the French Ministry of Higher Education and officially covers this activity alongside the engineering degree. And I do not work alone: at OptimizIA.xyz, Rémy Ginoux brings 25 years on the industrial floor and owns the diagnosis and the client relationship. The pairing is built for exactly this, my technical execution speed with his experience of organisations.",
     "Quelle formation suit Romain Ben ?": "What is Romain Ben studying?",
     "Il suit le cursus ingénieur Mathématiques Appliquées et Modélisation (MAM) à Polytech Nice Sophia, école d'ingénieurs de l'Université Côte d'Azur. Il est en MAM4, soit sa quatrième année à Polytech et la deuxième du cycle ingénieur, après deux ans de prépa intégrée PeiP.":
         "He is on the Applied Mathematics and Modelling engineering programme at Polytech Nice Sophia, the engineering school of Université Côte d'Azur. He is in his fourth year at Polytech and the second year of the engineering cycle, after two years in the PeiP integrated preparatory programme.",
