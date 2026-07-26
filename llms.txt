@@ -63,8 +63,26 @@ Romain Ben propose une prise de rendez-vous en ligne (20 minutes, visio) via sa 
 - **Cas d'usage** : projet étudiant, collaboration tech, mission via OptimizIA.xyz, stage ou alternance, simple bonjour
 - **Email de secours** : contact@romainben.cloud
 
+## Curriculum vitae
+
+Le CV complet, structuré et à jour, est publié en HTML (pas en PDF) pour rester lisible par les moteurs et les agents :
+- **URL** : https://www.romainben.cloud/cv.html
+- **Contenu** : profil, expérience (co-fondateur et responsable technique d'OptimizIA.xyz depuis 2026, développeur web freelance), six réalisations en production, six domaines de compétences techniques, formation à Polytech Nice Sophia (PeiP 2023-2025, cycle ingénieur MAM 2025-2028), Statut National Étudiant-Entrepreneur, langues et centres d'intérêt.
+- **Format** : la page est imprimable telle quelle en PDF depuis le navigateur.
+
+## Formation détaillée
+
+- **2025-2028 (prévu)** : diplôme d'ingénieur, spécialité Mathématiques Appliquées et Modélisation, Polytech Nice Sophia, Université Côte d'Azur, Biot. Actuellement en MAM4, deuxième année du cycle ingénieur. Analyse numérique, algèbre linéaire, équations différentielles, optimisation, probabilités et statistiques, algorithmique, C, Java, Python, Matlab, modélisation et traitement du signal.
+- **2023-2025** : Parcours des écoles d'ingénieurs Polytech (PeiP), prépa intégrée sur deux ans, Polytech Nice Sophia.
+- **2026** : Statut National Étudiant-Entrepreneur (SNEE), dispositif PEPITE du ministère de l'Enseignement supérieur.
+
+## Langues
+
+Français langue maternelle, anglais niveau B2, espagnol niveau A2.
+
 ## Liens
 
+- CV complet : https://www.romainben.cloud/cv.html
 - LinkedIn : https://www.linkedin.com/in/romainben/
 - GitHub : https://github.com/BnRomain
 - OptimizIA : https://www.optimizia.xyz/

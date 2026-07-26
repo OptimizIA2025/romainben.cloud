@@ -1,3 +1,18 @@
+# Rien de ce qui est liste ici n'atterrit dans la racine web du conteneur.
+# ATTENTION : ne jamais ajouter nginx.conf ici. Le Dockerfile fait
+# `COPY nginx.conf` AVANT `COPY .` : l'exclure casse le build
+# (`"/nginx.conf": not found`). Il est retire de la racine web par le
+# `RUN rm` du Dockerfile, pas par ce fichier.
+
 .git
 .gitignore
+.dockerignore
 .claude
+.impeccable
+Dockerfile
+*.md
+
+# Sources de la signature mail : les images sont deja embarquees en base64
+# dans le HTML, rien n'a besoin d'etre servi par le site.
+signature_html
+signature_email_pics

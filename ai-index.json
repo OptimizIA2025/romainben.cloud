@@ -24,6 +24,12 @@
         },
         {
             "@type": "WebPage",
+            "name": "CV complet",
+            "url": "https://www.romainben.cloud/cv.html",
+            "description": "Curriculum vitae détaillé : profil, expérience, réalisations en production, compétences techniques, formation à Polytech Nice Sophia, langues et centres d'intérêt. Page imprimable en PDF."
+        },
+        {
+            "@type": "WebPage",
             "name": "Contact et prise de rendez-vous",
             "url": "https://www.romainben.cloud/contact-rom.html",
             "description": "Réservation d'un échange de 20 minutes en visio, du lundi au samedi."
