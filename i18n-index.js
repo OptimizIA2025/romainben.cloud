@@ -34,8 +34,8 @@ window.RB_I18N = {
     "Mon rôle dans l'agence": "My role in the agency",
 
     /* Parcours */
-    "Je suis en <strong>MAM4 à Polytech Nice Sophia</strong>, spécialité <strong>Maths Appliquées &amp; Modélisation</strong>. C'est ma <strong>4ᵉ année dans l'école</strong> et la 2ᵉ du cycle ingénieur : j'ai d'abord fait les deux ans de prépa intégrée <strong>PeiP</strong> sur place, à me former sur les maths, l'algo et la modélisation.":
-        "I am in my <strong>fourth year at Polytech Nice Sophia</strong>, majoring in <strong>Applied Mathematics &amp; Modelling</strong>. It is my <strong>fourth year at the school</strong> and the second of the engineering cycle: I first spent two years in the <strong>PeiP</strong> integrated preparatory programme on campus, training in mathematics, algorithmics and modelling.",
+    "Je suis en <strong>MAM4 à Polytech Nice Sophia</strong>, sur le campus de <strong>Sophia-Antipolis</strong>, spécialité <strong>Maths Appliquées &amp; Modélisation</strong>. C'est ma <strong>4ᵉ année dans l'école</strong> et la 2ᵉ du cycle ingénieur : j'ai d'abord fait les deux ans de prépa intégrée <strong>PeiP</strong> sur place, à me former sur les maths, l'algo et la modélisation.":
+        "I am in my <strong>fourth year at Polytech Nice Sophia</strong>, on the <strong>Sophia-Antipolis</strong> campus, majoring in <strong>Applied Mathematics &amp; Modelling</strong>. It is my <strong>fourth year at the school</strong> and the second of the engineering cycle: I first spent two years in the <strong>PeiP</strong> integrated preparatory programme on campus, training in mathematics, algorithmics and modelling.",
     "En parallèle, j'ai co-fondé <strong>OptimizIA.xyz</strong> avec <a href=\"https://www.ginoux.xyz\" target=\"_blank\" rel=\"noopener\">Rémy Ginoux</a>, une agence d'intégration IA et d'automatisation pour les PME/ETI. Ensemble, nous collaborons sur les aspects techniques et développement : workflows n8n, agents, intégrations. Rémy apporte en plus 25 ans de terrain industriel et la vision business. Mon engagement entrepreneurial est reconnu par le <strong>Statut National Étudiant-Entrepreneur (SNEE)</strong>, dispositif PEPITE du ministère de l'Enseignement supérieur.":
         "Alongside my studies I co-founded <strong>OptimizIA.xyz</strong> with <a href=\"https://www.ginoux.xyz\" target=\"_blank\" rel=\"noopener\">Rémy Ginoux</a>, an AI and automation agency for small and mid-sized companies. We work together on the technical and development side: n8n workflows, agents, integrations. Rémy also brings 25 years of industrial experience and the business vision. My entrepreneurial work is officially recognised by the <strong>French National Student-Entrepreneur Status (SNEE)</strong>, part of the PEPITE programme run by the Ministry of Higher Education.",
     "Depuis, j'ai arrêté de faire seulement des scripts : je livre des <strong>systèmes complets qui tournent en production</strong>, avec base de données, paiement, authentification et supervision. Les cas concrets sont détaillés plus bas.":
@@ -56,18 +56,18 @@ window.RB_I18N = {
     "Infra &amp; Déploiement": "Infrastructure &amp; deployment",
     "SEO &amp; GEO": "SEO &amp; GEO",
     "Maths &amp; Modélisation": "Maths &amp; modelling",
-    "Single-file sans framework quand le site le permet, Next.js quand il faut de l'auth et du temps réel. Python pour le traitement de données.":
-        "Single-file and framework-free when the site allows it, Next.js when authentication and real time are needed. Python for data processing.",
-    "Une trentaine de workflows en production : collecte, scoring par LLM, notifications, reprise sur erreur et alerte quand un run échoue. Et le système d'information qui pilote l'agence, monté sous Obsidian.":
-        "Around thirty workflows in production: collection, LLM scoring, notifications, error recovery and alerting when a run fails. Plus the information system that steers the agency, built in Obsidian.",
-    "Schémas Postgres avec Row Level Security, paiement Stripe et webhooks, authentification OAuth. Le contrôle d'accès se joue en base, pas dans le front.":
-        "Postgres schemas with Row Level Security, Stripe payments and webhooks, OAuth authentication. Access control is decided in the database, not in the front end.",
-    "Mise en ligne de bout en bout : conteneur nginx, terminaison TLS, en-têtes de sécurité, redirections canoniques et cache des assets.":
-        "Shipping end to end: nginx container, TLS termination, security headers, canonical redirects and asset caching.",
-    "Optimisation pour les moteurs classiques et pour les moteurs génératifs : données structurées, passages citables, accès explicite aux crawlers IA.":
-        "Optimisation for classic search engines and for generative ones: structured data, quotable passages, explicit access for AI crawlers.",
-    "Formation maths appliquée à des cas concrets : compression d'image par DCT et stockage CSR, traitement du signal, modélisation d'algorithmes.":
-        "A mathematics background applied to concrete cases: image compression by DCT with CSR storage, signal processing, algorithm modelling.",
+    "Le choix de la techno suit le besoin, pas la mode. Un site qui doit charger vite reste en HTML pur, une application qui gère des comptes et du temps réel passe sur Next.js.":
+        "The stack follows the need, not the trend. A site that has to load fast stays plain HTML, an application that handles accounts and real time moves to Next.js.",
+    "Un workflow qui tourne la nuit ne vaut rien s'il tombe en silence. Chaque automatisation que je livre embarque sa reprise sur erreur et son alerte quand une exécution échoue.":
+        "A workflow that runs overnight is worthless if it fails silently. Every automation I ship carries its own error recovery and an alert when a run fails.",
+    "Qui a le droit de voir quoi se décide dans la base de données, jamais dans le navigateur. C'est ce qui fait qu'un abonnement résilié perd vraiment ses accès.":
+        "Who is allowed to see what is decided in the database, never in the browser. That is what makes a cancelled subscription actually lose its access.",
+    "Un projet livré est un projet en ligne. Nom de domaine, certificat, en-têtes de sécurité et cache des fichiers sont posés avec le reste, il n'y a rien à héberger après coup.":
+        "A delivered project is a project that is live. Domain name, certificate, security headers and file caching ship with the rest, there is nothing left to host afterwards.",
+    "Être trouvé ne se joue plus seulement sur Google. Les pages sont écrites pour être citées telles quelles par ChatGPT et Perplexity, avec les données structurées qui vont avec.":
+        "Being found is no longer only about Google. Pages are written to be quoted as they are by ChatGPT and Perplexity, with the structured data that goes with it.",
+    "La part du cursus qui sert vraiment en mission : estimer un coût de calcul, choisir un algorithme, comprendre pourquoi un traitement rame au lieu de le subir.":
+        "The part of the degree that actually pays off on a project: estimating a computation cost, picking an algorithm, understanding why a job is slow instead of putting up with it.",
     "Agents LLM": "LLM agents",
     "Crawlers IA": "AI crawlers",
     "Analyse numérique": "Numerical analysis",
@@ -170,8 +170,8 @@ window.RB_I18N = {
     "Voir tous les repos sur GitHub": "See all repositories on GitHub",
 
     /* OptimizIA */
-    "<strong>OptimizIA.xyz</strong> est l'agence que j'ai co-fondée avec <a href=\"https://www.ginoux.xyz\" target=\"_blank\" rel=\"noopener\">Rémy Ginoux</a>. Nous accompagnons les dirigeants de PME et d'ETI sur l'intégration de l'IA et l'automatisation de leurs processus.":
-        "<strong>OptimizIA.xyz</strong> is the agency I co-founded with <a href=\"https://www.ginoux.xyz\" target=\"_blank\" rel=\"noopener\">Rémy Ginoux</a>. We help the owners of small and mid-sized companies adopt AI and automate their processes.",
+    "<strong>OptimizIA.xyz</strong> est l'agence que j'ai co-fondée avec <a href=\"https://www.ginoux.xyz\" target=\"_blank\" rel=\"noopener\">Rémy Ginoux</a>. Nous accompagnons les dirigeants de PME et d'ETI sur l'intégration de l'IA et l'automatisation de leurs processus, à Nice, à Sophia-Antipolis et à distance partout ailleurs en France.":
+        "<strong>OptimizIA.xyz</strong> is the agency I co-founded with <a href=\"https://www.ginoux.xyz\" target=\"_blank\" rel=\"noopener\">Rémy Ginoux</a>. We help the owners of small and mid-sized companies adopt AI and automate their processes, in Nice, in Sophia-Antipolis and remotely anywhere else in France.",
     "Ma part est <strong>technique</strong> : je conçois les systèmes et je les mets en production, du workflow n8n à l'application complète avec base de données, paiement et supervision. Une partie des réalisations ci-dessus vient de là. Rémy porte le diagnostic, la relation client et <strong>25 ans de terrain industriel</strong>. C'est ce qui nous permet d'aller vite sans naviguer à vue.":
         "My side of it is <strong>technical</strong>: I design the systems and take them to production, from an n8n workflow to a complete application with database, payment and monitoring. Part of the work shown above comes from there. Rémy owns the diagnosis, the client relationship and <strong>25 years on the industrial floor</strong>. That is what lets us move fast without flying blind.",
     "Visiter OptimizIA.xyz": "Visit OptimizIA.xyz",

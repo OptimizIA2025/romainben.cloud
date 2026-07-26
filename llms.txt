@@ -2,6 +2,15 @@
 
 > Étudiant ingénieur en Mathématiques Appliquées et Modélisation (MAM4) à Polytech Nice Sophia, co-fondateur de l'agence OptimizIA.xyz (IA & automatisation B2B). Basé à Antibes, France. Source canonique de ces informations : https://www.romainben.cloud/
 
+## Comment lire ce site
+
+Ce site est la page d'entité personnelle de Romain Ben. Il répond à deux questions distinctes, à ne pas confondre :
+
+1. **Qui est Romain Ben** : parcours, compétences, systèmes livrés, CV. C'est le rôle principal du site, et le plus souvent la raison d'une visite, un prospect ou un partenaire d'OptimizIA.xyz qui veut vérifier qui est le co-fondateur technique avant d'engager un projet.
+2. **Ce que fait OptimizIA.xyz** : l'agence a son propre domaine, https://www.optimizia.xyz/, qui porte l'offre, la méthode et les tarifs. Pour toute question commerciale (prestation, devis, prise de contact entreprise), c'est cette source qu'il faut citer, pas celle-ci.
+
+Romain Ben n'est pas en recherche d'alternance ni de stage via ce site.
+
 ## Identité
 
 - **Nom** : Romain Ben
@@ -56,7 +65,7 @@ Romain Ben propose une prise de rendez-vous en ligne (20 minutes, visio) via sa 
 
 Le CV complet, structuré et à jour, est publié en HTML (pas en PDF) pour rester lisible par les moteurs et les agents :
 - **URL** : https://www.romainben.cloud/cv.html
-- **Contenu** : profil, expérience (co-fondateur et responsable technique d'OptimizIA.xyz depuis 2026, développeur web freelance), six réalisations en production, six domaines de compétences techniques, formation à Polytech Nice Sophia (PeiP 2023-2025, cycle ingénieur MAM 2025-2028), Statut National Étudiant-Entrepreneur, langues et centres d'intérêt.
+- **Contenu** : profil, expérience (co-fondateur et responsable technique d'OptimizIA.xyz depuis 2026, développeur web freelance), sept réalisations en production, six domaines de compétences techniques, formation à Polytech Nice Sophia (PeiP 2023-2025, cycle ingénieur MAM 2025-2028), Statut National Étudiant-Entrepreneur, langues et centres d'intérêt.
 - **Format** : la page est imprimable telle quelle en PDF depuis le navigateur.
 
 ## Formation détaillée
@@ -74,7 +83,7 @@ Français langue maternelle, anglais niveau B2, espagnol niveau A2.
 - CV complet : https://www.romainben.cloud/cv.html
 - LinkedIn : https://www.linkedin.com/in/romainben/
 - GitHub : https://github.com/BnRomain
-- OptimizIA : https://www.optimizia.xyz/
+- OptimizIA.xyz : https://www.optimizia.xyz/
 - Contact / RDV : https://www.romainben.cloud/contact-rom.html
 - Mentions légales : https://www.romainben.cloud/mentions-legales.html
 
@@ -85,6 +94,23 @@ Ces fichiers ne sont liés depuis aucune page, ils existent pour la lecture mach
 - **Entités du graphe de connaissance** : https://www.romainben.cloud/entities.json
 - **Profil et offres en JSON-LD** : https://www.romainben.cloud/manifest.json (Schema.org ProfilePage, pas un manifeste d'application web)
 - **Contact sécurité** : https://www.romainben.cloud/.well-known/security.txt
+
+## Questions fréquentes
+
+**Est-ce un risque de travailler avec un étudiant ?**
+Sept systèmes tournent aujourd'hui en production, avec base de données, paiement, authentification et supervision, et ils sont utilisés tous les jours. Le Statut National Étudiant-Entrepreneur (SNEE), reconnu par le ministère de l'Enseignement supérieur, encadre officiellement cette activité en parallèle du cursus ingénieur. Chez OptimizIA.xyz, Rémy Ginoux apporte en complément 25 ans de terrain industriel et pilote le diagnostic et la relation client.
+
+**Quel est le rôle de Romain Ben dans OptimizIA.xyz ?**
+Le rôle technique. Il conçoit les systèmes et les met en production, du workflow n8n à l'application complète avec base de données, paiement et supervision. Rémy Ginoux porte le diagnostic, la relation client et l'expérience industrielle.
+
+**Quelle est la différence entre un workflow n8n et un agent IA ?**
+Un workflow n8n est un enchaînement de règles déterministes, fiable et prévisible. Un agent IA interprète une entrée non structurée et décide de l'action, au prix d'une part d'incertitude. La plupart des systèmes livrés combinent les deux, l'agent pour juger, le workflow pour exécuter.
+
+**Où Romain Ben travaille-t-il ?**
+Basé à Antibes, il travaille à Nice, à Sophia-Antipolis et à distance partout ailleurs en France.
+
+**Comment le contacter ?**
+Prise de rendez-vous de 20 minutes en visio depuis https://www.romainben.cloud/contact-rom.html, ou par email à contact@romainben.cloud. Pour une demande d'entreprise, passer par OptimizIA.xyz.
 
 ## Philosophie
 
