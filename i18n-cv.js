@@ -5,8 +5,8 @@
 
 window.RB_I18N = {
     /* Titre de l'onglet et en-tete */
-    "CV de Romain Ben | Ingénieur MAM4, automatisation n8n, agents IA &amp; SaaS":
-        "Romain Ben's CV | Engineering student, n8n automation, AI agents &amp; SaaS",
+    "CV de Romain Ben | Automatisation n8n et agents IA":
+        "Romain Ben's CV | n8n automation and AI agents",
     "Curriculum vitae, mis à jour le 26 juillet 2026":
         "Curriculum vitae, updated 26 July 2026",
     "Étudiant ingénieur en mathématiques appliquées et modélisation, co-fondateur d'OptimizIA.xyz. Je conçois et je mets en production des systèmes d'automatisation et d'IA pour des PME et des ETI.":
