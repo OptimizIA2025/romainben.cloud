@@ -75,6 +75,12 @@ window.RB_I18N = {
     "Équations différentielles": "Differential equations",
 
     /* Realisations */
+    "Une exécution réussie par jour ouvré, avec sa durée.":
+        "One successful run per working day, with its duration.",
+    "Rapport rendu en direct : score, note et plan en quatre phases.":
+        "Report delivered live: score, grade and a four-phase plan.",
+    "Vue graphique du système d'information, notes et liens entre projets.":
+        "Graph view of the information system, notes and links between projects.",
     "Chaque nuit, l'agent parcourt les sources suivies par le client, note chaque élément selon des critères calibrés avec lui, puis envoie une synthèse le matin du lundi au vendredi. Un second workflow surveille le premier et alerte dès qu'une exécution échoue, ce qui rend la veille exploitable sans surveillance humaine.":
         "Every night the agent goes through the sources the client follows, scores each item against criteria calibrated with him, then sends a digest on weekday mornings. A second workflow watches the first and raises an alert as soon as a run fails, which makes the monitoring usable without anyone supervising it.",
     "SEOPlus! analyse un site sur 80 points techniques, SEO et sécurité, puis rend un rapport bilingue où chaque correctif est classé par priorité plutôt que listé en vrac. Il sert d'abord à qualifier un prospect avec des chiffres au lieu d'un argumentaire. C'est cet outil qui a audité ce site.":

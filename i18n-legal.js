@@ -74,10 +74,8 @@ window.RB_I18N = {
         "If you wish to lodge a complaint, you may contact the French data protection authority: <a href=\"https://www.cnil.fr\" target=\"_blank\" rel=\"noopener\">www.cnil.fr</a>.",
 
     "Cookies": "Cookies",
-    "Ce site n'utilise <strong>aucun cookie</strong> ni outil d'analyse tiers (type Google Analytics). Seules des ressources statiques sont chargées depuis des CDN publics, ce qui peut entraîner des requêtes techniques standards (adresse IP, en-têtes du navigateur) sans collecte nominative :":
-        "This site uses <strong>no cookies</strong> and no third-party analytics tool such as Google Analytics. Only static resources are loaded from public CDNs, which may trigger standard technical requests (IP address, browser headers) without any identifying data being collected:",
-    "<strong>Google Fonts</strong> (<code>fonts.googleapis.com</code>, <code>fonts.gstatic.com</code>) pour les polices d'affichage":
-        "<strong>Google Fonts</strong> (<code>fonts.googleapis.com</code>, <code>fonts.gstatic.com</code>) for the display typefaces",
+    "Ce site n'utilise <strong>aucun cookie</strong> ni outil d'analyse tiers (type Google Analytics). Les polices d'affichage sont <strong>hébergées sur ce serveur</strong> : leur chargement n'envoie donc aucune donnée à Google. Une seule ressource statique reste chargée depuis un CDN public, ce qui peut entraîner des requêtes techniques standards (adresse IP, en-têtes du navigateur) sans collecte nominative :":
+        "This site uses <strong>no cookies</strong> and no third-party analytics tool such as Google Analytics. The display typefaces are <strong>hosted on this server</strong>, so loading them sends nothing to Google. A single static resource is still loaded from a public CDN, which may trigger standard technical requests (IP address, browser headers) without any identifying data being collected:",
     "<strong>cdnjs</strong> (<code>cdnjs.cloudflare.com</code>) pour la bibliothèque d'animation GSAP":
         "<strong>cdnjs</strong> (<code>cdnjs.cloudflare.com</code>) for the GSAP animation library",
 

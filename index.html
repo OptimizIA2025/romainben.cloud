@@ -32,6 +32,8 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
     <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png?v=3">
     <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png?v=3">
+    <link rel="preload" as="font" type="font/woff2" href="fonts/archivo-latin.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/karla-latin.woff2" crossorigin>
     <link rel="preload" as="image" href="PhotoProfil.webp" type="image/webp">
 
     <script type="application/ld+json">
@@ -199,10 +201,7 @@
     }
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Karla:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- defer : GSAP n'est utile qu'apres le parsing. En synchrone il bloquait le rendu
          et pesait sur le LCP. Le script d'init plus bas attend DOMContentLoaded, qui
@@ -211,6 +210,57 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <style>
+        /* Polices auto-hebergees : variables, sous-ensembles latin et latin etendu.
+           Avant, la chaine Google Fonts coutait 3 sauts reseau (preconnect, CSS, puis
+           les fichiers) avant le premier rendu du texte. */
+        @font-face {
+            font-family: 'Archivo';
+            font-style: normal;
+            font-weight: 400 800;
+            font-display: swap;
+            src: url('fonts/archivo-latin.woff2') format('woff2');
+            unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+        }
+        @font-face {
+            font-family: 'Archivo';
+            font-style: normal;
+            font-weight: 400 800;
+            font-display: swap;
+            src: url('fonts/archivo-latin-ext.woff2') format('woff2');
+            unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+        }
+        @font-face {
+            font-family: 'Karla';
+            font-style: normal;
+            font-weight: 400 700;
+            font-display: swap;
+            src: url('fonts/karla-latin.woff2') format('woff2');
+            unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+        }
+        @font-face {
+            font-family: 'Karla';
+            font-style: normal;
+            font-weight: 400 700;
+            font-display: swap;
+            src: url('fonts/karla-latin-ext.woff2') format('woff2');
+            unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+        }
+        @font-face {
+            font-family: 'JetBrains Mono';
+            font-style: normal;
+            font-weight: 400 600;
+            font-display: swap;
+            src: url('fonts/jetbrains-mono-latin.woff2') format('woff2');
+            unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+        }
+        @font-face {
+            font-family: 'JetBrains Mono';
+            font-style: normal;
+            font-weight: 400 600;
+            font-display: swap;
+            src: url('fonts/jetbrains-mono-latin-ext.woff2') format('woff2');
+            unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+        }
         /* ═══════════════════════════════════════════════════════════
            DA « Trame ». Vocabulaire de la planche technique :
            filets pleins au lieu d'ombres, angles vifs partout,
@@ -703,6 +753,22 @@
             border-left: 2px solid var(--rule);
         }
         .usecase-card.violet .usecase-synth { border-left-color: var(--ink); }
+        .usecase-shot {
+            margin-bottom: 18px;
+        }
+        .usecase-shot img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 1px solid var(--rule);
+        }
+        .usecase-shot figcaption {
+            font-family: var(--f-mono);
+            font-size: 0.68rem;
+            color: var(--ink-3);
+            line-height: 1.5;
+            margin-top: 8px;
+        }
         .usecase-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
         .usecase-stack span {
             font-family: var(--f-mono);
@@ -1223,6 +1289,13 @@
                     <li>Workflow de surveillance qui prévient dès qu'une exécution échoue</li>
                 </ul>
                 <p class="usecase-synth">Chaque nuit, l'agent parcourt les sources suivies par le client, note chaque élément selon des critères calibrés avec lui, puis envoie une synthèse le matin du lundi au vendredi. Un second workflow surveille le premier et alerte dès qu'une exécution échoue, ce qui rend la veille exploitable sans surveillance humaine.</p>
+                <figure class="usecase-shot">
+                    <picture>
+                        <source srcset="preuve-veille-executions.webp" type="image/webp">
+                        <img src="preuve-veille-executions.jpg" alt="Capture de l'historique d'exécutions du workflow de veille dans n8n : une exécution réussie par jour ouvré, avec sa durée." width="1200" height="538" loading="lazy" decoding="async">
+                    </picture>
+                    <figcaption>Une exécution réussie par jour ouvré, avec sa durée.</figcaption>
+                </figure>
                 <div class="usecase-stack">
                     <span>n8n</span><span>OpenAI</span><span>Gmail API</span><span>VPS</span>
                 </div>
@@ -1245,6 +1318,13 @@
                     <li>Newsletter hebdomadaire générée et envoyée automatiquement</li>
                 </ul>
                 <p class="usecase-synth">SEOPlus! analyse un site sur 80 points techniques, SEO et sécurité, puis rend un rapport bilingue où chaque correctif est classé par priorité plutôt que listé en vrac. Il sert d'abord à qualifier un prospect avec des chiffres au lieu d'un argumentaire. C'est cet outil qui a audité ce site.</p>
+                <figure class="usecase-shot">
+                    <picture>
+                        <source srcset="preuve-seoplus-rapport.webp" type="image/webp">
+                        <img src="preuve-seoplus-rapport.jpg" alt="Capture d'un rapport SEOPlus! affichant un score de santé SEO de 85 sur 100 et la note A pour le site optimizia.xyz." width="1200" height="523" loading="lazy" decoding="async">
+                    </picture>
+                    <figcaption>Rapport rendu en direct : score, note et plan en quatre phases.</figcaption>
+                </figure>
                 <div class="usecase-stack">
                     <span>n8n</span><span>Supabase</span><span>PostgreSQL</span><span>Brevo</span>
                 </div>
@@ -1354,6 +1434,13 @@
                     <li>Tableaux de bord calculés depuis les fiches, et point d'avancement envoyé par mail automatiquement</li>
                 </ul>
                 <p class="usecase-synth">Toute l'activité de l'agence tient dans une base Obsidian partagée entre les deux associés : fiches de tâches, backlog priorisé, diagrammes de Gantt et chemin critique remis à jour à chaque sprint. Les tableaux de bord se calculent depuis les fiches, et le point d'avancement part par mail tout seul.</p>
+                <figure class="usecase-shot">
+                    <picture>
+                        <source srcset="preuve-pilotage-obsidian.webp" type="image/webp">
+                        <img src="preuve-pilotage-obsidian.jpg" alt="Capture du système d'information de l'agence sous Obsidian : arborescence des dossiers et vue graphique des notes reliées entre elles." width="1200" height="708" loading="lazy" decoding="async">
+                    </picture>
+                    <figcaption>Vue graphique du système d'information, notes et liens entre projets.</figcaption>
+                </figure>
                 <div class="usecase-stack">
                     <span>Obsidian</span><span>Dataview</span><span>Mermaid</span><span>n8n</span>
                 </div>
