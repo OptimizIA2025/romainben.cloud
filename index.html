@@ -694,6 +694,15 @@
             width: 10px; height: 1px; background: var(--accent);
         }
         .usecase-card.violet .usecase-list li::before { background: var(--ink); }
+        .usecase-synth {
+            font-size: 0.88rem;
+            color: var(--ink-2);
+            line-height: 1.65;
+            margin-bottom: 18px;
+            padding-left: 14px;
+            border-left: 2px solid var(--rule);
+        }
+        .usecase-card.violet .usecase-synth { border-left-color: var(--ink); }
         .usecase-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
         .usecase-stack span {
             font-family: var(--f-mono);
@@ -1213,6 +1222,7 @@
                     <li>Synthèse envoyée par mail du lundi au vendredi</li>
                     <li>Workflow de surveillance qui prévient dès qu'une exécution échoue</li>
                 </ul>
+                <p class="usecase-synth">Chaque nuit, l'agent parcourt les sources suivies par le client, note chaque élément selon des critères calibrés avec lui, puis envoie une synthèse le matin du lundi au vendredi. Un second workflow surveille le premier et alerte dès qu'une exécution échoue, ce qui rend la veille exploitable sans surveillance humaine.</p>
                 <div class="usecase-stack">
                     <span>n8n</span><span>OpenAI</span><span>Gmail API</span><span>VPS</span>
                 </div>
@@ -1234,6 +1244,7 @@
                     <li>Espace client et archivage des rapports en base</li>
                     <li>Newsletter hebdomadaire générée et envoyée automatiquement</li>
                 </ul>
+                <p class="usecase-synth">SEOPlus! analyse un site sur 80 points techniques, SEO et sécurité, puis rend un rapport bilingue où chaque correctif est classé par priorité plutôt que listé en vrac. Il sert d'abord à qualifier un prospect avec des chiffres au lieu d'un argumentaire. C'est cet outil qui a audité ce site.</p>
                 <div class="usecase-stack">
                     <span>n8n</span><span>Supabase</span><span>PostgreSQL</span><span>Brevo</span>
                 </div>
@@ -1255,6 +1266,7 @@
                     <li>Droits décidés en base avec Row Level Security</li>
                     <li>Connexion OAuth en un clic, sans saisie de code</li>
                 </ul>
+                <p class="usecase-synth">Le paiement Stripe déclenche l'ouverture des accès, mais la décision de qui a le droit de voir quoi se prend dans la base de données, jamais dans le navigateur. C'est ce qui fait qu'un abonnement résilié perd réellement ses accès, et pas seulement l'affichage d'un bouton.</p>
                 <div class="usecase-stack">
                     <span>Stripe</span><span>Supabase</span><span>n8n</span><span>OAuth2</span>
                 </div>
@@ -1275,6 +1287,7 @@
                     <li>Données structurées et pages légales conformes</li>
                     <li>Audit SEO et GEO livré avec un plan d'action sur 30 jours</li>
                 </ul>
+                <p class="usecase-synth">Le site d'une consultante en RH et RSE a été reconstruit en HTML, CSS et JavaScript, sans framework, avec ses données structurées et ses pages légales conformes. Il est livré avec un audit SEO et GEO et un plan d'action sur 30 jours, pour qu'elle sache quoi faire une fois le site en ligne.</p>
                 <div class="usecase-stack">
                     <span>HTML</span><span>CSS</span><span>JS</span><span>Schema.org</span>
                 </div>
@@ -1296,6 +1309,7 @@
                     <li>Nettoyage planifié des catégories à faible valeur</li>
                     <li>Brouillons de réponse pré-rédigés pour les cas récurrents</li>
                 </ul>
+                <p class="usecase-synth">À l'arrivée de chaque message, une classification décide de sa catégorie, déclenche une notification si c'est urgent et prépare un brouillon de réponse pour les cas récurrents. Les catégories à faible valeur sont nettoyées automatiquement. Le gain mesuré est de 20 à 30 minutes par jour.</p>
                 <div class="usecase-stack">
                     <span>n8n</span><span>OpenAI</span><span>Gmail API</span><span>VPS</span>
                 </div>
@@ -1317,6 +1331,7 @@
                     <li>Fiche contact créée ou mise à jour, sans jamais créer de doublon</li>
                     <li>Confirmation par mail et invitation visio générées automatiquement</li>
                 </ul>
+                <p class="usecase-synth">Les créneaux proposés sont calculés depuis les disponibilités réelles de l'agenda, avec la durée, le battement et le délai de prévenance pilotés par paramètre et non codés en dur. À la réservation, la fiche contact est créée ou mise à jour sans jamais produire de doublon, et la confirmation comme l'invitation visio partent seules.</p>
                 <div class="usecase-stack">
                     <span>n8n</span><span>Google Calendar API</span><span>Notion API</span><span>JS vanilla</span>
                 </div>
@@ -1338,6 +1353,7 @@
                     <li>Diagrammes de Gantt, cartes de dépendances et chemin critique tenus à jour à chaque sprint</li>
                     <li>Tableaux de bord calculés depuis les fiches, et point d'avancement envoyé par mail automatiquement</li>
                 </ul>
+                <p class="usecase-synth">Toute l'activité de l'agence tient dans une base Obsidian partagée entre les deux associés : fiches de tâches, backlog priorisé, diagrammes de Gantt et chemin critique remis à jour à chaque sprint. Les tableaux de bord se calculent depuis les fiches, et le point d'avancement part par mail tout seul.</p>
                 <div class="usecase-stack">
                     <span>Obsidian</span><span>Dataview</span><span>Mermaid</span><span>n8n</span>
                 </div>

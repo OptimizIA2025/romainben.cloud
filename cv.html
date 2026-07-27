@@ -683,8 +683,8 @@
                 <div class="entry-when"><b>Mission</b>créateur de contenu</div>
                 <div class="entry-body">
                     <h3>Agent de veille quotidien</h3>
-                    <p>Collecte multi-sources déclenchée chaque nuit, scoring de pertinence par LLM sur des critères définis avec le client, synthèse envoyée par mail du lundi au vendredi, et workflow de surveillance qui alerte dès qu'une exécution échoue.</p>
-                    <p><strong>Résultat :</strong> veille livrée 5 jours sur 7, sans intervention humaine.</p>
+                    <p>Conception et exploitation d'un agent de veille pour un créateur de contenu. La difficulté du projet n'était pas la collecte mais le filtrage : les critères de pertinence ont été calibrés avec le client puis appliqués par un LLM, ce qui ramène plusieurs dizaines d'éléments quotidiens à une synthèse lisible. Un workflow de supervision distinct surveille les exécutions.</p>
+                    <p><strong>Résultat :</strong> tourne cinq jours sur sept depuis la mise en production, sans reprise manuelle.</p>
                     <div class="tags"><span class="tag">n8n</span><span class="tag">OpenAI</span><span class="tag">Gmail API</span><span class="tag">VPS</span></div>
                 </div>
             </article>
@@ -693,8 +693,8 @@
                 <div class="entry-when"><b>Produit</b>interne</div>
                 <div class="entry-body">
                     <h3>SaaS d'audit SEO et GEO</h3>
-                    <p>Moteur d'analyse couvrant 80 points par site, rapport bilingue avec score, verdict et correctifs priorisés, espace client avec archivage des rapports en base, newsletter hebdomadaire générée et envoyée automatiquement.</p>
-                    <p><strong>Résultat :</strong> audit complet rendu en ligne en quelques minutes.</p>
+                    <p>Produit interne d'OptimizIA.xyz, développé de bout en bout. Le moteur applique 80 vérifications par site ; l'enjeu de conception était de rendre le verdict actionnable plutôt qu'exhaustif, d'où le classement des correctifs par priorité. Espace client, archivage des rapports en base et newsletter hebdomadaire complètent le produit.</p>
+                    <p><strong>Résultat :</strong> outil utilisé en qualification commerciale, rapport rendu en ligne en quelques minutes.</p>
                     <div class="tags"><span class="tag">n8n</span><span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">Brevo</span></div>
                 </div>
             </article>
@@ -703,8 +703,8 @@
                 <div class="entry-when"><b>Produit</b>interne</div>
                 <div class="entry-body">
                     <h3>Plateforme d'abonnement</h3>
-                    <p>Passage d'un service à accès manuel à un produit vendable : paiement Stripe en production, attribution automatique des accès communautaires après paiement, droits décidés en base avec Row Level Security, connexion OAuth en un clic.</p>
-                    <p><strong>Résultat :</strong> tunnel de vente opérationnel de bout en bout.</p>
+                    <p>Transformation d'un service à accès manuel en produit vendable. La décision d'architecture structurante a été de placer le contrôle d'accès en base, avec Row Level Security, plutôt que dans le front : les droits restent cohérents quel que soit le client qui interroge l'API. Paiement Stripe en production et connexion OAuth en un clic.</p>
+                    <p><strong>Résultat :</strong> tunnel de vente opérationnel, du paiement à l'ouverture automatique des accès.</p>
                     <div class="tags"><span class="tag">Stripe</span><span class="tag">Supabase</span><span class="tag">n8n</span><span class="tag">OAuth2</span></div>
                 </div>
             </article>
@@ -713,8 +713,8 @@
                 <div class="entry-when"><b>Mission</b>conseil RH et RSE</div>
                 <div class="entry-body">
                     <h3>Site vitrine et audit SEO</h3>
-                    <p>Refonte complète d'un site constructeur lent et peu visible : reconstruction en HTML, CSS et JavaScript sans framework, données structurées, pages légales conformes, audit SEO et GEO livré avec un plan d'action sur 30 jours.</p>
-                    <p><strong>Résultat :</strong> site en production sur un socle SEO propre.</p>
+                    <p>Mission freelance pour une consultante indépendante en RH et RSE, au départ sur un site constructeur lent et peu visible. Reconstruction sans framework pour supprimer la dépendance à une plateforme, mise en place des données structurées et des mentions légales, puis livraison d'un audit SEO et GEO assorti d'un plan d'action daté.</p>
+                    <p><strong>Résultat :</strong> site en production, maintenable sans abonnement à un éditeur tiers.</p>
                     <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Schema.org</span></div>
                 </div>
             </article>
@@ -723,8 +723,8 @@
                 <div class="entry-when"><b>Automatisation</b>boîte mail</div>
                 <div class="entry-body">
                     <h3>Tri intelligent de boîte Gmail</h3>
-                    <p>Classification automatique des messages à l'arrivée, notification immédiate sur les urgences, nettoyage planifié des catégories à faible valeur, brouillons de réponse pré-rédigés pour les cas récurrents.</p>
-                    <p><strong>Résultat :</strong> 20 à 30 minutes économisées par jour.</p>
+                    <p>Automatisation d'une boîte mail saturée. Le tri s'exécute à la réception et non en lot, pour que l'urgent soit notifié tout de suite ; les réponses récurrentes sont préparées en brouillon et laissées à validation humaine, choix assumé pour ne jamais envoyer un message non relu.</p>
+                    <p><strong>Résultat :</strong> 20 à 30 minutes récupérées chaque jour.</p>
                     <div class="tags"><span class="tag">n8n</span><span class="tag">OpenAI</span><span class="tag">Gmail API</span><span class="tag">VPS</span></div>
                 </div>
             </article>
@@ -733,8 +733,8 @@
                 <div class="entry-when"><b>Ce site</b>prise de rendez-vous</div>
                 <div class="entry-body">
                     <h3>Tunnel de réservation sur mesure</h3>
-                    <p>Remplacement d'un outil de réservation tiers par un tunnel maison : créneaux calculés depuis les disponibilités réelles de l'agenda, durée, battement et délai de prévenance pilotés par paramètre, fiche contact créée ou mise à jour sans jamais générer de doublon, confirmation par mail et invitation visio automatiques.</p>
-                    <p><strong>Résultat :</strong> réservation autonome, zéro saisie manuelle.</p>
+                    <p>Remplacement d'un outil de réservation tiers par un tunnel développé sur mesure et intégré au site. Le point délicat portait sur l'idempotence : une même personne qui réserve deux fois ne doit pas créer deux fiches dans un CRM partagé entre associés. Les paramètres de durée et de battement sont pilotés en base, pas écrits dans le code.</p>
+                    <p><strong>Résultat :</strong> réservation autonome, aucune saisie manuelle depuis la mise en ligne.</p>
                     <div class="tags"><span class="tag">n8n</span><span class="tag">Google Calendar API</span><span class="tag">Notion API</span><span class="tag">JavaScript</span></div>
                     <div class="entry-links">
                         <a href="contact-rom.html">
@@ -749,8 +749,8 @@
                 <div class="entry-when"><b>Interne</b>knowledge management</div>
                 <div class="entry-body">
                     <h3>Système d'information et pilotage de projet</h3>
-                    <p>Conception et exploitation du système d'information interne de l'agence, sous Obsidian, partagé et synchronisé entre les deux associés : base de connaissances structurée, portefeuille de projets en sprints avec fiches de tâches et backlog priorisé, diagrammes de Gantt, cartes de dépendances et chemin critique tenus à jour à chaque sprint, tableaux de bord calculés depuis les fiches, et point d'avancement envoyé par mail automatiquement.</p>
-                    <p><strong>Résultat :</strong> un seul endroit pour piloter tous les projets et toutes les missions clients.</p>
+                    <p>Conception et exploitation du système d'information interne d'OptimizIA.xyz, synchronisé entre les deux associés. Le parti pris est que la donnée de pilotage vit dans les fiches de tâches et que tout le reste, tableaux de bord, Gantt et chemin critique, en est dérivé : il n'y a jamais deux états à réconcilier. Le point d'avancement part par mail automatiquement.</p>
+                    <p><strong>Résultat :</strong> un seul endroit pour piloter les projets internes et les missions clients.</p>
                     <div class="tags"><span class="tag">Obsidian</span><span class="tag">Dataview</span><span class="tag">Mermaid</span><span class="tag">n8n</span><span class="tag">Knowledge Management</span></div>
                 </div>
             </article>

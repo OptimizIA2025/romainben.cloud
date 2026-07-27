@@ -71,46 +71,46 @@ window.RB_I18N = {
         "Client work is described by sector, without naming the companies.",
     "<b>Mission</b>créateur de contenu": "<b>Client</b>content creator",
     "Agent de veille quotidien": "Daily monitoring agent",
-    "Collecte multi-sources déclenchée chaque nuit, scoring de pertinence par LLM sur des critères définis avec le client, synthèse envoyée par mail du lundi au vendredi, et workflow de surveillance qui alerte dès qu'une exécution échoue.":
-        "Multi-source collection triggered every night, relevance scoring by LLM against criteria defined with the client, a digest emailed Monday to Friday, and a watchdog workflow that raises an alert as soon as a run fails.",
-    "<strong>Résultat :</strong> veille livrée 5 jours sur 7, sans intervention humaine.":
-        "<strong>Outcome:</strong> monitoring delivered five days a week, with no human intervention.",
+    "Conception et exploitation d'un agent de veille pour un créateur de contenu. La difficulté du projet n'était pas la collecte mais le filtrage : les critères de pertinence ont été calibrés avec le client puis appliqués par un LLM, ce qui ramène plusieurs dizaines d'éléments quotidiens à une synthèse lisible. Un workflow de supervision distinct surveille les exécutions.":
+        "Designed and ran a monitoring agent for a content creator. The hard part was not collection but filtering: the relevance criteria were calibrated with the client then applied by an LLM, which cuts dozens of daily items down to a readable digest. A separate watchdog workflow keeps an eye on the runs.",
+    "<strong>Résultat :</strong> tourne cinq jours sur sept depuis la mise en production, sans reprise manuelle.":
+        "<strong>Outcome:</strong> running five days a week since launch, with no manual recovery.",
     "<b>Produit</b>interne": "<b>Product</b>in-house",
     "SaaS d'audit SEO et GEO": "SEO and GEO audit SaaS",
-    "Moteur d'analyse couvrant 80 points par site, rapport bilingue avec score, verdict et correctifs priorisés, espace client avec archivage des rapports en base, newsletter hebdomadaire générée et envoyée automatiquement.":
-        "An analysis engine covering 80 checks per site, a bilingual report with a score, a verdict and prioritised fixes, a client area with reports archived in the database, and a weekly newsletter generated and sent automatically.",
-    "<strong>Résultat :</strong> audit complet rendu en ligne en quelques minutes.":
-        "<strong>Outcome:</strong> a full audit delivered online in minutes.",
+    "Produit interne d'OptimizIA.xyz, développé de bout en bout. Le moteur applique 80 vérifications par site ; l'enjeu de conception était de rendre le verdict actionnable plutôt qu'exhaustif, d'où le classement des correctifs par priorité. Espace client, archivage des rapports en base et newsletter hebdomadaire complètent le produit.":
+        "An in-house OptimizIA.xyz product, built end to end. The engine runs 80 checks per site; the design goal was to make the verdict actionable rather than exhaustive, hence fixes ranked by priority. A client area, reports archived in the database and a weekly newsletter round out the product.",
+    "<strong>Résultat :</strong> outil utilisé en qualification commerciale, rapport rendu en ligne en quelques minutes.":
+        "<strong>Outcome:</strong> used in sales qualification, with a report delivered online in minutes.",
     "Plateforme d'abonnement": "Subscription platform",
-    "Passage d'un service à accès manuel à un produit vendable : paiement Stripe en production, attribution automatique des accès communautaires après paiement, droits décidés en base avec Row Level Security, connexion OAuth en un clic.":
-        "Turned a manually granted service into a sellable product: Stripe payments in production, community access granted automatically after payment, permissions decided in the database with Row Level Security, one-click OAuth sign-in.",
-    "<strong>Résultat :</strong> tunnel de vente opérationnel de bout en bout.":
-        "<strong>Outcome:</strong> a sales funnel that works end to end.",
+    "Transformation d'un service à accès manuel en produit vendable. La décision d'architecture structurante a été de placer le contrôle d'accès en base, avec Row Level Security, plutôt que dans le front : les droits restent cohérents quel que soit le client qui interroge l'API. Paiement Stripe en production et connexion OAuth en un clic.":
+        "Turned a manually granted service into a sellable product. The structural architecture call was to put access control in the database, with Row Level Security, rather than in the front end: permissions stay consistent whichever client queries the API. Stripe payments in production and one-click OAuth sign-in.",
+    "<strong>Résultat :</strong> tunnel de vente opérationnel, du paiement à l'ouverture automatique des accès.":
+        "<strong>Outcome:</strong> a working sales funnel, from payment to access granted automatically.",
     "<b>Mission</b>conseil RH et RSE": "<b>Client</b>HR and CSR consulting",
     "Site vitrine et audit SEO": "Marketing site and SEO audit",
-    "Refonte complète d'un site constructeur lent et peu visible : reconstruction en HTML, CSS et JavaScript sans framework, données structurées, pages légales conformes, audit SEO et GEO livré avec un plan d'action sur 30 jours.":
-        "Full rebuild of a slow, barely visible website-builder site: rewritten in plain HTML, CSS and JavaScript, structured data, compliant legal pages, and an SEO and GEO audit delivered with a 30-day action plan.",
-    "<strong>Résultat :</strong> site en production sur un socle SEO propre.":
-        "<strong>Outcome:</strong> a live site on clean SEO foundations.",
+    "Mission freelance pour une consultante indépendante en RH et RSE, au départ sur un site constructeur lent et peu visible. Reconstruction sans framework pour supprimer la dépendance à une plateforme, mise en place des données structurées et des mentions légales, puis livraison d'un audit SEO et GEO assorti d'un plan d'action daté.":
+        "Freelance engagement for an independent HR and CSR consultant, starting from a slow, barely visible website-builder site. Rebuilt without a framework to remove the dependency on a platform, structured data and legal pages put in place, then an SEO and GEO audit delivered with a dated action plan.",
+    "<strong>Résultat :</strong> site en production, maintenable sans abonnement à un éditeur tiers.":
+        "<strong>Outcome:</strong> a live site, maintainable without a subscription to any vendor.",
     "<b>Automatisation</b>boîte mail": "<b>Automation</b>inbox",
     "Tri intelligent de boîte Gmail": "Smart Gmail inbox triage",
-    "Classification automatique des messages à l'arrivée, notification immédiate sur les urgences, nettoyage planifié des catégories à faible valeur, brouillons de réponse pré-rédigés pour les cas récurrents.":
-        "Automatic classification of incoming messages, instant notification on urgent ones, scheduled clean-up of low-value categories, and pre-written reply drafts for recurring cases.",
-    "<strong>Résultat :</strong> 20 à 30 minutes économisées par jour.":
-        "<strong>Outcome:</strong> 20 to 30 minutes saved every day.",
+    "Automatisation d'une boîte mail saturée. Le tri s'exécute à la réception et non en lot, pour que l'urgent soit notifié tout de suite ; les réponses récurrentes sont préparées en brouillon et laissées à validation humaine, choix assumé pour ne jamais envoyer un message non relu.":
+        "Automation of an overloaded mailbox. Sorting runs on arrival rather than in batches, so anything urgent is flagged straight away; recurring replies are prepared as drafts and left for human approval, a deliberate call so no message ever goes out unread.",
+    "<strong>Résultat :</strong> 20 à 30 minutes récupérées chaque jour.":
+        "<strong>Outcome:</strong> 20 to 30 minutes reclaimed every day.",
     "<b>Ce site</b>prise de rendez-vous": "<b>This site</b>booking funnel",
     "Tunnel de réservation sur mesure": "Custom booking funnel",
-    "Remplacement d'un outil de réservation tiers par un tunnel maison : créneaux calculés depuis les disponibilités réelles de l'agenda, durée, battement et délai de prévenance pilotés par paramètre, fiche contact créée ou mise à jour sans jamais générer de doublon, confirmation par mail et invitation visio automatiques.":
-        "Replaced a third-party booking tool with an in-house funnel: slots computed from real calendar availability, duration, buffer and notice period driven by settings, a contact record created or updated without ever producing a duplicate, and automatic email confirmation and video-call invitation.",
-    "<strong>Résultat :</strong> réservation autonome, zéro saisie manuelle.":
-        "<strong>Outcome:</strong> self-service booking, zero manual data entry.",
+    "Remplacement d'un outil de réservation tiers par un tunnel développé sur mesure et intégré au site. Le point délicat portait sur l'idempotence : une même personne qui réserve deux fois ne doit pas créer deux fiches dans un CRM partagé entre associés. Les paramètres de durée et de battement sont pilotés en base, pas écrits dans le code.":
+        "Replaced a third-party booking tool with a bespoke funnel built into the site. The tricky part was idempotency: the same person booking twice must not create two records in a CRM shared between partners. Duration and buffer settings live in the database, not in the code.",
+    "<strong>Résultat :</strong> réservation autonome, aucune saisie manuelle depuis la mise en ligne.":
+        "<strong>Outcome:</strong> self-service booking, no manual data entry since launch.",
     "Essayer le tunnel": "Try the funnel",
     "<b>Interne</b>knowledge management": "<b>In-house</b>knowledge management",
     "Système d'information et pilotage de projet": "Internal information system and project control",
-    "Conception et exploitation du système d'information interne de l'agence, sous Obsidian, partagé et synchronisé entre les deux associés : base de connaissances structurée, portefeuille de projets en sprints avec fiches de tâches et backlog priorisé, diagrammes de Gantt, cartes de dépendances et chemin critique tenus à jour à chaque sprint, tableaux de bord calculés depuis les fiches, et point d'avancement envoyé par mail automatiquement.":
-        "Designed and run the agency's internal information system in Obsidian, shared and synced between both partners: a structured knowledge base, a project portfolio organised in sprints with task records and a prioritised backlog, Gantt charts, dependency maps and a critical path kept current every sprint, dashboards computed from the records, and a progress report emailed automatically.",
-    "<strong>Résultat :</strong> un seul endroit pour piloter tous les projets et toutes les missions clients.":
-        "<strong>Outcome:</strong> a single place to steer every project and every client engagement.",
+    "Conception et exploitation du système d'information interne d'OptimizIA.xyz, synchronisé entre les deux associés. Le parti pris est que la donnée de pilotage vit dans les fiches de tâches et que tout le reste, tableaux de bord, Gantt et chemin critique, en est dérivé : il n'y a jamais deux états à réconcilier. Le point d'avancement part par mail automatiquement.":
+        "Designed and run the internal information system of OptimizIA.xyz, synced between both partners. The principle is that steering data lives in the task records and everything else, dashboards, Gantt charts and the critical path, is derived from them: there are never two states to reconcile. The progress report is emailed automatically.",
+    "<strong>Résultat :</strong> un seul endroit pour piloter les projets internes et les missions clients.":
+        "<strong>Outcome:</strong> a single place to steer internal projects and client engagements.",
 
     /* Competences */
     "Développement": "Development",
