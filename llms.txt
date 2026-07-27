@@ -89,7 +89,8 @@ Français langue maternelle, anglais niveau B2, espagnol niveau A2.
 
 ## Fichiers structurés pour les agents
 
-Ces fichiers ne sont liés depuis aucune page, ils existent pour la lecture machine :
+Ces fichiers existent pour la lecture machine :
+- **Flux RSS des systèmes en production** : https://www.romainben.cloud/rss.xml (les 7 systèmes, un par entrée, avec le secteur et une synthèse autoportante. Déclaré dans le `<head>` des 4 pages.)
 - **Index des pages** : https://www.romainben.cloud/ai-index.json (les 4 pages du site, avec leur description)
 - **Entités du graphe de connaissance** : https://www.romainben.cloud/entities.json
 - **Profil et offres en JSON-LD** : https://www.romainben.cloud/manifest.json (Schema.org ProfilePage, pas un manifeste d'application web)

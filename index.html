@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romain Ben | Ingénieur Polytech &amp; Co-fondateur OptimizIA.xyz</title>
-    <meta name="description" content="Romain Ben, étudiant ingénieur MAM4 à Polytech Nice Sophia et co-fondateur d'OptimizIA.xyz. Automatisation n8n, agents IA, SaaS et maths appliquées.">
+    <title>Romain Ben | Ingénieur Polytech, co-fondateur OptimizIA.xyz</title>
+    <meta name="description" content="Romain Ben, étudiant ingénieur MAM4 à Polytech Nice Sophia et co-fondateur d’OptimizIA.xyz. Automatisation n8n, agents IA, SaaS et maths appliquées.">
     <meta name="keywords" content="Romain Ben, OptimizIA.xyz, Polytech Nice Sophia, MAM4, étudiant ingénieur, automatisation n8n, agent IA, intelligence artificielle, mathématiques appliquées, développement web, SaaS, Supabase, Antibes">
     <meta name="author" content="Romain Ben">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="theme-color" content="#FAFAF9">
     <link rel="canonical" href="https://www.romainben.cloud/">
+    <link rel="alternate" type="application/rss+xml" title="Romain Ben - systèmes en production" href="rss.xml">
 
     <meta property="og:title" content="Romain Ben | Co-fondateur OptimizIA.xyz">
-    <meta property="og:description" content="Étudiant ingénieur MAM4 en maths appliquées, co-fondateur d'OptimizIA.xyz. Automatisation, agents IA et SaaS au service des PME/ETI.">
+    <meta property="og:description" content="Étudiant ingénieur MAM4 en maths appliquées, co-fondateur d’OptimizIA.xyz. Automatisation, agents IA et SaaS au service des PME/ETI.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.romainben.cloud/">
     <meta property="og:image" content="https://www.romainben.cloud/og-romainben.jpg?v=1">
@@ -23,7 +24,7 @@
     <meta property="og:site_name" content="Romain Ben">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:description" content="Étudiant ingénieur MAM4 en maths appliquées, co-fondateur d'OptimizIA.xyz. Automatisation, agents IA et SaaS au service des PME/ETI.">
+    <meta name="twitter:description" content="Étudiant ingénieur MAM4 en maths appliquées, co-fondateur d’OptimizIA.xyz. Automatisation, agents IA et SaaS au service des PME/ETI.">
     <meta name="twitter:title" content="Romain Ben | Co-fondateur OptimizIA.xyz">
     <meta name="twitter:image" content="https://www.romainben.cloud/og-romainben.jpg?v=1">
 
@@ -54,6 +55,7 @@
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Antibes",
+            "postalCode": "06600",
             "addressCountry": "FR"
           },
           "alumniOf": {
@@ -103,6 +105,7 @@
           "name": "Romain Ben",
           "inLanguage": "fr-FR",
           "dateModified": "2026-07-27T17:22:15+02:00",
+          "author": { "@id": "https://www.romainben.cloud/#romain" },
           "publisher": { "@id": "https://www.romainben.cloud/#romain" },
           "image": {
             "@type": "ImageObject",
@@ -201,13 +204,15 @@
     }
     </script>
 
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-    <!-- defer : GSAP n'est utile qu'apres le parsing. En synchrone il bloquait le rendu
-         et pesait sur le LCP. Le script d'init plus bas attend DOMContentLoaded, qui
-         se declenche apres l'execution des scripts defer. -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- GSAP auto-heberge depuis le 27/07 : servi par cdnjs, il coutait une
+         resolution DNS, une connexion et une negociation TLS vers un tiers avant
+         que la moindre animation ne parte, et rendait la page dependante d'un
+         domaine qu'on ne controle pas. En local il part du meme socket que le
+         HTML. Garde en defer : il n'est utile qu'apres le parsing, et le script
+         d'init plus bas attend DOMContentLoaded, declenche apres les defer. -->
+    <script defer src="js/gsap.min.js?v=3.12.5"></script>
+    <script defer src="js/ScrollTrigger.min.js?v=3.12.5"></script>
 
     <style>
         /* Polices auto-hebergees : variables, sous-ensembles latin et latin etendu.

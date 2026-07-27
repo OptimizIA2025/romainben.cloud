@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Romain Ben - systèmes en production</title>
+    <link>https://www.romainben.cloud/</link>
+    <description>Les automatisations et agents IA conçus par Romain Ben et actuellement en production, décrits du besoin exprimé jusqu’à la mise en service. Missions clients décrites par secteur, sans nommer les entreprises.</description>
+    <language>fr-FR</language>
+    <lastBuildDate>Mon, 27 Jul 2026 16:39:00 +0200</lastBuildDate>
+    <atom:link href="https://www.romainben.cloud/rss.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>contact@romainben.cloud (Romain Ben)</managingEditor>
+    <webMaster>contact@romainben.cloud (Romain Ben)</webMaster>
+    <item>
+      <title>Agent de veille quotidien</title>
+      <link>https://www.romainben.cloud/#use-cases</link>
+      <guid isPermaLink="false">https://www.romainben.cloud/#usecase-agent-de-veille-quotidien</guid>
+      <category>Mission client</category>
+      <pubDate>Mon, 27 Jul 2026 16:39:00 +0200</pubDate>
+      <description>Chaque nuit, l'agent parcourt les sources suivies par le client, note chaque élément selon des critères calibrés avec lui, puis envoie une synthèse le matin du lundi au vendredi. Un second workflow surveille le premier et alerte dès qu'une exécution échoue, ce qui rend la veille exploitable sans surveillance humaine.</description>
+    </item>
+    <item>
+      <title>SaaS d'audit SEO &amp; GEO</title>
+      <link>https://www.romainben.cloud/#use-cases</link>
+      <guid isPermaLink="false">https://www.romainben.cloud/#usecase-saas-d-audit-seo-geo</guid>
+      <pubDate>Mon, 27 Jul 2026 16:39:00 +0200</pubDate>
+      <description>SEOPlus! analyse un site sur 80 points techniques, SEO et sécurité, puis rend un rapport bilingue où chaque correctif est classé par priorité plutôt que listé en vrac. Il sert d'abord à qualifier un prospect avec des chiffres au lieu d'un argumentaire. C'est cet outil qui a audité ce site.</description>
+    </item>
+    <item>
+      <title>Plateforme d'abonnement</title>
+      <link>https://www.romainben.cloud/#use-cases</link>
+      <guid isPermaLink="false">https://www.romainben.cloud/#usecase-plateforme-d-abonnement</guid>
+      <pubDate>Mon, 27 Jul 2026 16:39:00 +0200</pubDate>
+      <description>Le paiement Stripe déclenche l'ouverture des accès, mais la décision de qui a le droit de voir quoi se prend dans la base de données, jamais dans le navigateur. C'est ce qui fait qu'un abonnement résilié perd réellement ses accès, et pas seulement l'affichage d'un bouton.</description>
+    </item>
+    <item>
+      <title>Site vitrine &amp; audit SEO</title>
+      <link>https://www.romainben.cloud/#use-cases</link>
+      <guid isPermaLink="false">https://www.romainben.cloud/#usecase-site-vitrine-audit-seo</guid>
+      <category>Mission client</category>
+      <pubDate>Mon, 27 Jul 2026 16:39:00 +0200</pubDate>
+      <description>Le site d'une consultante en RH et RSE a été reconstruit en HTML, CSS et JavaScript, sans framework, avec ses données structurées et ses pages légales conformes. Il est livré avec un audit SEO et GEO et un plan d'action sur 30 jours, pour qu'elle sache quoi faire une fois le site en ligne.</description>
+    </item>
+    <item>
+      <title>Tri intelligent de boîte Gmail</title>
+      <link>https://www.romainben.cloud/#use-cases</link>
+      <guid isPermaLink="false">https://www.romainben.cloud/#usecase-tri-intelligent-de-bo-te-gmail</guid>
+      <category>Automatisation</category>
+      <pubDate>Mon, 27 Jul 2026 16:39:00 +0200</pubDate>
+      <description>À l'arrivée de chaque message, une classification décide de sa catégorie, déclenche une notification si c'est urgent et prépare un brouillon de réponse pour les cas récurrents. Les catégories à faible valeur sont nettoyées automatiquement. Le gain mesuré est de 20 à 30 minutes par jour.</description>
+    </item>
+    <item>
+      <title>Prise de rendez-vous sur mesure</title>
+      <link>https://www.romainben.cloud/#use-cases</link>
+      <guid isPermaLink="false">https://www.romainben.cloud/#usecase-prise-de-rendez-vous-sur-mesure</guid>
+      <pubDate>Mon, 27 Jul 2026 16:39:00 +0200</pubDate>
+      <description>Les créneaux proposés sont calculés depuis les disponibilités réelles de l'agenda, avec la durée, le battement et le délai de prévenance pilotés par paramètre et non codés en dur. À la réservation, la fiche contact est créée ou mise à jour sans jamais produire de doublon, et la confirmation comme l'invitation visio partent seules.</description>
+    </item>
+    <item>
+      <title>Système d'information et pilotage de projet</title>
+      <link>https://www.romainben.cloud/#use-cases</link>
+      <guid isPermaLink="false">https://www.romainben.cloud/#usecase-systeme-d-information-et-pilotage-de-projet</guid>
+      <category>Interne</category>
+      <pubDate>Mon, 27 Jul 2026 16:39:00 +0200</pubDate>
+      <description>Toute l'activité de l'agence tient dans une base Obsidian partagée entre les deux associés : fiches de tâches, backlog priorisé, diagrammes de Gantt et chemin critique remis à jour à chaque sprint. Les tableaux de bord se calculent depuis les fiches, et le point d'avancement part par mail tout seul.</description>
+    </item>
+  </channel>
+</rss>

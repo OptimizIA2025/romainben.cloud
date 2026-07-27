@@ -5,8 +5,8 @@
 
 window.RB_I18N = {
     /* Titre et hero */
-    "Romain Ben | Ingénieur Polytech &amp; Co-fondateur OptimizIA.xyz":
-        "Romain Ben | Engineering student &amp; co-founder of OptimizIA.xyz",
+    "Romain Ben | Ingénieur Polytech, co-fondateur OptimizIA.xyz":
+        "Romain Ben | Engineering student, co-founder OptimizIA.xyz",
     "Romain Ben<br><span class=\"highlight\">étudiant ingénieur</span><br>&amp; entrepreneur.":
         "Romain Ben<br><span class=\"highlight\">engineering student</span><br>&amp; entrepreneur.",
     "étudiant ingénieur": "engineering student",
