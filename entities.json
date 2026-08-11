@@ -1,63 +1,252 @@
 {
-    "@context": "https://schema.org",
-    "@type": "Dataset",
-    "name": "Top Semantic Entities",
-    "description": "Core knowledge graph entities extracted for LLM ingestion.",
-    "dateModified": "2026-07-26",
-    "about": [
-        "Romain Ben",
-        "Mathématiques Appliquées et Modélisation",
-        "MAM4",
-        "Polytech Nice Sophia",
-        "Université Côte d'Azur",
-        "Statut National Étudiant-Entrepreneur",
-        "OptimizIA.xyz",
-        "Rémy Ginoux",
-        "SEOPlus!",
-        "n8n",
-        "Agents LLM",
-        "OpenAI",
-        "Claude",
-        "Supabase",
-        "PostgreSQL",
-        "Row Level Security",
-        "Stripe",
-        "Next.js",
-        "TypeScript",
-        "Docker",
-        "nginx",
-        "VPS",
-        "Gmail",
-        "Google Calendar",
-        "API",
-        "SEO technique",
-        "GEO",
-        "Schema.org",
-        "Core Web Vitals",
-        "Knowledge Management",
-        "DCT",
-        "CSR",
-        "JPEG",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Python",
-        "PME",
-        "ETI",
-        "Antibes",
-        "PeiP",
-        "Cycle ingénieur",
-        "Analyse numérique",
-        "Optimisation",
-        "Équations différentielles",
-        "Algèbre linéaire",
-        "Matlab",
-        "Streamlit",
-        "Leaflet",
-        "OAuth2",
-        "Webhooks",
-        "Traefik",
-        "Sophia-Antipolis",
-        "PEPITE"
-    ]
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Top Semantic Entities",
+  "description": "Core knowledge graph entities extracted for LLM ingestion.",
+  "dateModified": "2026-07-28",
+  "about": [
+    {
+      "@type": "Person",
+      "name": "Romain Ben",
+      "sameAs": "https://www.romainben.cloud/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Mathématiques Appliquées et Modélisation"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "MAM4"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Polytech Nice Sophia",
+      "sameAs": "https://polytech.univ-cotedazur.fr/"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Université Côte d'Azur",
+      "sameAs": "https://univ-cotedazur.fr/"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Statut National Étudiant-Entrepreneur"
+    },
+    {
+      "@type": "Organization",
+      "name": "OptimizIA.xyz",
+      "sameAs": "https://www.optimizia.xyz/"
+    },
+    {
+      "@type": "Person",
+      "name": "Rémy Ginoux",
+      "sameAs": "https://www.ginoux.xyz/"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "SEOPlus!",
+      "sameAs": "https://seoplus.optimizia.xyz/"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "n8n",
+      "sameAs": "https://n8n.io/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Agents LLM"
+    },
+    {
+      "@type": "Organization",
+      "name": "OpenAI",
+      "sameAs": "https://openai.com/"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Claude",
+      "sameAs": "https://www.anthropic.com/claude"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Supabase",
+      "sameAs": "https://supabase.com/"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "PostgreSQL",
+      "sameAs": "https://www.postgresql.org/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Row Level Security"
+    },
+    {
+      "@type": "Organization",
+      "name": "Stripe",
+      "sameAs": "https://stripe.com/"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Next.js",
+      "sameAs": "https://nextjs.org/"
+    },
+    {
+      "@type": "ComputerLanguage",
+      "name": "TypeScript",
+      "sameAs": "https://www.typescriptlang.org/"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Docker",
+      "sameAs": "https://www.docker.com/"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "nginx",
+      "sameAs": "https://nginx.org/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "VPS"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Gmail",
+      "sameAs": "https://mail.google.com/"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Google Calendar",
+      "sameAs": "https://calendar.google.com/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "API"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "SEO technique"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "GEO"
+    },
+    {
+      "@type": "Organization",
+      "name": "Schema.org",
+      "sameAs": "https://schema.org/"
+    },
+    {
+      "@type": "Thing",
+      "name": "Core Web Vitals",
+      "sameAs": "https://web.dev/vitals/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Knowledge Management"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "DCT"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "CSR"
+    },
+    {
+      "@type": "Thing",
+      "name": "JPEG"
+    },
+    {
+      "@type": "ComputerLanguage",
+      "name": "HTML"
+    },
+    {
+      "@type": "ComputerLanguage",
+      "name": "CSS"
+    },
+    {
+      "@type": "ComputerLanguage",
+      "name": "JavaScript"
+    },
+    {
+      "@type": "ComputerLanguage",
+      "name": "Python",
+      "sameAs": "https://www.python.org/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "PME"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "ETI"
+    },
+    {
+      "@type": "City",
+      "name": "Antibes"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "PeiP"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Cycle ingénieur"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Analyse numérique"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Optimisation"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Équations différentielles"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Algèbre linéaire"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Matlab",
+      "sameAs": "https://www.mathworks.com/products/matlab.html"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Streamlit",
+      "sameAs": "https://streamlit.io/"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Leaflet",
+      "sameAs": "https://leafletjs.com/"
+    },
+    {
+      "@type": "Thing",
+      "name": "OAuth2",
+      "sameAs": "https://oauth.net/2/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Webhooks"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Traefik",
+      "sameAs": "https://traefik.io/"
+    },
+    {
+      "@type": "Place",
+      "name": "Sophia-Antipolis"
+    },
+    {
+      "@type": "Organization",
+      "name": "PEPITE",
+      "sameAs": "https://www.pepite-france.fr/"
+    }
+  ]
 }

@@ -99,7 +99,7 @@ window.RB_I18N = {
     "<strong>Résultat :</strong> 20 à 30 minutes récupérées chaque jour.":
         "<strong>Outcome:</strong> 20 to 30 minutes reclaimed every day.",
     "<b>Ce site</b>prise de rendez-vous": "<b>This site</b>booking funnel",
-    "Tunnel de réservation sur mesure": "Custom booking funnel",
+    "Prise de rendez-vous sur mesure": "Custom booking funnel",
     "Remplacement d'un outil de réservation tiers par un tunnel développé sur mesure et intégré au site. Le point délicat portait sur l'idempotence : une même personne qui réserve deux fois ne doit pas créer deux fiches dans un CRM partagé entre associés. Les paramètres de durée et de battement sont pilotés en base, pas écrits dans le code.":
         "Replaced a third-party booking tool with a bespoke funnel built into the site. The tricky part was idempotency: the same person booking twice must not create two records in a CRM shared between partners. Duration and buffer settings live in the database, not in the code.",
     "<strong>Résultat :</strong> réservation autonome, aucune saisie manuelle depuis la mise en ligne.":

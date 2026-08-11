@@ -1,0 +1,26 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "name": "Romain Ben, ingénieur Polytech & co-fondateur OptimizIA.xyz",
+  "url": "https://www.romainben.cloud/",
+  "dateModified": "2026-07-28",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Romain Ben",
+    "jobTitle": "Étudiant ingénieur MAM4, Polytech Nice Sophia · Co-fondateur OptimizIA.xyz",
+    "url": "https://www.romainben.cloud/",
+    "email": "contact@romainben.cloud",
+    "sameAs": [
+      "https://www.linkedin.com/in/romainben/",
+      "https://github.com/BnRomain",
+      "https://www.optimizia.xyz/"
+    ]
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "contact@optimizia.xyz",
+    "url": "https://www.optimizia.xyz/contact.html",
+    "availableLanguage": "French"
+  }
+}

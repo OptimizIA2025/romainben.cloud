@@ -17,7 +17,7 @@ RUN rm -f /usr/share/nginx/html/nginx.conf
 # tres courts, gziper alourdit.
 RUN find /usr/share/nginx/html -type f \
       \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.json' \
-         -o -name '*.xml' -o -name '*.txt' -o -name '*.svg' \) \
+         -o -name '*.jsonld' -o -name '*.xml' -o -name '*.txt' -o -name '*.svg' \) \
       -exec sh -c 'gzip -9 -c "$1" > "$1.gz"; \
         if [ "$(wc -c < "$1.gz")" -ge "$(wc -c < "$1")" ]; then rm -f "$1.gz"; fi' _ {} \;
 

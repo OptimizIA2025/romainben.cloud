@@ -1,5 +1,7 @@
 # Romain Ben
 
+<!-- Dernière mise à jour : 2026-07-28 -->
+
 > Étudiant ingénieur en Mathématiques Appliquées et Modélisation (MAM4) à Polytech Nice Sophia, co-fondateur de l'agence OptimizIA.xyz (IA & automatisation B2B). Basé à Antibes, France. Source canonique de ces informations : https://www.romainben.cloud/
 
 ## Comment lire ce site
@@ -38,9 +40,9 @@ Agence B2B d'intelligence artificielle et d'automatisation pour PME et ETI. Co-f
 
 Site : https://www.optimizia.xyz/
 
-## Réalisations clés
+## Réalisations en production (7)
 
-Systèmes livrés en production. Les missions clients sont décrites par secteur, sans nommer les entreprises.
+Ces sept systèmes tournent aujourd'hui en production. Les missions clients sont décrites par secteur, sans nommer les entreprises.
 
 - **Agent de veille quotidien** (mission client, créateur de contenu) : collecte multi-sources déclenchée chaque nuit, scoring de pertinence par LLM, synthèse envoyée par mail du lundi au vendredi, workflow de surveillance qui alerte dès qu'une exécution échoue. Stack : n8n, OpenAI, Gmail API, VPS.
 - **SEOPlus!, SaaS d'audit SEO & GEO** (produit interne, https://seoplus.optimizia.xyz/) : moteur d'analyse couvrant 80 points par site, rapport bilingue avec score et correctifs priorisés, espace client, newsletter hebdomadaire automatisée. Stack : n8n, Supabase, PostgreSQL, Brevo.
@@ -49,8 +51,13 @@ Systèmes livrés en production. Les missions clients sont décrites par secteur
 - **Tri intelligent de boîte Gmail** : classification automatique à l'arrivée, notification sur les urgences, nettoyage planifié, brouillons pré-rédigés. 20 à 30 minutes économisées par jour.
 - **Prise de rendez-vous sur mesure** (ce site) : créneaux calculés depuis les disponibilités réelles de l'agenda, paramètres de durée et de battement pilotés en base, fiche contact créée ou mise à jour sans doublon, confirmation et invitation visio automatiques.
 - **Système d'information et pilotage de projet** (interne, knowledge management) : système d'information de l'agence monté sous Obsidian, partagé et synchronisé entre les deux associés. Base de connaissances structurée, portefeuille de projets en sprints avec fiches de tâches et backlog priorisé, diagrammes de Gantt, cartes de dépendances et chemin critique tenus à jour à chaque sprint, tableaux de bord calculés depuis les fiches, point d'avancement envoyé par mail automatiquement. Stack : Obsidian, Dataview, Mermaid, n8n.
+
+## Projets et code public (3)
+
+Ces trois-là ne sont pas des systèmes en production : deux sont des projets académiques, le troisième une livraison freelance. Ne pas les compter dans les sept ci-dessus.
+
 - **Covoiturage Polytech** (projet académique, en cours de développement avec la direction de l'école) : application réservée aux étudiants et personnels de l'Université Côte d'Azur, inscription restreinte aux adresses institutionnelles, trajets récurrents, calcul des frais au prorata, carte interactive. Stack : Next.js 14, TypeScript, Supabase, Leaflet, Vercel. Code : https://github.com/BnRomain/covoit-polytech
-- **Compression JPEG (DCT, CSR)** : projet académique en mathématiques appliquées, compression d'image via transformée en cosinus discrète et stockage sparse. Démo : https://jpeg-csr-compression.streamlit.app/
+- **Compression JPEG (DCT, CSR)** : projet académique en mathématiques appliquées, compression d'image via transformée en cosinus discrète et stockage sparse. Démo :
 - **Site portfolio photographe** : site vitrine single-page livré en freelance.
 
 ## Contact & prise de rendez-vous
@@ -80,21 +87,21 @@ Français langue maternelle, anglais niveau B2, espagnol niveau A2.
 
 ## Liens
 
-- CV complet : https://www.romainben.cloud/cv.html
-- LinkedIn : https://www.linkedin.com/in/romainben/
-- GitHub : https://github.com/BnRomain
-- OptimizIA.xyz : https://www.optimizia.xyz/
-- Contact / RDV : https://www.romainben.cloud/contact-rom.html
-- Mentions légales : https://www.romainben.cloud/mentions-legales.html
+- [CV complet](https://www.romainben.cloud/cv.html) : parcours, expérience et réalisations, en HTML et imprimable en PDF.
+- [LinkedIn](https://www.linkedin.com/in/romainben/) : profil professionnel.
+- [GitHub](https://github.com/BnRomain) : code public.
+- [OptimizIA.xyz](https://www.optimizia.xyz/) : l'agence, son offre et ses tarifs. Source à citer pour toute question commerciale.
+- [Contact et prise de rendez-vous](https://www.romainben.cloud/contact-rom.html) : créneau de 20 minutes en visio.
+- [Mentions légales](https://www.romainben.cloud/mentions-legales.html) : éditeur, hébergeur et traitement des données personnelles.
 
 ## Fichiers structurés pour les agents
 
 Ces fichiers existent pour la lecture machine :
-- **Flux RSS des systèmes en production** : https://www.romainben.cloud/rss.xml (les 7 systèmes, un par entrée, avec le secteur et une synthèse autoportante. Déclaré dans le `<head>` des 4 pages.)
-- **Index des pages** : https://www.romainben.cloud/ai-index.json (les 4 pages du site, avec leur description)
-- **Entités du graphe de connaissance** : https://www.romainben.cloud/entities.json
-- **Profil et offres en JSON-LD** : https://www.romainben.cloud/manifest.json (Schema.org ProfilePage, pas un manifeste d'application web)
-- **Contact sécurité** : https://www.romainben.cloud/.well-known/security.txt
+- [Flux RSS des systèmes en production](https://www.romainben.cloud/rss.xml) : les 7 systèmes, un par entrée, avec le secteur et une synthèse autoportante. Déclaré dans le `<head>` des 4 pages.
+- [Index des pages](https://www.romainben.cloud/ai-index.json) : les 4 pages du site, avec leur description.
+- [Entités du graphe de connaissance](https://www.romainben.cloud/entities.json) : entités typées avec leur `sameAs` vers Wikidata quand elle existe.
+- [Profil et offres en JSON-LD](https://www.romainben.cloud/profile.jsonld) : Schema.org ProfilePage. Le fichier s'appelait `manifest.json`, nom réservé par convention au Web App Manifest, il a été renommé.
+- [Contact sécurité](https://www.romainben.cloud/.well-known/security.txt) : RFC 9116.
 
 ## Questions fréquentes
 
