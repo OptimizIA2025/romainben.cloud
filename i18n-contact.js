@@ -103,7 +103,7 @@ window.RB_I18N = {
 window.RB_I18N_FRAGMENTS = {
     " est réservé. Tu recevras un lien Google Meet.": " is booked. You will receive a Google Meet link.",
     "Une erreur est survenue. Écris-moi à ": "Something went wrong. Email me at ",
-    "Sans engagement. Un simple échange, à toi de voir s'": "No commitment. Just a conversation, then it is up to you whether ",
+    "Sans engagement. Un simple échange, à toi de voir s'il y a une suite.": "No commitment. Just a conversation, then it is up to you whether there is a follow-up.",
 
     "janvier": "January", "février": "February", "mars": "March", "avril": "April",
     "juillet": "July", "juin": "June", "août": "August", "septembre": "September",
