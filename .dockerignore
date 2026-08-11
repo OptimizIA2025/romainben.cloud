@@ -9,10 +9,6 @@
 .dockerignore
 .claude
 .impeccable
+.github
 Dockerfile
 *.md
-
-# Sources de la signature mail : les images sont deja embarquees en base64
-# dans le HTML, rien n'a besoin d'etre servi par le site.
-signature_html
-signature_email_pics
