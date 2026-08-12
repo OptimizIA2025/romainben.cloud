@@ -1,3 +1,7 @@
 # Vault Obsidian — fichiers non destinés au déploiement
 .claude/
 *.md
+# Le README est la seule note Markdown qui appartient au dépôt. Le `*.md`
+# ci-dessus vise les notes du vault Obsidian, pas la documentation du projet.
+# Il reste hors de l'image : `.dockerignore` exclut `*.md` de son côté.
+!README.md
