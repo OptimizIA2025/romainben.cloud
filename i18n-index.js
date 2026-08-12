@@ -4,6 +4,15 @@
    traiter les deux formes. Les noms de technologies ne sont pas traduits. */
 
 window.RB_I18N = {
+    "En production depuis juillet 2026":
+        "In production since July 2026",
+    "En ligne depuis juillet 2026":
+        "Online since July 2026",
+    "En ligne depuis juin 2026":
+        "Online since June 2026",
+    "En service depuis mai 2026":
+        "Live since May 2026",
+
     /* Titre et hero */
     "Romain Ben | Ingénieur Polytech, co-fondateur OptimizIA.xyz":
         "Romain Ben | Engineering student, co-founder OptimizIA.xyz",
@@ -235,8 +244,8 @@ window.RB_I18N = {
     "OptimizIA.xyz est une agence B2B d'IA et d'automatisation co-fondée avec <strong>Rémy Ginoux</strong> (25 ans d'expérience en transformation industrielle chez Volvo, Airbus, Solvay). Nous intervenons sur trois axes : <strong>automatisation de processus métier</strong> via workflows n8n, déploiement d'<strong>agents IA personnalisés</strong> sur API OpenAI, et <strong>Knowledge Management</strong> : structuration de la connaissance interne pour la rendre exploitable par des outils IA. L'objectif : libérer +30 % de temps productif dès les premières semaines.":
         "OptimizIA.xyz is a B2B AI and automation agency co-founded with <strong>Rémy Ginoux</strong> (25 years of industrial transformation experience at Volvo, Airbus and Solvay). We work along three lines: <strong>business process automation</strong> through n8n workflows, deployment of <strong>custom AI agents</strong> on the OpenAI API, and <strong>Knowledge Management</strong>, structuring internal knowledge so AI tools can actually use it. The goal: free up 30% more productive time within the first few weeks.",
     "En combien de temps un premier MVP est-il livré ?": "How long does a first MVP take to deliver?",
-    "Notre méthode se déroule en 3 phases : un <strong>diagnostic de maturité</strong> (1 à 3 semaines), la construction d'un <strong>MVP fonctionnel en moyenne en 13 jours</strong>, puis une phase d'industrialisation à l'échelle. Le MVP permet au dirigeant de valider concrètement la solution avant tout engagement à grande échelle. Les premiers gains sont mesurables dès la mise en production.":
-        "Our method runs in three phases: a <strong>maturity assessment</strong> (one to three weeks), building a <strong>working MVP in 13 days on average</strong>, then scaling up. The MVP lets the owner validate the solution concretely before committing at scale. The first gains are measurable as soon as it goes live.",
+    "Notre méthode se déroule en 3 phases : un <strong>diagnostic de maturité</strong> (1 à 3 semaines), la construction d'un <strong>MVP fonctionnel en 13 jours environ</strong>, puis une phase d'industrialisation à l'échelle. Le MVP permet au dirigeant de valider concrètement la solution avant tout engagement à grande échelle. Les premiers gains sont mesurables dès la mise en production.":
+        "Our method runs in three phases: a <strong>maturity assessment</strong> (one to three weeks), building a <strong>working MVP in about 13 days</strong>, then scaling up. The MVP lets the owner validate the solution concretely before committing at scale. The first gains are measurable as soon as it goes live.",
     "Quelle est la différence entre un workflow n8n et un agent IA ?": "What is the difference between an n8n workflow and an AI agent?",
     "Un <strong>workflow n8n</strong> est un enchaînement de règles déterministes : si X alors Y. Fiable, auditable, idéal pour les processus bien définis (tri d'emails, synchronisation d'outils, notifications automatiques). Un <strong>agent IA</strong> intègre un LLM capable de raisonner sur des situations non prévues, pour rédiger, synthétiser ou décider avec du contexte. Les deux se combinent souvent : le workflow orchestre, l'agent interprète.":
         "An <strong>n8n workflow</strong> is a chain of deterministic rules: if X then Y. Reliable, auditable, ideal for well-defined processes (email sorting, tool synchronisation, automatic notifications). An <strong>AI agent</strong> embeds an LLM that can reason about situations nobody anticipated, to write, summarise or decide with context. The two are often combined: the workflow orchestrates, the agent interprets.",

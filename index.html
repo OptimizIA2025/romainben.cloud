@@ -284,7 +284,7 @@
               "name": "En combien de temps un premier MVP est-il livré ?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Notre méthode se déroule en 3 phases : un diagnostic de maturité (1 à 3 semaines), la construction d'un MVP fonctionnel en moyenne en 13 jours, puis une phase d'industrialisation à l'échelle. Le MVP permet au dirigeant de valider concrètement la solution avant tout engagement à grande échelle. Les premiers gains sont mesurables dès la mise en production."
+                "text": "Notre méthode se déroule en 3 phases : un diagnostic de maturité (1 à 3 semaines), la construction d'un MVP fonctionnel en 13 jours environ, puis une phase d'industrialisation à l'échelle. Le MVP permet au dirigeant de valider concrètement la solution avant tout engagement à grande échelle. Les premiers gains sont mesurables dès la mise en production."
               }
             },
             {
@@ -893,6 +893,18 @@
             line-height: 1.5;
             margin-top: 8px;
         }
+        /* Ligne de datation des realisations. Mono, comme toute donnee dans la
+           DA Trame. Chaque date est sourcee : creation du workflow n8n, fiche
+           client, ou mise en ligne verifiee. Ne jamais en poser une qui ne le
+           soit pas. */
+        .usecase-since {
+            font-family: var(--f-mono);
+            font-size: 0.68rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--ink-3);
+            margin: -6px 0 14px;
+        }
         .usecase-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
         .usecase-stack span {
             font-family: var(--f-mono);
@@ -1431,6 +1443,7 @@
                     <h3 id="usecase-veille-quotidienne">Agent de veille quotidien</h3>
                     <span class="usecase-tag">Mission client</span>
                 </div>
+                <p class="usecase-since">En production depuis juillet 2026</p>
                 <p class="usecase-context">Un créateur de contenu passait ses matinées à éplucher newsletters, vidéos et réseaux pour ne rien rater de son secteur.</p>
                 <ul class="usecase-list">
                     <li>Collecte multi-sources déclenchée automatiquement chaque nuit</li>
@@ -1460,6 +1473,7 @@
                     <h3 id="usecase-audit-seo-geo">SaaS d'audit SEO &amp; GEO</h3>
                     <span class="usecase-tag violet">Produit interne</span>
                 </div>
+                <p class="usecase-since">En ligne depuis juillet 2026</p>
                 <p class="usecase-context">Qualifier un prospect avec une analyse chiffrée de son site plutôt qu'avec un argumentaire.</p>
                 <ul class="usecase-list">
                     <li>Moteur d'analyse couvrant 107 points par site</li>
@@ -1511,6 +1525,7 @@
                     <h3 id="usecase-site-vitrine-audit-seo">Site vitrine &amp; audit SEO</h3>
                     <span class="usecase-tag">Mission client</span>
                 </div>
+                <p class="usecase-since">En ligne depuis juin 2026</p>
                 <p class="usecase-context">Une consultante indépendante en RH et RSE partait d'un site constructeur lent et peu visible dans les résultats de recherche.</p>
                 <ul class="usecase-list">
                     <li>Refonte complète en HTML, CSS et JS, sans framework</li>
@@ -1554,6 +1569,7 @@
                     <h3 id="usecase-prise-de-rendez-vous">Prise de rendez-vous sur mesure</h3>
                     <span class="usecase-tag violet">Ce site</span>
                 </div>
+                <p class="usecase-since">En service depuis mai 2026</p>
                 <p class="usecase-context">Remplacer un outil de réservation tiers par un tunnel maison, intégré au site et branché sur mon agenda réel.</p>
                 <ul class="usecase-list">
                     <li>Créneaux calculés depuis les disponibilités réelles de l'agenda</li>
@@ -1911,7 +1927,7 @@
                 </button>
                 <div class="faq-answer">
                     <div class="faq-answer-inner">
-                        Notre méthode se déroule en 3 phases : un <strong>diagnostic de maturité</strong> (1 à 3 semaines), la construction d'un <strong>MVP fonctionnel en moyenne en 13 jours</strong>, puis une phase d'industrialisation à l'échelle. Le MVP permet au dirigeant de valider concrètement la solution avant tout engagement à grande échelle. Les premiers gains sont mesurables dès la mise en production.
+                        Notre méthode se déroule en 3 phases : un <strong>diagnostic de maturité</strong> (1 à 3 semaines), la construction d'un <strong>MVP fonctionnel en 13 jours environ</strong>, puis une phase d'industrialisation à l'échelle. Le MVP permet au dirigeant de valider concrètement la solution avant tout engagement à grande échelle. Les premiers gains sont mesurables dès la mise en production.
                     </div>
                 </div>
             </div>
@@ -2190,7 +2206,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
-<script src="/i18n-index.js?v=30260726d" defer></script>
+<script src="/i18n-index.js?v=20260812a" defer></script>
 <script src="/site.js?v=20260812a" defer></script>
 </body>
 </html>
