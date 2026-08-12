@@ -77,8 +77,8 @@ window.RB_I18N = {
     "Étudiant ingénieur en Maths Appliquées à Polytech Nice Sophia, co-fondateur d'OptimizIA.xyz. Dev, automatisation n8n, IA et entrepreneuriat.":
         "Engineering student in Applied Mathematics at Polytech Nice Sophia, co-founder of OptimizIA.xyz. Development, n8n automation, AI and entrepreneurship.",
     "OptimizIA.xyz, l'agence IA &amp; automatisation": "OptimizIA.xyz, the AI &amp; automation agency",
-    "Présence en ligne vérifiée et suivie par un outil d'audit indépendant, sur 80 points techniques, SEO et sécurité.":
-        "Online presence verified and monitored by an independent audit tool, across 80 technical, SEO and security checks.",
+    "Présence en ligne vérifiée et suivie par notre propre outil d'audit, sur 107 points techniques, SEO et sécurité.":
+        "Online presence verified and monitored by our own audit tool, across 107 technical, SEO and security checks.",
 
     /* FAQ */
     "Questions fréquentes": "Frequently asked questions",
