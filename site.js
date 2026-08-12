@@ -14,7 +14,17 @@
     }
 
     function applyTheme(theme) {
-        root.setAttribute('data-theme', theme);
+        /* L'attribut n'est pose que pour le sombre, et seulement s'il change
+           reellement. Toute ecriture sur la racine invalide le style de tout le
+           document, des selecteurs :root[data-theme="dark"] en dependant. Le
+           clair etant l'etat par defaut de la feuille, il correspond a l'absence
+           d'attribut : l'ecrire quand meme coutait un recalcul complet pour un
+           affichage rigoureusement identique. */
+        var vise = theme === 'dark' ? 'dark' : null;
+        if (root.getAttribute('data-theme') !== vise) {
+            if (vise) root.setAttribute('data-theme', vise);
+            else root.removeAttribute('data-theme');
+        }
         var meta = document.querySelector('meta[name="theme-color"]');
         if (meta) meta.setAttribute('content', theme === 'dark' ? '#0E0F12' : '#FAFAF9');
         var btn = document.getElementById('theme-toggle');
@@ -177,24 +187,38 @@
         langBtn.setAttribute('aria-label', en ? 'Revenir au francais' : 'Switch to English');
     }
 
-    /* Francais par defaut, comme le theme clair : le site s'affiche tel qu'il a
-       ete ecrit tant que le visiteur n'a pas demande l'anglais. */
-    collectFragments(document.body);
+    /* Tout le travail de traduction est repousse au moment ou l'anglais est
+       reellement demande.
 
-    var stored;
-    try { stored = localStorage.getItem('rb-lang'); } catch (e) { stored = null; }
-    applyLang(stored === 'en' ? 'en' : 'fr');
+       Avant, le chargement appelait `applyLang('fr')` meme en restant en
+       francais. Cet appel reecrivait `el.innerHTML` sur chaque element collecte
+       avec exactement le meme contenu : rien ne changeait a l'ecran, mais le
+       navigateur detruisait puis reconstruisait ces sous-arbres et recalculait
+       la mise en page de toute la page. Lighthouse mobile le chiffrait a 415 ms
+       de tache longue pour un fichier de 4 Ko, et 1100 ms de Style & Layout.
 
-    langBtn.addEventListener('click', function () {
-        var next = root.getAttribute('data-lang') === 'en' ? 'fr' : 'en';
-        applyLang(next);
-        try { localStorage.setItem('rb-lang', next); } catch (e) {}
-    });
+       La collecte elle-meme (une serialisation de `innerHTML` par element sur un
+       selecteur tres large, plus un parcours de tous les noeuds texte) est
+       desormais differee au meme titre. Sur un chargement francais, ce fichier
+       ne fait donc plus que poser l'etat de la bascule. Le francais d'origine
+       reste capture correctement : au moment ou la collecte tourne, le document
+       n'a encore jamais ete modifie. */
+    var collected = false;
+    function ensureCollected() {
+        if (collected) return;
+        collected = true;
+        collect(document);
+        collectFragments(document.body);
+        watchLateContent();
+    }
 
     /* Le tunnel de reservation construit son interface en JavaScript : ses
        textes n'existent pas au chargement. On retraduit donc ce qui apparait
-       apres coup, sinon la page bascule en anglais mais pas le calendrier. */
-    if (window.MutationObserver) {
+       apres coup, sinon la page bascule en anglais mais pas le calendrier.
+       L'observateur n'est installe qu'une fois l'anglais engage : en francais il
+       n'aurait rien a faire a chaque mutation du tunnel. */
+    function watchLateContent() {
+        if (!window.MutationObserver) return;
         var pending = null;
         new MutationObserver(function (records) {
             if (root.getAttribute('data-lang') !== 'en') return;
@@ -214,4 +238,27 @@
             }, 60);
         }).observe(document.body, { childList: true, subtree: true });
     }
+
+    var stored;
+    try { stored = localStorage.getItem('rb-lang'); } catch (e) { stored = null; }
+
+    if (stored === 'en') {
+        ensureCollected();
+        applyLang('en');
+    } else {
+        /* Le document est deja dans sa langue d'origine : on ne touche ni au
+           contenu ni a la racine. `lang="fr"` est deja sur la balise <html>, et
+           `data-lang` n'a pas ete pose puisque le choix memorise n'est pas
+           l'anglais. Les reecrire serait deux invalidations de style de plus
+           pour un resultat identique. Seul l'etat du bouton reste a poser. */
+        langBtn.textContent = 'EN';
+        langBtn.setAttribute('aria-label', 'Switch to English');
+    }
+
+    langBtn.addEventListener('click', function () {
+        ensureCollected();
+        var next = root.getAttribute('data-lang') === 'en' ? 'fr' : 'en';
+        applyLang(next);
+        try { localStorage.setItem('rb-lang', next); } catch (e) {}
+    });
 })();

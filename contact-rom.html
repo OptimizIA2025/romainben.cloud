@@ -32,8 +32,13 @@
     <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png?v=3">
 
 
-    <script defer src="js/gsap.min.js?v=3.12.5"></script>
-    <script defer src="js/ScrollTrigger.min.js?v=3.12.5"></script>
+    <!-- GSAP et ScrollTrigger retires le 12/08/2026, voir le commentaire de
+         index.html : 115 Ko de bibliotheque pour un fondu au defilement, que
+         IntersectionObserver et une transition CSS font sans dependance.
+         Cette classe conditionne le masquage initial des .reveal a la presence de
+         JavaScript, pour qu'un script qui ne part pas ne laisse plus une page
+         blanche. -->
+    <script>document.documentElement.classList.add('js-reveal');</script>
 
     <script>
         // Webhooks n8n à brancher plus tard. Tant qu'ils sont vides, le widget
@@ -110,8 +115,8 @@
 
             --ink: #101114;
             --ink-2: #3A3E47;
-            --ink-3: #6B707B;
-            --muted: #8B909A;
+            --ink-3: #686D77;
+            --muted: #6E737C;
 
             --accent: #2B3FD9;
             --accent-deep: #1E2FA8;
@@ -153,7 +158,7 @@
             --ink: #F4F4F3;
             --ink-2: #C6CAD2;
             --ink-3: #969CA6;
-            --muted: #767C86;
+            --muted: #8A909B;
 
             --accent: #8B98FF;
             --accent-deep: #AEB8FF;
@@ -794,9 +799,25 @@
         }
 
         /* ═══ UTIL ═══ */
-        .reveal { opacity: 0; }
+        /* Masquage conditionne a .js-reveal, posee en tete de page : sans
+           JavaScript rien n'est cache. Seules opacity et transform sont animees,
+           les deux proprietes que le compositeur traite sans mise en page. */
+        .js-reveal .reveal {
+            opacity: 0;
+            transform: translateY(36px);
+            transition: opacity .8s cubic-bezier(.16, 1, .3, 1),
+                        transform .8s cubic-bezier(.16, 1, .3, 1);
+        }
+        .js-reveal .reveal.is-in { opacity: 1; transform: none; }
+        /* Ce qui est deja a l'ecran au chargement apparait sans transition :
+           le hero de cette page porte .reveal, l'animer retarderait la
+           completude visuelle mesuree par le Speed Index. */
+        .js-reveal .reveal.no-anim { transition: none; }
         @media (prefers-reduced-motion: reduce) {
-            .reveal { opacity: 1 !important; }
+            .reveal, .js-reveal .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+            }
             * { animation: none !important; transition: none !important; }
         }
 
@@ -860,8 +881,15 @@
             // Clair par defaut : le site n'est pas sombre tant que l'utilisateur
             // ne l'a pas demande explicitement. La preference systeme n'entre pas
             // en jeu (choix RBE du 26/07).
-            var t = localStorage.getItem('rb-theme') === 'dark' ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', t);
+            // On ne pose l'attribut QUE pour le sombre. Le clair est deja
+            // l'etat par defaut de la feuille, porte par le `:root` nu : ecrire
+            // data-theme="light" ne change rien a l'affichage mais invalide le
+            // style de tout le document, puisque des selecteurs
+            // :root[data-theme="dark"] en dependent. Mesure du 12/08/2026 :
+            // 256 ms de tache longue sur mobile, pour un attribut inutile.
+            if (localStorage.getItem('rb-theme') === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
             if (localStorage.getItem('rb-lang') === 'en') {
                 document.documentElement.setAttribute('data-lang', 'en');
             }
@@ -1072,7 +1100,7 @@
             </div>
         </div>
         <div class="footer-badge">
-            <a href="https://seoplus.optimizia.xyz/?utm_source=badge&amp;utm_medium=referral" target="_blank" rel="noopener" aria-label="Site audité par SEOPlus!" style="display:inline-flex;align-items:center;gap:11px;padding:9px 16px 9px 12px;border-radius:12px;background:linear-gradient(135deg,#F97316,#EA580C);box-shadow:0 2px 10px rgba(234,88,12,.28);text-decoration:none;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.15"><span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.18)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg></span><span style="display:inline-flex;flex-direction:column;gap:3px"><span style="color:rgba(255,255,255,.82);font-size:9px;font-weight:700;letter-spacing:.13em">AUDITÉ PAR</span><span style="color:#ffffff;font-size:15px;font-weight:800;letter-spacing:-.01em">SEOPlus!</span></span></a>
+            <a href="https://seoplus.optimizia.xyz/?utm_source=badge&amp;utm_medium=referral" target="_blank" rel="noopener" aria-label="Site audité par SEOPlus!" style="display:inline-flex;align-items:center;gap:11px;padding:9px 16px 9px 12px;border-radius:12px;background:linear-gradient(135deg,#F97316,#EA580C);box-shadow:0 2px 10px rgba(234,88,12,.28);text-decoration:none;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.15"><span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.18)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg></span><span style="display:inline-flex;flex-direction:column;gap:3px"><span style="color:rgba(255,255,255,.82);font-size:9px;font-weight:700;letter-spacing:.13em">AUDITÉ PAR</span> <span style="color:#ffffff;font-size:15px;font-weight:800;letter-spacing:-.01em">SEOPlus!</span></span></a>
             <p class="footer-badge-note">Présence en ligne vérifiée et suivie par notre propre outil d'audit, sur 107 points techniques, SEO et sécurité.</p>
         </div>
         <div class="footer-bottom">
@@ -1201,9 +1229,11 @@
     return '<div class="bw-card">'+sidebar()+'<div class="bw-main">'+dots('cal')
       +'<h3 class="bw-section-title">Choisis une date et un créneau</h3>'
       +loadingMsg
-      +'<div class="bw-cal-nav"><button class="bw-cal-nav-btn" id="bw-prev">'+SV.cL+'</button>'
+      // Les deux boutons ne contiennent qu'un chevron en SVG : sans aria-label
+      // ils n'ont aucun nom accessible et un lecteur d'ecran annonce « bouton ».
+      +'<div class="bw-cal-nav"><button type="button" class="bw-cal-nav-btn" id="bw-prev" aria-label="Mois précédent">'+SV.cL+'</button>'
       +'<span class="bw-cal-month">'+MO[g.vd.getMonth()]+' '+g.vd.getFullYear()+'</span>'
-      +'<button class="bw-cal-nav-btn" id="bw-next">'+SV.cR+'</button></div>'
+      +'<button type="button" class="bw-cal-nav-btn" id="bw-next" aria-label="Mois suivant">'+SV.cR+'</button></div>'
       +'<div class="bw-cal-grid">'+DH.map(function(d){return'<div class="bw-cal-hdr">'+d+'</div>';}).join('')+cells+'</div>'
       +slH+'</div></div>';
   }
@@ -1344,21 +1374,36 @@
         document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    // GSAP reveal
-    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.utils.toArray('.reveal').forEach(el => {
-            gsap.fromTo(el,
-                { y: 36, opacity: 0 },
-                {
-                    scrollTrigger: { trigger: el, start: "top 88%", toggleActions: "play none none none" },
-                    y: 0, opacity: 1, duration: 1, ease: "power4.out",
-                    delay: el.closest('.benefits-grid') ? Array.from(el.parentElement.children).indexOf(el) * 0.12 : 0
-                }
-            );
-        });
+    // Apparition au defilement, sans bibliotheque. Voir index.html pour le
+    // detail de la mesure qui a motive le retrait de GSAP.
+    const revealEls = document.querySelectorAll('.reveal');
+
+    if (!('IntersectionObserver' in window)) {
+        revealEls.forEach(function (el) { el.classList.add('is-in'); });
     } else {
-        document.querySelectorAll('.reveal').forEach(el => { el.style.opacity = '1'; });
+        // rootMargin -12% reproduit le `start: "top 88%"` de ScrollTrigger.
+        const io = new IntersectionObserver(function (entries, obs) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                const el = entry.target;
+                if (el.closest('.benefits-grid')) {
+                    const rank = Array.prototype.indexOf.call(el.parentElement.children, el);
+                    el.style.transitionDelay = (rank * 0.12) + 's';
+                }
+                el.classList.add('is-in');
+                obs.unobserve(el);
+            });
+        }, { rootMargin: '0px 0px -12% 0px' });
+
+        // Rectangles tous lus AVANT la moindre ecriture de classe : interleaver
+        // lecture et ecriture provoquerait un reflow force par element.
+        const vh = window.innerHeight;
+        const visibles = [], horsEcran = [];
+        revealEls.forEach(function (el) {
+            (el.getBoundingClientRect().top < vh ? visibles : horsEcran).push(el);
+        });
+        visibles.forEach(function (el) { el.classList.add('no-anim', 'is-in'); });
+        horsEcran.forEach(function (el) { io.observe(el); });
     }
 
     // FAQ accordion. Hauteur geree en CSS (grid-template-rows).
@@ -1401,6 +1446,6 @@
 </script>
 
 <script src="/i18n-contact.js?v=30260726d" defer></script>
-<script src="/site.js?v=30260726d" defer></script>
+<script src="/site.js?v=20260812a" defer></script>
 </body>
 </html>

@@ -112,8 +112,8 @@
 
             --ink: #101114;
             --ink-2: #3A3E47;
-            --ink-3: #6B707B;
-            --muted: #8B909A;
+            --ink-3: #686D77;
+            --muted: #6E737C;
 
             --accent: #2B3FD9;
             --accent-deep: #1E2FA8;
@@ -155,7 +155,7 @@
             --ink: #F4F4F3;
             --ink-2: #C6CAD2;
             --ink-3: #969CA6;
-            --muted: #767C86;
+            --muted: #8A909B;
 
             --accent: #8B98FF;
             --accent-deep: #AEB8FF;
@@ -346,7 +346,11 @@
             flex-wrap: wrap; gap: 14px;
         }
         .footer-copy { font-family: var(--f-mono); font-size: 0.74rem; color: var(--muted); }
-        .footer-copy a { color: var(--ink-2); }
+        /* Souligne, et pas seulement colore : un lien noye dans un paragraphe
+           doit rester reperable sans percevoir la couleur (WCAG 1.4.1). Le seul
+           ecart de teinte avec le texte voisin ne suffit pas, il tombait a
+           2,25:1 pour un seuil de 3:1. */
+        .footer-copy a { color: var(--ink-2); text-decoration: underline; text-underline-offset: 2px; }
         .footer-copy a:hover { color: var(--accent); }
         .footer-bottom-right { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
         .footer-domains { font-family: var(--f-mono); font-size: 0.74rem; color: var(--muted); }
@@ -376,8 +380,15 @@
             // Clair par defaut : le site n'est pas sombre tant que l'utilisateur
             // ne l'a pas demande explicitement. La preference systeme n'entre pas
             // en jeu (choix RBE du 26/07).
-            var t = localStorage.getItem('rb-theme') === 'dark' ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', t);
+            // On ne pose l'attribut QUE pour le sombre. Le clair est deja
+            // l'etat par defaut de la feuille, porte par le `:root` nu : ecrire
+            // data-theme="light" ne change rien a l'affichage mais invalide le
+            // style de tout le document, puisque des selecteurs
+            // :root[data-theme="dark"] en dependent. Mesure du 12/08/2026 :
+            // 256 ms de tache longue sur mobile, pour un attribut inutile.
+            if (localStorage.getItem('rb-theme') === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
             if (localStorage.getItem('rb-lang') === 'en') {
                 document.documentElement.setAttribute('data-lang', 'en');
             }
@@ -541,6 +552,6 @@
 
 
 <script src="/i18n-legal.js?v=30260726d" defer></script>
-<script src="/site.js?v=30260726d" defer></script>
+<script src="/site.js?v=20260812a" defer></script>
 </body>
 </html>
