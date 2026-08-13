@@ -96,8 +96,8 @@ window.RB_I18N = {
     "Tri intelligent de boîte Gmail": "Smart Gmail inbox triage",
     "Automatisation d'une boîte mail saturée. Le tri s'exécute à la réception et non en lot, pour que l'urgent soit notifié tout de suite ; les réponses récurrentes sont préparées en brouillon et laissées à validation humaine, choix assumé pour ne jamais envoyer un message non relu.":
         "Automation of an overloaded mailbox. Sorting runs on arrival rather than in batches, so anything urgent is flagged straight away; recurring replies are prepared as drafts and left for human approval, a deliberate call so no message ever goes out unread.",
-    "<strong>Résultat :</strong> 20 à 30 minutes récupérées chaque jour.":
-        "<strong>Outcome:</strong> 20 to 30 minutes reclaimed every day.",
+    "<strong>Résultat :</strong> Plus aucun tri quotidien à faire soi-même.":
+        "<strong>Outcome:</strong> No more daily sorting by hand.",
     "<b>Ce site</b>prise de rendez-vous": "<b>This site</b>booking funnel",
     "Prise de rendez-vous sur mesure": "Custom booking funnel",
     "Remplacement d'un outil de réservation tiers par un tunnel développé sur mesure et intégré au site. Le point délicat portait sur l'idempotence : une même personne qui réserve deux fois ne doit pas créer deux fiches dans un CRM partagé entre associés. Les paramètres de durée et de battement sont pilotés en base, pas écrits dans le code.":

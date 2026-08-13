@@ -45,7 +45,7 @@
       <guid isPermaLink="false">https://www.romainben.cloud/#usecase-tri-boite-gmail</guid>
       <category>Automatisation</category>
       <pubDate>Mon, 27 Jul 2026 16:39:00 +0200</pubDate>
-      <description>À l'arrivée de chaque message, une classification décide de sa catégorie, déclenche une notification si c'est urgent et prépare un brouillon de réponse pour les cas récurrents. Les catégories à faible valeur sont nettoyées automatiquement. Le gain mesuré est de 20 à 30 minutes par jour.</description>
+      <description>À l'arrivée de chaque message, une classification décide de sa catégorie, déclenche une notification si c'est urgent et prépare un brouillon de réponse pour les cas récurrents. Les catégories à faible valeur sont nettoyées automatiquement. La boîte reste triée sans passage manuel quotidien.</description>
     </item>
     <item>
       <title>Prise de rendez-vous sur mesure</title>

@@ -185,7 +185,7 @@
               "item": {
                 "@type": "CreativeWork",
                 "name": "Tri intelligent de boîte Gmail",
-                "description": "Classification automatique à l'arrivée et notification, 20 à 30 minutes économisées par jour.",
+                "description": "Classification automatique à l'arrivée, notification sur les urgences et nettoyage planifié.",
                 "genre": "Automatisation",
                 "creator": {
                   "@id": "https://www.romainben.cloud/#romain"
@@ -268,7 +268,7 @@
               "name": "Quels systèmes Romain Ben a-t-il livrés en production ?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Un agent de veille quotidien pour un créateur de contenu (collecte multi-sources, scoring par LLM, synthèse envoyée du lundi au vendredi). Un SaaS d'audit SEO et GEO analysant 107 points par site. Une plateforme d'abonnement avec paiement Stripe, espace client et attribution automatique des accès. Un site vitrine et son audit SEO pour une consultante RH et RSE. Un tri automatique de boîte Gmail qui économise 20 à 30 minutes par jour. Un tunnel de prise de rendez-vous sur mesure, dont les créneaux sont calculés depuis les disponibilités réelles de l'agenda. Un système d'information et de pilotage de projet, qui centralise le suivi des tâches et la base de connaissance."
+                "text": "Un agent de veille quotidien pour un créateur de contenu (collecte multi-sources, scoring par LLM, synthèse envoyée du lundi au vendredi). Un SaaS d'audit SEO et GEO analysant 107 points par site. Une plateforme d'abonnement avec paiement Stripe, espace client et attribution automatique des accès. Un site vitrine et son audit SEO pour une consultante RH et RSE. Un tri automatique de boîte Gmail qui signale les urgences à la réception. Un tunnel de prise de rendez-vous sur mesure, dont les créneaux sont calculés depuis les disponibilités réelles de l'agenda. Un système d'information et de pilotage de projet, qui centralise le suivi des tâches et la base de connaissance."
               }
             },
             {
@@ -1554,13 +1554,13 @@
                     <li>Nettoyage planifié des catégories à faible valeur</li>
                     <li>Brouillons de réponse pré-rédigés pour les cas récurrents</li>
                 </ul>
-                <p class="usecase-synth">À l'arrivée de chaque message, une classification décide de sa catégorie, déclenche une notification si c'est urgent et prépare un brouillon de réponse pour les cas récurrents. Les catégories à faible valeur sont nettoyées automatiquement. Le gain mesuré est de 20 à 30 minutes par jour.</p>
+                <p class="usecase-synth">À l'arrivée de chaque message, une classification décide de sa catégorie, déclenche une notification si c'est urgent et prépare un brouillon de réponse pour les cas récurrents. Les catégories à faible valeur sont nettoyées automatiquement. La boîte reste triée sans passage manuel quotidien.</p>
                 <div class="usecase-stack">
                     <span>n8n</span><span>OpenAI</span><span>Gmail API</span><span>VPS</span>
                 </div>
                 <div class="usecase-result">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg>
-                    20 à 30 minutes économisées par jour
+                    Boîte triée à la réception, sans passage manuel
                 </div>
             </div>
 
@@ -1903,7 +1903,7 @@
                 </button>
                 <div class="faq-answer">
                     <div class="faq-answer-inner">
-                        Un agent de veille quotidien pour un créateur de contenu (collecte multi-sources, scoring par LLM, synthèse envoyée du lundi au vendredi). Un SaaS d'audit SEO et GEO analysant 107 points par site. Une plateforme d'abonnement avec paiement Stripe, espace client et attribution automatique des accès. Un site vitrine et son audit SEO pour une consultante RH et RSE. Un tri automatique de boîte Gmail qui économise 20 à 30 minutes par jour. Un tunnel de prise de rendez-vous sur mesure, dont les créneaux sont calculés depuis les disponibilités réelles de l'agenda. Un système d'information et de pilotage de projet, qui centralise le suivi des tâches et la base de connaissance.
+                        Un agent de veille quotidien pour un créateur de contenu (collecte multi-sources, scoring par LLM, synthèse envoyée du lundi au vendredi). Un SaaS d'audit SEO et GEO analysant 107 points par site. Une plateforme d'abonnement avec paiement Stripe, espace client et attribution automatique des accès. Un site vitrine et son audit SEO pour une consultante RH et RSE. Un tri automatique de boîte Gmail qui signale les urgences à la réception. Un tunnel de prise de rendez-vous sur mesure, dont les créneaux sont calculés depuis les disponibilités réelles de l'agenda. Un système d'information et de pilotage de projet, qui centralise le suivi des tâches et la base de connaissance.
                     </div>
                 </div>
             </div>
@@ -2206,7 +2206,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
-<script src="/i18n-index.js?v=20260812a" defer></script>
+<script src="/i18n-index.js?v=20260812b" defer></script>
 <script src="/site.js?v=20260812a" defer></script>
 </body>
 </html>
