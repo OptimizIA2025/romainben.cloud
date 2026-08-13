@@ -77,8 +77,8 @@ window.RB_I18N = {
         "<strong>Outcome:</strong> running five days a week since launch, with no manual recovery.",
     "<b>Produit</b>interne": "<b>Product</b>in-house",
     "SaaS d'audit SEO et GEO": "SEO and GEO audit SaaS",
-    "Produit interne d'OptimizIA.xyz, développé de bout en bout. Le moteur applique 107 vérifications par site ; l'enjeu de conception était de rendre le verdict actionnable plutôt qu'exhaustif, d'où le classement des correctifs par priorité. Espace client, archivage des rapports en base et newsletter hebdomadaire complètent le produit.":
-        "An in-house OptimizIA.xyz product, built end to end. The engine runs 107 checks per site; the design goal was to make the verdict actionable rather than exhaustive, hence fixes ranked by priority. A client area, reports archived in the database and a weekly newsletter round out the product.",
+    "Produit interne d'OptimizIA.xyz, développé de bout en bout. Le moteur applique 160 vérifications par site ; l'enjeu de conception était de rendre le verdict actionnable plutôt qu'exhaustif, d'où le classement des correctifs par priorité. Espace client, archivage des rapports en base et newsletter hebdomadaire complètent le produit.":
+        "An in-house OptimizIA.xyz product, built end to end. The engine runs 160 checks per site; the design goal was to make the verdict actionable rather than exhaustive, hence fixes ranked by priority. A client area, reports archived in the database and a weekly newsletter round out the product.",
     "<strong>Résultat :</strong> outil utilisé en qualification commerciale, rapport rendu en ligne en quelques minutes.":
         "<strong>Outcome:</strong> used in sales qualification, with a report delivered online in minutes.",
     "Plateforme d'abonnement": "Subscription platform",
