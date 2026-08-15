@@ -81,8 +81,8 @@ window.RB_I18N = {
         "<strong>Legal basis:</strong> consent (art. 6.1.a GDPR and art. 82 of the French Data Protection Act), collected <strong>before</strong> the script is loaded and before any cookie is stored.",
     "<strong>Destinataire :</strong> <strong>Microsoft</strong>, qui a accès à ces données. Elles sont hébergées sur Microsoft Azure ; le contrat est passé avec Microsoft Ireland Operations Limited (Irlande) et les transferts vers Microsoft Corporation aux États-Unis reposent sur les clauses contractuelles types de la Commission européenne.":
         "<strong>Recipient:</strong> <strong>Microsoft</strong>, which has access to this data. It is hosted on Microsoft Azure; the contract is with Microsoft Ireland Operations Limited (Ireland) and transfers to Microsoft Corporation in the United States rely on the European Commission's standard contractual clauses.",
-    "<strong>Durée de conservation :</strong> 30 jours à compter de l'enregistrement.":
-        "<strong>Retention period:</strong> 30 days from the time of recording.",
+    "<strong>Durée de conservation :</strong> 30 jours pour les enregistrements de navigation. Microsoft conserve ensuite un échantillon résiduel, soit 1 % des enregistrements ou 10 par jour si ce nombre est supérieur, ainsi que les sessions marquées et les données de cartes de chaleur, jusqu'à 9 mois.":
+        "<strong>Retention period:</strong> 30 days for browsing recordings. Microsoft then keeps a residual sample, being 1% of recordings or 10 per day if that number is higher, along with flagged sessions and heatmap data, for up to 9 months.",
     "Vous pouvez revenir sur votre choix à tout moment avec le bouton <strong>« Gérer les cookies »</strong> en pied de page. Un refus efface les cookies déjà déposés et interrompt la collecte immédiatement.":
         "You can change your mind at any time using the <strong>&ldquo;Manage cookies&rdquo;</strong> button in the footer. Declining erases any cookies already stored and stops the collection immediately.",
     "Conformément au RGPD et à la loi « Informatique et Libertés », vous disposez d'un droit d'accès, de rectification, de suppression, d'opposition et de portabilité des données vous concernant. Pour exercer ces droits, adressez votre demande à <a href=\"mailto:contact@romainben.cloud\">contact@romainben.cloud</a>.":
@@ -117,8 +117,8 @@ window.RB_I18N = {
         "This legal notice is governed by <strong>French law</strong>. In the event of a dispute, and failing an amicable settlement, the French courts shall have jurisdiction.",
 
     "Date de mise à jour": "Last updated",
-    "Les présentes mentions légales ont été mises à jour le <strong>13 août 2026</strong>. L'éditeur se réserve le droit de les modifier à tout moment, la version en ligne faisant foi.":
-        "This legal notice was last updated on <strong>13 August 2026</strong>. The publisher reserves the right to amend it at any time, the online version being the one in force. <strong>This English text is a courtesy translation: the French version is the legally binding one.</strong>"
+    "Les présentes mentions légales ont été mises à jour le <strong>15 août 2026</strong>. L'éditeur se réserve le droit de les modifier à tout moment, la version en ligne faisant foi.":
+        "This legal notice was last updated on <strong>15 August 2026</strong>. The publisher reserves the right to amend it at any time, the online version being the one in force. <strong>This English text is a courtesy translation: the French version is the legally binding one.</strong>"
 };
 
 window.RB_I18N_ATTR = {
