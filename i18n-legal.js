@@ -31,8 +31,8 @@ window.RB_I18N = {
         "The publication director is <strong>Romain Ben</strong>, reachable by email at the address above.",
 
     "Hébergement": "Hosting",
-    "Ce site est hébergé sur un VPS, dans un conteneur nginx déployé depuis le dépôt GitHub public <a href=\"https://github.com/BnRomain/Mon-site-vitrine\" target=\"_blank\" rel=\"noopener\">BnRomain/Mon-site-vitrine</a>.":
-        "This site is hosted on a VPS, in an nginx container deployed from the public GitHub repository <a href=\"https://github.com/BnRomain/Mon-site-vitrine\" target=\"_blank\" rel=\"noopener\">BnRomain/Mon-site-vitrine</a>.",
+    "Ce site est hébergé sur un VPS, dans un conteneur nginx déployé depuis le dépôt GitHub public <a href=\"https://github.com/OptimizIA2025/romainben.cloud\" target=\"_blank\" rel=\"noopener\">OptimizIA2025/romainben.cloud</a>.":
+        "This site is hosted on a VPS, in an nginx container deployed from the public GitHub repository <a href=\"https://github.com/OptimizIA2025/romainben.cloud\" target=\"_blank\" rel=\"noopener\">OptimizIA2025/romainben.cloud</a>.",
     "61 Lordou Vironos Street, 6023 Larnaca, Chypre. Serveur situé à Paris, France.":
         "61 Lordou Vironos Street, 6023 Larnaca, Cyprus. Server located in Paris, France.",
 
