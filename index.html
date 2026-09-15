@@ -142,8 +142,9 @@
               "position": 2,
               "item": {
                 "@type": "CreativeWork",
-                "name": "SEOPlus!, SaaS d'audit SEO et GEO",
-                "description": "Moteur d'analyse de 160 points techniques, SEO et GEO par site, avec rapport priorisé.",
+                "name": "SEOPlus!, SaaS d'audit SEO, GEO et sécurité",
+                "description": "Moteur d'analyse de 161 points de vérification (technique, SEO, GEO, sécurité) par site, avec rapport multilingue priorisé.",
+                "url": "https://www.optimizia.xyz/tools/seoplus/",
                 "genre": "Produit interne",
                 "creator": {
                   "@id": "https://www.romainben.cloud/#romain"
@@ -268,7 +269,7 @@
               "name": "Quels systèmes Romain Ben a-t-il livrés en production ?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Un agent de veille quotidien pour un créateur de contenu (collecte multi-sources, scoring par LLM, synthèse envoyée du lundi au vendredi). Un SaaS d'audit SEO et GEO analysant 160 points par site. Une plateforme d'abonnement avec paiement Stripe, espace client et attribution automatique des accès. Un site vitrine et son audit SEO pour une consultante RH et RSE. Un tri automatique de boîte Gmail qui signale les urgences à la réception. Un tunnel de prise de rendez-vous sur mesure, dont les créneaux sont calculés depuis les disponibilités réelles de l'agenda. Un système d'information et de pilotage de projet, qui centralise le suivi des tâches et la base de connaissance."
+                "text": "Un agent de veille quotidien pour un créateur de contenu (collecte multi-sources, scoring par LLM, synthèse envoyée du lundi au vendredi). Un SaaS d'audit SEO, GEO et sécurité analysant 161 points par site. Une plateforme d'abonnement avec paiement Stripe, espace client et attribution automatique des accès. Un site vitrine et son audit SEO pour une consultante RH et RSE. Un tri automatique de boîte Gmail qui signale les urgences à la réception. Un tunnel de prise de rendez-vous sur mesure, dont les créneaux sont calculés depuis les disponibilités réelles de l'agenda. Un système d'information et de pilotage de projet, qui centralise le suivi des tâches et la base de connaissance."
               }
             },
             {
@@ -925,6 +926,17 @@
         }
         .usecase-card.violet .usecase-result { color: var(--ink); }
         .usecase-result svg { width: 14px; height: 14px; flex-shrink: 0; }
+        .usecase-link {
+            align-self: flex-start;
+            margin-top: 14px;
+            font-family: var(--f-mono);
+            font-size: 0.79rem; font-weight: 500;
+            color: var(--ink);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.2s;
+        }
+        .usecase-link:hover { color: var(--accent); }
         @media (max-width: 980px) { .usecase-grid { grid-template-columns: 1fr; } }
 
         /* ═══ PROJETS ═══ */
@@ -1471,18 +1483,18 @@
 
             <div class="usecase-card violet reveal">
                 <div class="usecase-head">
-                    <h3 id="usecase-audit-seo-geo">SaaS d'audit SEO &amp; GEO</h3>
+                    <h3 id="usecase-audit-seo-geo">SaaS d'audit SEO, GEO &amp; sécurité</h3>
                     <span class="usecase-tag violet">Produit interne</span>
                 </div>
                 <p class="usecase-since">En ligne depuis juillet 2026</p>
                 <p class="usecase-context">Qualifier un prospect avec une analyse chiffrée de son site plutôt qu'avec un argumentaire.</p>
                 <ul class="usecase-list">
-                    <li>Moteur d'analyse couvrant 160 points par site</li>
-                    <li>Rapport bilingue avec score, verdict et correctifs priorisés</li>
+                    <li>Moteur d'analyse de 161 points de vérification par site</li>
+                    <li>Rapport multilingue avec score, verdict et correctifs priorisés</li>
                     <li>Espace client et archivage des rapports en base</li>
                     <li>Newsletter hebdomadaire générée et envoyée automatiquement</li>
                 </ul>
-                <p class="usecase-synth">SEOPlus! analyse un site sur 160 points techniques, SEO et sécurité, puis rend un rapport bilingue où chaque correctif est classé par priorité plutôt que listé en vrac. Il sert d'abord à qualifier un prospect avec des chiffres au lieu d'un argumentaire. C'est cet outil qui a audité ce site.</p>
+                <p class="usecase-synth">SEOPlus! soumet un site à 161 points de vérification couvrant la technique, le SEO, le GEO et la sécurité, puis rend un rapport multilingue où chaque correctif est classé par priorité plutôt que listé en vrac. Il sert d'abord à qualifier un prospect avec des chiffres au lieu d'un argumentaire. C'est cet outil qui a audité ce site.</p>
                 <figure class="usecase-shot">
                     <picture>
                         <source srcset="preuve-seoplus-rapport.webp" type="image/webp">
@@ -1497,6 +1509,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg>
                     Audit complet rendu en ligne en quelques minutes
                 </div>
+                <a href="https://www.optimizia.xyz/tools/seoplus/?utm_source=romainben&amp;utm_medium=referral&amp;utm_campaign=usecase" target="_blank" rel="noopener" class="usecase-link">Accéder à SEOPlus!</a>
             </div>
 
             <div class="usecase-card violet reveal">
@@ -1511,7 +1524,7 @@
                     <li>Droits décidés en base avec Row Level Security</li>
                     <li>Connexion OAuth en un clic, sans saisie de code</li>
                 </ul>
-                <p class="usecase-synth">Le paiement Stripe déclenche l'ouverture des accès, mais la décision de qui a le droit de voir quoi se prend dans la base de données, jamais dans le navigateur. C'est ce qui fait qu'un abonnement résilié perd réellement ses accès, et pas seulement l'affichage d'un bouton.</p>
+                <p class="usecase-synth">Le paiement Stripe déclenche l'ouverture des accès, mais la décision de qui a le droit de voir quoi se prend dans la base de données, jamais dans le navigateur. Les accès suivent ainsi l'état réel de l'abonnement, de la souscription à la résiliation, sans intervention manuelle.</p>
                 <div class="usecase-stack">
                     <span>Stripe</span><span>Supabase</span><span>n8n</span><span>OAuth2</span>
                 </div>
@@ -1904,7 +1917,7 @@
                 </button>
                 <div class="faq-answer">
                     <div class="faq-answer-inner">
-                        Un agent de veille quotidien pour un créateur de contenu (collecte multi-sources, scoring par LLM, synthèse envoyée du lundi au vendredi). Un SaaS d'audit SEO et GEO analysant 160 points par site. Une plateforme d'abonnement avec paiement Stripe, espace client et attribution automatique des accès. Un site vitrine et son audit SEO pour une consultante RH et RSE. Un tri automatique de boîte Gmail qui signale les urgences à la réception. Un tunnel de prise de rendez-vous sur mesure, dont les créneaux sont calculés depuis les disponibilités réelles de l'agenda. Un système d'information et de pilotage de projet, qui centralise le suivi des tâches et la base de connaissance.
+                        Un agent de veille quotidien pour un créateur de contenu (collecte multi-sources, scoring par LLM, synthèse envoyée du lundi au vendredi). Un SaaS d'audit SEO, GEO et sécurité analysant 161 points par site. Une plateforme d'abonnement avec paiement Stripe, espace client et attribution automatique des accès. Un site vitrine et son audit SEO pour une consultante RH et RSE. Un tri automatique de boîte Gmail qui signale les urgences à la réception. Un tunnel de prise de rendez-vous sur mesure, dont les créneaux sont calculés depuis les disponibilités réelles de l'agenda. Un système d'information et de pilotage de projet, qui centralise le suivi des tâches et la base de connaissance.
                     </div>
                 </div>
             </div>
@@ -2005,9 +2018,9 @@
             </div>
             <div class="contact-seoplus-body">
                 <h3>Tu veux améliorer ton site en SEO et GEO ?</h3>
-                <p>Fais un tour sur SEOPlus!, l'outil d'audit qu'on a construit chez OptimizIA.xyz. Il analyse 160 points techniques, SEO et sécurité, et te rend un rapport avec les correctifs classés par priorité. C'est lui qui a audité ce site.</p>
+                <p>Fais un tour sur SEOPlus!, l'outil d'audit qu'on a construit chez OptimizIA.xyz. Il analyse 161 points techniques, SEO et sécurité, et te rend un rapport avec les correctifs classés par priorité. C'est lui qui a audité ce site.</p>
             </div>
-            <a href="https://seoplus.optimizia.xyz/?utm_source=romainben&amp;utm_medium=referral&amp;utm_campaign=contact" target="_blank" rel="noopener" class="btn btn-orange">
+            <a href="https://www.optimizia.xyz/tools/seoplus/?utm_source=romainben&amp;utm_medium=referral&amp;utm_campaign=contact" target="_blank" rel="noopener" class="btn btn-orange">
                 Auditer mon site
             </a>
         </div>
@@ -2044,7 +2057,7 @@
                 <ul class="footer-nav">
                     <li><a href="cv.html">CV complet</a></li>
                     <li><a href="contact-rom.html">Prendre rendez-vous</a></li>
-                    <li><a href="https://seoplus.optimizia.xyz/?utm_source=footer&amp;utm_medium=referral" target="_blank" rel="noopener">SEOPlus!, audit SEO &amp; GEO</a></li>
+                    <li><a href="https://www.optimizia.xyz/tools/seoplus/?utm_source=footer&amp;utm_medium=referral" target="_blank" rel="noopener">SEOPlus!, audit SEO &amp; GEO</a></li>
                 </ul>
             </div>
             <!-- Contact & infos -->
@@ -2079,11 +2092,11 @@
             </div>
         </div>
         <div class="footer-badge">
-            <a href="https://seoplus.optimizia.xyz/?utm_source=badge&amp;utm_medium=referral" target="_blank" rel="noopener" aria-label="Site audité par SEOPlus!" style="display:inline-flex;align-items:center;gap:11px;padding:9px 16px 9px 12px;border-radius:12px;background:linear-gradient(135deg,#F97316,#EA580C);box-shadow:0 2px 10px rgba(234,88,12,.28);text-decoration:none;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.15"><span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.18)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg></span><span style="display:inline-flex;flex-direction:column;gap:3px"><span style="color:rgba(255,255,255,.82);font-size:9px;font-weight:700;letter-spacing:.13em">AUDITÉ PAR</span> <span style="color:#ffffff;font-size:15px;font-weight:800;letter-spacing:-.01em">SEOPlus!</span></span></a>
-            <p class="footer-badge-note">Présence en ligne vérifiée et suivie par notre propre outil d'audit, sur 160 points techniques, SEO et sécurité.</p>
+            <a href="https://www.optimizia.xyz/tools/seoplus/?utm_source=badge&amp;utm_medium=referral" target="_blank" rel="noopener" aria-label="Site audité par SEOPlus!" style="display:inline-flex;align-items:center;gap:11px;padding:9px 16px 9px 12px;border-radius:12px;background:linear-gradient(135deg,#F97316,#EA580C);box-shadow:0 2px 10px rgba(234,88,12,.28);text-decoration:none;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.15"><span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.18)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5" /></svg></span><span style="display:inline-flex;flex-direction:column;gap:3px"><span style="color:rgba(255,255,255,.82);font-size:9px;font-weight:700;letter-spacing:.13em">AUDITÉ PAR</span> <span style="color:#ffffff;font-size:15px;font-weight:800;letter-spacing:-.01em">SEOPlus!</span></span></a>
+            <p class="footer-badge-note">Présence en ligne vérifiée et suivie par notre propre outil d'audit, sur 161 points techniques, SEO et sécurité.</p>
         </div>
         <div class="footer-bottom">
-            <div class="footer-copy">© 2026 Romain Ben · Tous droits réservés</div>
+            <div class="footer-copy">© 2026 Romain Ben · Tous droits réservés · v4.1</div>
             <div class="footer-bottom-right">
                 <div class="footer-domains"><a href="#" class="muted">romainben.cloud</a> · <a href="https://www.ginoux.xyz" target="_blank" rel="noopener">ginoux.xyz</a> · <a href="https://www.optimizia.xyz" target="_blank" rel="noopener">optimizia.xyz</a></div>
             <div class="footer-socials">
@@ -2207,7 +2220,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
-<script src="/i18n-index.js?v=20260813a" defer></script>
+<script src="/i18n-index.js?v=20260915a" defer></script>
 <script src="/site.js?v=20260813b" defer></script>
 <script src="/tracker.js?v=20260815a" defer></script>
 </body>

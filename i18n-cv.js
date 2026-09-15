@@ -7,8 +7,8 @@ window.RB_I18N = {
     /* Titre de l'onglet et en-tete */
     "CV de Romain Ben | Automatisation n8n et agents IA":
         "Romain Ben's CV | n8n automation and AI agents",
-    "Curriculum vitae, mis à jour le 26 juillet 2026":
-        "Curriculum vitae, updated 26 July 2026",
+    "Curriculum vitae, mis à jour le 15 septembre 2026":
+        "Curriculum vitae, updated 15 September 2026",
     "Étudiant ingénieur en mathématiques appliquées et modélisation, co-fondateur d'OptimizIA.xyz. Je conçois et je mets en production des systèmes d'automatisation et d'IA pour des PME et des ETI.":
         "Engineering student in applied mathematics and modelling, co-founder of OptimizIA.xyz. I design and ship automation and AI systems that run in production for small and mid-sized companies.",
     "Retour au site": "Back to the site",
@@ -76,9 +76,9 @@ window.RB_I18N = {
     "<strong>Résultat :</strong> tourne cinq jours sur sept depuis la mise en production, sans reprise manuelle.":
         "<strong>Outcome:</strong> running five days a week since launch, with no manual recovery.",
     "<b>Produit</b>interne": "<b>Product</b>in-house",
-    "SaaS d'audit SEO et GEO": "SEO and GEO audit SaaS",
-    "Produit interne d'OptimizIA.xyz, développé de bout en bout. Le moteur applique 160 vérifications par site ; l'enjeu de conception était de rendre le verdict actionnable plutôt qu'exhaustif, d'où le classement des correctifs par priorité. Espace client, archivage des rapports en base et newsletter hebdomadaire complètent le produit.":
-        "An in-house OptimizIA.xyz product, built end to end. The engine runs 160 checks per site; the design goal was to make the verdict actionable rather than exhaustive, hence fixes ranked by priority. A client area, reports archived in the database and a weekly newsletter round out the product.",
+    "SaaS d'audit SEO, GEO et sécurité": "SEO, GEO and security audit SaaS",
+    "Produit interne d'OptimizIA.xyz, développé de bout en bout. Le moteur applique 161 vérifications par site ; l'enjeu de conception était de rendre le verdict actionnable plutôt qu'exhaustif, d'où le classement des correctifs par priorité. Espace client, archivage des rapports en base et newsletter hebdomadaire complètent le produit.":
+        "An in-house OptimizIA.xyz product, built end to end. The engine runs 161 checks per site; the design goal was to make the verdict actionable rather than exhaustive, hence fixes ranked by priority. A client area, reports archived in the database and a weekly newsletter round out the product.",
     "<strong>Résultat :</strong> outil utilisé en qualification commerciale, rapport rendu en ligne en quelques minutes.":
         "<strong>Outcome:</strong> used in sales qualification, with a report delivered online in minutes.",
     "Plateforme d'abonnement": "Subscription platform",
@@ -177,6 +177,9 @@ window.RB_I18N = {
     "Langues": "Languages",
     "<strong>Français</strong> langue maternelle · <strong>Anglais</strong> niveau B2 · <strong>Espagnol</strong> niveau A2":
         "<strong>French</strong> native · <strong>English</strong> level B2 · <strong>Spanish</strong> level A2",
+    "Expérience à l'étranger": "Time abroad",
+    "Deux mois de WWOOFing au Portugal, bénévole dans l'agriculture biologique en échange du gîte et du couvert : découverte du travail agricole au quotidien, en immersion complète en anglais.":
+        "Two months of WWOOFing in Portugal, volunteering in organic farming in exchange for room and board: hands-on farm work every day, in full English immersion.",
     "Méthode de travail": "How I work",
     "Prendre un problème concret et sortir une solution qui marche, sans sur-ingénierie et sans framework inutile. Modifier l'existant plutôt qu'empiler du neuf.":
         "Take a concrete problem and ship something that works, without over-engineering and without a needless framework. Change what exists rather than pile on something new.",

@@ -92,10 +92,10 @@ window.RB_I18N = {
         "Graph view of the information system, notes and links between projects.",
     "Chaque nuit, l'agent parcourt les sources suivies par le client, note chaque élément selon des critères calibrés avec lui, puis envoie une synthèse le matin du lundi au vendredi. Un second workflow surveille le premier et alerte dès qu'une exécution échoue, ce qui rend la veille exploitable sans surveillance humaine.":
         "Every night the agent goes through the sources the client follows, scores each item against criteria calibrated with him, then sends a digest on weekday mornings. A second workflow watches the first and raises an alert as soon as a run fails, which makes the monitoring usable without anyone supervising it.",
-    "SEOPlus! analyse un site sur 160 points techniques, SEO et sécurité, puis rend un rapport bilingue où chaque correctif est classé par priorité plutôt que listé en vrac. Il sert d'abord à qualifier un prospect avec des chiffres au lieu d'un argumentaire. C'est cet outil qui a audité ce site.":
-        "SEOPlus! checks a site against 160 technical, SEO and security points, then returns a bilingual report where every fix is ranked by priority rather than dumped in a list. Its first job is to qualify a prospect with numbers instead of a sales pitch. It is the tool that audited this site.",
-    "Le paiement Stripe déclenche l'ouverture des accès, mais la décision de qui a le droit de voir quoi se prend dans la base de données, jamais dans le navigateur. C'est ce qui fait qu'un abonnement résilié perd réellement ses accès, et pas seulement l'affichage d'un bouton.":
-        "The Stripe payment opens up access, but the decision of who may see what is taken in the database, never in the browser. That is what makes a cancelled subscription actually lose its access, rather than just hiding a button.",
+    "SEOPlus! soumet un site à 161 points de vérification couvrant la technique, le SEO, le GEO et la sécurité, puis rend un rapport multilingue où chaque correctif est classé par priorité plutôt que listé en vrac. Il sert d'abord à qualifier un prospect avec des chiffres au lieu d'un argumentaire. C'est cet outil qui a audité ce site.":
+        "SEOPlus! runs a site through 161 checks covering technical health, SEO, GEO and security, then returns a multilingual report where every fix is ranked by priority rather than dumped in a list. Its first job is to qualify a prospect with numbers instead of a sales pitch. It is the tool that audited this site.",
+    "Le paiement Stripe déclenche l'ouverture des accès, mais la décision de qui a le droit de voir quoi se prend dans la base de données, jamais dans le navigateur. Les accès suivent ainsi l'état réel de l'abonnement, de la souscription à la résiliation, sans intervention manuelle.":
+        "The Stripe payment opens up access, but the decision of who may see what is taken in the database, never in the browser. Access therefore follows the actual state of the subscription, from sign-up to cancellation, with no manual step.",
     "Le site d'une consultante en RH et RSE a été reconstruit en HTML, CSS et JavaScript, sans framework, avec ses données structurées et ses pages légales conformes. Il est livré avec un audit SEO et GEO et un plan d'action sur 30 jours, pour qu'elle sache quoi faire une fois le site en ligne.":
         "The site of an HR and CSR consultant was rebuilt in plain HTML, CSS and JavaScript, with its structured data and compliant legal pages. It ships with an SEO and GEO audit and a 30-day action plan, so she knows what to do once the site is live.",
     "À l'arrivée de chaque message, une classification décide de sa catégorie, déclenche une notification si c'est urgent et prépare un brouillon de réponse pour les cas récurrents. Les catégories à faible valeur sont nettoyées automatiquement. La boîte reste triée sans passage manuel quotidien.":
@@ -121,11 +121,12 @@ window.RB_I18N = {
     "Workflow de surveillance qui prévient dès qu'une exécution échoue": "A watchdog workflow that warns as soon as a run fails",
     "Veille livrée 5 jours sur 7, sans intervention": "Monitoring delivered five days a week, hands off",
 
-    "SaaS d'audit SEO &amp; GEO": "SEO &amp; GEO audit SaaS",
+    "SaaS d'audit SEO, GEO &amp; sécurité": "SEO, GEO &amp; security audit SaaS",
     "Qualifier un prospect avec une analyse chiffrée de son site plutôt qu'avec un argumentaire.":
         "Qualifying a prospect with hard numbers about their site rather than with a sales pitch.",
-    "Moteur d'analyse couvrant 160 points par site": "An analysis engine covering 160 checks per site",
-    "Rapport bilingue avec score, verdict et correctifs priorisés": "A bilingual report with a score, a verdict and prioritised fixes",
+    "Moteur d'analyse de 161 points de vérification par site": "An analysis engine with 161 checks per site",
+    "Rapport multilingue avec score, verdict et correctifs priorisés": "A multilingual report with a score, a verdict and prioritised fixes",
+    "Accéder à SEOPlus!": "Open SEOPlus!",
     "Espace client et archivage des rapports en base": "A client area with reports archived in the database",
     "Newsletter hebdomadaire générée et envoyée automatiquement": "A weekly newsletter generated and sent automatically",
     "Audit complet rendu en ligne en quelques minutes": "A full audit delivered online in minutes",
@@ -217,8 +218,8 @@ window.RB_I18N = {
         "An AI, automation or Knowledge Management need for your company? Go through the agency.",
     "Contacter OptimizIA.xyz": "Contact OptimizIA.xyz",
     "Tu veux améliorer ton site en SEO et GEO ?": "Want to improve your site for SEO and GEO?",
-    "Fais un tour sur SEOPlus!, l'outil d'audit qu'on a construit chez OptimizIA.xyz. Il analyse 160 points techniques, SEO et sécurité, et te rend un rapport avec les correctifs classés par priorité. C'est lui qui a audité ce site.":
-        "Take a look at SEOPlus!, the audit tool we built at OptimizIA.xyz. It runs 160 technical, SEO and security checks and returns a report with the fixes ranked by priority. It is the tool that audited this site.",
+    "Fais un tour sur SEOPlus!, l'outil d'audit qu'on a construit chez OptimizIA.xyz. Il analyse 161 points techniques, SEO et sécurité, et te rend un rapport avec les correctifs classés par priorité. C'est lui qui a audité ce site.":
+        "Take a look at SEOPlus!, the audit tool we built at OptimizIA.xyz. It runs 161 technical, SEO and security checks and returns a report with the fixes ranked by priority. It is the tool that audited this site.",
     "Auditer mon site": "Audit my site",
 
     /* FAQ */
@@ -238,8 +239,8 @@ window.RB_I18N = {
     "Développement web (HTML, CSS, JavaScript, Next.js), programmation (Python, Java, C#, C), automatisation n8n, agents LLM sur API OpenAI et Claude, back-end Supabase et PostgreSQL avec RLS, paiement Stripe, déploiement Docker sur VPS, SEO technique et GEO, modélisation mathématique et compression d'image (DCT, CSR).":
         "Web development (HTML, CSS, JavaScript, Next.js), programming (Python, Java, C#, C), n8n automation, LLM agents on the OpenAI and Claude APIs, Supabase and PostgreSQL back ends with RLS, Stripe payments, Docker deployment on a VPS, technical SEO and GEO, mathematical modelling and image compression (DCT, CSR).",
     "Quels systèmes Romain Ben a-t-il livrés en production ?": "What systems has Romain Ben shipped to production?",
-    "Un agent de veille quotidien pour un créateur de contenu (collecte multi-sources, scoring par LLM, synthèse envoyée du lundi au vendredi). Un SaaS d'audit SEO et GEO analysant 160 points par site. Une plateforme d'abonnement avec paiement Stripe, espace client et attribution automatique des accès. Un site vitrine et son audit SEO pour une consultante RH et RSE. Un tri automatique de boîte Gmail qui signale les urgences à la réception. Un tunnel de prise de rendez-vous sur mesure, dont les créneaux sont calculés depuis les disponibilités réelles de l'agenda. Un système d'information et de pilotage de projet, qui centralise le suivi des tâches et la base de connaissance.":
-        "A daily monitoring agent for a content creator (multi-source collection, LLM scoring, a digest sent Monday to Friday). An SEO and GEO audit SaaS running 160 checks per site. A subscription platform with Stripe payments, a client area and automatic access provisioning. A marketing site and its SEO audit for an HR and CSR consultant. Automatic Gmail inbox triage that flags urgent messages on arrival. A bespoke booking funnel whose slots are computed from real calendar availability. And an information and project-steering system that centralises task tracking and the knowledge base.",
+    "Un agent de veille quotidien pour un créateur de contenu (collecte multi-sources, scoring par LLM, synthèse envoyée du lundi au vendredi). Un SaaS d'audit SEO, GEO et sécurité analysant 161 points par site. Une plateforme d'abonnement avec paiement Stripe, espace client et attribution automatique des accès. Un site vitrine et son audit SEO pour une consultante RH et RSE. Un tri automatique de boîte Gmail qui signale les urgences à la réception. Un tunnel de prise de rendez-vous sur mesure, dont les créneaux sont calculés depuis les disponibilités réelles de l'agenda. Un système d'information et de pilotage de projet, qui centralise le suivi des tâches et la base de connaissance.":
+        "A daily monitoring agent for a content creator (multi-source collection, LLM scoring, a digest sent Monday to Friday). An SEO, GEO and security audit SaaS running 161 checks per site. A subscription platform with Stripe payments, a client area and automatic access provisioning. A marketing site and its SEO audit for an HR and CSR consultant. Automatic Gmail inbox triage that flags urgent messages on arrival. A bespoke booking funnel whose slots are computed from real calendar availability. And an information and project-steering system that centralises task tracking and the knowledge base.",
     "Qu'est-ce qu'OptimizIA.xyz et quels services proposez-vous ?": "What is OptimizIA.xyz and what services do you offer?",
     "OptimizIA.xyz est une agence B2B d'IA et d'automatisation co-fondée avec <strong>Rémy Ginoux</strong> (25 ans d'expérience en transformation industrielle chez Volvo, Airbus, Solvay). Nous intervenons sur trois axes : <strong>automatisation de processus métier</strong> via workflows n8n, déploiement d'<strong>agents IA personnalisés</strong> sur API OpenAI, et <strong>Knowledge Management</strong> : structuration de la connaissance interne pour la rendre exploitable par des outils IA. L'objectif : libérer +30 % de temps productif dès les premières semaines.":
         "OptimizIA.xyz is a B2B AI and automation agency co-founded with <strong>Rémy Ginoux</strong> (25 years of industrial transformation experience at Volvo, Airbus and Solvay). We work along three lines: <strong>business process automation</strong> through n8n workflows, deployment of <strong>custom AI agents</strong> on the OpenAI API, and <strong>Knowledge Management</strong>, structuring internal knowledge so AI tools can actually use it. The goal: free up 30% more productive time within the first few weeks.",
@@ -263,8 +264,8 @@ window.RB_I18N = {
     "Contact &amp; infos": "Contact &amp; info",
     "Ressources": "Resources",
     "Mentions légales": "Legal notice",
-    "Présence en ligne vérifiée et suivie par notre propre outil d'audit, sur 160 points techniques, SEO et sécurité.":
-        "Online presence verified and monitored by our own audit tool, across 160 technical, SEO and security checks."
+    "Présence en ligne vérifiée et suivie par notre propre outil d'audit, sur 161 points techniques, SEO et sécurité.":
+        "Online presence verified and monitored by our own audit tool, across 161 technical, SEO and security checks."
 };
 
 window.RB_I18N_ATTR = {

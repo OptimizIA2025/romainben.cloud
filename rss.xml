@@ -5,7 +5,7 @@
     <link>https://www.romainben.cloud/</link>
     <description>Les automatisations et agents IA conçus par Romain Ben et actuellement en production, décrits du besoin exprimé jusqu’à la mise en service. Missions clients décrites par secteur, sans nommer les entreprises.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Mon, 27 Jul 2026 16:39:00 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 11:56:34 +0200</lastBuildDate>
     <atom:link href="https://www.romainben.cloud/rss.xml" rel="self" type="application/rss+xml" />
     <managingEditor>contact@romainben.cloud (Romain Ben)</managingEditor>
     <webMaster>contact@romainben.cloud (Romain Ben)</webMaster>
@@ -18,18 +18,18 @@
       <description>Chaque nuit, l'agent parcourt les sources suivies par le client, note chaque élément selon des critères calibrés avec lui, puis envoie une synthèse le matin du lundi au vendredi. Un second workflow surveille le premier et alerte dès qu'une exécution échoue, ce qui rend la veille exploitable sans surveillance humaine.</description>
     </item>
     <item>
-      <title>SaaS d'audit SEO &amp; GEO</title>
+      <title>SaaS d'audit SEO, GEO &amp; sécurité</title>
       <link>https://www.romainben.cloud/#usecase-audit-seo-geo</link>
       <guid isPermaLink="false">https://www.romainben.cloud/#usecase-audit-seo-geo</guid>
       <pubDate>Mon, 27 Jul 2026 16:39:00 +0200</pubDate>
-      <description>SEOPlus! analyse un site sur 80 points techniques, SEO et sécurité, puis rend un rapport bilingue où chaque correctif est classé par priorité plutôt que listé en vrac. Il sert d'abord à qualifier un prospect avec des chiffres au lieu d'un argumentaire. C'est cet outil qui a audité ce site.</description>
+      <description>SEOPlus! soumet un site à 161 points de vérification couvrant la technique, le SEO, le GEO et la sécurité, puis rend un rapport multilingue où chaque correctif est classé par priorité plutôt que listé en vrac. Il sert d'abord à qualifier un prospect avec des chiffres au lieu d'un argumentaire. C'est cet outil qui a audité ce site.</description>
     </item>
     <item>
       <title>Plateforme d'abonnement</title>
       <link>https://www.romainben.cloud/#usecase-plateforme-abonnement</link>
       <guid isPermaLink="false">https://www.romainben.cloud/#usecase-plateforme-abonnement</guid>
       <pubDate>Mon, 27 Jul 2026 16:39:00 +0200</pubDate>
-      <description>Le paiement Stripe déclenche l'ouverture des accès, mais la décision de qui a le droit de voir quoi se prend dans la base de données, jamais dans le navigateur. C'est ce qui fait qu'un abonnement résilié perd réellement ses accès, et pas seulement l'affichage d'un bouton.</description>
+      <description>Le paiement Stripe déclenche l'ouverture des accès, mais la décision de qui a le droit de voir quoi se prend dans la base de données, jamais dans le navigateur. Les accès suivent ainsi l'état réel de l'abonnement, de la souscription à la résiliation, sans intervention manuelle.</description>
     </item>
     <item>
       <title>Site vitrine &amp; audit SEO</title>
