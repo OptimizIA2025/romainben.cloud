@@ -184,22 +184,22 @@ window.RB_I18N = {
     "Un seul endroit pour piloter tous les projets": "A single place to steer every project",
 
     /* Projets */
-    "Projets académiques et sites livrés, avec le dépôt ouvert et la démo en ligne.":
-        "Academic projects and delivered sites, with the repository open and the demo online.",
-    "En cours": "Ongoing",
+    "Projets personnels, académiques et sites livrés, avec le dépôt ouvert et la démo en ligne.":
+        "Personal and academic projects and delivered sites, with the repository open and the demo online.",
+    "Outil · Google Sheets": "Tool · Google Sheets",
     "Maths · Python": "Maths · Python",
-    "Front · Freelance": "Front end · Freelance",
-    "Covoiturage Polytech": "Polytech carpooling",
-    "<strong style=\"color: var(--ink)\">En cours de développement avec la direction de l'école.</strong> Application de covoiturage réservée aux étudiants et personnels de l'Université Côte d'Azur. Inscription restreinte aux adresses institutionnelles, trajets récurrents, réservation passager, calcul des frais d'essence au prorata et carte interactive.":
-        "<strong style=\"color: var(--ink)\">Currently being developed with the school's management.</strong> A carpooling app reserved for students and staff of Université Côte d'Azur. Sign-up restricted to institutional addresses, recurring trips, passenger booking, prorated fuel cost splitting and an interactive map.",
+    "Front · Client": "Front end · Client",
+    "Suivi d'entraînement en force athlétique construit sur Google Sheets, sans script. e1RM estimé depuis la table RPE, charges planifiées automatiquement, MAX de référence recalculés chaque semaine depuis les performances réelles, indice de fatigue sur un bloc de dix semaines. Modèle public et documentation bilingue.":
+        "A powerlifting training tracker built on Google Sheets, with no scripting. e1RM estimated from the RPE chart, loads planned automatically, reference MAXs recomputed every week from actual performance, a fatigue index over a ten-week block. Public template and bilingual documentation.",
+    "Modèle Google Sheets": "Google Sheets template",
+    "Démo en ligne": "Try it online",
     "Compression JPEG (DCT · CSR)": "JPEG compression (DCT · CSR)",
     "Implémentation d'un algorithme de compression inspiré JPEG, transformée en cosinus discrète sur blocs 8×8 puis stockage en matrices sparses CSR. Application Streamlit interactive avec métriques en temps réel.":
         "An implementation of a JPEG-inspired compression algorithm: discrete cosine transform on 8×8 blocks, then storage as CSR sparse matrices. Interactive Streamlit app with metrics in real time.",
     "Site portfolio photographe": "Photographer portfolio site",
-    "Site vitrine pour une cliente photographe. Galerie soignée, design responsive, navigation fluide. Projet freelance livré en HTML/CSS/JS vanilla, sans framework.":
-        "A marketing site for a photographer. Careful gallery, responsive design, smooth navigation. Freelance project delivered in vanilla HTML, CSS and JavaScript, no framework.",
+    "Site vitrine pour une cliente photographe. Galerie soignée, design responsive, navigation fluide. Livré via OptimizIA.xyz en HTML/CSS/JS vanilla, sans framework.":
+        "A marketing site for a photographer. Careful gallery, responsive design, smooth navigation. Delivered through OptimizIA.xyz in vanilla HTML, CSS and JavaScript, no framework.",
     "Code": "Code",
-    "Démo live": "Live demo",
     "Site live": "Live site",
     "Voir tous les repos sur GitHub": "See all repositories on GitHub",
 

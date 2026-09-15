@@ -1003,6 +1003,13 @@
         }
         .project-links a:hover { color: var(--accent); }
         .project-links svg { width: 13px; height: 13px; }
+        .project-links .project-demo {
+            margin-left: auto;
+            padding: 7px 14px;
+            font-family: var(--f-mono);
+            font-size: 0.76rem; font-weight: 500;
+        }
+        .project-links .project-demo:hover { color: var(--paper); }
 
         .see-more { margin-top: 40px; }
         .see-more a {
@@ -1775,24 +1782,24 @@
         <div class="section-header reveal">
             <span class="overline">Projets</span>
             <h2>Le code public</h2>
-            <p>Projets académiques et sites livrés, avec le dépôt ouvert et la démo en ligne.</p>
+            <p>Projets personnels, académiques et sites livrés, avec le dépôt ouvert et la démo en ligne.</p>
         </div>
         <div class="projects-grid">
             <div class="project-card reveal">
                 <div class="project-head">
-                    <h3>Covoiturage Polytech</h3>
-                    <span class="project-cat">En cours</span>
+                    <h3>PowerLift Tracker</h3>
+                    <span class="project-cat">Outil · Google Sheets</span>
                 </div>
-                <p><strong style="color: var(--ink)">En cours de développement avec la direction de l'école.</strong> Application de covoiturage réservée aux étudiants et personnels de l'Université Côte d'Azur. Inscription restreinte aux adresses institutionnelles, trajets récurrents, réservation passager, calcul des frais d'essence au prorata et carte interactive.</p>
+                <p>Suivi d'entraînement en force athlétique construit sur Google Sheets, sans script. e1RM estimé depuis la table RPE, charges planifiées automatiquement, MAX de référence recalculés chaque semaine depuis les performances réelles, indice de fatigue sur un bloc de dix semaines. Modèle public et documentation bilingue.</p>
                 <div class="project-stack">
-                    <span>Next.js 14</span><span>TypeScript</span><span>Supabase</span><span>Leaflet</span><span>Vercel</span>
+                    <span>Google Sheets</span><span>ARRAYFORMULA</span><span>GitHub Actions</span><span>MIT</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/BnRomain/covoit-polytech" target="_blank" rel="noopener">
+                    <a href="https://github.com/BnRomain/tracker-powerlifting" target="_blank" rel="noopener">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" /></svg> Code
                     </a>
-                    <a href="https://covoit-polytech-814c.vercel.app" target="_blank" rel="noopener">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg> Démo live
+                    <a href="https://docs.google.com/spreadsheets/d/1cMEQfgsgYV3C5RC8sq0Xvccz4UgO5aT8dhn19qVybdU/edit?usp=sharing" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg> Modèle Google Sheets
                     </a>
                 </div>
             </div>
@@ -1810,18 +1817,16 @@
                     <a href="https://github.com/BnRomain/jpeg-compression" target="_blank" rel="noopener">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" /></svg> Code
                     </a>
-                    <a href="https://jpeg-csr-compression.streamlit.app/" target="_blank" rel="noopener">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg> Démo live
-                    </a>
+                    <a href="https://jpeg-csr-compression.streamlit.app/" target="_blank" rel="noopener" class="btn btn-outline project-demo">Démo en ligne</a>
                 </div>
             </div>
 
             <div class="project-card reveal">
                 <div class="project-head">
                     <h3>Site portfolio photographe</h3>
-                    <span class="project-cat">Front · Freelance</span>
+                    <span class="project-cat">Front · Client</span>
                 </div>
-                <p>Site vitrine pour une cliente photographe. Galerie soignée, design responsive, navigation fluide. Projet freelance livré en HTML/CSS/JS vanilla, sans framework.</p>
+                <p>Site vitrine pour une cliente photographe. Galerie soignée, design responsive, navigation fluide. Livré via OptimizIA.xyz en HTML/CSS/JS vanilla, sans framework.</p>
                 <div class="project-stack">
                     <span>HTML</span><span>CSS</span><span>JS</span><span>GitHub Pages</span>
                 </div>
@@ -2233,7 +2238,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
-<script src="/i18n-index.js?v=20260915b" defer></script>
+<script src="/i18n-index.js?v=20260915c" defer></script>
 <script src="/site.js?v=20260813b" defer></script>
 <script src="/tracker.js?v=20260815a" defer></script>
 </body>

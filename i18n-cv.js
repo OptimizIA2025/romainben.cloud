@@ -24,7 +24,7 @@ window.RB_I18N = {
     "Formation et distinctions": "Education and awards",
     "Projets, code public": "Projects, public code",
     "Langues et centres d'intérêt": "Languages and interests",
-    "Entrepreneuriat et freelance": "Entrepreneurship and freelance",
+    "Entrepreneuriat": "Entrepreneurship",
     "7 systèmes": "7 systems",
     "6 domaines": "6 areas",
     "3 dépôts": "3 repositories",
@@ -42,9 +42,8 @@ window.RB_I18N = {
 
     /* Experience */
     "Co-fondateur, responsable technique": "Co-founder, technical lead",
-    "<b>2026</b>aujourd'hui": "<b>2026</b>present",
     "<b>2025</b>aujourd'hui": "<b>2025</b>present",
-    "OptimizIA.xyz, Sophia-Antipolis": "OptimizIA.xyz, Sophia-Antipolis, France",
+    "OptimizIA.xyz, Sophia-Antipolis · activité exercée en portage salarial": "OptimizIA.xyz, Sophia-Antipolis, France · operated under a French umbrella-company scheme (portage salarial)",
     "Agence B2B d'intégration IA et d'automatisation pour dirigeants de PME et d'ETI, co-fondée avec <a href=\"https://www.ginoux.xyz\" target=\"_blank\" rel=\"noopener\">Rémy Ginoux</a>. Je porte la partie technique : architecture, développement, mise en production et exploitation.":
         "A B2B AI and automation agency for owners of small and mid-sized companies, co-founded with <a href=\"https://www.ginoux.xyz\" target=\"_blank\" rel=\"noopener\">Rémy Ginoux</a>. I own the technical side: architecture, development, release and operations.",
     "Conception et exploitation d'une trentaine de <strong>workflows n8n en production</strong> sur VPS : collecte multi-sources, scoring par LLM, notifications, reprise sur erreur, alerte en cas d'échec d'exécution":
@@ -55,16 +54,12 @@ window.RB_I18N = {
         "<strong>Supabase and PostgreSQL</strong> back end: data model, Row Level Security, stored procedures, migrations",
     "Intégration <strong>Stripe</strong> de bout en bout : abonnements, webhooks, gestion des changements de formule au prorata":
         "End-to-end <strong>Stripe</strong> integration: subscriptions, webhooks, prorated plan changes",
-    "Sites et interfaces livrés en HTML, CSS et JavaScript, ou en <strong>Next.js</strong> quand l'authentification et le temps réel l'imposent":
-        "Sites and interfaces delivered in plain HTML, CSS and JavaScript, or in <strong>Next.js</strong> when authentication and real time call for it",
+    "Sites vitrines et interfaces livrés de la maquette à la mise en ligne en HTML, CSS et JavaScript, ou en <strong>Next.js</strong> quand l'authentification et le temps réel l'imposent":
+        "Marketing sites and interfaces delivered from mockup to launch in plain HTML, CSS and JavaScript, or in <strong>Next.js</strong> when authentication and real time call for it",
     "Déploiement et exploitation : <strong>Docker, nginx, VPS Linux, Vercel</strong>, DNS et TLS, en-têtes de sécurité HTTP, redirections canoniques":
         "Deployment and operations: <strong>Docker, nginx, Linux VPS, Vercel</strong>, DNS and TLS, HTTP security headers, canonical redirects",
     "Optimisation <strong>SEO technique et GEO</strong> : données structurées Schema.org, Core Web Vitals, llms.txt, accès explicite aux crawlers IA":
         "<strong>Technical SEO and GEO</strong>: Schema.org structured data, Core Web Vitals, llms.txt, explicit access for AI crawlers",
-    "Développeur web freelance": "Freelance web developer",
-    "Missions indépendantes": "Independent assignments",
-    "Sites vitrines livrés de la maquette à la mise en ligne, en HTML, CSS et JavaScript sans framework : galerie photographe, avec données structurées, pages légales conformes et socle SEO posé dès la livraison.":
-        "Marketing sites delivered from mockup to launch in plain HTML, CSS and JavaScript: a photographer's gallery, with structured data, compliant legal pages and SEO foundations laid at delivery.",
 
     /* Realisations */
     "Les missions clients sont décrites par secteur, le site livré est lié quand il est public.":
@@ -159,17 +154,18 @@ window.RB_I18N = {
         "Official recognition of the OptimizIA.xyz venture: adjusted timetable, mentoring and access to the PEPITE ecosystem.",
 
     /* Projets */
-    "<b>En cours</b>projet académique": "<b>Ongoing</b>academic project",
-    "<strong>En cours de développement avec la direction de l'école.</strong> Application de covoiturage réservée aux étudiants et personnels de l'Université Côte d'Azur : inscription restreinte aux adresses institutionnelles, trajets récurrents, réservation passager, calcul des frais d'essence au prorata et carte interactive.":
-        "<strong>Currently being developed with the school's management.</strong> A carpooling app reserved for students and staff of Université Côte d'Azur: sign-up restricted to institutional addresses, recurring trips, passenger booking, prorated fuel cost splitting and an interactive map.",
+    "<b>Outil</b>Google Sheets": "<b>Tool</b>Google Sheets",
+    "Suivi d'entraînement en force athlétique construit sur Google Sheets, sans script : e1RM estimé depuis la table RPE, charges planifiées automatiquement, MAX de référence recalculés chaque semaine depuis les performances réelles et indice de fatigue, sur un bloc de dix semaines. Modèle public, documentation bilingue, licence MIT.":
+        "A powerlifting training tracker built on Google Sheets, with no scripting: e1RM estimated from the RPE chart, loads planned automatically, reference MAXs recomputed every week from actual performance and a fatigue index, over a ten-week block. Public template, bilingual documentation, MIT licence.",
+    "Modèle Google Sheets": "Google Sheets template",
     "<b>Maths</b>Python": "<b>Maths</b>Python",
     "Compression JPEG par DCT et matrices creuses": "JPEG compression using DCT and sparse matrices",
     "Implémentation d'un algorithme de compression inspiré de JPEG : transformée en cosinus discrète sur blocs 8×8 puis stockage en matrices creuses au format CSR. Application Streamlit interactive avec métriques calculées en temps réel.":
         "An implementation of a JPEG-inspired compression algorithm: discrete cosine transform on 8×8 blocks, then storage as sparse matrices in CSR format. Interactive Streamlit app with metrics computed in real time.",
-    "<b>Freelance</b>front": "<b>Freelance</b>front end",
+    "<b>Client</b>front": "<b>Client</b>front end",
     "Site portfolio photographe": "Photographer portfolio site",
-    "Site vitrine livré pour une cliente photographe : galerie soignée, design responsive, navigation fluide. Projet freelance en HTML, CSS et JavaScript vanilla, sans framework.":
-        "A marketing site delivered for a photographer: a careful gallery, responsive design, smooth navigation. Freelance project in vanilla HTML, CSS and JavaScript, no framework.",
+    "Site vitrine livré pour une cliente photographe : galerie soignée, design responsive, navigation fluide. Livré via OptimizIA.xyz en HTML, CSS et JavaScript vanilla, sans framework.":
+        "A marketing site delivered for a photographer: a careful gallery, responsive design, smooth navigation. Delivered through OptimizIA.xyz in vanilla HTML, CSS and JavaScript, no framework.",
     "Code source": "Source code",
     "Démonstration": "Live demo",
     "Site en ligne": "Live site",
