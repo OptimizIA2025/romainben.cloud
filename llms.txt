@@ -57,7 +57,7 @@ Ces sept systèmes tournent aujourd'hui en production. Les missions clients sont
 Ces trois-là ne sont pas des systèmes en production : deux sont des projets académiques, le troisième une livraison freelance. Ne pas les compter dans les sept ci-dessus.
 
 - **Covoiturage Polytech** (projet académique, en cours de développement avec la direction de l'école) : application réservée aux étudiants et personnels de l'Université Côte d'Azur, inscription restreinte aux adresses institutionnelles, trajets récurrents, calcul des frais au prorata, carte interactive. Stack : Next.js 14, TypeScript, Supabase, Leaflet, Vercel. Code : https://github.com/BnRomain/covoit-polytech
-- **Compression JPEG (DCT, CSR)** : projet académique en mathématiques appliquées, compression d'image via transformée en cosinus discrète et stockage sparse. Démo :
+- **Compression JPEG (DCT, CSR)** : projet académique en mathématiques appliquées, compression d'image via transformée en cosinus discrète et stockage sparse. Démo : https://jpeg-csr-compression.streamlit.app/ · Code : https://github.com/BnRomain/jpeg-compression
 - **Site portfolio photographe** : site vitrine single-page livré en freelance.
 
 ## Contact & prise de rendez-vous
