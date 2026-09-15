@@ -19,8 +19,8 @@ window.RB_I18N = {
     "Romain Ben <br><span class=\"highlight\">étudiant ingénieur</span> <br>&amp; entrepreneur.":
         "Romain Ben <br><span class=\"highlight\">engineering student</span> <br>&amp; entrepreneur.",
     "étudiant ingénieur": "engineering student",
-    "Maths appliquées, automatisation et IA. Ce sont les ingrédients principaux que j'utilise pour proposer via <strong style=\"color: var(--ink)\">OptimizIA.xyz</strong>, des solutions innovantes pour mes clients ! Sept systèmes en production, du workflow de veille au SaaS avec paiement.":
-        "Applied mathematics, automation and AI. Those are the main ingredients I use to build innovative solutions for our clients through <strong style=\"color: var(--ink)\">OptimizIA.xyz</strong>. Seven systems in production, from a monitoring workflow to a SaaS with payments.",
+    "Maths appliquées, automatisation et IA. Ce sont les ingrédients principaux que j'utilise pour proposer via <strong style=\"color: var(--ink)\">OptimizIA.xyz</strong>, des solutions innovantes pour mes clients ! Des systèmes en production, du workflow de veille au SaaS avec paiement.":
+        "Applied mathematics, automation and AI. Those are the main ingredients I use to build innovative solutions for our clients through <strong style=\"color: var(--ink)\">OptimizIA.xyz</strong>. Systems in production, from a monitoring workflow to a SaaS with payments.",
     "Me contacter": "Get in touch",
     "Voir les systèmes en production": "See the systems running in production",
 
@@ -96,16 +96,18 @@ window.RB_I18N = {
         "SEOPlus! runs a site through 161 checks covering technical health, SEO, GEO and security, then returns a multilingual report where every fix is ranked by priority rather than dumped in a list. Its first job is to qualify a prospect with numbers instead of a sales pitch. It is the tool that audited this site.",
     "Le paiement Stripe déclenche l'ouverture des accès, mais la décision de qui a le droit de voir quoi se prend dans la base de données, jamais dans le navigateur. Les accès suivent ainsi l'état réel de l'abonnement, de la souscription à la résiliation, sans intervention manuelle.":
         "The Stripe payment opens up access, but the decision of who may see what is taken in the database, never in the browser. Access therefore follows the actual state of the subscription, from sign-up to cancellation, with no manual step.",
-    "Le site d'une consultante en RH et RSE a été reconstruit en HTML, CSS et JavaScript, sans framework, avec ses données structurées et ses pages légales conformes. Il est livré avec un audit SEO et GEO et un plan d'action sur 30 jours, pour qu'elle sache quoi faire une fois le site en ligne.":
-        "The site of an HR and CSR consultant was rebuilt in plain HTML, CSS and JavaScript, with its structured data and compliant legal pages. It ships with an SEO and GEO audit and a 30-day action plan, so she knows what to do once the site is live.",
+    "Cette consultante en RH et RSE partait sans site. Nous l'avons construit avec elle, de zéro, en HTML, CSS et JavaScript, puis travaillé le SEO et le GEO dès la première version : données structurées, contenu écrit pour être cité, accès ouvert aux crawlers IA, audit et plan d'action sur 30 jours. Quelques semaines après la mise en ligne, ChatGPT la propose à qui demande une consultante RH à Béziers.":
+        "This HR and CSR consultant started with no website at all. We built it with her, from scratch, in plain HTML, CSS and JavaScript, then worked on SEO and GEO from the very first version: structured data, content written to be quoted, open access for AI crawlers, an audit and a 30-day action plan. A few weeks after launch, ChatGPT puts her forward to anyone asking for an HR consultant in Béziers.",
+    "ChatGPT, requête « consultante RH sur Béziers » : sa fiche ressort, notée 5,0.":
+        "ChatGPT, query \"HR consultant in Béziers\": her listing comes up, rated 5.0.",
     "À l'arrivée de chaque message, une classification décide de sa catégorie, déclenche une notification si c'est urgent et prépare un brouillon de réponse pour les cas récurrents. Les catégories à faible valeur sont nettoyées automatiquement. La boîte reste triée sans passage manuel quotidien.":
         "As each message arrives, a classifier decides its category, fires a notification if it is urgent and prepares a reply draft for recurring cases. Low-value categories are cleaned up automatically. The inbox stays sorted without a daily manual pass.",
     "Les créneaux proposés sont calculés depuis les disponibilités réelles de l'agenda, avec la durée, le battement et le délai de prévenance pilotés par paramètre et non codés en dur. À la réservation, la fiche contact est créée ou mise à jour sans jamais produire de doublon, et la confirmation comme l'invitation visio partent seules.":
         "The slots on offer are computed from real calendar availability, with duration, buffer and notice period driven by settings rather than hard-coded. On booking, the contact record is created or updated without ever producing a duplicate, and both the confirmation and the video-call invitation go out on their own.",
     "Toute l'activité de l'agence tient dans une base Obsidian partagée entre les deux associés : fiches de tâches, backlog priorisé, diagrammes de Gantt et chemin critique remis à jour à chaque sprint. Les tableaux de bord se calculent depuis les fiches, et le point d'avancement part par mail tout seul.":
         "The agency's whole activity sits in an Obsidian base shared between both partners: task records, a prioritised backlog, Gantt charts and a critical path refreshed every sprint. Dashboards are computed from the records, and the progress report goes out by email on its own.",
-    "Sept cas concrets, du besoin exprimé jusqu'à la mise en production. Les missions clients sont décrites par secteur, sans nommer les entreprises.":
-        "Seven concrete cases, from the stated need through to production. Client work is described by sector, without naming the companies.",
+    "Sept cas concrets, du besoin exprimé jusqu'à la mise en production. Les missions clients sont décrites par secteur, le site livré est lié quand il est public.":
+        "Seven concrete cases, from the stated need through to production. Client work is described by sector, with a link to the delivered site when it is public.",
     "Mission client": "Client work",
     "Produit interne": "In-house product",
     "Automatisation": "Automation",
@@ -141,12 +143,14 @@ window.RB_I18N = {
     "Tunnel de vente opérationnel de bout en bout": "A sales funnel that works end to end",
 
     "Site vitrine &amp; audit SEO": "Marketing site &amp; SEO audit",
-    "Une consultante indépendante en RH et RSE partait d'un site constructeur lent et peu visible dans les résultats de recherche.":
-        "An independent HR and CSR consultant was starting from a slow website-builder site with little visibility in search results.",
-    "Refonte complète en HTML, CSS et JS, sans framework": "Full rebuild in HTML, CSS and JavaScript, no framework",
-    "Données structurées et pages légales conformes": "Structured data and compliant legal pages",
-    "Audit SEO et GEO livré avec un plan d'action sur 30 jours": "An SEO and GEO audit delivered with a 30-day action plan",
-    "Site en production sur un socle SEO propre": "A live site on clean SEO foundations",
+    "Une consultante indépendante en RH et RSE n'avait aucun site. Mission OptimizIA.xyz : le construire avec elle, de zéro, et la rendre visible aussi bien sur Google que dans les réponses des IA.":
+        "An independent HR and CSR consultant had no website at all. The OptimizIA.xyz brief: build it with her, from scratch, and make her visible on Google and in AI answers alike.",
+    "Site construit de zéro avec elle, en HTML, CSS et JS, sans framework": "A site built from scratch with her, in HTML, CSS and JavaScript, no framework",
+    "SEO et GEO travaillés dès la première version : données structurées, contenu rédigé pour être cité, accès ouvert aux crawlers IA": "SEO and GEO handled from the first version: structured data, content written to be quoted, open access for AI crawlers",
+    "Pages légales conformes, audit SEO et GEO avec plan d'action sur 30 jours": "Compliant legal pages, an SEO and GEO audit with a 30-day action plan",
+    "Proposée par ChatGPT à qui cherche une consultante RH à Béziers": "Put forward by ChatGPT to anyone looking for an HR consultant in Béziers",
+    "Citée par ChatGPT sur sa requête métier locale": "Cited by ChatGPT on her local trade query",
+    "Voir happysharing-rh.fr": "Visit happysharing-rh.fr",
 
     "Tri intelligent de boîte Gmail": "Smart Gmail inbox triage",
     "Une boîte mail saturée dans laquelle l'important se noyait dans le volume quotidien.":

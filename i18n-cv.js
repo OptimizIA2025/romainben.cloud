@@ -63,12 +63,12 @@ window.RB_I18N = {
         "<strong>Technical SEO and GEO</strong>: Schema.org structured data, Core Web Vitals, llms.txt, explicit access for AI crawlers",
     "Développeur web freelance": "Freelance web developer",
     "Missions indépendantes": "Independent assignments",
-    "Sites vitrines livrés de la maquette à la mise en ligne, en HTML, CSS et JavaScript sans framework : galerie photographe, site de consultante indépendante, avec données structurées, pages légales conformes et audit SEO livré avec un plan d'action.":
-        "Marketing sites delivered from mockup to launch in plain HTML, CSS and JavaScript: a photographer's gallery, an independent consultant's site, with structured data, compliant legal pages and an SEO audit shipped with an action plan.",
+    "Sites vitrines livrés de la maquette à la mise en ligne, en HTML, CSS et JavaScript sans framework : galerie photographe, avec données structurées, pages légales conformes et socle SEO posé dès la livraison.":
+        "Marketing sites delivered from mockup to launch in plain HTML, CSS and JavaScript: a photographer's gallery, with structured data, compliant legal pages and SEO foundations laid at delivery.",
 
     /* Realisations */
-    "Les missions clients sont décrites par secteur, sans nommer les entreprises.":
-        "Client work is described by sector, without naming the companies.",
+    "Les missions clients sont décrites par secteur, le site livré est lié quand il est public.":
+        "Client work is described by sector, with a link to the delivered site when it is public.",
     "<b>Mission</b>créateur de contenu": "<b>Client</b>content creator",
     "Agent de veille quotidien": "Daily monitoring agent",
     "Conception et exploitation d'un agent de veille pour un créateur de contenu. La difficulté du projet n'était pas la collecte mais le filtrage : les critères de pertinence ont été calibrés avec le client puis appliqués par un LLM, ce qui ramène plusieurs dizaines d'éléments quotidiens à une synthèse lisible. Un workflow de supervision distinct surveille les exécutions.":
@@ -88,10 +88,11 @@ window.RB_I18N = {
         "<strong>Outcome:</strong> a working sales funnel, from payment to access granted automatically.",
     "<b>Mission</b>conseil RH et RSE": "<b>Client</b>HR and CSR consulting",
     "Site vitrine et audit SEO": "Marketing site and SEO audit",
-    "Mission freelance pour une consultante indépendante en RH et RSE, au départ sur un site constructeur lent et peu visible. Reconstruction sans framework pour supprimer la dépendance à une plateforme, mise en place des données structurées et des mentions légales, puis livraison d'un audit SEO et GEO assorti d'un plan d'action daté.":
-        "Freelance engagement for an independent HR and CSR consultant, starting from a slow, barely visible website-builder site. Rebuilt without a framework to remove the dependency on a platform, structured data and legal pages put in place, then an SEO and GEO audit delivered with a dated action plan.",
-    "<strong>Résultat :</strong> site en production, maintenable sans abonnement à un éditeur tiers.":
-        "<strong>Outcome:</strong> a live site, maintainable without a subscription to any vendor.",
+    "Mission OptimizIA.xyz pour une consultante indépendante en RH et RSE qui n'avait aucun site. Construction de zéro, avec elle, en HTML, CSS et JavaScript sans framework, puis travail du SEO et du GEO dès la première version : données structurées, contenu rédigé pour être cité, accès ouvert aux crawlers IA, audit et plan d'action sur 30 jours.":
+        "OptimizIA.xyz engagement for an independent HR and CSR consultant who had no website at all. Built from scratch with her, in plain HTML, CSS and JavaScript, then SEO and GEO handled from the first version: structured data, content written to be quoted, open access for AI crawlers, an audit and a 30-day action plan.",
+    "<strong>Résultat :</strong> site en production, proposé par ChatGPT à qui cherche une consultante RH à Béziers.":
+        "<strong>Outcome:</strong> a live site, put forward by ChatGPT to anyone looking for an HR consultant in Béziers.",
+    "Voir le site": "Visit the site",
     "<b>Automatisation</b>boîte mail": "<b>Automation</b>inbox",
     "Tri intelligent de boîte Gmail": "Smart Gmail inbox triage",
     "Automatisation d'une boîte mail saturée. Le tri s'exécute à la réception et non en lot, pour que l'urgent soit notifié tout de suite ; les réponses récurrentes sont préparées en brouillon et laissées à validation humaine, choix assumé pour ne jamais envoyer un message non relu.":

@@ -3,7 +3,7 @@
   <channel>
     <title>Romain Ben - systèmes en production</title>
     <link>https://www.romainben.cloud/</link>
-    <description>Les automatisations et agents IA conçus par Romain Ben et actuellement en production, décrits du besoin exprimé jusqu’à la mise en service. Missions clients décrites par secteur, sans nommer les entreprises.</description>
+    <description>Les automatisations et agents IA conçus par Romain Ben et actuellement en production, décrits du besoin exprimé jusqu’à la mise en service. Missions clients décrites par secteur, le site livré est lié quand il est public.</description>
     <language>fr-FR</language>
     <lastBuildDate>Tue, 15 Sep 2026 11:56:34 +0200</lastBuildDate>
     <atom:link href="https://www.romainben.cloud/rss.xml" rel="self" type="application/rss+xml" />
@@ -37,7 +37,7 @@
       <guid isPermaLink="false">https://www.romainben.cloud/#usecase-site-vitrine-audit-seo</guid>
       <category>Mission client</category>
       <pubDate>Mon, 27 Jul 2026 16:39:00 +0200</pubDate>
-      <description>Le site d'une consultante en RH et RSE a été reconstruit en HTML, CSS et JavaScript, sans framework, avec ses données structurées et ses pages légales conformes. Il est livré avec un audit SEO et GEO et un plan d'action sur 30 jours, pour qu'elle sache quoi faire une fois le site en ligne.</description>
+      <description>Cette consultante en RH et RSE partait sans site. Nous l'avons construit avec elle, de zéro, en HTML, CSS et JavaScript, puis travaillé le SEO et le GEO dès la première version : données structurées, contenu écrit pour être cité, accès ouvert aux crawlers IA, audit et plan d'action sur 30 jours. Quelques semaines après la mise en ligne, ChatGPT la propose à qui demande une consultante RH à Béziers.</description>
     </item>
     <item>
       <title>Tri intelligent de boîte Gmail</title>
