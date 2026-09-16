@@ -1,5 +1,9 @@
 # romainben.cloud
 
+[![CI](https://github.com/OptimizIA2025/romainben.cloud/actions/workflows/ci.yml/badge.svg)](https://github.com/OptimizIA2025/romainben.cloud/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/OptimizIA2025/romainben.cloud/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/OptimizIA2025/romainben.cloud/actions/workflows/github-code-scanning/codeql)
+[![Site](https://img.shields.io/badge/site-romainben.cloud-2ea44f)](https://www.romainben.cloud/)
+
 Site vitrine de [Romain Ben](https://www.romainben.cloud), étudiant ingénieur en mathématiques appliquées et modélisation à Polytech Nice Sophia, co-fondateur d'[OptimizIA.xyz](https://www.optimizia.xyz).
 
 Quatre pages statiques, aucun framework, aucune étape de build côté front, et **aucune requête sortante vers un tiers** : polices et bibliothèques sont auto-hébergées.
@@ -7,7 +11,7 @@ Quatre pages statiques, aucun framework, aucune étape de build côté front, et
 ## Pages
 
 | Fichier | Rôle |
-|---|---|
+| --- | --- |
 | `index.html` | Accueil : parcours, compétences, réalisations en production |
 | `cv.html` | CV complet, imprimable en PDF via un bloc `@media print` |
 | `contact-rom.html` | Contact et prise de rendez-vous |
@@ -17,7 +21,7 @@ Chaque page est autonome : son HTML, son CSS et son JavaScript sont inline. Pour
 
 ## Organisation du dépôt
 
-```
+```text
 index.html, cv.html, ...        pages, styles et scripts inline
 i18n-*.js                       dictionnaires de traduction, un par page
 site.js                         comportements partagés
@@ -71,3 +75,10 @@ Un `push` sur `main` déclenche le redéploiement automatiquement. Il n'y a pas 
 Le contenu du site, textes et images, est protégé par le droit d'auteur.
 
 GSAP et ScrollTrigger, dans `js/`, sont distribués sous licence standard GreenSock, en-tête conservé en tête de fichier. Les polices Archivo, Karla et JetBrains Mono sont sous SIL Open Font License 1.1.
+
+## Automatisation
+
+- **CI** (`.github/workflows/ci.yml`) : à chaque push sur `main` et à chaque pull request, l'image est construite, `nginx -t` est exécuté, puis un conteneur est lancé et vérifié par `scripts/verifier-image.sh` (pages en 200, redirections, en-têtes de sécurité, compression). Le résultat est dans le résumé du job. Un second job vérifie les documents Markdown (markdownlint, lychee).
+- **Dependabot** : montées de version de l'image nginx et des GitHub Actions, chaque semaine. Les mises à jour patch et mineures sont fusionnées automatiquement une fois la CI passée, ce qui déploie l'image mise à jour ; les majeures attendent une relecture.
+- **Ruleset sur `main`** : pas de suppression ni de force push, pull request et vérifications requises pour tout le monde sauf les administrateurs, qui gardent le push direct (le mode de publication normal du site).
+- **CodeQL**, **dependency review**, secret scanning avec protection au push. Voir [SECURITY.md](SECURITY.md) et [CONTRIBUTING.md](CONTRIBUTING.md).
