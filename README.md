@@ -68,7 +68,7 @@ Cette étape n'est pas décorative : certains défauts n'existent qu'une fois l'
 
 ### Déploiement
 
-Un `push` sur `main` déclenche le redéploiement automatiquement. Il n'y a pas d'intégration continue entre les deux : ce qui est fusionné part en production tel quel, y compris une montée de version d'image proposée par Dependabot. Construire l'image en local avant de fusionner.
+Une fusion sur `main` déclenche le redéploiement automatiquement. Les modifications passent par une pull request fusionnée automatiquement une fois la CI au vert (image construite et vérifiée, documents, revue des dépendances), y compris les montées de version proposées par Dependabot. Le push direct reste possible pour les administrateurs, en secours : il part alors en production avant le résultat de la CI.
 
 ## Licence
 
@@ -80,5 +80,5 @@ GSAP et ScrollTrigger, dans `js/`, sont distribués sous licence standard GreenS
 
 - **CI** (`.github/workflows/ci.yml`) : à chaque push sur `main` et à chaque pull request, l'image est construite, `nginx -t` est exécuté, puis un conteneur est lancé et vérifié par `scripts/verifier-image.sh` (pages en 200, redirections, en-têtes de sécurité, compression). Le résultat est dans le résumé du job. Un second job vérifie les documents Markdown (markdownlint, lychee).
 - **Dependabot** : montées de version de l'image nginx et des GitHub Actions, chaque semaine. Les mises à jour patch et mineures sont fusionnées automatiquement une fois la CI passée, ce qui déploie l'image mise à jour ; les majeures attendent une relecture.
-- **Ruleset sur `main`** : pas de suppression ni de force push, pull request et vérifications requises pour tout le monde sauf les administrateurs, qui gardent le push direct (le mode de publication normal du site).
+- **Ruleset sur `main`** : pas de suppression ni de force push, pull request et vérifications requises pour tout le monde. Les administrateurs gardent le push direct pour un correctif urgent ; le mode de publication normal est la pull request fusionnée automatiquement.
 - **CodeQL**, **dependency review**, secret scanning avec protection au push. Voir [SECURITY.md](SECURITY.md) et [CONTRIBUTING.md](CONTRIBUTING.md).
