@@ -36,7 +36,7 @@ Ce site n'est pas une candidature. Son rôle est de permettre de vérifier qui e
 
 ## OptimizIA.xyz
 
-Agence B2B d'intelligence artificielle et d'automatisation pour PME et ETI. Co-fondée par Romain Ben et Rémy Ginoux. Prestations : workflows n8n de tri email, agents IA sur API OpenAI, automatisation de tâches métier répétitives, intégrations Gmail et outils métier, Knowledge Management.
+Agence B2B d'intelligence artificielle et d'automatisation pour TPE et PME, à Béziers et à distance partout ailleurs. Co-fondée par Romain Ben et Rémy Ginoux. Prestations : workflows n8n de tri email, agents IA sur API OpenAI, automatisation de tâches métier répétitives, intégrations Gmail et outils métier, Knowledge Management.
 
 Site : https://www.optimizia.xyz/
 
@@ -52,13 +52,16 @@ Ces sept systèmes tournent aujourd'hui en production. Les missions clients sont
 - **Prise de rendez-vous sur mesure** (ce site) : créneaux calculés depuis les disponibilités réelles de l'agenda, paramètres de durée et de battement pilotés en base, fiche contact créée ou mise à jour sans doublon, confirmation et invitation visio automatiques.
 - **Système d'information et pilotage de projet** (interne, knowledge management) : système d'information de l'agence monté sous Obsidian, partagé et synchronisé entre les deux associés. Base de connaissances structurée, portefeuille de projets en sprints avec fiches de tâches et backlog priorisé, diagrammes de Gantt, cartes de dépendances et chemin critique tenus à jour à chaque sprint, tableaux de bord calculés depuis les fiches, point d'avancement envoyé par mail automatiquement. Stack : Obsidian, Dataview, Mermaid, n8n.
 
-## Projets et code public (3)
+## Projets et code public (6)
 
-Ces trois-là ne sont pas des systèmes en production : un outil personnel, un projet académique et un site client livré via OptimizIA.xyz. Ne pas les compter dans les sept ci-dessus.
+Ces six-là ne sont pas des systèmes en production : trois projets académiques, un outil personnel et deux sites clients. Ne pas les compter dans les sept ci-dessus. C'est une sélection : d'autres projets de groupe sont hébergés sur les dépôts de camarades de promotion.
 
-- **PowerLift Tracker** (outil personnel, public) : suivi d'entraînement en force athlétique construit sur Google Sheets sans script, e1RM estimé depuis la table RPE, charges planifiées automatiquement, MAX de référence recalculés chaque semaine, indice de fatigue sur un bloc de dix semaines. Licence MIT, documentation bilingue. Code : https://github.com/BnRomain/tracker-powerlifting · Modèle : https://docs.google.com/spreadsheets/d/1cMEQfgsgYV3C5RC8sq0Xvccz4UgO5aT8dhn19qVybdU/edit?usp=sharing
 - **Compression JPEG (DCT, CSR)** : projet académique en mathématiques appliquées, compression d'image via transformée en cosinus discrète et stockage sparse. Démo : https://jpeg-csr-compression.streamlit.app/ · Code : https://github.com/BnRomain/jpeg-compression
+- **Expéditions himalayennes** (projet académique MAM3, Polytech Nice Sophia, juin 2026) : prédire le succès d'une expédition avec les seules informations connues avant le départ. Régression logistique sur 11 425 expéditions du jeu Kaggle Himalayan Expeditions, 69,3 % en validation croisée contre 55 % de référence, fuites de données et facteurs de confusion écartés. Stack : Python, pandas, scikit-learn, seaborn. Code : https://github.com/BnRomain/himalayan-expedition-success · Rapport : https://github.com/BnRomain/himalayan-expedition-success/blob/main/docs/report-fr.pdf
+- **Classification de races de chiens** (projet académique MAM3, Polytech Nice Sophia, juin 2026) : six races du jeu Stanford Dogs. Pipeline classique PCA et HOG avec kNN et SVM autour de 60 %, transfer learning VGG16 à 98 %. Stack : Python, scikit-learn, scikit-image. Code : https://github.com/BnRomain/dog-breed-classification · Rapport : https://github.com/BnRomain/dog-breed-classification/blob/main/docs/report-fr.pdf
+- **PowerLift Tracker** (outil personnel, public) : suivi d'entraînement en force athlétique construit sur Google Sheets sans script, e1RM estimé depuis la table RPE, charges planifiées automatiquement, MAX de référence recalculés chaque semaine, indice de fatigue sur un bloc de dix semaines. Licence MIT, documentation bilingue. Code : https://github.com/BnRomain/tracker-powerlifting · Modèle : https://docs.google.com/spreadsheets/d/1cMEQfgsgYV3C5RC8sq0Xvccz4UgO5aT8dhn19qVybdU/edit?usp=sharing
 - **Site portfolio photographe** : site vitrine single-page livré via OptimizIA.xyz. Code : https://github.com/BnRomain/ophelie-malorey-photographe · Site : https://bnromain.github.io/ophelie-malorey-photographe/
+- **Block Rose** (site client, 2024) : site de location de matériel audio, vidéo et streaming construit à partir de la charte graphique du client, en HTML, CSS et JavaScript sans framework, neuf pages. Premier projet web, interrompu par le client. Code : https://github.com/BnRomain/blockrose-equipment-rental · Démo : https://bnromain.github.io/blockrose-equipment-rental/
 
 ## Contact & prise de rendez-vous
 
@@ -115,7 +118,7 @@ Le rôle technique. Il conçoit les systèmes et les met en production, du workf
 Un workflow n8n est un enchaînement de règles déterministes, fiable et prévisible. Un agent IA interprète une entrée non structurée et décide de l'action, au prix d'une part d'incertitude. La plupart des systèmes livrés combinent les deux, l'agent pour juger, le workflow pour exécuter.
 
 **Où Romain Ben travaille-t-il ?**
-Basé à Antibes, il travaille à Nice, à Sophia-Antipolis et à distance partout ailleurs en France.
+Basé à Antibes, il intervient avec OptimizIA.xyz à Béziers et à distance partout ailleurs.
 
 **Comment le contacter ?**
 Prise de rendez-vous de 20 minutes en visio depuis https://www.romainben.cloud/contact-rom.html, ou par email à contact@romainben.cloud. Pour une demande d'entreprise, passer par OptimizIA.xyz.

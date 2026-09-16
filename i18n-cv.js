@@ -7,10 +7,10 @@ window.RB_I18N = {
     /* Titre de l'onglet et en-tete */
     "CV de Romain Ben | Automatisation n8n et agents IA":
         "Romain Ben's CV | n8n automation and AI agents",
-    "Curriculum vitae, mis à jour le 15 septembre 2026":
-        "Curriculum vitae, updated 15 September 2026",
-    "Étudiant ingénieur en mathématiques appliquées et modélisation, co-fondateur d'OptimizIA.xyz. Je conçois et je mets en production des systèmes d'automatisation et d'IA pour des PME et des ETI.":
-        "Engineering student in applied mathematics and modelling, co-founder of OptimizIA.xyz. I design and ship automation and AI systems that run in production for small and mid-sized companies.",
+    "Curriculum vitae, mis à jour le 16 septembre 2026":
+        "Curriculum vitae, updated 16 September 2026",
+    "Étudiant ingénieur en mathématiques appliquées et modélisation, co-fondateur d'OptimizIA.xyz. Je conçois et je mets en production des systèmes d'automatisation et d'IA pour des TPE et des PME.":
+        "Engineering student in applied mathematics and modelling, co-founder of OptimizIA.xyz. I design and ship automation and AI systems that run in production for small businesses and SMEs.",
     "Retour au site": "Back to the site",
     "Imprimer ou enregistrer en PDF": "Print or save as PDF",
     "Antibes, Alpes-Maritimes": "Antibes, French Riviera",
@@ -27,11 +27,11 @@ window.RB_I18N = {
     "Entrepreneuriat": "Entrepreneurship",
     "7 systèmes": "7 systems",
     "6 domaines": "6 areas",
-    "3 dépôts": "3 repositories",
+    "6 dépôts": "6 repositories",
 
     /* Resume */
-    "Quatrième année à Polytech Nice Sophia, spécialité Mathématiques Appliquées et Modélisation, après deux ans de prépa intégrée PeiP. En parallèle, co-fondateur et responsable technique d'OptimizIA.xyz, agence d'intégration IA et d'automatisation pour les PME et ETI, avec le Statut National Étudiant-Entrepreneur. Je ne livre pas des scripts isolés mais des systèmes complets en production : collecte et traitement de données, agents LLM, base PostgreSQL avec contrôle d'accès, paiement, authentification, déploiement conteneurisé et supervision des exécutions.":
-        "Fourth year at Polytech Nice Sophia, majoring in Applied Mathematics and Modelling, after two years of the school's integrated preparatory programme. Alongside my studies I am co-founder and technical lead of OptimizIA.xyz, an AI and automation agency for small and mid-sized companies, and I hold the French National Student-Entrepreneur Status. I do not ship isolated scripts but complete production systems: data collection and processing, LLM agents, a PostgreSQL database with access control, payment, authentication, containerised deployment and run monitoring.",
+    "Quatrième année à Polytech Nice Sophia, spécialité Mathématiques Appliquées et Modélisation, après deux ans de prépa intégrée PeiP. En parallèle, co-fondateur et responsable technique d'OptimizIA.xyz, agence d'intégration IA et d'automatisation pour les TPE et PME, avec le Statut National Étudiant-Entrepreneur. Je ne livre pas des scripts isolés mais des systèmes complets en production : collecte et traitement de données, agents LLM, base PostgreSQL avec contrôle d'accès, paiement, authentification, déploiement conteneurisé et supervision des exécutions.":
+        "Fourth year at Polytech Nice Sophia, majoring in Applied Mathematics and Modelling, after two years of the school's integrated preparatory programme. Alongside my studies I am co-founder and technical lead of OptimizIA.xyz, an AI and automation agency for small businesses and SMEs, and I hold the French National Student-Entrepreneur Status. I do not ship isolated scripts but complete production systems: data collection and processing, LLM agents, a PostgreSQL database with access control, payment, authentication, containerised deployment and run monitoring.",
     "Agents IA et LLM": "AI and LLM agents",
     "Supabase et PostgreSQL": "Supabase and PostgreSQL",
     "Next.js et TypeScript": "Next.js and TypeScript",
@@ -44,8 +44,8 @@ window.RB_I18N = {
     "Co-fondateur, responsable technique": "Co-founder, technical lead",
     "<b>2025</b>aujourd'hui": "<b>2025</b>present",
     "OptimizIA.xyz, Sophia-Antipolis · activité exercée en portage salarial": "OptimizIA.xyz, Sophia-Antipolis, France · operated under a French umbrella-company scheme (portage salarial)",
-    "Agence B2B d'intégration IA et d'automatisation pour dirigeants de PME et d'ETI, co-fondée avec <a href=\"https://www.ginoux.xyz\" target=\"_blank\" rel=\"noopener\">Rémy Ginoux</a>. Je porte la partie technique : architecture, développement, mise en production et exploitation.":
-        "A B2B AI and automation agency for owners of small and mid-sized companies, co-founded with <a href=\"https://www.ginoux.xyz\" target=\"_blank\" rel=\"noopener\">Rémy Ginoux</a>. I own the technical side: architecture, development, release and operations.",
+    "Agence B2B d'intégration IA et d'automatisation pour dirigeants de TPE et de PME, co-fondée avec <a href=\"https://www.ginoux.xyz\" target=\"_blank\" rel=\"noopener\">Rémy Ginoux</a>. Je porte la partie technique : architecture, développement, mise en production et exploitation.":
+        "A B2B AI and automation agency for owners of small businesses and SMEs, co-founded with <a href=\"https://www.ginoux.xyz\" target=\"_blank\" rel=\"noopener\">Rémy Ginoux</a>. I own the technical side: architecture, development, release and operations.",
     "Conception et exploitation d'une trentaine de <strong>workflows n8n en production</strong> sur VPS : collecte multi-sources, scoring par LLM, notifications, reprise sur erreur, alerte en cas d'échec d'exécution":
         "Designed and operate around thirty <strong>n8n workflows running in production</strong> on a VPS: multi-source collection, LLM scoring, notifications, error recovery and alerting when a run fails",
     "Développement d'<strong>agents IA</strong> sur API OpenAI et Claude, adaptés aux processus internes des clients":
@@ -166,6 +166,20 @@ window.RB_I18N = {
     "Site portfolio photographe": "Photographer portfolio site",
     "Site vitrine livré pour une cliente photographe : galerie soignée, design responsive, navigation fluide. Livré via OptimizIA.xyz en HTML, CSS et JavaScript vanilla, sans framework.":
         "A marketing site delivered for a photographer: a careful gallery, responsive design, smooth navigation. Delivered through OptimizIA.xyz in vanilla HTML, CSS and JavaScript, no framework.",
+    "Sélection de dépôts publics ; les autres projets menés en groupe sont hébergés sur les dépôts des camarades concernés.":
+        "A selection of public repositories; other group projects are hosted on the repositories of the classmates involved.",
+    "Prédiction du succès d'expéditions himalayennes": "Predicting the success of Himalayan expeditions",
+    "Projet de traitement de données mené en binôme (MAM3, juin 2026) sur le jeu Kaggle Himalayan Expeditions (11 425 expéditions). L'essentiel du travail a porté sur les variables à exclure : celles qui ne sont connues qu'après le départ, et un effet saison qui masquait en réalité un effet sommet. Modèle logistique à 69,3 % de précision (validation croisée à 5 plis), pour une référence à 55 %.":
+        "A two-person data processing project (third year, June 2026) on the Kaggle Himalayan Expeditions dataset (11,425 expeditions). Most of the work went into what to leave out: variables only known after departure, and a season effect that was really a peak effect. A logistic model at 69.3% accuracy (5-fold cross-validation), against a 55% baseline.",
+    "Classification d'images de races de chiens": "Dog breed image classification",
+    "Projet d'apprentissage automatique à trois (MAM3, juin 2026) sur 1 002 photos de six races issues de Stanford Dogs. Comparaison d'une chaîne classique, descripteurs PCA et HOG puis kNN et SVM réglés par recherche sur grille, avec un réseau VGG16 pré-entraîné dont seule la tête est apprise : 59 % contre 98 %. Le plafond venait des descripteurs, pas du classifieur choisi.":
+        "A three-person machine learning project (third year, June 2026) on 1,002 photos of six breeds from Stanford Dogs. A classical chain, PCA and HOG features then kNN and SVM tuned by grid search, compared with a pre-trained VGG16 network where only the head is trained: 59% against 98%. The ceiling came from the features, not from the chosen classifier.",
+    "<b>Data</b>Python": "<b>Data</b>Python",
+    "<b>ML</b>Python": "<b>ML</b>Python",
+    "Block Rose, location de matériel audiovisuel": "Block Rose, audiovisual equipment rental",
+    "Vitrine et catalogue d'un loueur de matériel audiovisuel et de diffusion en direct, réalisés en 2024 : mon premier projet web. Contrainte structurante, une charte graphique imposée (typographies, palette, illustrations) à décliner sur neuf pages cohérentes et responsives, sans framework. Projet arrêté par le client, qui n'avait plus besoin du site.":
+        "Showcase and catalogue for a rental company of audiovisual and live streaming equipment, built in 2024: my first web project. The shaping constraint was an imposed brand book (typefaces, palette, illustrations) to carry across nine consistent, responsive pages, with no framework. The client stopped the project once the site was no longer needed.",
+    "Rapport (PDF)": "Report (PDF)",
     "Code source": "Source code",
     "Démonstration": "Live demo",
     "Site en ligne": "Live site",

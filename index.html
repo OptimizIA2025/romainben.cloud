@@ -13,7 +13,7 @@
     <link rel="alternate" type="application/rss+xml" title="Romain Ben - systèmes en production" href="rss.xml">
 
     <meta property="og:title" content="Romain Ben | Co-fondateur OptimizIA.xyz">
-    <meta property="og:description" content="Étudiant ingénieur MAM4 en maths appliquées, co-fondateur d’OptimizIA.xyz. Automatisation, agents IA et SaaS au service des PME/ETI.">
+    <meta property="og:description" content="Étudiant ingénieur MAM4 en maths appliquées, co-fondateur d’OptimizIA.xyz. Automatisation, agents IA et SaaS au service des TPE/PME.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.romainben.cloud/">
     <meta property="og:image" content="https://www.romainben.cloud/og-romainben.jpg?v=1">
@@ -24,7 +24,7 @@
     <meta property="og:site_name" content="Romain Ben">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:description" content="Étudiant ingénieur MAM4 en maths appliquées, co-fondateur d’OptimizIA.xyz. Automatisation, agents IA et SaaS au service des PME/ETI.">
+    <meta name="twitter:description" content="Étudiant ingénieur MAM4 en maths appliquées, co-fondateur d’OptimizIA.xyz. Automatisation, agents IA et SaaS au service des TPE/PME.">
     <meta name="twitter:title" content="Romain Ben | Co-fondateur OptimizIA.xyz">
     <meta name="twitter:image" content="https://www.romainben.cloud/og-romainben.jpg?v=1">
 
@@ -79,7 +79,7 @@
           "name": "OptimizIA.xyz",
           "url": "https://www.optimizia.xyz/",
           "logo": "https://www.optimizia.xyz/favicon.png",
-          "description": "Agence IA et automatisation B2B pour PME et ETI.",
+          "description": "Agence IA et automatisation B2B pour TPE et PME.",
           "founder": [
             { "@id": "https://www.romainben.cloud/#romain" },
             { "@type": "Person", "name": "Rémy Ginoux", "url": "https://www.ginoux.xyz/" }
@@ -89,12 +89,12 @@
           "@type": "Service",
           "@id": "https://www.optimizia.xyz/#service",
           "name": "OptimizIA.xyz, automatisation IA et workflows n8n",
-          "description": "Agence B2B d'IA et d'automatisation pour PME et ETI. Workflows n8n, agents IA personnalisés, intégrations Gmail et outils métier.",
+          "description": "Agence B2B d'IA et d'automatisation pour TPE et PME. Workflows n8n, agents IA personnalisés, intégrations Gmail et outils métier.",
           "provider": { "@id": "https://www.optimizia.xyz/#org" },
-          "areaServed": {
-            "@type": "Place",
-            "name": "Nice Sophia-Antipolis, France"
-          },
+          "areaServed": [
+            { "@type": "City", "name": "Béziers" },
+            { "@type": "Country", "name": "France" }
+          ],
           "url": "https://www.optimizia.xyz/",
           "serviceType": ["Automatisation n8n", "Intégration IA", "Agents LLM", "Workflows métier", "Knowledge Management"]
         },
@@ -238,7 +238,7 @@
               "name": "Qui est Romain Ben ?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Romain Ben est un étudiant ingénieur en MAM4 (Mathématiques Appliquées et Modélisation) à Polytech Nice Sophia. Il est co-fondateur de l'agence OptimizIA.xyz, spécialisée en IA et automatisation pour les PME et ETI, et titulaire du Statut National Étudiant-Entrepreneur."
+                "text": "Romain Ben est un étudiant ingénieur en MAM4 (Mathématiques Appliquées et Modélisation) à Polytech Nice Sophia. Il est co-fondateur de l'agence OptimizIA.xyz, spécialisée en IA et automatisation pour les TPE et PME, et titulaire du Statut National Étudiant-Entrepreneur."
               }
             },
             {
@@ -302,7 +302,7 @@
               "name": "À qui s'adressent vos solutions ?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Principalement des dirigeants de PME et ETI avec des processus répétitifs à fort volume : gestion d'emails, qualification de leads, reporting, traitement de documents. Le critère déterminant n'est pas le secteur mais l'existence de tâches manuelles récurrentes qui consomment du temps à forte valeur. Nous intervenons aussi pour des particuliers sur des projets ciblés."
+                "text": "Principalement des dirigeants de TPE et PME avec des processus répétitifs à fort volume : gestion d'emails, qualification de leads, reporting, traitement de documents. Le critère déterminant n'est pas le secteur mais l'existence de tâches manuelles récurrentes qui consomment du temps à forte valeur. Nous intervenons aussi pour des particuliers sur des projets ciblés."
               }
             },
             {
@@ -1520,28 +1520,6 @@
                 <a href="https://www.optimizia.xyz/tools/seoplus/?utm_source=romainben&amp;utm_medium=referral&amp;utm_campaign=usecase" target="_blank" rel="noopener" class="usecase-link">Accéder à SEOPlus!</a>
             </div>
 
-            <div class="usecase-card violet reveal">
-                <div class="usecase-head">
-                    <h3 id="usecase-plateforme-abonnement">Plateforme d'abonnement</h3>
-                    <span class="usecase-tag violet">Produit interne</span>
-                </div>
-                <p class="usecase-context">Transformer un service à accès manuel en produit vendable, avec un contrôle d'accès qui ne dépend pas du front.</p>
-                <ul class="usecase-list">
-                    <li>Paiement Stripe en production, abonnements et espace client</li>
-                    <li>Attribution automatique des accès communautaires après paiement</li>
-                    <li>Droits décidés en base avec Row Level Security</li>
-                    <li>Connexion OAuth en un clic, sans saisie de code</li>
-                </ul>
-                <p class="usecase-synth">Le paiement Stripe déclenche l'ouverture des accès, mais la décision de qui a le droit de voir quoi se prend dans la base de données, jamais dans le navigateur. Les accès suivent ainsi l'état réel de l'abonnement, de la souscription à la résiliation, sans intervention manuelle.</p>
-                <div class="usecase-stack">
-                    <span>Stripe</span><span>Supabase</span><span>n8n</span><span>OAuth2</span>
-                </div>
-                <div class="usecase-result">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg>
-                    Tunnel de vente opérationnel de bout en bout
-                </div>
-            </div>
-
             <div class="usecase-card reveal">
                 <div class="usecase-head">
                     <h3 id="usecase-site-vitrine-audit-seo">Site vitrine &amp; audit SEO</h3>
@@ -1571,6 +1549,57 @@
                     Citée par ChatGPT sur sa requête métier locale
                 </div>
                 <a href="https://happysharing-rh.fr/" target="_blank" rel="noopener" class="usecase-link">Voir happysharing-rh.fr</a>
+            </div>
+
+            <div class="usecase-card reveal">
+                <div class="usecase-head">
+                    <h3 id="usecase-systeme-information">Système d'information et pilotage de projet</h3>
+                    <span class="usecase-tag">Interne</span>
+                </div>
+                <p class="usecase-context">Deux associés, plusieurs projets et clients menés en parallèle, et aucun endroit unique pour savoir qui fait quoi ni où en est chaque chantier.</p>
+                <ul class="usecase-list">
+                    <li>Base de connaissances Obsidian partagée et synchronisée entre les deux associés</li>
+                    <li>Portefeuille structuré en sprints : fiches de tâches, backlog priorisé, revue hebdomadaire</li>
+                    <li>Diagrammes de Gantt, cartes de dépendances et chemin critique tenus à jour à chaque sprint</li>
+                    <li>Tableaux de bord calculés depuis les fiches, et point d'avancement envoyé par mail automatiquement</li>
+                </ul>
+                <p class="usecase-synth">Toute l'activité de l'agence tient dans une base Obsidian partagée entre les deux associés : fiches de tâches, backlog priorisé, diagrammes de Gantt et chemin critique remis à jour à chaque sprint. Les tableaux de bord se calculent depuis les fiches, et le point d'avancement part par mail tout seul.</p>
+                <figure class="usecase-shot">
+                    <picture>
+                        <source srcset="preuve-pilotage-obsidian.webp" type="image/webp">
+                        <img src="preuve-pilotage-obsidian.jpg" alt="Capture du système d'information de l'agence sous Obsidian : arborescence des dossiers et vue graphique des notes reliées entre elles." width="1200" height="708" loading="lazy" decoding="async">
+                    </picture>
+                    <figcaption>Vue graphique du système d'information, notes et liens entre projets.</figcaption>
+                </figure>
+                <div class="usecase-stack">
+                    <span>Obsidian</span><span>Dataview</span><span>Mermaid</span><span>n8n</span>
+                </div>
+                <div class="usecase-result">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg>
+                    Un seul endroit pour piloter tous les projets
+                </div>
+            </div>
+
+            <div class="usecase-card violet reveal">
+                <div class="usecase-head">
+                    <h3 id="usecase-plateforme-abonnement">Plateforme d'abonnement</h3>
+                    <span class="usecase-tag violet">Produit interne</span>
+                </div>
+                <p class="usecase-context">Transformer un service à accès manuel en produit vendable, avec un contrôle d'accès qui ne dépend pas du front.</p>
+                <ul class="usecase-list">
+                    <li>Paiement Stripe en production, abonnements et espace client</li>
+                    <li>Attribution automatique des accès communautaires après paiement</li>
+                    <li>Droits décidés en base avec Row Level Security</li>
+                    <li>Connexion OAuth en un clic, sans saisie de code</li>
+                </ul>
+                <p class="usecase-synth">Le paiement Stripe déclenche l'ouverture des accès, mais la décision de qui a le droit de voir quoi se prend dans la base de données, jamais dans le navigateur. Les accès suivent ainsi l'état réel de l'abonnement, de la souscription à la résiliation, sans intervention manuelle.</p>
+                <div class="usecase-stack">
+                    <span>Stripe</span><span>Supabase</span><span>n8n</span><span>OAuth2</span>
+                </div>
+                <div class="usecase-result">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg>
+                    Tunnel de vente opérationnel de bout en bout
+                </div>
             </div>
 
             <div class="usecase-card reveal">
@@ -1615,35 +1644,6 @@
                 <div class="usecase-result">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg>
                     Réservation autonome, zéro saisie manuelle
-                </div>
-            </div>
-
-            <div class="usecase-card reveal">
-                <div class="usecase-head">
-                    <h3 id="usecase-systeme-information">Système d'information et pilotage de projet</h3>
-                    <span class="usecase-tag">Interne</span>
-                </div>
-                <p class="usecase-context">Deux associés, plusieurs projets et clients menés en parallèle, et aucun endroit unique pour savoir qui fait quoi ni où en est chaque chantier.</p>
-                <ul class="usecase-list">
-                    <li>Base de connaissances Obsidian partagée et synchronisée entre les deux associés</li>
-                    <li>Portefeuille structuré en sprints : fiches de tâches, backlog priorisé, revue hebdomadaire</li>
-                    <li>Diagrammes de Gantt, cartes de dépendances et chemin critique tenus à jour à chaque sprint</li>
-                    <li>Tableaux de bord calculés depuis les fiches, et point d'avancement envoyé par mail automatiquement</li>
-                </ul>
-                <p class="usecase-synth">Toute l'activité de l'agence tient dans une base Obsidian partagée entre les deux associés : fiches de tâches, backlog priorisé, diagrammes de Gantt et chemin critique remis à jour à chaque sprint. Les tableaux de bord se calculent depuis les fiches, et le point d'avancement part par mail tout seul.</p>
-                <figure class="usecase-shot">
-                    <picture>
-                        <source srcset="preuve-pilotage-obsidian.webp" type="image/webp">
-                        <img src="preuve-pilotage-obsidian.jpg" alt="Capture du système d'information de l'agence sous Obsidian : arborescence des dossiers et vue graphique des notes reliées entre elles." width="1200" height="708" loading="lazy" decoding="async">
-                    </picture>
-                    <figcaption>Vue graphique du système d'information, notes et liens entre projets.</figcaption>
-                </figure>
-                <div class="usecase-stack">
-                    <span>Obsidian</span><span>Dataview</span><span>Mermaid</span><span>n8n</span>
-                </div>
-                <div class="usecase-result">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg>
-                    Un seul endroit pour piloter tous les projets
                 </div>
             </div>
 
@@ -1747,7 +1747,7 @@
                 Je suis en <strong>MAM4 à Polytech Nice Sophia</strong>, sur le campus de <strong>Sophia-Antipolis</strong>, spécialité <strong>Maths Appliquées &amp; Modélisation</strong>. C'est ma <strong>4ᵉ année dans l'école</strong> et la 2ᵉ du cycle ingénieur : j'ai d'abord fait les deux ans de prépa intégrée <strong>PeiP</strong> sur place, à me former sur les maths, l'algo et la modélisation.
             </p>
             <p>
-                En parallèle, j'ai co-fondé <strong>OptimizIA.xyz</strong> avec <a href="https://www.ginoux.xyz" target="_blank" rel="noopener">Rémy Ginoux</a>, une agence d'intégration IA et d'automatisation pour les PME/ETI. Ensemble, nous collaborons sur les aspects techniques et développement : workflows n8n, agents, intégrations. Rémy apporte en plus 25 ans de terrain industriel et la vision business. Mon engagement entrepreneurial est reconnu par le <strong>Statut National Étudiant-Entrepreneur (SNEE)</strong>, dispositif PEPITE du ministère de l'Enseignement supérieur.
+                En parallèle, j'ai co-fondé <strong>OptimizIA.xyz</strong> avec <a href="https://www.ginoux.xyz" target="_blank" rel="noopener">Rémy Ginoux</a>, une agence d'intégration IA et d'automatisation pour les TPE/PME. Ensemble, nous collaborons sur les aspects techniques et développement : workflows n8n, agents, intégrations. Rémy apporte en plus 25 ans de terrain industriel et la vision business. Mon engagement entrepreneurial est reconnu par le <strong>Statut National Étudiant-Entrepreneur (SNEE)</strong>, dispositif PEPITE du ministère de l'Enseignement supérieur.
             </p>
             <p>
                 Depuis, j'ai arrêté de faire seulement des scripts : je livre des <strong>systèmes complets qui tournent en production</strong>, avec base de données, paiement, authentification et supervision. Les cas concrets sont détaillés plus bas.
@@ -1782,9 +1782,64 @@
         <div class="section-header reveal">
             <span class="overline">Projets</span>
             <h2>Le code public</h2>
-            <p>Projets personnels, académiques et sites livrés, avec le dépôt ouvert et la démo en ligne.</p>
+            <p>Une sélection de projets personnels, académiques et de sites livrés, avec le dépôt ouvert et la démo en ligne. D'autres projets de groupe vivent sur les dépôts de mes camarades.</p>
         </div>
         <div class="projects-grid">
+            <div class="project-card reveal">
+                <div class="project-head">
+                    <h3>Compression JPEG (DCT · CSR)</h3>
+                    <span class="project-cat violet">Maths · Python</span>
+                </div>
+                <p>Implémentation d'un algorithme de compression inspiré JPEG, transformée en cosinus discrète sur blocs 8×8 puis stockage en matrices sparses CSR. Application Streamlit interactive avec métriques en temps réel.</p>
+                <div class="project-stack">
+                    <span>Python</span><span>Streamlit</span><span>NumPy</span><span>SciPy</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/BnRomain/jpeg-compression" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" /></svg> Code
+                    </a>
+                    <a href="https://jpeg-csr-compression.streamlit.app/" target="_blank" rel="noopener" class="btn btn-outline project-demo">Démo en ligne</a>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-head">
+                    <h3>Expéditions himalayennes</h3>
+                    <span class="project-cat">Data · Python</span>
+                </div>
+                <p>Prédire si une expédition atteindra le sommet avec ce que l'on sait avant le départ. Régression logistique sur 11 425 expéditions Kaggle : 69,3 % en validation croisée contre 55 % de référence, en écartant fuites de données et facteurs de confusion.</p>
+                <div class="project-stack">
+                    <span>Python</span><span>pandas</span><span>scikit-learn</span><span>seaborn</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/BnRomain/himalayan-expedition-success" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" /></svg> Code
+                    </a>
+                    <a href="https://github.com/BnRomain/himalayan-expedition-success/blob/main/docs/report-fr.pdf" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg> Rapport (PDF)
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-head">
+                    <h3>Classification de races de chiens</h3>
+                    <span class="project-cat violet">ML · Python</span>
+                </div>
+                <p>Reconnaître six races du jeu Stanford Dogs. Un pipeline classique (PCA, HOG codé à la main, kNN, SVM) plafonne autour de 60 %, un transfer learning VGG16 atteint 98 % : ce sont les descripteurs qui fixent le plafond, pas le classifieur.</p>
+                <div class="project-stack">
+                    <span>Python</span><span>scikit-learn</span><span>scikit-image</span><span>VGG16</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/BnRomain/dog-breed-classification" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" /></svg> Code
+                    </a>
+                    <a href="https://github.com/BnRomain/dog-breed-classification/blob/main/docs/report-fr.pdf" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg> Rapport (PDF)
+                    </a>
+                </div>
+            </div>
+
             <div class="project-card reveal">
                 <div class="project-head">
                     <h3>PowerLift Tracker</h3>
@@ -1806,25 +1861,8 @@
 
             <div class="project-card reveal">
                 <div class="project-head">
-                    <h3>Compression JPEG (DCT · CSR)</h3>
-                    <span class="project-cat violet">Maths · Python</span>
-                </div>
-                <p>Implémentation d'un algorithme de compression inspiré JPEG, transformée en cosinus discrète sur blocs 8×8 puis stockage en matrices sparses CSR. Application Streamlit interactive avec métriques en temps réel.</p>
-                <div class="project-stack">
-                    <span>Python</span><span>Streamlit</span><span>NumPy</span><span>SciPy</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/BnRomain/jpeg-compression" target="_blank" rel="noopener">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" /></svg> Code
-                    </a>
-                    <a href="https://jpeg-csr-compression.streamlit.app/" target="_blank" rel="noopener" class="btn btn-outline project-demo">Démo en ligne</a>
-                </div>
-            </div>
-
-            <div class="project-card reveal">
-                <div class="project-head">
                     <h3>Site portfolio photographe</h3>
-                    <span class="project-cat">Front · Client</span>
+                    <span class="project-cat violet">Front · Client</span>
                 </div>
                 <p>Site vitrine pour une cliente photographe. Galerie soignée, design responsive, navigation fluide. Livré via OptimizIA.xyz en HTML/CSS/JS vanilla, sans framework.</p>
                 <div class="project-stack">
@@ -1836,6 +1874,25 @@
                     </a>
                     <a href="https://bnromain.github.io/ophelie-malorey-photographe/" target="_blank" rel="noopener">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg> Site live
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-head">
+                    <h3>Block Rose</h3>
+                    <span class="project-cat">Front · Client</span>
+                </div>
+                <p>Site de location de matériel audio, vidéo et streaming, construit en 2024 à partir de la charte graphique du client, en HTML, CSS et JavaScript sans framework. Premier projet web, neuf pages, interrompu par le client en cours de route.</p>
+                <div class="project-stack">
+                    <span>HTML</span><span>CSS</span><span>JS</span><span>GitHub Pages</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/BnRomain/blockrose-equipment-rental" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" /></svg> Code
+                    </a>
+                    <a href="https://bnromain.github.io/blockrose-equipment-rental/" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg> Démo live
                     </a>
                 </div>
             </div>
@@ -1856,7 +1913,7 @@
                 <div class="optimizia-logo">Optimiz<span>IA.xyz</span></div>
                 <h2>Mon rôle dans l'agence</h2>
                 <p>
-                    <strong>OptimizIA.xyz</strong> est l'agence que j'ai co-fondée avec <a href="https://www.ginoux.xyz" target="_blank" rel="noopener">Rémy Ginoux</a>. Nous accompagnons les dirigeants de PME et d'ETI sur l'intégration de l'IA et l'automatisation de leurs processus, à Nice, à Sophia-Antipolis et à distance partout ailleurs en France.
+                    <strong>OptimizIA.xyz</strong> est l'agence que j'ai co-fondée avec <a href="https://www.ginoux.xyz" target="_blank" rel="noopener">Rémy Ginoux</a>. Nous accompagnons les dirigeants de TPE et de PME sur l'intégration de l'IA et l'automatisation de leurs processus, à Béziers et à distance partout ailleurs.
                 </p>
                 <p>
                     Ma part est <strong>technique</strong> : je conçois les systèmes et je les mets en production, du workflow n8n à l'application complète avec base de données, paiement et supervision. Une partie des réalisations ci-dessus vient de là. Rémy porte le diagnostic, la relation client et <strong>25 ans de terrain industriel</strong>. C'est ce qui nous permet d'aller vite sans naviguer à vue.
@@ -1887,7 +1944,7 @@
                 </button>
                 <div class="faq-answer">
                     <div class="faq-answer-inner">
-                        Romain Ben est un étudiant ingénieur en MAM4 (Mathématiques Appliquées et Modélisation) à Polytech Nice Sophia. Il est co-fondateur de l'agence OptimizIA.xyz, spécialisée en IA et automatisation pour les PME et ETI, et titulaire du Statut National Étudiant-Entrepreneur.
+                        Romain Ben est un étudiant ingénieur en MAM4 (Mathématiques Appliquées et Modélisation) à Polytech Nice Sophia. Il est co-fondateur de l'agence OptimizIA.xyz, spécialisée en IA et automatisation pour les TPE et PME, et titulaire du Statut National Étudiant-Entrepreneur.
                     </div>
                 </div>
             </div>
@@ -1983,7 +2040,7 @@
                 </button>
                 <div class="faq-answer">
                     <div class="faq-answer-inner">
-                        Principalement des <strong>dirigeants de PME et ETI</strong> avec des processus répétitifs à fort volume : gestion d'emails, qualification de leads, reporting, traitement de documents. Le critère déterminant n'est pas le secteur mais l'existence de <strong>tâches manuelles récurrentes</strong> qui consomment du temps à forte valeur. Nous intervenons aussi pour des particuliers sur des projets ciblés.
+                        Principalement des <strong>dirigeants de TPE et PME</strong> avec des processus répétitifs à fort volume : gestion d'emails, qualification de leads, reporting, traitement de documents. Le critère déterminant n'est pas le secteur mais l'existence de <strong>tâches manuelles récurrentes</strong> qui consomment du temps à forte valeur. Nous intervenons aussi pour des particuliers sur des projets ciblés.
                     </div>
                 </div>
             </div>
@@ -2238,7 +2295,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
-<script src="/i18n-index.js?v=20260915c" defer></script>
+<script src="/i18n-index.js?v=20260916a" defer></script>
 <script src="/site.js?v=20260813b" defer></script>
 <script src="/tracker.js?v=20260916" defer></script>
 </body>

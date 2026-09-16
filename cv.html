@@ -43,7 +43,7 @@
       "name": "CV de Romain Ben",
       "inLanguage": "fr-FR",
       "dateCreated": "2026-07-26T02:05:51+02:00",
-      "dateModified": "2026-09-15T16:45:00+02:00",
+      "dateModified": "2026-09-16T10:00:00+02:00",
       "author": { "@id": "https://www.romainben.cloud/#romain" },
       "isPartOf": { "@id": "https://www.romainben.cloud/#website" },
       "mainEntity": {
@@ -615,9 +615,9 @@
     <div class="container">
         <div class="cv-identity">
             <div>
-                <span class="overline">Curriculum vitae, mis à jour le 15 septembre 2026</span>
+                <span class="overline">Curriculum vitae, mis à jour le 16 septembre 2026</span>
                 <h1>Romain Ben</h1>
-                <p class="cv-role">Étudiant ingénieur en mathématiques appliquées et modélisation, co-fondateur d'OptimizIA.xyz. Je conçois et je mets en production des systèmes d'automatisation et d'IA pour des PME et des ETI.</p>
+                <p class="cv-role">Étudiant ingénieur en mathématiques appliquées et modélisation, co-fondateur d'OptimizIA.xyz. Je conçois et je mets en production des systèmes d'automatisation et d'IA pour des TPE et des PME.</p>
             </div>
             <!-- Variante 396 px : le portrait est affiche en 132, la version de
                  la page d'accueil (258 Ko en JPEG) etait douze fois trop lourde
@@ -664,7 +664,7 @@
         <div class="summary-block">
             <h2>En résumé</h2>
             <p>
-                Quatrième année à Polytech Nice Sophia, spécialité Mathématiques Appliquées et Modélisation, après deux ans de prépa intégrée PeiP. En parallèle, co-fondateur et responsable technique d'OptimizIA.xyz, agence d'intégration IA et d'automatisation pour les PME et ETI, avec le Statut National Étudiant-Entrepreneur. Je ne livre pas des scripts isolés mais des systèmes complets en production : collecte et traitement de données, agents LLM, base PostgreSQL avec contrôle d'accès, paiement, authentification, déploiement conteneurisé et supervision des exécutions.
+                Quatrième année à Polytech Nice Sophia, spécialité Mathématiques Appliquées et Modélisation, après deux ans de prépa intégrée PeiP. En parallèle, co-fondateur et responsable technique d'OptimizIA.xyz, agence d'intégration IA et d'automatisation pour les TPE et PME, avec le Statut National Étudiant-Entrepreneur. Je ne livre pas des scripts isolés mais des systèmes complets en production : collecte et traitement de données, agents LLM, base PostgreSQL avec contrôle d'accès, paiement, authentification, déploiement conteneurisé et supervision des exécutions.
             </p>
             <div class="tags">
                 <span class="tag">Automatisation n8n</span>
@@ -694,7 +694,7 @@
                 <div class="entry-body">
                     <h3>Co-fondateur, responsable technique</h3>
                     <div class="entry-org">OptimizIA.xyz, Sophia-Antipolis · activité exercée en portage salarial</div>
-                    <p>Agence B2B d'intégration IA et d'automatisation pour dirigeants de PME et d'ETI, co-fondée avec <a href="https://www.ginoux.xyz" target="_blank" rel="noopener">Rémy Ginoux</a>. Je porte la partie technique : architecture, développement, mise en production et exploitation.</p>
+                    <p>Agence B2B d'intégration IA et d'automatisation pour dirigeants de TPE et de PME, co-fondée avec <a href="https://www.ginoux.xyz" target="_blank" rel="noopener">Rémy Ginoux</a>. Je porte la partie technique : architecture, développement, mise en production et exploitation.</p>
                     <ul>
                         <li>Conception et exploitation d'une trentaine de <strong>workflows n8n en production</strong> sur VPS : collecte multi-sources, scoring par LLM, notifications, reprise sur erreur, alerte en cas d'échec d'exécution</li>
                         <li>Développement d'<strong>agents IA</strong> sur API OpenAI et Claude, adaptés aux processus internes des clients</li>
@@ -923,23 +923,11 @@
     <div class="container">
         <div class="section-head">
             <h2>Projets, code public</h2>
-            <span class="count">3 dépôts</span>
+            <span class="count">6 dépôts</span>
         </div>
+        <p class="lede">Sélection de dépôts publics ; les autres projets menés en groupe sont hébergés sur les dépôts des camarades concernés.</p>
 
         <div class="entry-list">
-            <article class="entry">
-                <div class="entry-when"><b>Outil</b>Google Sheets</div>
-                <div class="entry-body">
-                    <h3>PowerLift Tracker</h3>
-                    <p>Suivi d'entraînement en force athlétique construit sur Google Sheets, sans script : e1RM estimé depuis la table RPE, charges planifiées automatiquement, MAX de référence recalculés chaque semaine depuis les performances réelles et indice de fatigue, sur un bloc de dix semaines. Modèle public, documentation bilingue, licence MIT.</p>
-                    <div class="tags"><span class="tag">Google Sheets</span><span class="tag">ARRAYFORMULA</span><span class="tag">GitHub Actions</span><span class="tag">MIT</span></div>
-                    <div class="entry-links">
-                        <a href="https://github.com/BnRomain/tracker-powerlifting" target="_blank" rel="noopener">Code source</a>
-                        <a href="https://docs.google.com/spreadsheets/d/1cMEQfgsgYV3C5RC8sq0Xvccz4UgO5aT8dhn19qVybdU/edit?usp=sharing" target="_blank" rel="noopener">Modèle Google Sheets</a>
-                    </div>
-                </div>
-            </article>
-
             <article class="entry">
                 <div class="entry-when"><b>Maths</b>Python</div>
                 <div class="entry-body">
@@ -954,6 +942,45 @@
             </article>
 
             <article class="entry">
+                <div class="entry-when"><b>Data</b>Python</div>
+                <div class="entry-body">
+                    <h3>Prédiction du succès d'expéditions himalayennes</h3>
+                    <p>Projet de traitement de données mené en binôme (MAM3, juin 2026) sur le jeu Kaggle Himalayan Expeditions (11 425 expéditions). L'essentiel du travail a porté sur les variables à exclure : celles qui ne sont connues qu'après le départ, et un effet saison qui masquait en réalité un effet sommet. Modèle logistique à 69,3 % de précision (validation croisée à 5 plis), pour une référence à 55 %.</p>
+                    <div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">scikit-learn</span><span class="tag">seaborn</span></div>
+                    <div class="entry-links">
+                        <a href="https://github.com/BnRomain/himalayan-expedition-success" target="_blank" rel="noopener">Code source</a>
+                        <a href="https://github.com/BnRomain/himalayan-expedition-success/blob/main/docs/report-fr.pdf" target="_blank" rel="noopener">Rapport (PDF)</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="entry">
+                <div class="entry-when"><b>ML</b>Python</div>
+                <div class="entry-body">
+                    <h3>Classification d'images de races de chiens</h3>
+                    <p>Projet d'apprentissage automatique à trois (MAM3, juin 2026) sur 1 002 photos de six races issues de Stanford Dogs. Comparaison d'une chaîne classique, descripteurs PCA et HOG puis kNN et SVM réglés par recherche sur grille, avec un réseau VGG16 pré-entraîné dont seule la tête est apprise : 59 % contre 98 %. Le plafond venait des descripteurs, pas du classifieur choisi.</p>
+                    <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">scikit-image</span><span class="tag">VGG16</span></div>
+                    <div class="entry-links">
+                        <a href="https://github.com/BnRomain/dog-breed-classification" target="_blank" rel="noopener">Code source</a>
+                        <a href="https://github.com/BnRomain/dog-breed-classification/blob/main/docs/report-fr.pdf" target="_blank" rel="noopener">Rapport (PDF)</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="entry">
+                <div class="entry-when"><b>Outil</b>Google Sheets</div>
+                <div class="entry-body">
+                    <h3>PowerLift Tracker</h3>
+                    <p>Suivi d'entraînement en force athlétique construit sur Google Sheets, sans script : e1RM estimé depuis la table RPE, charges planifiées automatiquement, MAX de référence recalculés chaque semaine depuis les performances réelles et indice de fatigue, sur un bloc de dix semaines. Modèle public, documentation bilingue, licence MIT.</p>
+                    <div class="tags"><span class="tag">Google Sheets</span><span class="tag">ARRAYFORMULA</span><span class="tag">GitHub Actions</span><span class="tag">MIT</span></div>
+                    <div class="entry-links">
+                        <a href="https://github.com/BnRomain/tracker-powerlifting" target="_blank" rel="noopener">Code source</a>
+                        <a href="https://docs.google.com/spreadsheets/d/1cMEQfgsgYV3C5RC8sq0Xvccz4UgO5aT8dhn19qVybdU/edit?usp=sharing" target="_blank" rel="noopener">Modèle Google Sheets</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="entry">
                 <div class="entry-when"><b>Client</b>front</div>
                 <div class="entry-body">
                     <h3>Site portfolio photographe</h3>
@@ -962,6 +989,19 @@
                     <div class="entry-links">
                         <a href="https://github.com/BnRomain/ophelie-malorey-photographe" target="_blank" rel="noopener">Code source</a>
                         <a href="https://bnromain.github.io/ophelie-malorey-photographe/" target="_blank" rel="noopener">Site en ligne</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="entry">
+                <div class="entry-when"><b>Client</b>front</div>
+                <div class="entry-body">
+                    <h3>Block Rose, location de matériel audiovisuel</h3>
+                    <p>Vitrine et catalogue d'un loueur de matériel audiovisuel et de diffusion en direct, réalisés en 2024 : mon premier projet web. Contrainte structurante, une charte graphique imposée (typographies, palette, illustrations) à décliner sur neuf pages cohérentes et responsives, sans framework. Projet arrêté par le client, qui n'avait plus besoin du site.</p>
+                    <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">GitHub Pages</span></div>
+                    <div class="entry-links">
+                        <a href="https://github.com/BnRomain/blockrose-equipment-rental" target="_blank" rel="noopener">Code source</a>
+                        <a href="https://bnromain.github.io/blockrose-equipment-rental/" target="_blank" rel="noopener">Démonstration</a>
                     </div>
                 </div>
             </article>
@@ -1012,7 +1052,7 @@ document.getElementById('print-cv').addEventListener('click', function () {
 });
 </script>
 
-<script src="/i18n-cv.js?v=20260915c" defer></script>
+<script src="/i18n-cv.js?v=20260916a" defer></script>
 <script src="/site.js?v=20260813b" defer></script>
 <script src="/tracker.js?v=20260916" defer></script>
 </body>
