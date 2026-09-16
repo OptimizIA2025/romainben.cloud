@@ -1,25 +1,42 @@
 version: 2
 
-# Une seule chose de ce depot est une dependance au sens de Dependabot :
-# le `FROM nginx:...-alpine` du Dockerfile. Les polices, GSAP et ScrollTrigger
-# sont versionnes en clair dans le depot sans manifeste, donc invisibles pour
-# lui : leur mise a jour reste manuelle.
+# Dépendances suivies : l'image nginx du Dockerfile (FROM nginx:...-alpine) et
+# les GitHub Actions des workflows. Le site lui-même n'a aucune dépendance
+# déclarée : polices et bibliothèques sont versionnées en clair, leur mise à
+# jour reste manuelle.
 #
-# Docker n'est couvert que par les *version updates*, pas par les alertes de
-# securite : aucune CVE nginx ne remontera ici, seules les montees de version
-# de l'image de base sont proposees.
-#
-# ATTENTION avant de fusionner une PR de montee nginx : il n'y a aucune CI et
-# le webhook Coolify deploie des la fusion sur `main`. Or `gzip_static` exige
-# que l'image soit compilee avec --with-http_gzip_static_module. Si une image
-# future le perdait, nginx refuserait de demarrer et le site tomberait sans
-# etape intermediaire. Construire l'image en local avant de fusionner.
+# Docker n'est couvert que par les montées de version, pas par les alertes de
+# sécurité. Chaque montée de nginx passe par une pull request que la CI
+# vérifie (image construite, nginx -t, pages servies, compression) avant que
+# l'auto-merge ne la fusionne : le déploiement Coolify ne part qu'après.
 
 updates:
-  - package-ecosystem: docker
-    directory: /
+  - package-ecosystem: "docker"
+    directory: "/"
     schedule:
-      interval: monthly
+      interval: "weekly"
     open-pull-requests-limit: 2
     commit-message:
-      prefix: deps
+      prefix: "deps"
+    groups:
+      docker-patch-minor:
+        update-types:
+          - "patch"
+          - "minor"
+        patterns:
+          - "*"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "deps"
+    groups:
+      actions-patch-minor:
+        update-types:
+          - "patch"
+          - "minor"
+        patterns:
+          - "*"
