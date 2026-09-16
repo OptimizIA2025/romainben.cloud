@@ -5,3 +5,9 @@
 # ci-dessus vise les notes du vault Obsidian, pas la documentation du projet.
 # Il reste hors de l'image : `.dockerignore` exclut `*.md` de son côté.
 !README.md
+# Documentation du dépôt et modèles GitHub : versionnés (et exclus de l'image
+# par .dockerignore).
+!CONTRIBUTING.md
+!SECURITY.md
+!CODE_OF_CONDUCT.md
+!.github/**
