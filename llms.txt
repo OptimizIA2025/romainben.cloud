@@ -58,7 +58,7 @@ Ces trois-là ne sont pas des systèmes en production : un outil personnel, un p
 
 - **PowerLift Tracker** (outil personnel, public) : suivi d'entraînement en force athlétique construit sur Google Sheets sans script, e1RM estimé depuis la table RPE, charges planifiées automatiquement, MAX de référence recalculés chaque semaine, indice de fatigue sur un bloc de dix semaines. Licence MIT, documentation bilingue. Code : https://github.com/BnRomain/tracker-powerlifting · Modèle : https://docs.google.com/spreadsheets/d/1cMEQfgsgYV3C5RC8sq0Xvccz4UgO5aT8dhn19qVybdU/edit?usp=sharing
 - **Compression JPEG (DCT, CSR)** : projet académique en mathématiques appliquées, compression d'image via transformée en cosinus discrète et stockage sparse. Démo : https://jpeg-csr-compression.streamlit.app/ · Code : https://github.com/BnRomain/jpeg-compression
-- **Site portfolio photographe** : site vitrine single-page livré via OptimizIA.xyz. Code : https://github.com/BnRomain/SitePhoto_Ophelie · Site : https://bnromain.github.io/SitePhoto_Ophelie
+- **Site portfolio photographe** : site vitrine single-page livré via OptimizIA.xyz. Code : https://github.com/BnRomain/ophelie-malorey-photographe · Site : https://bnromain.github.io/ophelie-malorey-photographe/
 
 ## Contact & prise de rendez-vous
 
