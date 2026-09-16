@@ -2,23 +2,27 @@
 
 Ce dépôt est le canal de livraison de le site vitrine de Romain Ben servi sur `www.romainben.cloud`. Il contient ce qui part en
 production, pas le projet : le site se développe dans le vault Obsidian et se
-publie par un push sur `main` depuis le dossier `01 Site Romain/Romainben.cloud_Sprint_V4.1` du vault. Ce guide fixe ce qui se passe entre un commit
+publie par une pull request vers `main` depuis le dossier `01 Site Romain/Romainben.cloud_Sprint_V4.1` du vault. Ce guide fixe ce qui se passe entre un commit
 et la mise en ligne.
 
 En participant, vous acceptez le [code de conduite](CODE_OF_CONDUCT.md).
 
 ## Comment ça se publie
 
-1. Un push sur `main` déclenche le webhook Coolify : l'image est reconstruite et
-   déployée en quelques dizaines de secondes.
-2. À chaque push et à chaque pull request, la CI construit la même image et la
-   vérifie (`nginx -t`, pages, redirections, en-têtes, compression). Un push
-   direct part en production avant le résultat de la CI : elle sert alors
-   d'alerte après coup, et de garde-fou avant coup pour les pull requests.
-3. La branche `main` est protégée par un ruleset : pas de suppression, pas de
-   force push, pull request et vérifications `image`, `docs` et
-   `dependency-review` requises. Les administrateurs du dépôt peuvent pousser
-   directement (c'est le mode de publication normal du site).
+1. Chaque modification part sur une branche et passe par une pull request vers
+   `main`, marquée pour fusion automatique (`gh pr merge --auto --squash`).
+2. La CI construit l'image de production et la vérifie (`nginx -t`, pages,
+   redirections, en-têtes, compression), contrôle les documents et relit les
+   dépendances. La pull request n'est fusionnée qu'une fois `image`, `docs` et
+   `dependency-review` au vert : rien n'arrive en production sans être passé
+   par la CI.
+3. La fusion sur `main` déclenche le webhook Coolify : l'image est reconstruite
+   et déployée en quelques dizaines de secondes.
+4. La branche `main` est protégée par un ruleset : pas de suppression, pas de
+   force push, pull request et vérifications requises. Les administrateurs
+   gardent le push direct, réservé au correctif urgent : il part en production
+   avant le résultat de la CI, et GitHub le rappelle au push par « required
+   status checks are expected ».
 
 ## Dependabot et auto-merge
 
