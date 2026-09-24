@@ -51,7 +51,7 @@ window.RB_I18N = {
         "Since then I have stopped writing standalone scripts: I ship <strong>complete systems that run in production</strong>, with a database, payment, authentication and monitoring. The concrete cases are detailed below.",
     "Ce que j'aime : prendre un problème concret (une boîte Gmail qui déborde, un traitement d'image à optimiser, un site à livrer, une veille à automatiser) et sortir une solution qui marche, sans sur-ingénierie, sans frameworks inutiles.":
         "What I enjoy: taking a concrete problem (an overflowing Gmail inbox, an image pipeline to optimise, a site to ship, monitoring to automate) and delivering something that works, without over-engineering and without needless frameworks.",
-    "Antibes, France": "Antibes, France",
+    "Cagnes-sur-Mer, France": "Cagnes-sur-Mer, France",
     "Polytech Nice Sophia, MAM4": "Polytech Nice Sophia, 4th year",
     "Co-fondateur OptimizIA.xyz": "Co-founder of OptimizIA.xyz",
     "Statut Étudiant-Entrepreneur (SNEE)": "Student-Entrepreneur Status (SNEE)",
@@ -187,7 +187,7 @@ window.RB_I18N = {
     "Une sélection de projets personnels, académiques et de sites livrés, avec le dépôt ouvert et la démo en ligne. D'autres projets de groupe vivent sur les dépôts de mes camarades.":
         "A selection of personal and academic projects and delivered sites, with the repository open and the demo online. Other group projects live on my classmates' repositories.",
     "Outil · Google Sheets": "Tool · Google Sheets",
-    "Maths · Python": "Maths · Python",
+    "Maths · Python · C++": "Maths · Python · C++",
     "Front · Client": "Front end · Client",
     "Expéditions himalayennes": "Himalayan expeditions",
     "Prédire si une expédition atteindra le sommet avec ce que l'on sait avant le départ. Régression logistique sur 11 425 expéditions Kaggle : 69,3 % en validation croisée contre 55 % de référence, en écartant fuites de données et facteurs de confusion.":
@@ -204,8 +204,8 @@ window.RB_I18N = {
     "Modèle Google Sheets": "Google Sheets template",
     "Démo en ligne": "Try it online",
     "Compression JPEG (DCT · CSR)": "JPEG compression (DCT · CSR)",
-    "Implémentation d'un algorithme de compression inspiré JPEG, transformée en cosinus discrète sur blocs 8×8 puis stockage en matrices sparses CSR. Application Streamlit interactive avec métriques en temps réel.":
-        "An implementation of a JPEG-inspired compression algorithm: discrete cosine transform on 8×8 blocks, then storage as CSR sparse matrices. Interactive Streamlit app with metrics in real time.",
+    "Implémentation d'un algorithme de compression inspiré JPEG, transformée en cosinus discrète sur blocs 8×8 puis stockage en matrices sparses CSR. Application Streamlit interactive avec métriques en temps réel, puis portage en C++20 sans NumPy ni SciPy, environ 11 fois plus rapide.":
+        "An implementation of a JPEG-inspired compression algorithm: discrete cosine transform on 8×8 blocks, then storage as CSR sparse matrices. Interactive Streamlit app with metrics in real time, then a C++20 port without NumPy or SciPy, about 11 times faster.",
     "Site portfolio photographe": "Photographer portfolio site",
     "Site vitrine pour une cliente photographe. Galerie soignée, design responsive, navigation fluide. Livré via OptimizIA.xyz en HTML/CSS/JS vanilla, sans framework.":
         "A marketing site for a photographer. Careful gallery, responsive design, smooth navigation. Delivered through OptimizIA.xyz in vanilla HTML, CSS and JavaScript, no framework.",

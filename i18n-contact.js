@@ -73,7 +73,7 @@ window.RB_I18N = {
     "Ressources": "Resources",
     "Contact &amp; infos": "Contact &amp; info",
     "Mentions légales": "Legal notice",
-    "Antibes, France": "Antibes, France",
+    "Cagnes-sur-Mer, France": "Cagnes-sur-Mer, France",
     "Étudiant ingénieur en Maths Appliquées à Polytech Nice Sophia, co-fondateur d'OptimizIA.xyz. Dev, automatisation n8n, IA et entrepreneuriat.":
         "Engineering student in Applied Mathematics at Polytech Nice Sophia, co-founder of OptimizIA.xyz. Development, n8n automation, AI and entrepreneurship.",
     "OptimizIA.xyz, l'agence IA &amp; automatisation": "OptimizIA.xyz, the AI &amp; automation agency",

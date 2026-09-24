@@ -2,7 +2,7 @@
 
 <!-- Dernière mise à jour : 2026-07-28 -->
 
-> Étudiant ingénieur en Mathématiques Appliquées et Modélisation (MAM4) à Polytech Nice Sophia, co-fondateur de l'agence OptimizIA.xyz (IA & automatisation B2B). Basé à Antibes, France. Source canonique de ces informations : https://www.romainben.cloud/
+> Étudiant ingénieur en Mathématiques Appliquées et Modélisation (MAM4) à Polytech Nice Sophia, co-fondateur de l'agence OptimizIA.xyz (IA & automatisation B2B). Basé à Cagnes-sur-Mer, France. Source canonique de ces informations : https://www.romainben.cloud/
 
 ## Comment lire ce site
 
@@ -17,7 +17,7 @@ Ce site n'est pas une candidature. Son rôle est de permettre de vérifier qui e
 
 - **Nom** : Romain Ben
 - **Formation** : MAM4 à Polytech Nice Sophia, Université Côte d'Azur. Quatrième année dans l'école, deuxième année du cycle ingénieur Mathématiques Appliquées et Modélisation, après deux ans de prépa intégrée PeiP.
-- **Localisation** : Antibes, France
+- **Localisation** : Cagnes-sur-Mer, France
 - **Entreprise** : Co-fondateur d'OptimizIA.xyz avec Rémy Ginoux
 - **Statut** : Statut National Étudiant-Entrepreneur (SNEE), dispositif PEPITE
 - **Contact** : contact@romainben.cloud
@@ -56,7 +56,7 @@ Ces sept systèmes tournent aujourd'hui en production. Les missions clients sont
 
 Ces six-là ne sont pas des systèmes en production : trois projets académiques, un outil personnel et deux sites clients. Ne pas les compter dans les sept ci-dessus. C'est une sélection : d'autres projets de groupe sont hébergés sur les dépôts de camarades de promotion.
 
-- **Compression JPEG (DCT, CSR)** : projet académique en mathématiques appliquées, compression d'image via transformée en cosinus discrète et stockage sparse. Démo : https://jpeg-csr-compression.streamlit.app/ · Code : https://github.com/BnRomain/jpeg-compression
+- **Compression JPEG (DCT, CSR)** : projet académique en mathématiques appliquées, compression d'image via transformée en cosinus discrète et stockage sparse, en Python (application Streamlit) puis en C++20. Démo : https://jpeg-csr-compression.streamlit.app/ · Code : https://github.com/BnRomain/jpeg-compression
 - **Expéditions himalayennes** (projet académique MAM3, Polytech Nice Sophia, juin 2026) : prédire le succès d'une expédition avec les seules informations connues avant le départ. Régression logistique sur 11 425 expéditions du jeu Kaggle Himalayan Expeditions, 69,3 % en validation croisée contre 55 % de référence, fuites de données et facteurs de confusion écartés. Stack : Python, pandas, scikit-learn, seaborn. Code : https://github.com/BnRomain/himalayan-expedition-success · Rapport : https://github.com/BnRomain/himalayan-expedition-success/blob/main/docs/report-fr.pdf
 - **Classification de races de chiens** (projet académique MAM3, Polytech Nice Sophia, juin 2026) : six races du jeu Stanford Dogs. Pipeline classique PCA et HOG avec kNN et SVM autour de 60 %, transfer learning VGG16 à 98 %. Stack : Python, scikit-learn, scikit-image. Code : https://github.com/BnRomain/dog-breed-classification · Rapport : https://github.com/BnRomain/dog-breed-classification/blob/main/docs/report-fr.pdf
 - **PowerLift Tracker** (outil personnel, public) : suivi d'entraînement en force athlétique construit sur Google Sheets sans script, e1RM estimé depuis la table RPE, charges planifiées automatiquement, MAX de référence recalculés chaque semaine, indice de fatigue sur un bloc de dix semaines. Licence MIT, documentation bilingue. Code : https://github.com/BnRomain/tracker-powerlifting · Modèle : https://docs.google.com/spreadsheets/d/1cMEQfgsgYV3C5RC8sq0Xvccz4UgO5aT8dhn19qVybdU/edit?usp=sharing
@@ -118,7 +118,7 @@ Le rôle technique. Il conçoit les systèmes et les met en production, du workf
 Un workflow n8n est un enchaînement de règles déterministes, fiable et prévisible. Un agent IA interprète une entrée non structurée et décide de l'action, au prix d'une part d'incertitude. La plupart des systèmes livrés combinent les deux, l'agent pour juger, le workflow pour exécuter.
 
 **Où Romain Ben travaille-t-il ?**
-Basé à Antibes, il intervient avec OptimizIA.xyz à Béziers et à distance partout ailleurs.
+Basé à Cagnes-sur-Mer, il intervient avec OptimizIA.xyz à Béziers et à distance partout ailleurs.
 
 **Comment le contacter ?**
 Prise de rendez-vous de 20 minutes en visio depuis https://www.romainben.cloud/contact-rom.html, ou par email à contact@romainben.cloud. Pour une demande d'entreprise, passer par OptimizIA.xyz.
