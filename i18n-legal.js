@@ -24,7 +24,7 @@ window.RB_I18N = {
     "Site": "Site",
     "Étudiant ingénieur MAM4, Polytech Nice Sophia, Maths Appliquées et Modélisation. Titulaire du Statut National Étudiant-Entrepreneur (SNEE), dispositif PEPITE.":
         "Fourth-year engineering student at Polytech Nice Sophia, Applied Mathematics and Modelling. Holder of the French National Student-Entrepreneur Status (SNEE), PEPITE programme.",
-    "Antibes, France": "Antibes, France",
+    "Cagnes-sur-Mer, France": "Cagnes-sur-Mer, France",
 
     "Directeur de la publication": "Publication director",
     "Le directeur de la publication est <strong>Romain Ben</strong>, joignable par courrier électronique à l'adresse ci-dessus.":

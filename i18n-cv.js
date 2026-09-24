@@ -13,7 +13,7 @@ window.RB_I18N = {
         "Engineering student in applied mathematics and modelling, co-founder of OptimizIA.xyz. I design and ship automation and AI systems that run in production for small businesses and SMEs.",
     "Retour au site": "Back to the site",
     "Imprimer ou enregistrer en PDF": "Print or save as PDF",
-    "Antibes, Alpes-Maritimes": "Antibes, French Riviera",
+    "Cagnes-sur-Mer, Alpes-Maritimes": "Cagnes-sur-Mer, French Riviera",
     "Prendre rendez-vous": "Book a meeting",
 
     /* Titres de section */
@@ -158,10 +158,10 @@ window.RB_I18N = {
     "Suivi d'entraînement en force athlétique construit sur Google Sheets, sans script : e1RM estimé depuis la table RPE, charges planifiées automatiquement, MAX de référence recalculés chaque semaine depuis les performances réelles et indice de fatigue, sur un bloc de dix semaines. Modèle public, documentation bilingue, licence MIT.":
         "A powerlifting training tracker built on Google Sheets, with no scripting: e1RM estimated from the RPE chart, loads planned automatically, reference MAXs recomputed every week from actual performance and a fatigue index, over a ten-week block. Public template, bilingual documentation, MIT licence.",
     "Modèle Google Sheets": "Google Sheets template",
-    "<b>Maths</b>Python": "<b>Maths</b>Python",
+    "<b>Maths</b>Python · C++": "<b>Maths</b>Python · C++",
     "Compression JPEG par DCT et matrices creuses": "JPEG compression using DCT and sparse matrices",
-    "Implémentation d'un algorithme de compression inspiré de JPEG : transformée en cosinus discrète sur blocs 8×8 puis stockage en matrices creuses au format CSR. Application Streamlit interactive avec métriques calculées en temps réel.":
-        "An implementation of a JPEG-inspired compression algorithm: discrete cosine transform on 8×8 blocks, then storage as sparse matrices in CSR format. Interactive Streamlit app with metrics computed in real time.",
+    "Implémentation d'un algorithme de compression inspiré de JPEG : transformée en cosinus discrète sur blocs 8×8 puis stockage en matrices creuses au format CSR. Application Streamlit interactive avec métriques calculées en temps réel. Seconde version en C++20 en MAM4, en binôme : matrices CSR écrites à la main, tests sous AddressSanitizer, coefficients identiques à la version Python.":
+        "An implementation of a JPEG-inspired compression algorithm: discrete cosine transform on 8×8 blocks, then storage as sparse matrices in CSR format. Interactive Streamlit app with metrics computed in real time. A second version in C++20 in the 4th year, in a pair: hand-written CSR matrices, tests under AddressSanitizer, coefficients identical to the Python version.",
     "<b>Client</b>front": "<b>Client</b>front end",
     "Site portfolio photographe": "Photographer portfolio site",
     "Site vitrine livré pour une cliente photographe : galerie soignée, design responsive, navigation fluide. Livré via OptimizIA.xyz en HTML, CSS et JavaScript vanilla, sans framework.":
@@ -198,8 +198,8 @@ window.RB_I18N = {
     "Parachutisme, gestion du risque et discipline · Voyages · Veille technique sur l'IA et l'automatisation":
         "Skydiving, risk management and discipline · Travel · Keeping up with AI and automation",
     "Localisation": "Location",
-    "Antibes, Alpes-Maritimes. Mobile sur la technopole de Sophia-Antipolis et à distance.":
-        "Antibes, French Riviera. Available across the Sophia-Antipolis tech park and remotely.",
+    "Cagnes-sur-Mer, Alpes-Maritimes. Mobile sur la technopole de Sophia-Antipolis et à distance.":
+        "Cagnes-sur-Mer, French Riviera. Available across the Sophia-Antipolis tech park and remotely.",
     "Mentions légales": "Legal notice"
 };
 
