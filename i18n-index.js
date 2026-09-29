@@ -278,6 +278,7 @@ window.RB_I18N = {
     "Contact &amp; infos": "Contact &amp; info",
     "Ressources": "Resources",
     "Mentions légales": "Legal notice",
+    "AUDITÉ PAR": "AUDITED BY",
     "Présence en ligne vérifiée et suivie par notre propre outil d'audit, sur 161 points techniques, SEO et sécurité.":
         "Online presence verified and monitored by our own audit tool, across 161 technical, SEO and security checks."
 };
