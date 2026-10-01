@@ -3,7 +3,7 @@
   "@type": "ProfilePage",
   "name": "Romain Ben, ingénieur Polytech & co-fondateur OptimizIA.xyz",
   "url": "https://www.romainben.cloud/",
-  "dateModified": "2026-07-28",
+  "dateModified": "2026-10-01",
   "mainEntity": {
     "@type": "Person",
     "name": "Romain Ben",
@@ -13,7 +13,8 @@
     "sameAs": [
       "https://www.linkedin.com/in/romainben/",
       "https://github.com/BnRomain",
-      "https://www.optimizia.xyz/"
+      "https://www.optimizia.xyz/",
+      "https://www.behance.net/romainben1"
     ]
   },
   "contactPoint": {

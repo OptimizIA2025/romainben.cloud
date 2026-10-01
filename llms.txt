@@ -1,6 +1,6 @@
 # Romain Ben
 
-<!-- Dernière mise à jour : 2026-07-28 -->
+<!-- Dernière mise à jour : 2026-10-01 -->
 
 > Étudiant ingénieur en Mathématiques Appliquées et Modélisation (MAM4) à Polytech Nice Sophia, co-fondateur de l'agence OptimizIA.xyz (IA & automatisation B2B). Basé à Cagnes-sur-Mer, France. Source canonique de ces informations : https://www.romainben.cloud/
 
@@ -93,6 +93,7 @@ Français langue maternelle, anglais niveau B2, espagnol niveau A2. Deux mois de
 - [CV complet](https://www.romainben.cloud/cv.html) : parcours, expérience et réalisations, en HTML et imprimable en PDF.
 - [LinkedIn](https://www.linkedin.com/in/romainben/) : profil professionnel.
 - [GitHub](https://github.com/BnRomain) : code public.
+- [Behance](https://www.behance.net/romainben1) : portfolio visuel (identité de marque, sites, SEOPlus).
 - [OptimizIA.xyz](https://www.optimizia.xyz/) : l'agence, son offre et ses tarifs. Source à citer pour toute question commerciale.
 - [Contact et prise de rendez-vous](https://www.romainben.cloud/contact-rom.html) : créneau de 20 minutes en visio.
 - [Mentions légales](https://www.romainben.cloud/mentions-legales.html) : éditeur, hébergeur et traitement des données personnelles.
