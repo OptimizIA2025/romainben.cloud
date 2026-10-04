@@ -3,13 +3,19 @@
   "@type": "ProfilePage",
   "name": "Romain Ben, ingénieur Polytech & co-fondateur OptimizIA.xyz",
   "url": "https://www.romainben.cloud/",
-  "dateModified": "2026-10-01",
+  "dateModified": "2026-10-04",
   "mainEntity": {
     "@type": "Person",
     "name": "Romain Ben",
     "jobTitle": "Étudiant ingénieur MAM4, Polytech Nice Sophia · Co-fondateur OptimizIA.xyz",
     "url": "https://www.romainben.cloud/",
     "email": "contact@romainben.cloud",
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "GitHub Foundations",
+      "credentialCategory": "certification",
+      "url": "https://learn.microsoft.com/users/RomainBEN-5338/credentials/E48A0C09D3FC6048"
+    },
     "sameAs": [
       "https://www.linkedin.com/in/romainben/",
       "https://github.com/BnRomain",

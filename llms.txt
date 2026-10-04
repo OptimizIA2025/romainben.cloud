@@ -20,6 +20,7 @@ Ce site n'est pas une candidature. Son rôle est de permettre de vérifier qui e
 - **Localisation** : Cagnes-sur-Mer, France
 - **Entreprise** : Co-fondateur d'OptimizIA.xyz avec Rémy Ginoux
 - **Statut** : Statut National Étudiant-Entrepreneur (SNEE), dispositif PEPITE
+- **Certification** : GitHub Foundations (GH-900), obtenue en octobre 2026, vérifiable sur Microsoft Learn : https://learn.microsoft.com/users/RomainBEN-5338/credentials/E48A0C09D3FC6048
 - **Contact** : contact@romainben.cloud
 - **Site** : https://www.romainben.cloud/
 
@@ -75,7 +76,7 @@ Romain Ben propose une prise de rendez-vous en ligne (20 minutes, visio) via sa 
 
 Le CV complet, structuré et à jour, est publié en HTML (pas en PDF) pour rester lisible par les moteurs et les agents :
 - **URL** : https://www.romainben.cloud/cv.html
-- **Contenu** : profil, expérience (co-fondateur et responsable technique d'OptimizIA.xyz depuis 2025, activité exercée en portage salarial), sept réalisations en production, six domaines de compétences techniques, formation à Polytech Nice Sophia (PeiP 2023-2025, cycle ingénieur MAM 2025-2028), Statut National Étudiant-Entrepreneur, langues et centres d'intérêt.
+- **Contenu** : profil, expérience (co-fondateur et responsable technique d'OptimizIA.xyz depuis 2025, activité exercée en portage salarial), sept réalisations en production, six domaines de compétences techniques, formation à Polytech Nice Sophia (PeiP 2023-2025, cycle ingénieur MAM 2025-2028), certification GitHub Foundations, Statut National Étudiant-Entrepreneur, langues et centres d'intérêt.
 - **Format** : la page est imprimable telle quelle en PDF depuis le navigateur.
 
 ## Formation détaillée
@@ -83,6 +84,7 @@ Le CV complet, structuré et à jour, est publié en HTML (pas en PDF) pour rest
 - **2025-2028 (prévu)** : diplôme d'ingénieur, spécialité Mathématiques Appliquées et Modélisation, Polytech Nice Sophia, Université Côte d'Azur, Biot. Actuellement en MAM4, deuxième année du cycle ingénieur. Analyse numérique, algèbre linéaire, équations différentielles, optimisation, probabilités et statistiques, algorithmique, C, Java, Python, Matlab, modélisation et traitement du signal.
 - **2023-2025** : Parcours des écoles d'ingénieurs Polytech (PeiP), prépa intégrée sur deux ans, Polytech Nice Sophia.
 - **2026** : Statut National Étudiant-Entrepreneur (SNEE), dispositif PEPITE du ministère de l'Enseignement supérieur.
+- **2026** : certification GitHub Foundations (GH-900), délivrée par Microsoft Learn le 1er octobre 2026, valable jusqu'en octobre 2028. Identifiant E48A0C09D3FC6048, vérification : https://learn.microsoft.com/users/RomainBEN-5338/credentials/E48A0C09D3FC6048
 
 ## Langues
 
