@@ -7,8 +7,8 @@ window.RB_I18N = {
     /* Titre de l'onglet et en-tete */
     "CV de Romain Ben | Automatisation n8n et agents IA":
         "Romain Ben's CV | n8n automation and AI agents",
-    "Curriculum vitae, mis à jour le 16 septembre 2026":
-        "Curriculum vitae, updated 16 September 2026",
+    "Curriculum vitae, mis à jour le 4 octobre 2026":
+        "Curriculum vitae, updated 4 October 2026",
     "Étudiant ingénieur en mathématiques appliquées et modélisation, co-fondateur d'OptimizIA.xyz. Je conçois et je mets en production des systèmes d'automatisation et d'IA pour des TPE et des PME.":
         "Engineering student in applied mathematics and modelling, co-founder of OptimizIA.xyz. I design and ship automation and AI systems that run in production for small businesses and SMEs.",
     "Retour au site": "Back to the site",
@@ -21,7 +21,7 @@ window.RB_I18N = {
     "Expérience": "Experience",
     "Réalisations en production": "Shipped to production",
     "Compétences techniques": "Technical skills",
-    "Formation et distinctions": "Education and awards",
+    "Formation, certification et distinctions": "Education, certification and awards",
     "Projets, code public": "Projects, public code",
     "Langues et centres d'intérêt": "Languages and interests",
     "Entrepreneuriat": "Entrepreneurship",
@@ -146,6 +146,10 @@ window.RB_I18N = {
     "Prépa intégrée sur deux ans : mathématiques, physique, informatique et algorithmique, méthodologie de projet. Admission au cycle ingénieur en spécialité Mathématiques Appliquées et Modélisation.":
         "Two-year integrated preparatory programme: mathematics, physics, computer science and algorithmics, project methodology. Admitted to the engineering cycle in Applied Mathematics and Modelling.",
     "<b>2026</b>distinction": "<b>2026</b>award",
+    "GitHub, délivrée par Microsoft Learn": "GitHub, issued through Microsoft Learn",
+    "Certification officielle de GitHub : Git et dépôts, collaboration par issues, pull requests et revues de code, GitHub Actions, Codespaces et Copilot, gestion de projet, sécurité et administration d'une organisation. Obtenue le 1ᵉʳ octobre 2026, valable jusqu'en octobre 2028, identifiant E48A0C09D3FC6048.":
+        "Official GitHub certification: Git and repositories, collaboration through issues, pull requests and code reviews, GitHub Actions, Codespaces and Copilot, project management, security and administration of an organisation. Earned on 1 October 2026, valid until October 2028, credential ID E48A0C09D3FC6048.",
+    "Vérifier la certification": "Verify the certification",
     "Statut National Étudiant-Entrepreneur (SNEE)":
         "French National Student-Entrepreneur Status (SNEE)",
     "Dispositif PEPITE, ministère de l'Enseignement supérieur":

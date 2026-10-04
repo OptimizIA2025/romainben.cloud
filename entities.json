@@ -33,6 +33,12 @@
       "name": "Statut National Étudiant-Entrepreneur"
     },
     {
+      "@type": "EducationalOccupationalCredential",
+      "name": "GitHub Foundations",
+      "credentialCategory": "certification",
+      "url": "https://learn.microsoft.com/users/RomainBEN-5338/credentials/E48A0C09D3FC6048"
+    },
+    {
       "@type": "Organization",
       "name": "OptimizIA.xyz",
       "sameAs": "https://www.optimizia.xyz/"
