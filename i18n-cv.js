@@ -7,8 +7,8 @@ window.RB_I18N = {
     /* Titre de l'onglet et en-tete */
     "CV de Romain Ben | Automatisation n8n et agents IA":
         "Romain Ben's CV | n8n automation and AI agents",
-    "Curriculum vitae, mis à jour le 4 octobre 2026":
-        "Curriculum vitae, updated 4 October 2026",
+    "Curriculum vitae, mis à jour le 5 novembre 2026":
+        "Curriculum vitae, updated 5 November 2026",
     "Étudiant ingénieur en mathématiques appliquées et modélisation, co-fondateur d'OptimizIA.xyz. Je conçois et je mets en production des systèmes d'automatisation et d'IA pour des TPE et des PME.":
         "Engineering student in applied mathematics and modelling, co-founder of OptimizIA.xyz. I design and ship automation and AI systems that run in production for small businesses and SMEs.",
     "Retour au site": "Back to the site",
@@ -24,7 +24,7 @@ window.RB_I18N = {
     "Formation, certification et distinctions": "Education, certification and awards",
     "Projets, code public": "Projects, public code",
     "Langues et centres d'intérêt": "Languages and interests",
-    "Entrepreneuriat": "Entrepreneurship",
+    "Entrepreneuriat et enseignement": "Entrepreneurship and teaching",
     "7 systèmes": "7 systems",
     "6 domaines": "6 areas",
     "6 dépôts": "6 repositories",
@@ -43,6 +43,15 @@ window.RB_I18N = {
     /* Experience */
     "Co-fondateur, responsable technique": "Co-founder, technical lead",
     "<b>2025</b>aujourd'hui": "<b>2025</b>present",
+    "<b>2026</b>aujourd'hui": "<b>2026</b>present",
+    "Professeur particulier de mathématiques": "Private mathematics tutor",
+    "Complétude, cours à domicile · Alpes-Maritimes": "Complétude, home tutoring · Alpes-Maritimes, France",
+    "Soutien scolaire en mathématiques et en physique-chimie, niveau Terminale générale. Recruté par Complétude sur entretien et sur dossier universitaire, premier cours en novembre 2026. Le travail : reprendre une notion là où elle bloque, consolider la méthode, préparer les contrôles.":
+        "Tutoring in mathematics and in physics and chemistry, final year of French high school (Terminale générale). Recruited by Complétude after an interview and a review of my university record, first lesson in November 2026. The job: pick a concept up where it stalls, build solid method, prepare for tests.",
+    "Mathématiques": "Mathematics",
+    "Physique-chimie": "Physics and chemistry",
+    "Niveau lycée": "High school level",
+    "Pédagogie": "Teaching",
     "OptimizIA.xyz, Sophia-Antipolis · activité exercée en portage salarial": "OptimizIA.xyz, Sophia-Antipolis, France · operated under a French umbrella-company scheme (portage salarial)",
     "Agence B2B d'intégration IA et d'automatisation pour dirigeants de TPE et de PME, co-fondée avec <a href=\"https://www.ginoux.xyz\" target=\"_blank\" rel=\"noopener\">Rémy Ginoux</a>. Je porte la partie technique : architecture, développement, mise en production et exploitation.":
         "A B2B AI and automation agency for owners of small businesses and SMEs, co-founded with <a href=\"https://www.ginoux.xyz\" target=\"_blank\" rel=\"noopener\">Rémy Ginoux</a>. I own the technical side: architecture, development, release and operations.",
