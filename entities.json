@@ -3,7 +3,7 @@
   "@type": "Dataset",
   "name": "Top Semantic Entities",
   "description": "Core knowledge graph entities extracted for LLM ingestion.",
-  "dateModified": "2026-07-28",
+  "dateModified": "2026-11-05",
   "about": [
     {
       "@type": "Person",
@@ -42,6 +42,11 @@
       "@type": "Organization",
       "name": "OptimizIA.xyz",
       "sameAs": "https://www.optimizia.xyz/"
+    },
+    {
+      "@type": "Organization",
+      "name": "Complétude",
+      "sameAs": "https://www.completude.com/"
     },
     {
       "@type": "Person",
